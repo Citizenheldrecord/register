@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Pipeline tests. Each runs on a scratch copy of the repository; the real files are never touched.
 set -uo pipefail
-ROOT=$(cd "$(dirname "$0")/.." && pwd); D=2026-10-18c; fails=0
+ROOT=$(cd "$(dirname "$0")/.." && pwd); D=$(ls "$ROOT"/public-live-rows-*.csv | sed -E "s/.*public-live-rows-(.+)\.csv/\1/" | sort | tail -1); fails=0
 fresh(){ W=$(mktemp -d); cp -r "$ROOT"/. "$W"/; rm -rf "$W/local"; cd "$W"; }
 ok(){ echo "  PASS $1"; }; bad(){ echo "  FAIL $1"; fails=$((fails+1)); }
 expect_fail(){ local name=$1; shift; if "$@" >/tmp/pl.out 2>&1; then bad "$name (build should have failed)"; else grep -q "$PATTERN" /tmp/pl.out && ok "$name: $(grep -m1 "$PATTERN" /tmp/pl.out | cut -c1-110)" || { bad "$name (wrong reason)"; cat /tmp/pl.out; }; fi; }
