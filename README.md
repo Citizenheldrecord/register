@@ -2,13 +2,13 @@
 
 The Register
 
-Entries as at 17 October 2026. Last change: [DATE OF LAUNCH].
+Entries as at 17 October 2026. Last change: 17 October 2026.
 
 This page is a citizen-held register of Canadian public commitments. Each line is a test: what counts as a pass, the date it is scored and who answers for it. The main table holds files owned by Canadian governments, legislatures, courts, regulators, Crown bodies and companies, and foreign decisions a Canadian file depends on. My own commitments, and outside files I watch, sit in short sections of their own under the same rules.
 
 The page is dull on purpose. It does not argue, campaign or ask for anything. The essays make the arguments; this page keeps the score.
 
-Nothing here is edited quietly. Every change is a dated entry in a public record that keeps its full history, at [REGISTER HISTORY LINK, not yet created]. If this page and that record ever differ, the record governs.
+Nothing here is edited quietly. Every change is a dated entry in a public record that keeps its full history, at https://github.com/citizenheldrecord/register/commits/main. If this page and that record ever differ, the record governs.
 
 The owner on each line is my designation of who answers for the outcome. It is not a finding of fact about any person or body.
 
@@ -320,4 +320,4 @@ Scored entries
 
 Each entry scored PASS or FAILED is listed here with its date, its source link and, for a FAILED entry, the blocking layer and priced cost. [FILLED AT LAUNCH FROM SCORING ENTRIES.]
 
-Full history of every change: [REGISTER HISTORY LINK, not yet created]
+Full history of every change: https://github.com/citizenheldrecord/register/commits/main
