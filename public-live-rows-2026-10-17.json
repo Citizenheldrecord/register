@@ -914,7 +914,7 @@
   "sort_date": "2028-02-28",
   "scoring_date": "28 Feb 2028",
   "id": "HOUSING-STARTS",
-  "test": "PASS: CMHC 2027 annual national housing starts at or above 430,000. FAILED: below",
+  "test": "PASS: CMHC 2027 annual national housing starts at or above 417,000 (corrected 18 Oct 2026 from 430,000 to the low end of CMHC's 417,000 to 469,000 range, Housing Supply Report 10 Sep 2026; Barry go; a correction, not an extension). FAILED: below",
   "owner": "CMHC / Housing, Infrastructure and Communities Canada",
   "date_source": "SCHEDULED RELEASE: CMHC annual housing starts, 2027",
   "status": "LIVE",
