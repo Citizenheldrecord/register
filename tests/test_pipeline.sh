@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Pipeline tests. Each runs on a scratch copy of the repository; the real files are never touched.
 set -uo pipefail
-ROOT=$(cd "$(dirname "$0")/.." && pwd); D=2026-10-18b; fails=0
+ROOT=$(cd "$(dirname "$0")/.." && pwd); D=2026-10-18c; fails=0
 fresh(){ W=$(mktemp -d); cp -r "$ROOT"/. "$W"/; rm -rf "$W/local"; cd "$W"; }
 ok(){ echo "  PASS $1"; }; bad(){ echo "  FAIL $1"; fails=$((fails+1)); }
 expect_fail(){ local name=$1; shift; if "$@" >/tmp/pl.out 2>&1; then bad "$name (build should have failed)"; else grep -q "$PATTERN" /tmp/pl.out && ok "$name: $(grep -m1 "$PATTERN" /tmp/pl.out | cut -c1-110)" || { bad "$name (wrong reason)"; cat /tmp/pl.out; }; fi; }
@@ -75,5 +75,22 @@ PATTERN="needs cost to date" expect_fail "resolved without cost caught" build 20
 
 echo "9. redate appends a new entry citing the old fingerprint"
 fresh; python3 scripts/add_entry.py redate --supersedes FIR1 --id FIR1-R1 --scoring-date "15 Jan 2027" --date-source "DESK-SET: test redate" >/tmp/pl.out && build 2026-10-19 >/tmp/pl2.out 2>&1 && grep -q "1 new since the latest manifest \['FIR1-R1'\]" /tmp/pl2.out && ok "redate built; old FIR1 kept" || { bad "redate"; cat /tmp/pl.out /tmp/pl2.out; }
+
+
+echo "10. page logic: a synthetic scored row marks its original CLOSED with a link (node, temp copy)"
+fresh; node -e '
+const fs=require("fs");const h=fs.readFileSync("index.html","utf8");
+const line=h.split("\n").find(l=>l.startsWith("const CLOSED="));
+const tpl=h.match(/<td>\$\{CLOSED\[r\.id\][^\n]*?esc\(r\.status\)\}<\/td>/)[0];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+const ROWS=[{id:"AI1",status:"LIVE"},{id:"AI1-SCORED-20261031",status:"SCORED 31 Oct 2026: PASS",supersedes_id:"AI1"},{id:"AI2",status:"LIVE"}];
+eval(line.replace("const CLOSED","var CLOSED"));
+const cell=r=>eval("`"+tpl+"`");
+const a=cell(ROWS[0]),b=cell(ROWS[1]),c=cell(ROWS[2]);
+if(!a.includes("CLOSED: scored in AI1-SCORED-20261031")||!a.includes("href=\"#row-AI1-SCORED-20261031\""))throw "original not closed: "+a;
+if(!b.includes("SCORED 31 Oct 2026: PASS")||c.includes("CLOSED"))throw "wrong rows closed";
+console.log(a);' >/tmp/pl.out 2>&1 && ok "original shows $(sed 's/<[^>]*>//g' /tmp/pl.out); scoring row and unscored row unchanged" || { bad "page closed logic"; cat /tmp/pl.out; }
+grep -q "<th>Hype</th><th>Means</th><th>Cost</th>" index.html && grep -q "r.hype_score" index.html && ok "page table shows hype, means and cost" || bad "sub-score columns on page"
+grep -q "| Cost to date | Hype | Means | Cost$" README.md && ok "README tables show hype, means and cost" || bad "README sub-score columns"
 
 echo; [ $fails -eq 0 ] && echo "PIPELINE TESTS: ALL PASSED" || echo "PIPELINE TESTS: $fails FAILED"; exit $fails
