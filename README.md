@@ -50,7 +50,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-18c.csv (all 118 rows) is d94795eb2f061d1143d2ab95889c206f35c52402600e91a975098ee2bb1b94cc
+Checksum for this update: SHA-256 of public-live-rows-2026-10-18d.csv (all 119 rows) is b2411869215652dcd22d101ccea7bda09953d65a0373998e2531b3f9f63ac7dc
 
 Rule entries
 
@@ -272,7 +272,7 @@ CPL-RESULT | PASS: Coupling Test Studies A to C reported with URL under the froz
 
 RWE-READ | PASS: a federal minister, parliamentary committee, department or officer of Parliament publicly cites or responds to an entry in this register, with a URL on the public record (Hansard, committee evidence or a departmental publication). FAILED: none | Barry Sharp (desk) | 17 Oct 2027 | DESK-SET: one year after the test was set on 17 Oct 2026 (row) | LIVE | OPEN | OPEN | OPEN | [publishes 4 Nov 2026] | OPEN until scoring date 17 Oct 2027 | OPEN | OPEN | OPEN
 
-Outside files we watch (16)
+Outside files we watch (17)
 
 ID | Test | Owner | Scoring date | Date source | Status | Measure | Money | Funding | Argument | Cost to date | Hype | Means | Cost
 
@@ -281,6 +281,8 @@ AI1 | PASS: Anthropic embeds a named third party evaluator team on site, with ac
 AI2 | PASS: OpenAI publishes a written access charter. FAILED: not | OpenAI | 31 Oct 2026 | DESK-SET: the Wait Report's soft date of 31 Oct 2026, seven weeks after the 12 Sep announcement, treated as hard (row) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Oct 2026 | OPEN | OPEN | OPEN
 
 PAUSE-RECIP | PASS: a reciprocal Russia Ukraine energy strike pause, confirmed by a non party source (AP, Reuters, BBC, or both governments), holds at least 7 days by 31 Oct. FAILED: no reciprocal pause confirmed | US Administration (broker) | 31 Oct 2026 | DESK-SET: end of October 2026, two weeks after the 16 Oct essay that set the test (row) | LIVE | OPEN | OPEN | OPEN | https://barryesharp.substack.com/p/the-register-is-still-open | OPEN until scoring date 31 Oct 2026 | OPEN | OPEN | OPEN
+
+MIL-QUESTURA | Questura di Milano breakdown of the about 50 people detained (fermati) on 17 Oct (Italia in Piazza). PASS: by 31 Oct 2026 the Questura di Milano or the Ministero dell'Interno publishes a breakdown of those detained on 17 Oct by age (minor/adult) AND citizenship (Italian/foreign), with arrest vs denuncia status. Unattributed press counts do not count. FAILED: dated entry within 30 days; no extension | Questura di Milano (Ministero dell'Interno) (CoS-assigned, unverified) | 31 Oct 2026 | DESK-SET: two weeks after 17 Oct, as Barry approved 18 Oct 2026 | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Oct 2026 | OPEN | OPEN | OPEN
 
 AI4 | PASS: METR publishes its cyber incident review (report URL) by 9 Nov. FAILED: no report; any dated mutual extension is recorded in the entry | METR / Anthropic | 9 Nov 2026 | DESK-SET: about eight weeks after Anthropic's 9 Sep 2026 post announcing the review (Wait Report AI4) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 9 Nov 2026 | OPEN | OPEN | OPEN
 
