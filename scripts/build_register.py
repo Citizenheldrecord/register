@@ -30,8 +30,8 @@ def one(pattern, repl, text, name, flags=0):
     return new
 
 
-TABLE_COLS = "ID | Test | Owner | Scoring date | Date source | Status | Measure | Money | Funding | Argument | Cost to date"
-TABLE_KEYS = ["id", "test", "owner", "scoring_date", "date_source", "status", "measure", "money", "funding", "argument", "cost_to_date"]
+TABLE_COLS = "ID | Test | Owner | Scoring date | Date source | Status | Measure | Money | Funding | Argument | Cost to date | Hype | Means | Cost"
+TABLE_KEYS = ["id", "test", "owner", "scoring_date", "date_source", "status", "measure", "money", "funding", "argument", "cost_to_date", "hype_score", "means_score", "cost_score"]
 SECTION_HEADS = {
     "CANADA": "Canadian files (%d), in order of scoring date",
     "DESK": "This desk's own commitments (%d)",
