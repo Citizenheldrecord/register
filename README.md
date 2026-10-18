@@ -2,7 +2,7 @@
 
 The Register
 
-Entries as at 17 October 2026. Last change: 17 October 2026.
+Entries as at 18 October 2026. Last change: 18 October 2026.
 
 This page is a citizen-held register of Canadian public commitments. Each line is a test: what counts as a pass, the date it is scored and who answers for it. The main table holds files owned by Canadian governments, legislatures, courts, regulators, Crown bodies and companies, and foreign decisions a Canadian file depends on. My own commitments, and outside files I watch, sit in short sections of their own under the same rules.
 
@@ -26,6 +26,12 @@ The record is permanent and append only. Nothing is deleted. A reversal or a cor
 
 Resolved entries get three sub-scores, hype, means and cost, each MATCHED, MIXED, FAILED or OPEN. They never change the PASS or FAILED.
 
+Every entry carries a cost to date, filled in on the scoring date from a public source showing the figures of whoever holds them (department, Crown body, company, court, foreign government, the Bank of Canada or this desk), cited with URL and date. If no public figure exists on that day, the cost sub-score is FAILED and names whoever holds the figure. "Cannot determine" is FAILED. No exemptions. The desk never estimates it. It sits inside the cost sub-score and never changes the PASS or FAILED.
+
+Every entry carries a fingerprint, the SHA-256 checksum of its canonical text on the day it goes in, listed in a manifest kept in the public record and snapshotted on the Wayback Machine at each update. A new date, and a scoring, are each a new dated entry citing the prior entry's id and fingerprint, never an edit in place. How to recompute it, and the script, are in the rule entry of 18 October 2026.
+
+Rules apply from their entry date forward and are never retroactive. Entries scored on or before 18 October 2026, including HR5334, keep cost to date OPEN.
+
 Each line says why its date is what it is (a statute, a court file, a government promise, a scheduled release, a company timetable, or a reason I set and state), where the result will be read, the budget line where one is documented, and the essay that set the test. Anything not yet found is marked OPEN.
 
 Each line also says how the money behind it is set. CASELOAD-COUPLED: the budget line grows with the volume of the problem. FIXED-OUTCOME: the money is tied to a named deliverable or milestone. TIME-LIMITED: the money sunsets on a printed end date. OPEN: no primary page shows any of these. A line is marked coupled, fixed or time limited only when a Main Estimates, Supplementary Estimates, Public Accounts, contribution agreement or Canada Infrastructure Bank financing page (or a provincial Estimates page) shows it, and that page is cited in the Money column. Everything else is OPEN, and the Money column still carries the line and amount where one was found.
@@ -42,7 +48,35 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-17.csv (all 115 rows) is 605a6e9461fbdb907c86ad476c717077d23f58d7df230a53b4e3f5d36053344a
+Checksum for this update: SHA-256 of public-live-rows-2026-10-18.csv (all 115 rows) is a640b60b737d8e2688588fb8e6230b9af2fa7f7291ad305104c209ed0a357624
+
+Rule entries
+
+R-2026-10-18-A. Entry fingerprint
+
+Entered 18 October 2026. From this date every entry carries a fingerprint: the SHA-256 checksum of its canonical text, taken on the day the entry goes in.
+
+The canonical text is built the same way every time, so anyone can recompute it. The first line is the tag chr-entry-v1. Then come fifteen lines, one per field, in this order: id, section, scoring_date, sort_date, test, owner, date_source, status, measure, money, funding, argument, cost_to_date, supersedes_id, supersedes_hash. Each line is the field name, an equals sign, then the value. A field with no value is left empty after the equals sign. In each value, the text is normalised to Unicode NFC, every run of spaces, tabs or line breaks becomes one space, and spaces at the start and end are removed. The lines are joined by a single line feed, with no line feed at the end, and encoded as UTF-8. The fingerprint is the SHA-256 of those bytes, written as 64 lowercase letters and digits.
+
+A new date is a new entry. It gets its own id and fingerprint and cites the old entry's id and fingerprint in supersedes_id and supersedes_hash. The old entry stays, with its old fingerprint.
+
+Scoring is also a new entry. On the scoring date the result goes in as a new, dated entry with its own id and fingerprint, citing the scored entry's id and fingerprint in supersedes_id and supersedes_hash. The scored entry is not edited in place.
+
+Every update publishes a manifest listing each entry's id and fingerprint, with the checksum of the CSV it was computed from. The manifest is kept in the public record and a Wayback Machine snapshot of it is taken at each update. Manifests are never replaced: each update adds a new one.
+
+If an entry's fingerprint ever differs from the last manifest without a dated entry explaining why, that is itself a correction to be entered. The script that computes the fingerprints is published in the record at scripts/hash_entries.py, and anyone can run it on the downloaded CSV. The public record's commit history is already a chain of checksums; the fingerprints let a reader check a single entry without trusting this page.
+
+This rule applies from 18 October 2026 forward. Entries scored on or before that date, including HR5334, stand as recorded.
+
+R-2026-10-18-B. Cost to date
+
+Entered 18 October 2026. Every entry carries a cost to date. It is filled in on the scoring date from a public source that shows the figures of whoever holds them: the department, Crown body, company, court, foreign government, the Bank of Canada or this desk. For governments that means sources such as the Public Accounts, a Departmental Results Report, the Main or Supplementary Estimates, a Parliamentary Budget Officer report, a written answer or Order Paper response, or an access to information release; for others, their own published reports, filings or records. The cell gives the amount, the source, its URL and the date it was read.
+
+If no public figure exists on the scoring date, the cost sub-score is FAILED, and the entry names whoever holds the figure. "Cannot determine" is FAILED. There are no exemptions. The desk never estimates a cost to date. Before the scoring date, the cell reads OPEN.
+
+Cost to date sits inside the existing cost sub-score. Like hype and means, it never changes the PASS or FAILED and never moves a cell.
+
+This rule applies from 18 October 2026 forward and is never applied retroactively. Entries already on the register carry cost to date OPEN until their own scoring date. Entries scored on or before 18 October 2026, including HR5334, keep cost to date OPEN.
 
 Ways promises get eaten
 
@@ -314,7 +348,7 @@ A failed entry is never overwritten. A new promise gets a new ID, which cites th
 
 ID | Original deadline | Date failed | Original test | Blocking layer | Priced cost | Chosen instead
 
-No entries as at 17 October 2026.
+No entries as at 18 October 2026.
 
 Scored entries
 
