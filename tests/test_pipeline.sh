@@ -95,4 +95,20 @@ console.log(a);' >/tmp/pl.out 2>&1 && ok "original shows $(sed 's/<[^>]*>//g' /t
 grep -q "<th>Hype</th><th>Means</th><th>Cost</th>" index.html && grep -q "r.hype_score" index.html && ok "page table shows hype, means and cost" || bad "sub-score columns on page"
 grep -q "| Cost to date | Hype | Means | Cost$" README.md && ok "README tables show hype, means and cost" || bad "README sub-score columns"
 
+echo "12. transfer cap: a sixth open transfer entry is refused (R-2026-10-19-H)"
+fresh; n=$(python3 -c "import csv;print(sum(1 for r in csv.DictReader(open('data/entries.csv',encoding='utf-8',newline='')) if r['id'].startswith('XFER-') and r['status']=='LIVE'))")
+for i in $(seq $((n+1)) 5); do python3 scripts/add_entry.py commit --id XFER-TEST-$i --section CANADA --scoring-date "30 Nov 2027" --test "PASS: test. FAILED: test." --owner "Test owner" --date-source "DESK-SET: test" >/dev/null || bad "cap setup $i"; done
+PATTERN="transfer cap" expect_fail "sixth open transfer entry refused" python3 scripts/add_entry.py commit --id XFER-TEST-6 --section CANADA --scoring-date "30 Nov 2027" --test "PASS: test. FAILED: test." --owner "Test owner" --date-source "DESK-SET: test"
+python3 scripts/add_entry.py commit --id NOTXFER-TEST --section CANADA --scoring-date "30 Nov 2027" --test "PASS: test. FAILED: test." --owner "Test owner" --date-source "DESK-SET: test" >/dev/null && ok "non-transfer entry still allowed at the cap" || bad "non-transfer entry refused"
+
+echo "13. next on the clock lists no CLOSED entry and carries the past-due line"
+fresh; build $SCRATCH >/dev/null 2>&1; python3 - <<'PY' && ok "strip clean" || bad "strip"
+import re,csv
+t=open('index.html',encoding='utf-8').read(); m=re.search(r'<!-- NEXT-ON-CLOCK -->(.*?)<!-- /NEXT-ON-CLOCK -->',t,re.S); assert m
+ids=re.findall(r'<tr><td>[^<]*</td><td>([^<]*)</td>',m.group(1)); assert len(ids)<=5
+rows=list(csv.DictReader(open('data/entries.csv',encoding='utf-8',newline='')))
+closed={r['supersedes_id'] for r in rows if r['supersedes_id']}
+assert not set(ids)&closed and 'Past their scoring date' in m.group(1)
+PY
+
 echo; [ $fails -eq 0 ] && echo "PIPELINE TESTS: ALL PASSED" || echo "PIPELINE TESTS: $fails FAILED"; exit $fails
