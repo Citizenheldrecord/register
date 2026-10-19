@@ -2,7 +2,7 @@
 
 The Register
 
-Entries as at 18 October 2026. Last change: 18 October 2026.
+Entries as at 19 October 2026. Last change: 19 October 2026.
 
 This page is a citizen-held register of Canadian public commitments. Each line is a test: what counts as a pass, the date it is scored and who answers for it. The main table holds files owned by Canadian governments, legislatures, courts, regulators, Crown bodies and companies, and foreign decisions a Canadian file depends on. My own commitments, and outside files I watch, sit in short sections of their own under the same rules.
 
@@ -50,7 +50,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-18d.csv (all 119 rows) is b2411869215652dcd22d101ccea7bda09953d65a0373998e2531b3f9f63ac7dc
+Checksum for this update: SHA-256 of public-live-rows-2026-10-19a.csv (all 126 rows) is 072f8011117a964daaf026de0c28a708addf620920306fc7c7863eadf8708040
 
 Rule entries
 
@@ -90,6 +90,30 @@ The v1 manifest of 18 October 2026 is kept unchanged in the record. From this up
 
 A second update on the same day carries a letter after the date, as in 2026-10-18b, so no published file is ever overwritten.
 
+R-2026-10-19-A. A capacity test on every levels plan
+
+Entered 19 October 2026. Each time an Immigration Levels Plan falls due under section 94(1) of the Immigration and Refugee Protection Act, the register enters one capacity test for that plan before it is tabled. PASS: any permanent resident target above the prior plan's target for the same year is made expressly conditional on at least one published, numeric capacity measure with a stated trigger (housing starts or completions against new residents, a dated corridor or financing milestone, or a productivity or investment series). PASS-NO-INCREASE: no increase, test not triggered. FAILED: an increase with no such condition. The entry sits in the section for recorded files, because it carries a third reading and its scoring day can move to within 3 days of tabling, with a hard stop at the statutory window. The next plan's entry goes in the day after the current one is scored. A companion reading of housing completions per additional resident may be entered; its baseline is filled only from a primary source and reads OPEN until then.
+
+R-2026-10-19-B. Transfer files: delivered against committed
+
+Entered 19 October 2026. The register may hold entries for single international assistance transfers, read from the department's own project data. Each is scored on a fixed date on three points: disbursed at or above committed, activity status closed or in finalisation, and a published result linked to the activity. Any one missing is FAILED. Limits: at most five transfer entries open at any time; only activities with a committed amount of CAD 50 million or more and a published planned end date. The figures are the department's own and are labelled as such; the register does not present them as an audit. A loss or fraud finding abroad is never attached to a Canadian file unless a source traces it to Canadian funds. No totals, rankings or commentary on recipients.
+
+R-2026-10-19-C. Ratchet hold
+
+Entered 19 October 2026. An entry that scores a reduction (a headcount, a spending share, a backlog) may carry a conditional hold entry: the lower level is still met on the same series three readings later. The hold is scored only if its parent is scored PASS. If the parent is FAILED, the hold is entered VOID on the same day, not extended. Holds sit in the section for recorded files, beside the register's other conditional entries.
+
+R-2026-10-19-D. Sunsets that fire
+
+Entered 19 October 2026. A statutory sunset, or a statutory review deadline, in a statute already tied to an entry on this register may be entered and scored on its own date. PASS: on that date the consolidated text shows the limit unamended and the power has lapsed, or the review report has been laid. FAILED: the limit was extended or removed, or the review was not laid, cited by bill number or Journals entry. This scores the statute's own date as written. It complements the entry that scores whether a new power carries a sunset at all (BOOMBUST-SUNSET). Statutes not tied to a register entry are not added.
+
+R-2026-10-19-E. Instrument tag
+
+Entered 19 October 2026. Where an entry involves public money, the money column begins with INSTRUMENT: followed by GRANT, LOAN, GUARANTEE, EQUITY or IN-KIND, set only when a primary page shows it, and otherwise INSTRUMENT: OPEN. For a loan or a guarantee, the cost to date on the scoring date gives the outstanding or guaranteed amount, from the Public Accounts of Canada or the lender's own published page, separately from any grant amount. The desk never estimates it.
+
+Labels and the fingerprint. Rules A, B and D also put EVIDENCE-HOLDER: SELF (the owner's own data) or EVIDENCE-HOLDER: INDEPENDENT (a body other than the owner) at the start of the measure column. These labels, and the INSTRUMENT tag, are written inside columns that already exist (test, measure, money, date source), so they are inside the chr-entry-v2 fingerprint. No column is added by these rules, so no new fingerprint layout is needed and chr-entry-v2 stays in use. A column added later still needs its own layout and rule entry (rule entry C of 18 October 2026).
+
+These rules apply from 19 October 2026 forward and are never retroactive. No existing entry is changed.
+
 Ways promises get eaten
 
 Four mechanisms, set out in the essay The Reforms Were Eaten: Why the Thermometer Must Be Citizen-Held. Link: OPEN (not yet published).
@@ -104,7 +128,7 @@ Time horizons and concentrated interests: those paid by the process are organize
 
 This register records from outside the institutions it measures. It does not ask any of them to measure itself.
 
-Canadian files (73), in order of scoring date
+Canadian files (78), in order of scoring date
 
 ID | Test | Owner | Scoring date | Date source | Status | Measure | Money | Funding | Argument | Cost to date | Hype | Means | Cost
 
@@ -192,6 +216,8 @@ FIR3 | PASS: the Commissioner publishes at least one enforcement action under th
 
 EIB-S12 | PASS: by 31 Mar 2027 any one is public: a Canada EIB framework or host agreement, an EIB privileges and immunities order in Canada Gazette Part II, or the Bank Act s.12(1) order and its terms. FAILED: none of the three; the entry records whether the EIB financed a Canadian project with no published terms | Minister of Finance | 31 Mar 2027 | DESK-SET: end of fiscal year 2026-27 (register cost column pilot) | LIVE | Canada Gazette Part II https://gazette.gc.ca/rp-pr/p2/2026/index-eng.html | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
 
+XFER-UA-GRAIN | PASS: by 31 Mar 2027 the GAC IATI record CA-3-P011836001 (Grain storage support for Ukrainian farms, implementer FAO) shows disbursement at or above commitment, activity status Closed or Finalisation, and a published result or results document linked to the activity. FAILED: any of the three missing. | Minister of International Development / Global Affairs Canada | 31 Mar 2027 | DESK-SET: six months after the planned end date of 30 Sep 2026, at fiscal year end | LIVE | EVIDENCE-HOLDER: SELF (GAC IATI publisher CA-3) https://d-portal.org/q.html?aid=CA-3-P011836001 | INSTRUMENT: OPEN (funding type in the IATI record not confirmed) | COMMITTED: CAD 52,000,000; SPEND: CAD 52,000,000 (d-portal mirror of GAC IATI record CA-3-P011836001, read 19 Oct 2026; re-read from the GAC Project Browser before scoring) | planned end 30 Sep 2026 | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
+
 SINGLE-TAB-FY | PASS: before fiscal year 2027-28 begins, the Government of Canada publishes one dated table carrying four columns in the same week: Russian fossil revenues by buyer, Chinese dual use flows, Ukraine aid and the Nord Stream trial outcome. FAILED: none | PMO / Finance / GAC / DND | 1 Apr 2027 | DESK-SET: start of fiscal year 2027-28, reading "before the next fiscal year" (row) | LIVE | OPEN | OPEN | OPEN | [publishes 26 Oct 2026] | OPEN until scoring date 1 Apr 2027 | OPEN | OPEN | OPEN
 
 NUCH-SCC | PASS: the SCC 42379 docket (BC v. Nuchatlaht) shows a hearing date set by 16 Apr 2027. FAILED: no hearing date by then. The decision becomes a new entry once the hearing is set | SCC; Attorney General of BC (appellant) | 16 Apr 2027 | DOCKET: SCC file 42379, Registrar schedule of 15 Oct 2026, last filing (intervener factums) 16 Apr 2027 | LIVE | SCC docket https://www.scc-csc.ca/case-dossier/info/dock-regi-eng.aspx?cas=42379 | OPEN | OPEN | https://barryesharp.substack.com/p/canada-does-not-lack-resources-it | OPEN until scoring date 16 Apr 2027 | OPEN | OPEN | OPEN
@@ -240,7 +266,11 @@ BOOMBUST-SUNSET | PASS: every federal Act or regulation creating a new emergency
 
 BOOMBUST-CORRIDOR | PASS: at least one energy or minerals corridor is in service at realized capacity within its announced dated window, on an operator or regulator primary source. FAILED: none | Government of Canada | 31 Dec 2027 | DESK-SET: end of calendar year 2027, the year the boom and bust test covers (split from BOOMBUST, economic base essay) | LIVE | Canada Energy Regulator https://www.cer-rec.gc.ca/ | OPEN | OPEN | [publishes 29 Oct 2026] | OPEN until scoring date 31 Dec 2027 | OPEN | OPEN | OPEN
 
+GUAR-DARL-PA | PASS: the Public Accounts of Canada 2026-27 (Volume I or the consolidated financial statements of the Canada Indigenous Loan Guarantee Corporation) disclose the federal guarantee supporting the Williams Treaties First Nations' Darlington financing, with an amount, in contingent liabilities or a named note. FAILED: not separately disclosed; an undifferentiated program total does not count. If the guarantee closed in a fiscal year other than 2026-27, re-date as a new entry citing this one; no silent shift. | President of the Treasury Board (tables); Receiver General for Canada (prepares) | 31 Dec 2027 | STATUTE: Financial Administration Act s.64(1), Public Accounts laid on or before 31 Dec following the fiscal year, or within the first 15 sitting days after if the House is not sitting | LIVE | EVIDENCE-HOLDER: INDEPENDENT (Public Accounts of Canada) https://laws-lois.justice.gc.ca/eng/acts/F-11/section-64.html | INSTRUMENT: GUARANTEE | federal share: OPEN (not stated in the Finance release of 23 Jun 2026) | closing fiscal year: OPEN | OPEN | https://www.canada.ca/en/department-finance/news/2026/06/government-announces-largest-indigenous-loan-guarantee-in-canadian-history-to-support-darlington-new-nuclear-project.html | OPEN until scoring date 31 Dec 2027 | OPEN | OPEN | OPEN
+
 HOUSING-STARTS | PASS: CMHC 2027 annual national housing starts at or above 417,000 (corrected 18 Oct 2026 from 430,000 to the low end of CMHC's 417,000 to 469,000 range, Housing Supply Report 10 Sep 2026; Barry go; a correction, not an extension). FAILED: below | CMHC / Housing, Infrastructure and Communities Canada | 28 Feb 2028 | SCHEDULED RELEASE: CMHC annual housing starts, 2027 | LIVE | CMHC starts release (September 2026 shown) https://www.cmhc-schl.gc.ca/media-newsroom/news-releases/2026/housing-starts-construction-data-september-2026 | OPEN | OPEN | https://barryesharp.substack.com/p/a-diplomats-fifteen-million-figure | OPEN until scoring date 28 Feb 2028 | OPEN | OPEN | OPEN
+
+CAP-RATIO-27 | PASS: 2027 national housing completions divided by the 2027 population increase (1 Jan 2027 to 1 Jan 2028) is higher than the same ratio for 2025. FAILED: not higher. Direction only, a desk reading, not a government target. Baseline 2025 ratio: OPEN until computed from the primary tables and entered as a dated note; the entry cannot be scored PASS while the baseline is OPEN. If the 1 Jan 2028 estimate is not out by 31 Mar 2028: dated 'not published' entry, score within 3 days of release. | Minister of Housing, Infrastructure and Communities / CMHC | 31 Mar 2028 | DESK-SET: aligned with the GDPPC-POP hard stop; the Statistics Canada estimate for 1 Jan 2028 is expected about then | LIVE | EVIDENCE-HOLDER: INDEPENDENT (CMHC Starts and Completions Survey, annual completions, Canada, table number OPEN; Statistics Canada 17-10-0009-01 quarterly population) https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000901 | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2028 | OPEN | OPEN | OPEN
 
 N3 | PASS: the industrial carbon price is confined in statute. FAILED: not | ECCC / Parliament | 30 Jun 2028 | DESK-SET: date set in the net zero essay of 4 Sep 2026: "By June 2028"; end of June used | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2028 | OPEN | OPEN | OPEN
 
@@ -251,6 +281,10 @@ PS-330 | PASS: the TBS table shows a 31 March 2029 federal public service popula
 DT1 | PASS: an official page states the outcome, date, owner and falsifier for Ukraine assistance and Op UNIFIER; both columns scored at end 2029. FAILED: no such page | PMO / GAC / DND | 31 Dec 2029 | GOVERNMENT PROMISE: DND says Op UNIFIER runs through 2029; DND gives the year only, so the desk uses 31 Dec 2029 (row check 16 Oct) | LIVE | OPEN | Main Estimates 2026/27, Department of National Defence, Vote 1 Operating expenditures $26,667,839,458 (organization summary) https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2026-27/organization-summary.csv; Vote 10 transfer payment Contributions in Support of the Military Training and Cooperation Program $2,089,417,850 https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2026-27/transfer-payments.csv. No 2026/27 Main Estimates or Supplementary Estimates (A) line names Ukraine or Op UNIFIER. Amounts only: the page shows no volume driver, named deliverable or end date. | OPEN | [publishes 23 Oct 2026] | OPEN until scoring date 31 Dec 2029 | OPEN | OPEN | OPEN
 
 MEGA-TEST | PASS: all three on published series: real business investment per worker above 54 per cent of the US level, real after tax median income up, and federal debt per working age household not rising. FAILED: any one misses | Minister of Finance | 31 Dec 2029 | DESK-SET: outer end of the three to five year test window (row) | LIVE | Fraser https://www.fraserinstitute.org/ ; StatCan https://www150.statcan.gc.ca/ ; Finance Canada https://www.canada.ca/en/department-finance.html | OPEN | OPEN | [publishes 29 Oct 2026] | OPEN until scoring date 31 Dec 2029 | OPEN | OPEN | OPEN
+
+REVIEW-BCA-24 | PASS: the s.24(2) review report has been laid before the Parliamentary Review Committee and each House (Journals or Sessional Paper cited) by 26 Jun 2030. FAILED: not laid. Review date reading: OPEN (desk reading, to be confirmed). | designated Minister under Building Canada Act s.3 | 26 Jun 2030 | DESK-SET: a reading of Building Canada Act s.24(2), within five years after the day the Act came into force (26 Jun 2025); reading to be confirmed | LIVE | EVIDENCE-HOLDER: INDEPENDENT (Journals; LEGISinfo) https://laws-lois.justice.gc.ca/eng/acts/B-9.89/FullText.html | OPEN | OPEN | OPEN | OPEN until scoring date 26 Jun 2030 | OPEN | OPEN | OPEN
+
+SUNSET-BCA-5 | PASS: on 27 Jun 2030 the consolidated Building Canada Act still carries the fifth anniversary limits in s.5(2), 8(4), 21(3), 22(2) and 23(2), unamended, so those powers have lapsed. FAILED: any of those limits extended or removed by an enacted bill before that date (bill cited). | Government of Canada / Parliament (designated minister under Building Canada Act s.3) | 27 Jun 2030 | STATUTE: Building Canada Act, S.C. 2025, c. 2, s. 4, in force 26 Jun 2025; s.5(2), 8(4), 21(3), 22(2) and 23(2) end the listed powers on the fifth anniversary | LIVE | EVIDENCE-HOLDER: INDEPENDENT (Justice Laws consolidation; LEGISinfo) https://laws-lois.justice.gc.ca/eng/acts/B-9.89/FullText.html | OPEN | OPEN | OPEN | OPEN until scoring date 27 Jun 2030 | OPEN | OPEN | OPEN
 
 A4 | PASS: an official report shows buyers outside the US take more than 50 per cent of Canadian gas exports. FAILED: not | NRCan / Government of Canada | 31 Dec 2035 | DESK-SET: date set in the access essay of 6 Sep 2026: "By 31 December 2035", against what the essay calls "Ottawa's own mid-decade target" | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2035 | OPEN | OPEN | OPEN
 
@@ -310,7 +344,7 @@ TIGER-UKMFG | PASS: the World Bank 2026 value for UK manufacturing share of GDP 
 
 SA2 | PASS: an official Saudi energy ministry or Saudi Aramco statement, or a named wire, reports Hormuz bypass pipeline capacity of about 10 million barrels a day by 12 Oct 2029. FAILED: no such report | Saudi Aramco / Saudi Ministry of Energy | 12 Oct 2029 | GOVERNMENT PROMISE: Saudi energy minister, 12 Oct 2026, two to three years; outer end used (row) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 12 Oct 2029 | OPEN | OPEN | OPEN
 
-Recorded facts and checkpoints (22)
+Recorded facts and checkpoints (24)
 
 These files record a fact, a status or a condition, or carry a reading or a scoring day the main table does not use. They are dated and kept, and are not counted in the main table.
 
@@ -352,11 +386,15 @@ AB-NINE | At least one of Alberta referendum questions 1 to 9 that passes become
 
 USMCA-AUTO27 | The CUSMA heavy truck regional value content requirement rises to 70 per cent (net cost) on 1 Jul 2027 as scheduled, or a written amendment or deferral is recorded. Recorded, not scored PASS or FAILED: the step takes effect by regulation unless amended; either is recorded as fact. Re-read the SOR text before public use. | USTR / GAC / Mexico (parties) | 1 Jul 2027 | STATUTE: CUSMA Rules of Origin Regulations, SOR/2020-155 (section not yet cited in desk files) | LIVE | Regulations https://laws-lois.justice.gc.ca/eng/regulations/SOR-2020-155/ | OPEN | OPEN | OPEN | OPEN until scoring date 1 Jul 2027 | OPEN | OPEN | OPEN
 
+HCAP-LVL-28 | PASS: the 2028 to 2030 Immigration Levels Plan makes any 2028 permanent resident target above the 2027 target set in the 2027 to 2029 plan expressly conditional on at least one published, numeric capacity measure with a stated trigger (housing starts or completions against new residents, a dated corridor or financing milestone, or a productivity or investment series). PASS-NO-INCREASE: the 2028 target is at or below the 2027 target, test not triggered. FAILED: the 2028 target is above the 2027 target with no such condition. If not tabled by 5 Nov 2027: written entry 'not tabled as of 5 Nov 2027', then score within 3 days of tabling, hard stop at the s.94 window; no silent extension. Baseline (2027 target): OPEN until the 2027 to 2029 plan is tabled. | Minister of Immigration, Refugees and Citizenship / IRCC | 5 Nov 2027 | STATUTE: IRPA s.94(1), report due 1 Nov or within the next 30 sitting days; scored the first Friday after 1 Nov | LIVE | EVIDENCE-HOLDER: SELF (IRCC levels plan) https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/corporate-initiatives/levels.html | OPEN | OPEN | OPEN | OPEN until scoring date 5 Nov 2027 | OPEN | OPEN | OPEN
+
 NPR5 | PASS line: the StatCan estimate for 1 Jan 2028 shows non-permanent residents under 5 per cent of the population. Recorded, not scored PASS or FAILED: binary, but scored on the first StatCan release covering 1 Jan 2028, not on a fixed date. | IRCC | 31 Dec 2027 (scored on first release for 1 Jan 2028) | GOVERNMENT PROMISE: IRCC levels plan target, non-permanent residents below 5 per cent of population by end 2027 | LIVE | StatCan Daily 23 Sep 2026 (population estimates) https://www150.statcan.gc.ca/n1/daily-quotidien/260923/dq260923a-eng.htm | Main Estimates 2026/27, Department of Citizenship and Immigration, Vote 1 Operating expenditures $1,891,240,714; Vote 10 Grants and contributions $2,394,061,854 (organization summary) https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2026-27/organization-summary.csv. Amounts only: the page shows no volume driver, named deliverable or end date. | OPEN | https://barryesharp.substack.com/p/a-diplomats-fifteen-million-figure | OPEN until scoring date 31 Dec 2027 (scored on first release for 1 Jan 2028) | OPEN | OPEN | OPEN
 
 CPL-RESPONSE | Only if the Coupling Test result is SUPPORTED: Estimates or statute show funding for at least one tested domain shifted from caseload coupled to outcome tied or fixed appropriations, with published median times. Recorded, not scored PASS or FAILED: conditional; void if the result is FAILED or BLANK. | President of the Treasury Board / TBS | 31 Mar 2029 | DESK-SET: end of fiscal year 2028-29, so that year's Estimates can show the shift (row) | LIVE | OPEN | OPEN | OPEN | [publishes 1 Nov 2026] | OPEN until scoring date 31 Mar 2029 | OPEN | OPEN | OPEN
 
 SIX-final | Status of Bills A to F at dissolution: moved in the life of this Parliament or not. Recorded, not scored PASS or FAILED: a status record, and the date moves earlier if Parliament dissolves early. | Parliament | 15 Oct 2029, or dissolution if earlier | STATUTE: fixed election date, third Monday of October 2029 (section not yet cited in desk files) | LIVE | OPEN | OPEN | OPEN | [publishes 10 Nov 2026] | OPEN until scoring date 15 Oct 2029, or dissolution if earlier | OPEN | OPEN | OPEN
+
+PS-330-HOLD | CONDITIONAL on PS-330 = PASS. PASS: the TBS table shows a 31 March 2032 federal public service population of 335,000 or fewer (the PS-330 tolerance). FAILED: above 335,000. VOID if PS-330 is FAILED, entered as VOID, not extended. If the 2032 figure is not published by 30 Jun 2032: dated 'not published' entry, score within 3 days of release; no extension. | President of the Treasury Board / TBS (OCHRO) | 30 Jun 2032 | DESK-SET: three readings after the parent, the same three year horizon the tax ration test uses | LIVE | TBS population table https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service.html | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2032 | OPEN | OPEN | OPEN
 
 G1/G2 | Outside file. Petroline flows, and Brent against $100, as a dated print each month until resolved. Recorded, not scored PASS or FAILED: a monthly print with no pass line. | Market | Last day of each month | DESK-SET: last day of each month, a monthly print (row) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date Last day of each month | OPEN | OPEN | OPEN
 
@@ -368,7 +406,7 @@ A failed entry is never overwritten. A new promise gets a new ID, which cites th
 
 ID | Original deadline | Date failed | Original test | Blocking layer | Priced cost | Chosen instead
 
-No entries as at 18 October 2026.
+No entries as at 19 October 2026.
 
 Scored entries
 
