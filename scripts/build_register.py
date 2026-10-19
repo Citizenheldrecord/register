@@ -81,6 +81,16 @@ def next_on_clock(rows, iso, n=5):
             % (rc.long_date(iso), cells, pd))
 
 
+CODEBERG = "https://codeberg.org/citizen-held-record/register"
+
+
+def copies_line(uid):
+    """Display only (rule entry R-2026-10-19-J): names the copies and the update the Codeberg copy is refreshed to."""
+    return ('<!-- COPIES --><p class="copies">Copies of this record: GitHub (this site) and Codeberg, <a href="%s">%s</a> '
+            '(manual copy; the desk refreshes it to update %s after each push and checks the checksum below).</p><!-- /COPIES -->'
+            % (CODEBERG, CODEBERG, html.escape(uid)))
+
+
 def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
     ld = rc.long_date(iso)
     t = one(r'(id="csvdata"[^>]*>).*?(</script>)', lambda m: m.group(1) + json.dumps(csv_text, ensure_ascii=False).replace("</", "<\\/") + m.group(2), tpl, "index.html", re.S)
@@ -88,6 +98,7 @@ def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
     t = one(r"SHA-256 of public-live-rows-\d{4}-\d\d-\d\d[a-z]?\.csv \(all \d+ rows\)", "SHA-256 of %s (all %d rows)" % (csv_name, len(rows)), t, "index.html")
     t = one(r'"public-live-rows-\d{4}-\d\d-\d\d[a-z]?\.csv"', '"%s"' % csv_name, t, "index.html")
     t = one(r'"public-live-rows-\d{4}-\d\d-\d\d[a-z]?\.json"', '"%s"' % json_name, t, "index.html")
+    t = one(r"<!-- COPIES -->.*?<!-- /COPIES -->", lambda m: copies_line(csv_name[len("public-live-rows-"):-4]), t, "index.html", re.S)
     strip = next_on_clock(rows, iso)
     if "<!-- NEXT-ON-CLOCK -->" in t:
         t = one(r"<!-- NEXT-ON-CLOCK -->.*?<!-- /NEXT-ON-CLOCK -->\n", lambda m: strip, t, "index.html", re.S)
