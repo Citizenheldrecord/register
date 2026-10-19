@@ -50,7 +50,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-19b.csv (all 131 rows) is 647ccf5b3dbf3f1cc3948abc8633979bbd6506a4d0a8d51c5065b1490957af58
+Checksum for this update: SHA-256 of public-live-rows-2026-10-19c.csv (all 131 rows) is 647ccf5b3dbf3f1cc3948abc8633979bbd6506a4d0a8d51c5065b1490957af58
 
 Rule entries
 
@@ -111,6 +111,24 @@ R-2026-10-19-E. Instrument tag
 Entered 19 October 2026. Where an entry involves public money, the money column begins with INSTRUMENT: followed by GRANT, LOAN, GUARANTEE, EQUITY or IN-KIND, set only when a primary page shows it, and otherwise INSTRUMENT: OPEN. For a loan or a guarantee, the cost to date on the scoring date gives the outstanding or guaranteed amount, from the Public Accounts of Canada or the lender's own published page, separately from any grant amount. The desk never estimates it.
 
 Labels and the fingerprint. Rules A, B and D also put EVIDENCE-HOLDER: SELF (the owner's own data) or EVIDENCE-HOLDER: INDEPENDENT (a body other than the owner) at the start of the measure column. These labels, and the INSTRUMENT tag, are written inside columns that already exist (test, measure, money, date source), so they are inside the chr-entry-v2 fingerprint. No column is added by these rules, so no new fingerprint layout is needed and chr-entry-v2 stays in use. A column added later still needs its own layout and rule entry (rule entry C of 18 October 2026).
+
+These rules apply from 19 October 2026 forward and are never retroactive. No existing entry is changed.
+
+R-2026-10-19-F. Next on the clock
+
+Entered 19 October 2026. The page shows, above the table of entries, the five nearest live entries not yet scored, on or after the date of the update, in scoring-date order, with scoring date, id, section and owner, and one line naming every live entry past its scoring date and not yet scored. It is display only and is rebuilt with each update, so it reads as at the update date. No column is added and no entry is changed; the chr-entry-v2 fingerprint is unaffected.
+
+R-2026-10-19-G. Snapshot check
+
+Entered 19 October 2026. After each update the page, the dated CSV and the dated manifest are saved to the Wayback Machine, and scripts/check_wayback.py checks that every recorded snapshot answers with its archived date. A missing or unresolved snapshot is reported, not hidden; where an update has none, the register says so in its failure or correction notes rather than leaving the gap silent.
+
+R-2026-10-19-H. Cap guard on transfer entries
+
+Entered 19 October 2026. The limit of five open transfer entries in rule entry B of 19 October 2026, and its CAD 50 million floor, can be changed only by a new dated public rule entry that states the old limit, the new limit and the reason. No transfer entry beyond the limit in force is entered before that rule entry is published. scripts/add_entry.py refuses a sixth open transfer entry (ids beginning XFER-), and a pipeline test proves it.
+
+R-2026-10-19-I. Third mirror
+
+Entered 19 October 2026. A third public copy of this repository is planned on Codeberg (codeberg.org), as a pull mirror of the GitHub repository, so the record survives the loss of any one host. Status: PENDING SETUP. The mirror address is added to this page by a later dated rule entry once it is live and its CSV checksum matches this copy.
 
 These rules apply from 19 October 2026 forward and are never retroactive. No existing entry is changed.
 
