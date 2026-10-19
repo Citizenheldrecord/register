@@ -11,7 +11,7 @@ supersedes fields), house grammar fails anywhere public, a prior entry changed o
 vanished against the previous manifest, or a printed checksum does not match.
 Nothing is written to the repository unless every check passes.
 """
-import argparse, glob, hashlib, json, os, re, shutil, sys, tempfile
+import argparse, glob, hashlib, html, json, os, re, shutil, sys, tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import regcore as rc
 import hash_entries as he
@@ -66,6 +66,21 @@ def render_readme(tpl, rows, csv_name, csv_sha, iso):
     return t[:a] + tables(rows) + t[b:]
 
 
+def next_on_clock(rows, iso, n=5):
+    """Display only (rule entry R-2026-10-19-F): the n nearest LIVE entries not yet scored,
+    on or after the build date, plus one line naming entries past their date and not yet scored."""
+    closers = rc.closed_by(rows)
+    open_ = [r for r in rows if r["status"] == "LIVE" and r["id"] not in closers and not rc.is_resolved(r)]
+    nxt = sorted([r for r in open_ if r["sort_date"] >= iso], key=lambda r: (r["sort_date"], r["id"]))[:n]
+    past = sorted([r for r in open_ if r["sort_date"] < iso], key=lambda r: (r["sort_date"], r["id"]))
+    cells = "".join("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (
+        html.escape(r["scoring_date"]), html.escape(r["id"]), html.escape(r["section"]), html.escape(r["owner"])) for r in nxt)
+    pd = ("Past their scoring date and not yet scored: %s." % ", ".join("%s (%s)" % (html.escape(r["id"]), html.escape(r["scoring_date"])) for r in past)) if past else "Past their scoring date and not yet scored: none."
+    return ('<!-- NEXT-ON-CLOCK --><h2>Next on the clock</h2><p>The five nearest entries still to be scored, by scoring date, as at %s.</p>'
+            '<table><thead><tr><th>Scoring date</th><th>ID</th><th>Section</th><th>Owner</th></tr></thead><tbody>%s</tbody></table><p>%s</p><!-- /NEXT-ON-CLOCK -->\n'
+            % (rc.long_date(iso), cells, pd))
+
+
 def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
     ld = rc.long_date(iso)
     t = one(r'(id="csvdata"[^>]*>).*?(</script>)', lambda m: m.group(1) + json.dumps(csv_text, ensure_ascii=False).replace("</", "<\\/") + m.group(2), tpl, "index.html", re.S)
@@ -73,6 +88,11 @@ def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
     t = one(r"SHA-256 of public-live-rows-\d{4}-\d\d-\d\d[a-z]?\.csv \(all \d+ rows\)", "SHA-256 of %s (all %d rows)" % (csv_name, len(rows)), t, "index.html")
     t = one(r'"public-live-rows-\d{4}-\d\d-\d\d[a-z]?\.csv"', '"%s"' % csv_name, t, "index.html")
     t = one(r'"public-live-rows-\d{4}-\d\d-\d\d[a-z]?\.json"', '"%s"' % json_name, t, "index.html")
+    strip = next_on_clock(rows, iso)
+    if "<!-- NEXT-ON-CLOCK -->" in t:
+        t = one(r"<!-- NEXT-ON-CLOCK -->.*?<!-- /NEXT-ON-CLOCK -->\n", lambda m: strip, t, "index.html", re.S)
+    else:
+        t = t.replace("<h2>Entries (", strip + "<h2>Entries (", 1)
     t = one(r"<h2>Entries \(\d+\)</h2>", "<h2>Entries (%d)</h2>" % len(rows), t, "index.html")
     t = one(r"Entries as at \d+ \w+ \d{4}\. Last change: \d+ \w+ \d{4}\.", "Entries as at %s. Last change: %s." % (ld, ld), t, "index.html")
     t = one(r"No entries as at \d+ \w+ \d{4}\.", "No entries as at %s." % ld, t, "index.html")

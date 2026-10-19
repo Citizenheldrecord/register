@@ -24,6 +24,9 @@ import hash_entries as he
 LAYERS = ["title", "courts", "regulation", "financing", "statute", "political choice"]
 
 
+XFER_CAP = 5   # R-2026-10-19-B; change only with a dated public rule entry (R-2026-10-19-H)
+
+
 def die(msg):
     print("ADD FAILED: " + msg, file=sys.stderr)
     sys.exit(1)
@@ -102,6 +105,12 @@ def main():
                "cost_to_date": "OPEN until scoring date %s" % a.scoring_date,
                "hype_score": "OPEN", "means_score": "OPEN", "cost_score": "OPEN"}
         if a.id in byid: die("id %s already exists" % a.id)
+        if a.id.upper().startswith("XFER-"):
+            closers = rc.closed_by(rows)
+            open_x = [r["id"] for r in rows if r["id"].upper().startswith("XFER-") and r["status"] == "LIVE"
+                      and r["id"] not in closers and not rc.is_resolved(r)]
+            if len(open_x) >= XFER_CAP:
+                die("transfer cap: %d open transfer entries (%s); the cap of %d (rule entry B of 19 October 2026) is raised only by a new dated public rule entry (R-2026-10-19-H)" % (len(open_x), ", ".join(open_x), XFER_CAP))
         append(header, rows, new, a.source, a.dry_run)
 
     elif a.cmd == "redate":
