@@ -50,7 +50,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-19c.csv (all 131 rows) is 647ccf5b3dbf3f1cc3948abc8633979bbd6506a4d0a8d51c5065b1490957af58
+Checksum for this update: SHA-256 of public-live-rows-2026-10-19d.csv (all 131 rows) is 647ccf5b3dbf3f1cc3948abc8633979bbd6506a4d0a8d51c5065b1490957af58
 
 Rule entries
 
@@ -129,6 +129,10 @@ Entered 19 October 2026. The limit of five open transfer entries in rule entry B
 R-2026-10-19-I. Third mirror
 
 Entered 19 October 2026. A third public copy of this repository is planned on Codeberg (codeberg.org), as a pull mirror of the GitHub repository, so the record survives the loss of any one host. Status: PENDING SETUP. The mirror address is added to this page by a later dated rule entry once it is live and its CSV checksum matches this copy.
+
+R-2026-10-19-J. Third copy on Codeberg
+
+Entered 19 October 2026. The third public copy named in rule entry I of 19 October 2026 is at https://codeberg.org/citizen-held-record/register. Status: LIVE (manual copy, refreshed by the desk after each update). It is a copy, not an automatic mirror: after each update the desk refreshes it and checks that its head commit and the checksum of the dated CSV match this repository. If they do not match, the register says so in its correction notes and names the update the copy last matched.
 
 These rules apply from 19 October 2026 forward and are never retroactive. No existing entry is changed.
 
