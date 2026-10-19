@@ -6,6 +6,8 @@ fresh(){ W=$(mktemp -d); cp -r "$ROOT"/. "$W"/; rm -rf "$W/local"; cd "$W"; }
 ok(){ echo "  PASS $1"; }; bad(){ echo "  FAIL $1"; fails=$((fails+1)); }
 expect_fail(){ local name=$1; shift; if "$@" >/tmp/pl.out 2>&1; then bad "$name (build should have failed)"; else grep -q "$PATTERN" /tmp/pl.out && ok "$name: $(grep -m1 "$PATTERN" /tmp/pl.out | cut -c1-110)" || { bad "$name (wrong reason)"; cat /tmp/pl.out; }; fi; }
 build(){ python3 scripts/build_register.py --date ${1:-$D}; }
+# Scratch update id for builds in tests: must sort after every real update, so the latest real manifest is the one checked.
+SCRATCH=2099-12-31
 
 echo "1. full build reproduces the current update ($D) byte for byte; first 18 Oct files untouched"
 fresh; T=$(mktemp -d); python3 scripts/build_register.py --date $D --out-dir $T >/dev/null || bad "build"
@@ -17,13 +19,13 @@ echo "2. an edited prior entry fails"
 fresh; python3 - <<'PY'
 p='data/entries.csv'; s=open(p,encoding='utf-8',newline='').read(); s=s.replace('records filed by 20 Oct','records filed by 21 Oct',1); open(p,'w',encoding='utf-8',newline='').write(s)
 PY
-PATTERN="CHANGED GX1b" expect_fail "edit caught" build 2026-10-19
+PATTERN="CHANGED GX1b" expect_fail "edit caught" build $SCRATCH
 
 echo "3. a vanished entry fails"
 fresh; python3 - <<'PY'
 p='data/entries.csv'; L=open(p,encoding='utf-8',newline='').read().split('\r\n'); open(p,'w',encoding='utf-8',newline='').write('\r\n'.join(L[:1]+L[2:]))
 PY
-PATTERN="VANISHED GX1b" expect_fail "deletion caught" build 2026-10-19
+PATTERN="VANISHED GX1b" expect_fail "deletion caught" build $SCRATCH
 
 echo "4. missing owner fails"
 fresh; python3 - <<'PY'
@@ -31,7 +33,7 @@ import csv,io
 p='data/entries.csv'; r=list(csv.DictReader(open(p,encoding='utf-8',newline=''))); h=list(r[0]); r.append(dict(r[0],id='NEW1',owner='',supersedes_id='',supersedes_hash=''))
 b=io.StringIO(); w=csv.DictWriter(b,fieldnames=h); w.writeheader(); w.writerows(r); open(p,'w',encoding='utf-8',newline='').write(b.getvalue())
 PY
-PATTERN="owner is empty" expect_fail "missing owner caught" build 2026-10-19
+PATTERN="owner is empty" expect_fail "missing owner caught" build $SCRATCH
 
 echo "5. curly quote and em dash fail house grammar"
 fresh; python3 scripts/add_entry.py --dry-run commit --id GRAM1 --section DESK --scoring-date "30 Nov 2026" --test "PASS: it works. FAILED: it does not" --owner "Barry Sharp (desk)" --date-source "DESK-SET: test" >/dev/null || bad "valid dry run"
@@ -62,7 +64,7 @@ import csv,io
 p='data/entries.csv'; r=list(csv.DictReader(open(p,encoding='utf-8',newline=''))); h=list(r[0]); r[0]['hype_score']='MATCHED'
 b=io.StringIO(); w=csv.DictWriter(b,fieldnames=h); w.writeheader(); w.writerows(r); open(p,'w',encoding='utf-8',newline='').write(b.getvalue())
 PY2
-PATTERN="CHANGED GX1b" expect_fail "sub-score edit caught" build 2026-10-19
+PATTERN="CHANGED GX1b" expect_fail "sub-score edit caught" build $SCRATCH
 
 echo "8. a resolved entry without cost to date or sub-scores fails the build"
 fresh; python3 - <<'PY'
@@ -71,10 +73,10 @@ p='data/entries.csv'; r=list(csv.DictReader(open(p,encoding='utf-8',newline=''))
 r.append(dict(r[0],id='BAD-SCORE',sort_date='2026-10-25',status='SCORED 25 Oct 2026: PASS',cost_to_date='OPEN until scoring date 20 Oct 2026'))
 b=io.StringIO(); w=csv.DictWriter(b,fieldnames=h); w.writeheader(); w.writerows(r); open(p,'w',encoding='utf-8',newline='').write(b.getvalue())
 PY
-PATTERN="needs cost to date" expect_fail "resolved without cost caught" build 2026-10-19
+PATTERN="needs cost to date" expect_fail "resolved without cost caught" build $SCRATCH
 
 echo "9. redate appends a new entry citing the old fingerprint"
-fresh; python3 scripts/add_entry.py redate --supersedes FIR1 --id FIR1-R1 --scoring-date "15 Jan 2027" --date-source "DESK-SET: test redate" >/tmp/pl.out && build 2026-10-19 >/tmp/pl2.out 2>&1 && grep -q "1 new since the latest manifest \['FIR1-R1'\]" /tmp/pl2.out && ok "redate built; old FIR1 kept" || { bad "redate"; cat /tmp/pl.out /tmp/pl2.out; }
+fresh; python3 scripts/add_entry.py redate --supersedes FIR1 --id FIR1-R1 --scoring-date "15 Jan 2027" --date-source "DESK-SET: test redate" >/tmp/pl.out && build $SCRATCH >/tmp/pl2.out 2>&1 && grep -q "1 new since the latest manifest \['FIR1-R1'\]" /tmp/pl2.out && ok "redate built; old FIR1 kept" || { bad "redate"; cat /tmp/pl.out /tmp/pl2.out; }
 
 
 echo "10. page logic: a synthetic scored row marks its original CLOSED with a link (node, temp copy)"
