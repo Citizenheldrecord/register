@@ -2,7 +2,7 @@
 
 The Register
 
-Entries as at 19 October 2026. Last change: 19 October 2026.
+Entries as at 20 October 2026. Last change: 20 October 2026.
 
 This page is a citizen-held register of Canadian public commitments. Each line is a test: what counts as a pass, the date it is scored and who answers for it. The main table holds files owned by Canadian governments, legislatures, courts, regulators, Crown bodies and companies, and foreign decisions a Canadian file depends on. My own commitments, and outside files I watch, sit in short sections of their own under the same rules.
 
@@ -50,7 +50,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-19e.csv (all 137 rows) is 5387cbf5a77d2f3cc2f1c9f8296781577369476a9b07302e7bfa2a847e44dba3
+Checksum for this update: SHA-256 of public-live-rows-2026-10-20b.csv (all 141 rows) is 1c764a6148910edfef1b06edebde366270b622b311715a227b64f05429f89d23
 
 Rule entries
 
@@ -346,7 +346,7 @@ CPL-RESULT | PASS: Coupling Test Studies A to C reported with URL under the froz
 
 RWE-READ | PASS: a federal minister, parliamentary committee, department or officer of Parliament publicly cites or responds to an entry in this register, with a URL on the public record (Hansard, committee evidence or a departmental publication). FAILED: none | Barry Sharp (desk) | 17 Oct 2027 | DESK-SET: one year after the test was set on 17 Oct 2026 (row) | LIVE | OPEN | OPEN | OPEN | [publishes 4 Nov 2026] | OPEN until scoring date 17 Oct 2027 | OPEN | OPEN | OPEN
 
-Outside files we watch (17)
+Outside files we watch (20)
 
 ID | Test | Owner | Scoring date | Date source | Status | Measure | Money | Funding | Argument | Cost to date | Hype | Means | Cost
 
@@ -366,6 +366,8 @@ LIM-ORIGIN | France publishes the persons held in garde a vue or prosecuted over
 
 SA1 | PASS: the Saudi energy ministry, Saudi Aramco or a named wire (Reuters, Bloomberg, AP) reports the converted gas line carrying about 1.2 million barrels a day of crude by 7 Dec. FAILED: no such report | Saudi Aramco / Saudi Ministry of Energy | 7 Dec 2026 | GOVERNMENT PROMISE: Saudi energy minister, 12 Oct 2026, seven to eight weeks; eight weeks used (row) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 7 Dec 2026 | OPEN | OPEN | OPEN
 
+UK-M6-RESP-2 | PASS: by 20 Jan 2027 the UK government publishes its full response to the recommendations of the UK Covid-19 Inquiry Module 6 report (adult social care, published 20 Oct 2026), stating accept or reject for each recommendation, including Recommendation 2 (enable the safe and timely isolation of care home residents, including following discharge from hospital). FAILED: no published response by 20 Jan 2027, or a response that states no position on Recommendation 2 | Department of Health and Social Care | 20 Jan 2027 | GOVERNMENT PROMISE: the UK Covid-19 Inquiry FAQ states that the UK government and devolved administrations will publish a response to each report within three months of publication; Module 6 report published 20 October 2026 https://www.covid19.public-inquiry.uk/frequently-asked-questions/ (read 20 October 2026). Supersedes UK-M6-RESP (20 Apr 2027, set on the Inquiry's six month request), which goes in the same update; the earlier, government-stated date governs | LIVE | UK Covid-19 Inquiry Module 6 report https://covid19.public-inquiry.uk/documents/module-6-full-report/ ; GOV.UK publication page https://www.gov.uk/government/publications/uk-covid-19-inquiry-care-sector-module-6-report | OPEN | OPEN | OPEN | OPEN until scoring date 20 Jan 2027 | OPEN | OPEN | OPEN
+
 TIGER-DU | PASS: the KSE CHP tracker for Q4 2026 (or the EU envoy figure) shows China's share of Russia's high priority dual use imports below 75 per cent. FAILED: 75 per cent or higher | China / Russia trade; measure owner KSE Institute | 31 Jan 2027 | SCHEDULED RELEASE: KSE Institute CHP tracker, Q4 2026 edition | LIVE | KSE CHP tracker (Q3 2026 edition; Q4 scores) https://institute.kse.ua/wp-content/uploads/2026/10/russian_chp_tracker_eng_q3_2026.pdf | OPEN | OPEN | OPEN | OPEN until scoring date 31 Jan 2027 | OPEN | OPEN | OPEN
 
 AI3 | PASS: embedded evaluators publish findings without editorial control by 31 Jan 2027. FAILED: none | Embedded evaluators | 31 Jan 2027 | DESK-SET: three months after the 31 Oct 2026 embed date in AI1; the Wait Report gives only "first report after embed" (row) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Jan 2027 | OPEN | OPEN | OPEN
@@ -378,13 +380,17 @@ NS1 | PASS: the Hamburg Higher Regional Court delivers its first instance verdic
 
 LIM-REBUILD | A dated and financed reconstruction plan for the Limoges Hotel de Ville (MH-inscribed facades and roofs, 1975). PASS: by 17 Apr 2027 (six months) the Ville de Limoges and/or the State publish a reconstruction or restoration plan with BOTH a dated timetable (works start or completion date) AND a financing table naming funders and amounts (city, State/Culture, insurer, region, public subscription). Announcements without dates and money do not count. FAILED: dated entry within 30 days; no extension | Ville de Limoges (mayor Guillaume Guerin, owner of the building per Merimee); Ministere de la Culture / DRAC Nouvelle-Aquitaine (CoS-assigned, unverified) | 17 Apr 2027 | DESK-SET: six months, as recorded in the test (by 17 Apr 2027 (six months)) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 17 Apr 2027 | OPEN | OPEN | OPEN
 
+UK-M6-RESP | PASS: by 20 Apr 2027 the UK government publishes its full response to the recommendations of the UK Covid-19 Inquiry Module 6 report (adult social care, published 20 Oct 2026), stating accept or reject for each recommendation, including the recommendation on safe and timely isolation of care home residents, including following hospital discharge. FAILED: no published response by 20 Apr 2027, or a response that states no position on the isolation recommendation | Department of Health and Social Care | 20 Apr 2027 | INQUIRY REQUIREMENT: the Inquiry requires governments to respond within six months of publication of the Module 6 report (20 Oct 2026), as stated in the Welsh Government written statement of 20 Oct 2026 https://www.gov.wales/written-statement-uk-covid-19-inquiry-module-6-report | LIVE | UK Covid-19 Inquiry Module 6 report https://covid19.public-inquiry.uk/documents/module-6-full-report/ ; GOV.UK publication page https://www.gov.uk/government/publications/uk-covid-19-inquiry-care-sector-module-6-report | OPEN | OPEN | OPEN | OPEN until scoring date 20 Apr 2027 | OPEN | OPEN | OPEN
+
 TIGER-UKCN | PASS: the DBT or ONS figure for the year to March 2027 shows the UK goods deficit with China below £52.5bn. FAILED: at or above. Only the number is scored | UK Government (DBT) | 30 Jun 2027 | SCHEDULED RELEASE: DBT or ONS trade figure, year to March 2027 | LIVE | DBT China factsheet 24 Sep 2026 https://assets.publishing.service.gov.uk/media/6ab147d44c0f475de0a66afa/china-trade-and-investment-factsheet-2026-09-24.pdf | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
 TIGER-UKMFG | PASS: the World Bank 2026 value for UK manufacturing share of GDP is at or above 7.68 per cent. FAILED: below | UK Government | 31 Dec 2027 | SCHEDULED RELEASE: World Bank manufacturing share series, 2026 value | LIVE | World Bank series https://data.worldbank.org/indicator/NV.IND.MANF.ZS?locations=GB | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2027 | OPEN | OPEN | OPEN
 
+ATIP-CIRNAC-149 | CIRNAC ATIP A-2026-00149 (EA2026_0195120; hectares settled versus added, net title ledger, FY2015-16 to date). PASS: records released (full or partial package, or a written no-records answer) by the extended deadline, 21 Jan 2028. FAILED: not released by the extended deadline | Crown-Indigenous Relations and Northern Affairs Canada (CIRNAC) ATIP office | 21 Jan 2028 | DESK-SET: extended deadline computed by the desk, not stated by CIRNAC (clarified 23 Sep 2026; 30-day + 9(1)(a) 12 months + 9(1)(b) 90 days; s.27(1) third-party notice); extension letter 19 Oct 2026 states no due date | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 21 Jan 2028 | OPEN | OPEN | OPEN
+
 SA2 | PASS: an official Saudi energy ministry or Saudi Aramco statement, or a named wire, reports Hormuz bypass pipeline capacity of about 10 million barrels a day by 12 Oct 2029. FAILED: no such report | Saudi Aramco / Saudi Ministry of Energy | 12 Oct 2029 | GOVERNMENT PROMISE: Saudi energy minister, 12 Oct 2026, two to three years; outer end used (row) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 12 Oct 2029 | OPEN | OPEN | OPEN
 
-Recorded facts and checkpoints (26)
+Recorded facts and checkpoints (27)
 
 These files record a fact, a status or a condition, or carry a reading or a scoring day the main table does not use. They are dated and kept, and are not counted in the main table.
 
@@ -392,7 +398,9 @@ ID | Test | Owner | Scoring date | Date source | Status | Measure | Money | Fund
 
 HR5334 | Outside file. Which applied on 18 Oct: a rate under sections 112 or 113, a written section 115 waiver, or neither. Recorded as fact: SET-AND-WAIVED. The 16 Oct order set the duties at the statutory caps (500 and 100 per cent, section 2) and waived them under section 115 by written certification stated as submitted to Congress (section 4), effective 18 Oct. Certification text and Federal Register citation: OPEN. Recorded, not scored PASS or FAILED: every outcome is recorded as fact; none fails. | US Administration / US Treasury | 18 Oct 2026 | STATUTE: US Public Law 119-111 (H.R. 5334), sections 112, 113 and 115, deadline 18 Oct 2026 | SCORED 18 Oct 2026 | https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/ | OPEN | OPEN | [publishes 19 Oct 2026] | OPEN: scored on or before 18 Oct 2026; rule B is not retroactive | OPEN | OPEN | OPEN
 
-AB1 | Alberta referendum Question 10: remain, or a second ballot authorised, on the unofficial Elections Alberta result on election night or the next day. Recorded, not scored PASS or FAILED: the result is recorded as fact. | Alberta / Elections Alberta | 19 Oct 2026 | SCHEDULED RELEASE: Elections Alberta unofficial Question 10 result, referendum day 19 Oct 2026 | LIVE | Elections Alberta https://www.elections.ab.ca/elections/referendum/ | OPEN | OPEN | OPEN | OPEN until scoring date 19 Oct 2026 | OPEN | OPEN | OPEN
+AB1 | Alberta referendum Question 10: remain, or a second ballot authorised, on the unofficial Elections Alberta result on election night or the next day. Recorded, not scored PASS or FAILED: the result is recorded as fact. | Alberta / Elections Alberta | 19 Oct 2026 | SCHEDULED RELEASE: Elections Alberta unofficial Question 10 result, referendum day 19 Oct 2026 | CLOSED: scored in AB1-SCORED-20261020 | Elections Alberta https://www.elections.ab.ca/elections/referendum/ | OPEN | OPEN | OPEN | OPEN until scoring date 19 Oct 2026 | OPEN | OPEN | OPEN
+
+AB1-SCORED-20261020 | Alberta referendum Question 10: remain, or a second ballot authorised, on the unofficial Elections Alberta result on election night or the next day. Recorded, not scored PASS or FAILED: the result is recorded as fact. | Alberta / Elections Alberta | 19 Oct 2026 | SCHEDULED RELEASE: Elections Alberta unofficial Question 10 result, referendum day 19 Oct 2026 | SCORED 20 Oct 2026: PASS | https://results.elections.ab.ca/ Recorded as fact, not a desk position. PASS here means only that the result was published and recorded on its date; the register takes no side. Result: Question 10, Option 1 (Remain) leads on the unofficial count: Option 1 (Remain) 1,380,677; Option 2 (Referendum) 447,695; 4,479 of 5,586 voting areas or locations reporting, read 20 October 2026, 7:39 AM MT (lastUpdated 13:39 UTC). Scoring date 19 October 2026 (referendum day, the entry's date); result read and entered 20 October 2026, the next day, as the entry allows. Official results 29 October 2026. | OPEN | OPEN | OPEN | FAILED: no public cost-to-date figure for the referendum; held by Elections Alberta, which has published no referendum cost (Budget 2026 added a $20 million allocation, an allocation, not a cost) | OPEN | OPEN | FAILED
 
 CL-BASE | RECORDED, not scored: for each of four closers (finality with transfer phase-down; closed-versus-open register; ICA-equivalent screen; statutory fee-simple certainty) and each party (BC NDP, BC Conservatives, BC Greens), the URL of a platform commitment made before polls close, or "none found as of 24 Oct 2026". Scored with BC-PARCELS | Desk (Barry Sharp) | 24 Oct 2026 | DESK-SET: BC general election day, 24 Oct 2026 | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
 
@@ -450,7 +458,7 @@ A failed entry is never overwritten. A new promise gets a new ID, which cites th
 
 ID | Original deadline | Date failed | Original test | Blocking layer | Priced cost | Chosen instead
 
-No entries as at 19 October 2026.
+No entries as at 20 October 2026.
 
 Scored entries
 
@@ -461,3 +469,4 @@ Full history of every change: https://github.com/citizenheldrecord/register/comm
 Corrections: commit labels of 18 October 2026, a dated correction entry: https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-18-commit-labels.md
 Corrections: Schedule 1 listing of Pacific Link, 19 October 2026, a dated correction entry: https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-19-schedule1-listing.md
 Corrections: Codeberg commit labels of update 2026-10-19e, 20 October 2026, a dated correction entry: https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-20-codeberg-commit-labels.md
+Corrections: Grays Bay Road and Port fact-check line, 20 October 2026, a dated transparency correction entry (no published piece was affected): https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-20-graysbay-factcheck.md
