@@ -50,7 +50,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-19d.csv (all 131 rows) is 647ccf5b3dbf3f1cc3948abc8633979bbd6506a4d0a8d51c5065b1490957af58
+Checksum for this update: SHA-256 of public-live-rows-2026-10-19e.csv (all 137 rows) is 5387cbf5a77d2f3cc2f1c9f8296781577369476a9b07302e7bfa2a847e44dba3
 
 Rule entries
 
@@ -150,7 +150,7 @@ Time horizons and concentrated interests: those paid by the process are organize
 
 This register records from outside the institutions it measures. It does not ask any of them to measure itself.
 
-Canadian files (81), in order of scoring date
+Canadian files (87), in order of scoring date
 
 ID | Test | Owner | Scoring date | Date source | Status | Measure | Money | Funding | Argument | Cost to date | Hype | Means | Cost
 
@@ -167,6 +167,18 @@ TR1 | PASS: pm.gc.ca or a joint text gives a dated chapter list (energy, mineral
 BC1 | PASS: one major BC party publishes a one page answer covering all three cells: a DRIPA positive law answer, lender readable title and a Cowichan statute answer. FAILED: none does | BC parties (NDP, Conservatives, CentreBC, Greens) | 24 Oct 2026 | DESK-SET: BC general election day, 24 Oct 2026 (Wait Report calendar lock) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
 
 BC-PARCELS | PASS: the Government of BC or the BC NDP publishes the list of about 400 Crown parcels committed for transfer, with combined area, dated by 8 PM PT on 24 Oct. FAILED: no list. Recheck 24 to 48 hours after before entering FAILED | Government of British Columbia (Ministry of Forests / Indigenous Relations and Reconciliation) | 24 Oct 2026 | DESK-SET: before polls close in the BC general election, 8 PM PT 24 Oct 2026 (row) | LIVE | OPEN | BC 2026/27 Estimates, Indigenous Relations and Reconciliation: Land Transfers $50,000 thousand; Declaration Act Secretariat $4,147 thousand (line totals, not file specific) https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf | OPEN | [publishes 20 Oct 2026] | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
+
+TR-CANDU | PASS: a signed document (not the 3 Mar 2026 MOU, not a joint statement) published by PMO, NRCan, AtkinsRealis or TUNAS by 24 Oct naming the parties, site or capacity, a financing structure and dates. FAILED: none, or only a new MOU, joint statement or continued talks | PMO / NRCan; AtkinsRealis | 24 Oct 2026 | GOVERNMENT PROMISE: PMO release 6 Oct 2026 gives the visit as 21 to 24 Oct; scored at trip close | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
+
+TR-OFFTAKE | PASS: a published signed critical-minerals, uranium or energy offtake or investment by 24 Oct naming counterparties, a dollar value and delivery or investment dates. FAILED: opportunity language only | PMO / GAC / named companies | 24 Oct 2026 | GOVERNMENT PROMISE: PMO release 6 Oct 2026 gives the visit as 21 to 24 Oct; scored at trip close | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
+
+DSRB-CAP | PASS: a published primary by 24 Oct shows a new founding member of the Defence, Security and Resilience Bank beyond the nine reported on 30 Aug 2026, or paid-in or subscribed capital above about EUR 5 billion. FAILED: restatement only | Department of Finance / PMO | 24 Oct 2026 | GOVERNMENT PROMISE: PMO release 6 Oct 2026 gives the visit as 21 to 24 Oct; scored at trip close | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
+
+TR-FTA-ROUND | PASS: GAC or PMO publishes by 24 Oct a dated first (or next) Canada-Turkiye free trade agreement negotiating round. FAILED: talks continue only | GAC (Minister of International Trade) | 24 Oct 2026 | GOVERNMENT PROMISE: PMO release 6 Oct 2026 gives the visit as 21 to 24 Oct; scored at trip close | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
+
+TR-UA-PAGE | PASS: the visit's joint statement or PMO readout by 24 Oct carries a concrete Ukraine item (prisoner-exchange facilitation, corridor language, or a dated diplomatic step) in the same document as the commercial items. FAILED: absent, or in a separate document only | PMO | 24 Oct 2026 | GOVERNMENT PROMISE: PMO release 6 Oct 2026 gives the visit as 21 to 24 Oct; scored at trip close | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
+
+TR-DEF | PASS: if a defence-industrial, export or procurement item is announced by 24 Oct, the published text states end-use or re-export conditions (Notice to Exporters 1108 standard or stronger). FAILED: an announcement with no stated end-use terms. NO SCORE if no defence item is announced | GAC (export controls) / DND | 24 Oct 2026 | GOVERNMENT PROMISE: PMO release 6 Oct 2026 gives the visit as 21 to 24 Oct; scored at trip close | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
 
 DGR1 | PASS: after the DGR notice comment period closes, a dated list or refuse decision track is on record. FAILED: none. A listing is not a CNSC licence and not a loan | Privy Council (Governor in Council) / NWMO / NRCan | 26 Oct 2026 | GOVERNMENT PROMISE: Canada Gazette notice, comment period closes 26 Oct 2026 (Wait Report calendar lock, FA3c) | LIVE | Canada Gazette Part II https://gazette.gc.ca/rp-pr/p2/2026/index-eng.html | OPEN | OPEN | OPEN | OPEN until scoring date 26 Oct 2026 | OPEN | OPEN | OPEN
 
@@ -447,3 +459,4 @@ Each entry scored PASS or FAILED is listed here with its date, its source link a
 Full history of every change: https://github.com/citizenheldrecord/register/commits/main
 
 Corrections: commit labels of 18 October 2026, a dated correction entry: https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-18-commit-labels.md
+Corrections: Schedule 1 listing of Pacific Link, 19 October 2026, a dated correction entry: https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-19-schedule1-listing.md
