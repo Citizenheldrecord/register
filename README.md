@@ -50,7 +50,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-21b.csv (all 145 rows) is 8512a69c9e6d049ba1136867b79631037bdeb29fded56127a6ce86b242f094f8
+Checksum for this update: SHA-256 of public-live-rows-2026-10-21c.csv (all 147 rows) is 8b4f1b50a9562dc93ad18f5e7750541a84846583a645b3a7830f46d1ac931196
 
 Rule entries
 
@@ -352,7 +352,7 @@ CPL-RESULT | PASS: Coupling Test Studies A to C reported with URL under the froz
 
 RWE-READ | PASS: a federal minister, parliamentary committee, department or officer of Parliament publicly cites or responds to an entry in this register, with a URL on the public record (Hansard, committee evidence or a departmental publication). FAILED: none | Barry Sharp (desk) | 17 Oct 2027 | DESK-SET: one year after the test was set on 17 Oct 2026 (row) | LIVE | OPEN | OPEN | OPEN | [publishes 4 Nov 2026] | OPEN until scoring date 17 Oct 2027 | OPEN | OPEN | OPEN
 
-Outside files we watch (21)
+Outside files we watch (23)
 
 ID | Test | Owner | Scoring date | Date source | Status | Measure | Money | Funding | Argument | Cost to date | Hype | Means | Cost
 
@@ -394,9 +394,13 @@ TIGER-UKCN | PASS: the DBT or ONS figure for the year to March 2027 shows the UK
 
 TIGER-UKMFG | PASS: the World Bank 2026 value for UK manufacturing share of GDP is at or above 7.68 per cent. FAILED: below | UK Government | 31 Dec 2027 | SCHEDULED RELEASE: World Bank manufacturing share series, 2026 value | LIVE | World Bank series https://data.worldbank.org/indicator/NV.IND.MANF.ZS?locations=GB | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2027 | OPEN | OPEN | OPEN
 
+KAMLOOPS-EXCAV | PASS: by 31 Dec 2027 a forensic excavation has begun at the former Kamloops Indian Residential School orchard site and a report of its findings is published. FAILED: either not done by 31 Dec 2027; the dated FAILED entry names the blocking layer: consent, funding or no decision. No extension. Sub-scores: HYPE = the 27 May 2021 release wording 'the confirmation of the remains of 215 children' against what is delivered; COST = Residential Schools Missing Children Community Support Fund figures from a sourced government page | Tk'emlups te Secwepemc (plan subject to the consent of the 38 Nations whose children attended) | 31 Dec 2027 | DESK-SET (Barry GO 21 Oct 2026): year end of the 2027 excavation plan reported by the Globe and Mail (2026) from a band presentation, SECONDARY https://www.theglobeandmail.com/canada/article-tkemlups-unmarked-graves-residential-school-kamloops/ . PROPOSED until a TteS primary document on the plan is on file | PROPOSED | TteS news https://tkemlups.ca/news/ ; latest band update 17 Feb 2026 https://tkemlups.ca/news/update-on-ongoing-investigation-at-former-kamloops-indian-residential-school/ | INSTRUMENT: OPEN. CIRNAC fund page: 161 funding agreements, more than $246.7 million as of 31 Mar 2025 http://rcaanc-cirnac.gc.ca/eng/1622742779529/1628608766235 ; read again on the scoring date | OPEN | OPEN | OPEN until scoring date 31 Dec 2027 | OPEN | OPEN | OPEN
+
 ATIP-CIRNAC-149 | CIRNAC ATIP A-2026-00149 (EA2026_0195120; hectares settled versus added, net title ledger, FY2015-16 to date). PASS: records released (full or partial package, or a written no-records answer) by the extended deadline, 21 Jan 2028. FAILED: not released by the extended deadline | Crown-Indigenous Relations and Northern Affairs Canada (CIRNAC) ATIP office | 21 Jan 2028 | DESK-SET: extended deadline computed by the desk, not stated by CIRNAC (clarified 23 Sep 2026; 30-day + 9(1)(a) 12 months + 9(1)(b) 90 days; s.27(1) third-party notice); extension letter 19 Oct 2026 states no due date | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 21 Jan 2028 | OPEN | OPEN | OPEN
 
 SA2 | PASS: an official Saudi energy ministry or Saudi Aramco statement, or a named wire, reports Hormuz bypass pipeline capacity of about 10 million barrels a day by 12 Oct 2029. FAILED: no such report | Saudi Aramco / Saudi Ministry of Energy | 12 Oct 2029 | GOVERNMENT PROMISE: Saudi energy minister, 12 Oct 2026, two to three years; outer end used (row) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 12 Oct 2029 | OPEN | OPEN | OPEN
+
+QC-SEATMATH | PASS (for the thesis): the platform of the party that forms government after the next federal GE lacks a dated title-map commitment or a dated one-law-for-all commitment (finished legal order traded). FAILED (for the thesis): a majority forms with both dated commitments in its platform. Finished legal order means BOTH a dated title-map commitment AND a dated one-law-for-all commitment in the winning platform. A minority result is still scored on the platform and flagged MINORITY. Record seats won outside Quebec against Quebec seats (Elections Canada Table 7). Rules approved by Barry 21 Oct 2026 | Governing party after the next federal general election; scorer: the desk | 14 Dec 2029 | PROPOSED: 30 days after Elections Canada validated results of the next GE; fixed-date fallback GE Mon 15 Oct 2029 (Canada Elections Act s. 56.1(2), derived), score 14 Dec 2029; earlier if Parliament dissolves sooner | PROPOSED | Elections Canada official voting results Table 7 (seats by affiliation, by province) for the next GE; winning party platform text. Baseline 2025: https://www.elections.ca/res/rep/off/ovrGE45/62/table7E.html | OPEN | OPEN | drafts/QUEBEC-SEAT-MATH-BANKED-2026-10-21.md | OPEN until scoring date 14 Dec 2029 | OPEN | OPEN | OPEN
 
 Recorded facts and checkpoints (27)
 
