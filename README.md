@@ -50,7 +50,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-21.csv (all 143 rows) is fab2e014a20b65a8c61e252fa18552b1dce975f702f077a7ea99cbd7e24f65c7
+Checksum for this update: SHA-256 of public-live-rows-2026-10-21b.csv (all 145 rows) is 8512a69c9e6d049ba1136867b79631037bdeb29fded56127a6ce86b242f094f8
 
 Rule entries
 
@@ -332,9 +332,11 @@ SUNSET-BCA-5 | PASS: on 27 Jun 2030 the consolidated Building Canada Act still c
 
 A4 | PASS: an official report shows buyers outside the US take more than 50 per cent of Canadian gas exports. FAILED: not | NRCan / Government of Canada | 31 Dec 2035 | DESK-SET: date set in the access essay of 6 Sep 2026: "By 31 December 2035", against what the essay calls "Ottawa's own mid-decade target" | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2035 | OPEN | OPEN | OPEN
 
-This desk's own commitments (7)
+This desk's own commitments (8)
 
 ID | Test | Owner | Scoring date | Date source | Status | Measure | Money | Funding | Argument | Cost to date | Hype | Means | Cost
+
+REG-PROV1 | PASS: by 1 Nov 2026 the register README and RULES file carry a provenance rule (posts and press are leads only; a row resting solely on a secondary is flagged with a dated replacement task and never scored on that alone), and rows C39-CTTE, C39-D1, S2, S7, MTL-CLOSE and NOV1 are each re-based on a primary or flagged. FAILED: not adopted, or any of the six neither fixed nor flagged | Barry Sharp (desk) | 1 Nov 2026 | DESK-SET: before the 2 Nov scoring cluster, so the six press-only rows are fixed or flagged first (row) | LIVE | Register README and RULES file https://github.com/citizenheldrecord/register | OPEN | OPEN | OPEN | OPEN until scoring date 1 Nov 2026 | OPEN | OPEN | OPEN
 
 CPL-FREEZE | PASS: the Coupling Test design is frozen in public before any data are touched: the full Substack piece is live with URL and archived the same evening, unedited after. FAILED: not live by 30 Nov | Barry Sharp (desk) | 30 Nov 2026 | DESK-SET: the piece is slotted for Sun 1 Nov 2026; 30 Nov is the latest acceptable date if the slot slips (row) | LIVE | OPEN | OPEN | OPEN | [publishes 1 Nov 2026] | OPEN until scoring date 30 Nov 2026 | OPEN | OPEN | OPEN
 
@@ -350,7 +352,7 @@ CPL-RESULT | PASS: Coupling Test Studies A to C reported with URL under the froz
 
 RWE-READ | PASS: a federal minister, parliamentary committee, department or officer of Parliament publicly cites or responds to an entry in this register, with a URL on the public record (Hansard, committee evidence or a departmental publication). FAILED: none | Barry Sharp (desk) | 17 Oct 2027 | DESK-SET: one year after the test was set on 17 Oct 2026 (row) | LIVE | OPEN | OPEN | OPEN | [publishes 4 Nov 2026] | OPEN until scoring date 17 Oct 2027 | OPEN | OPEN | OPEN
 
-Outside files we watch (20)
+Outside files we watch (21)
 
 ID | Test | Owner | Scoring date | Date source | Status | Measure | Money | Funding | Argument | Cost to date | Hype | Means | Cost
 
@@ -369,6 +371,8 @@ DSL1 | PASS: no Ukrainian or Russian official report of a strike on energy infra
 LIM-ORIGIN | France publishes the persons held in garde a vue or prosecuted over the lycee movement and 17 Oct violence broken down by nationality and/or country of birth. PASS: by 30 Nov 2026 the Ministere de la Justice or the Ministere de l'Interieur publishes such a breakdown (nationality or country of birth; objective data permitted under CC 2007-557 DC cons. 29). A breakdown by ethnic origin is NOT the test (barred by loi 78-17 art. 6 and 2007-557 DC). FAILED: none published by 30 Nov 2026, dated entry within 30 days; no extension | Garde des Sceaux / Ministere de la Justice (DACG); Ministre de l'Interieur (CoS-assigned, unverified) | 30 Nov 2026 | DESK-SET: about six weeks after 17 Oct, matching the 2023 precedent (riots 27 Jun to 7 Jul, report Aug 2023) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Nov 2026 | OPEN | OPEN | OPEN
 
 SA1 | PASS: the Saudi energy ministry, Saudi Aramco or a named wire (Reuters, Bloomberg, AP) reports the converted gas line carrying about 1.2 million barrels a day of crude by 7 Dec. FAILED: no such report | Saudi Aramco / Saudi Ministry of Energy | 7 Dec 2026 | GOVERNMENT PROMISE: Saudi energy minister, 12 Oct 2026, seven to eight weeks; eight weeks used (row) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 7 Dec 2026 | OPEN | OPEN | OPEN
+
+WDG-VET | PASS: by 31 Dec 2026 at least one major poll aggregator (NYT, Silver Bulletin, DDHQ, FiftyPlusOne or VoteHub) publishes a written rule requiring microdata or vendor confirmation for new pollsters before inclusion. FAILED: bans of named firms or people only, or nothing | The poll aggregators (NYT, Silver Bulletin, DDHQ, FiftyPlusOne, VoteHub) | 31 Dec 2026 | DESK-SET: year end after the Wedgewood removal of 20 to 21 Oct 2026; read in the 2 Jan 2027 State of the Files (row) | LIVE | FiftyPlusOne https://blog.fiftyplusone.news/p/fiftyplusone-just-caught-a-pollster ; Silver Bulletin https://www.natesilver.net/p/nate-silver-2026-midterm-election-polls-model | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2026 | OPEN | OPEN | OPEN
 
 UK-M6-RESP-2 | PASS: by 20 Jan 2027 the UK government publishes its full response to the recommendations of the UK Covid-19 Inquiry Module 6 report (adult social care, published 20 Oct 2026), stating accept or reject for each recommendation, including Recommendation 2 (enable the safe and timely isolation of care home residents, including following discharge from hospital). FAILED: no published response by 20 Jan 2027, or a response that states no position on Recommendation 2 | Department of Health and Social Care | 20 Jan 2027 | GOVERNMENT PROMISE: the UK Covid-19 Inquiry FAQ states that the UK government and devolved administrations will publish a response to each report within three months of publication; Module 6 report published 20 October 2026 https://www.covid19.public-inquiry.uk/frequently-asked-questions/ (read 20 October 2026). Supersedes UK-M6-RESP (20 Apr 2027, set on the Inquiry's six month request), which goes in the same update; the earlier, government-stated date governs | LIVE | UK Covid-19 Inquiry Module 6 report https://covid19.public-inquiry.uk/documents/module-6-full-report/ ; GOV.UK publication page https://www.gov.uk/government/publications/uk-covid-19-inquiry-care-sector-module-6-report | OPEN | OPEN | OPEN | OPEN until scoring date 20 Jan 2027 | OPEN | OPEN | OPEN
 
