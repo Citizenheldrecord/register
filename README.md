@@ -2,7 +2,7 @@
 
 The Register
 
-Entries as at 20 October 2026. Last change: 20 October 2026.
+Entries as at 21 October 2026. Last change: 21 October 2026.
 
 This page is a citizen-held register of Canadian public commitments. Each line is a test: what counts as a pass, the date it is scored and who answers for it. The main table holds files owned by Canadian governments, legislatures, courts, regulators, Crown bodies and companies, and foreign decisions a Canadian file depends on. My own commitments, and outside files I watch, sit in short sections of their own under the same rules.
 
@@ -50,7 +50,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-20b.csv (all 141 rows) is 1c764a6148910edfef1b06edebde366270b622b311715a227b64f05429f89d23
+Checksum for this update: SHA-256 of public-live-rows-2026-10-21.csv (all 143 rows) is fab2e014a20b65a8c61e252fa18552b1dce975f702f077a7ea99cbd7e24f65c7
 
 Rule entries
 
@@ -150,7 +150,7 @@ Time horizons and concentrated interests: those paid by the process are organize
 
 This register records from outside the institutions it measures. It does not ask any of them to measure itself.
 
-Canadian files (87), in order of scoring date
+Canadian files (89), in order of scoring date
 
 ID | Test | Owner | Scoring date | Date source | Status | Measure | Money | Funding | Argument | Cost to date | Hype | Means | Cost
 
@@ -187,6 +187,8 @@ S2 | Montreal summit. PASS: by 30 Oct, a lender term sheet with a named counterp
 S7 | EU associate member status, created or abandoned, on the Montreal rule. PASS: by 30 Oct, a lender term sheet with a named counterparty on at least one corridor, or a published exclusions page (no free movement, no dynamic alignment, no unvoted contribution). A heads of agreement does not count. FAILED: anything less. No extension | PMO / GAC | 30 Oct 2026 | GOVERNMENT PROMISE: Montreal summit 29 to 30 Oct 2026, to which the Prime Minister deferred substance at Strasbourg on 17 Sep (proof test scoreboard S1: Reuters, POLITICO 17 Sep) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Oct 2026 | OPEN | OPEN | OPEN
 
 MTL-CLOSE | Montreal close, scored with S2 and S7. PASS: by 30 Oct, a lender term sheet with a named counterparty on at least one corridor, or a published exclusions page (no free movement, no dynamic alignment, no unvoted contribution). A heads of agreement does not count. FAILED: anything less. No extension | PMO | 30 Oct 2026 | GOVERNMENT PROMISE: Montreal summit 29 to 30 Oct 2026, to which the Prime Minister deferred substance at Strasbourg on 17 Sep (proof test scoreboard S1: Reuters, POLITICO 17 Sep) | LIVE | OPEN | OPEN | OPEN | [publishes 28 Oct 2026] | OPEN until scoring date 30 Oct 2026 | OPEN | OPEN | OPEN
+
+BUDGET26-TABLE | PASS: Budget 2026 is tabled in the House of Commons on 5 November 2026 (House Journals or the Finance Canada budget page dated 5 November 2026). FAILED: not tabled on 5 November 2026; dated FAILED entry within 30 days naming the blocking layer, cost priced; no extension. Tests the tabling only; budget content tests (MD1, PS-330) stay on their own entries | Minister of Finance and National Revenue (François-Philippe Champagne) / Department of Finance Canada | 5 Nov 2026 | GOVERNMENT PROMISE: Finance Canada media advisory, 20 Oct 2026: the Minister 'announced that he will table Budget 2026 on November 5, 2026' https://www.canada.ca/en/department-finance/news/2026/10/government-of-canada-to-release-budget-2026-on-november-5-2026.html | LIVE | House of Commons Journals and Finance Canada Budget 2026 page, read 5 November 2026 | OPEN | OPEN | OPEN | OPEN until scoring date 5 Nov 2026 | OPEN | OPEN | OPEN
 
 IRV1 | PASS: Irving Oil reports Saint John refinery operations resumed (Operation Osprey) by 18 Nov. FAILED: not resumed by 18 Nov; the slip is recorded in the entry | Irving Oil | 18 Nov 2026 | COMPANY TIMETABLE: Irving Oil Operation Osprey turnaround, stream to stream 8 Sep to 18 Nov 2026, on the Irving Oil turnaround page (paying the molecule SOFTS, row 39) | LIVE | Irving Oil turnaround page https://www.irvingoil.com/en-CA/discover-irving/fall-turnaround | OPEN | OPEN | OPEN | OPEN until scoring date 18 Nov 2026 | OPEN | OPEN | OPEN
 
@@ -229,6 +231,8 @@ CGL-EQ2 | PASS: TC Energy or a partner announces the close of the second planned
 EA-LEAVE | PASS: a leave judgment (granted or dismissed) is on the SCC 42261 docket (Emergencies Act) by 31 Dec 2026. FAILED: no leave judgment by 31 Dec 2026 | SCC; AG Canada (applicant) | 31 Dec 2026 | DESK-SET: end of calendar year 2026; leave material went to the judges on 14 Sep 2026 and the SCC sets no deadline for leave decisions (row) | LIVE | SCC docket https://www.scc-csc.ca/cases-dossiers/search-recherche/42261/ | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2026 | OPEN | OPEN | OPEN
 
 CAN2 | PASS: a written extension or replacement of China's suspension of 100 per cent tariffs on Canadian canola meal and peas (and 25 per cent on lobster and crab) by 31 Dec. FAILED: the suspension lapses and the tariffs return on 1 Jan 2027. Canada dependency: Canadian canola meal, pea, lobster and crab exports. Merged on 17 Oct 2026 with CAN1 (canola holiday extended in writing or not), which was dated 31 Oct; the merged entry uses 31 Dec 2026, the date in the handshake essay | China Customs Tariff Commission / MOFCOM; GAC / AAFC | 31 Dec 2026 | GOVERNMENT PROMISE: China Customs Tariff Commission Announcement 2026 No. 2, suspension ends 31 Dec 2026 (Xinhua 27 Feb 2026; GAC March 2026); the handshake essay gives the same date | LIVE | GAC March 2026 https://www.canada.ca/en/global-affairs/news/2026/03/canada-secures-renewed-market-access-with-china-to-boost-exports-and-strengthen-economic-collaboration.html | OPEN | OPEN | https://barryesharp.substack.com/p/the-handshake-is-not-the-clock | OPEN until scoring date 31 Dec 2026 | OPEN | OPEN | OPEN
+
+CDRC-CIF | PASS: by 31 December 2026 the Cabinet Directive on Regulatory Competitiveness and Red Tape Reduction is published on canada.ca (TBS) with an effective date of 31 December 2026 or earlier, and the 2018 Cabinet Directive on Regulation is marked replaced or archived. FAILED: directive not in effect on 31 December 2026 (no published text, or effective date moved); dated FAILED entry within 30 days; no extension. Tests the instrument, not the release; read 2 January 2027 with the state of the files. The 'two for one' burden rule is a hype exhibit only, not tested here | President of the Treasury Board (Shafqat Ali) / Treasury Board of Canada Secretariat | 31 Dec 2026 | GOVERNMENT PROMISE: TBS news release, 21 Oct 2026: 'The New Cabinet directive takes effect on December 31, 2026, replacing the 2018 Cabinet Directive on Regulation.' https://www.canada.ca/en/treasury-board-secretariat/news/2026/10/government-of-canada-launches-new-directive-to-reduce-red-tape-and-strengthen-competitiveness.html | LIVE | TBS Cabinet Directive on Regulatory Competitiveness and Red Tape Reduction page on canada.ca, read 2 January 2027 | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2026 | OPEN | OPEN | OPEN
 
 C1/O1 | PASS: one corridor with two independent financed or offtake signatures, a named FID plus a second financed or offtake signature on the same corridor. FAILED: not met | Government of Canada (PMO / Major Projects Office) and corridor proponents | 1 Jan 2027 | DESK-SET: set ahead of the US tariff line on Canadian vehicles and steel due 1 Jan 2027 (proof test O1; see TAR1) | LIVE | MPO projects https://www.canada.ca/en/privy-council/major-projects-office/projects/national.html | Main Estimates 2026/27, Privy Council Office, Vote 1 Program expenditures $224,349,806 (organization summary; the Major Projects Office has no vote of its own) https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2026-27/organization-summary.csv; Supplementary Estimates (A) 2026/27, Privy Council Office, Funding for the Major Projects Office (Budget 2025) $7,507,508 https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/supplementary-estimates/explanation-requirements-a-2026-27.csv. Amounts only: the page shows no volume driver, named deliverable or end date. | OPEN | https://barryesharp.substack.com/p/the-face-is-not-the-factory | OPEN until scoring date 1 Jan 2027 | OPEN | OPEN | OPEN
 
@@ -458,7 +462,7 @@ A failed entry is never overwritten. A new promise gets a new ID, which cites th
 
 ID | Original deadline | Date failed | Original test | Blocking layer | Priced cost | Chosen instead
 
-No entries as at 20 October 2026.
+No entries as at 21 October 2026.
 
 Scored entries
 
