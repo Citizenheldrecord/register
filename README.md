@@ -2,7 +2,7 @@
 
 The Register
 
-Entries as at 21 October 2026. Last change: 21 October 2026.
+Entries as at 22 October 2026. Last change: 22 October 2026.
 
 This page is a citizen-held register of Canadian public commitments. Each line is a test: what counts as a pass, the date it is scored and who answers for it. The main table holds files owned by Canadian governments, legislatures, courts, regulators, Crown bodies and companies, and foreign decisions a Canadian file depends on. My own commitments, and outside files I watch, sit in short sections of their own under the same rules.
 
@@ -50,7 +50,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-21c.csv (all 147 rows) is 8b4f1b50a9562dc93ad18f5e7750541a84846583a645b3a7830f46d1ac931196
+Checksum for this update: SHA-256 of public-live-rows-2026-10-22.csv (all 147 rows) is 8b4f1b50a9562dc93ad18f5e7750541a84846583a645b3a7830f46d1ac931196
 
 Rule entries
 
@@ -136,6 +136,12 @@ Entered 19 October 2026. The third public copy named in rule entry I of 19 Octob
 
 These rules apply from 19 October 2026 forward and are never retroactive. No existing entry is changed.
 
+R-2026-10-22-A. Reading aids and essay links (display only)
+
+Entered 22 October 2026. The page shows three display-only aids, rebuilt with each update from the table: a status summary at the top (counts by status and section, entries past their scoring date and not yet scored, and entries due in the next 30 days), a box on how to read the page with one worked example, and a list of the essays that set tests. The essay column shows a link to the published essay where one exists, read from data/essay-links.csv in this record, which maps an entry id to the essay's title, address and publication date. Each row id links to that row. No column is added to the CSV and no entry is changed: a row's own argument field stays as entered, and where the two differ the published essay link is the reading aid and the entry is the record. The essay-links file is outside the chr-entry-v2 fingerprint; changes to it are listed in the public record's commit history. Where an entry as entered shows an internal desk working reference (a working file name or note), the page and README show "[internal desk reference hidden in display, 22 Oct 2026]" in its place; the entry, the CSV and the JSON stay as entered, and each such case is listed in a dated correction entry.
+
+This rule applies from 22 October 2026 forward and is never retroactive. No existing entry is changed.
+
 Ways promises get eaten
 
 Four mechanisms, set out in the essay The Reforms Were Eaten: Why the Thermometer Must Be Citizen-Held. Link: OPEN (not yet published).
@@ -190,13 +196,13 @@ MTL-CLOSE | Montreal close, scored with S2 and S7. PASS: by 30 Oct, a lender ter
 
 BUDGET26-TABLE | PASS: Budget 2026 is tabled in the House of Commons on 5 November 2026 (House Journals or the Finance Canada budget page dated 5 November 2026). FAILED: not tabled on 5 November 2026; dated FAILED entry within 30 days naming the blocking layer, cost priced; no extension. Tests the tabling only; budget content tests (MD1, PS-330) stay on their own entries | Minister of Finance and National Revenue (François-Philippe Champagne) / Department of Finance Canada | 5 Nov 2026 | GOVERNMENT PROMISE: Finance Canada media advisory, 20 Oct 2026: the Minister 'announced that he will table Budget 2026 on November 5, 2026' https://www.canada.ca/en/department-finance/news/2026/10/government-of-canada-to-release-budget-2026-on-november-5-2026.html | LIVE | House of Commons Journals and Finance Canada Budget 2026 page, read 5 November 2026 | OPEN | OPEN | OPEN | OPEN until scoring date 5 Nov 2026 | OPEN | OPEN | OPEN
 
-IRV1 | PASS: Irving Oil reports Saint John refinery operations resumed (Operation Osprey) by 18 Nov. FAILED: not resumed by 18 Nov; the slip is recorded in the entry | Irving Oil | 18 Nov 2026 | COMPANY TIMETABLE: Irving Oil Operation Osprey turnaround, stream to stream 8 Sep to 18 Nov 2026, on the Irving Oil turnaround page (paying the molecule SOFTS, row 39) | LIVE | Irving Oil turnaround page https://www.irvingoil.com/en-CA/discover-irving/fall-turnaround | OPEN | OPEN | OPEN | OPEN until scoring date 18 Nov 2026 | OPEN | OPEN | OPEN
+IRV1 | PASS: Irving Oil reports Saint John refinery operations resumed (Operation Osprey) by 18 Nov. FAILED: not resumed by 18 Nov; the slip is recorded in the entry | Irving Oil | 18 Nov 2026 | COMPANY TIMETABLE: Irving Oil Operation Osprey turnaround, stream to stream 8 Sep to 18 Nov 2026, on the Irving Oil turnaround page [internal desk reference hidden in display, 22 Oct 2026] | LIVE | Irving Oil turnaround page https://www.irvingoil.com/en-CA/discover-irving/fall-turnaround | OPEN | OPEN | OPEN | OPEN until scoring date 18 Nov 2026 | OPEN | OPEN | OPEN
 
 GX2 | PASS: a hearing date for SCC file 42200 appears on the docket by 20 Nov. FAILED: none, entered within 30 days naming the blocking layer and priced cost. Docket rechecked 24 to 48 hours later before any FAILED entry | SCC Registrar / Court; parties in 42200 | 20 Nov 2026 | DOCKET: SCC file 42200, Chief Justice order of 14 Oct 2026 setting intervener factums for 20 Nov 2026; the hearing date test was set on that day by Barry's decision of 15 Oct (GX1 correction) | LIVE | SCC docket https://www.scc-csc.ca/cases-dossiers/search-recherche/42200/ | OPEN | OPEN | OPEN | OPEN until scoring date 20 Nov 2026 | OPEN | OPEN | OPEN
 
 C39-366 | PASS: the Bill C-39 legislative committee moves an amendment writing a consequence for day 366 of the one year clock in s. 65(10): a deemed decision, automatic referral to a named decision maker with its own fixed date, or a permanent published failure entry naming the official, cause and cost. FAILED: none moved. The entry records whether it carried | Legislative Committee on Bill C-39 (Chair James Maloney) | 27 Nov 2026 | DESK-SET: the Friday after clause-by-clause (week of 16 Nov), scored against committee minutes (Day 366 essay) | LIVE | CC39 meetings https://www.ourcommons.ca/Committees/en/CC39/Meetings | OPEN | OPEN | [publishes 22 Oct 2026] | OPEN until scoring date 27 Nov 2026 | OPEN | OPEN | OPEN
 
-DSL2 | PASS: PMO, NRCan or CER publishes the method or source for the figure "well over a million barrels of diesel per day". FAILED: none | PMO | 30 Nov 2026 | DESK-SET: end of November, seven weeks after the 11 Oct PMO readout that used the figure (maximising diesel SOFTS, MD-2) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Nov 2026 | OPEN | OPEN | OPEN
+DSL2 | PASS: PMO, NRCan or CER publishes the method or source for the figure "well over a million barrels of diesel per day". FAILED: none | PMO | 30 Nov 2026 | DESK-SET: end of November, seven weeks after the 11 Oct PMO readout that used the figure [internal desk reference hidden in display, 22 Oct 2026] | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Nov 2026 | OPEN | OPEN | OPEN
 
 FIR1 | PASS: the public Foreign Influence Transparency Registry shows at least 32 entries by 30 Nov. FAILED: 31 or fewer, entered with the live count | Foreign Influence Transparency Commissioner (Anton Boegman) | 30 Nov 2026 | DESK-SET: end of November, eight weeks after the 3 Oct registration deadline, for the more than 30 deadline submissions to be validated and made public (row) | LIVE | OPEN | OPEN | OPEN | [publishes 25 Oct 2026] | OPEN until scoring date 30 Nov 2026 | OPEN | OPEN | OPEN
 
@@ -286,7 +292,7 @@ C39 | PASS: Bill C-39 Royal Assent plus a published one year decision clock. FAI
 
 C39-D2 | PASS: Bill C-39 (or a successor) is enacted by 30 Jun 2027 with deemed outcomes in its clocks. FAILED: not enacted by then, or enacted without them (the one year timelines are then scored as decorations) | Parliament / Government of Canada | 30 Jun 2027 | DESK-SET: the C39 date of 30 Jun 2027, used as the backstop for Royal Assent (row) | LIVE | LEGISinfo https://www.parl.ca/legisinfo/en/bill/45-1/C-39 | OPEN | OPEN | [publishes 27 Oct 2026] | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
-O3 | PASS: a killable pilot default clause in the next major statute. FAILED: none | Parliament | 30 Jun 2027 | DESK-SET: proof test O3 had no date; 30 Jun 2027 was proposed on 12 Oct 2026 when every undated test was given a fixed date, and confirmed that day (row; ledger 12 Oct) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
+O3 | PASS: a killable pilot default clause in the next major statute. FAILED: none | Parliament | 30 Jun 2027 | DESK-SET: proof test O3 had no date; 30 Jun 2027 was proposed on 12 Oct 2026 when every undated test was given a fixed date, and confirmed that day [internal desk reference hidden in display, 22 Oct 2026] | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
 IND1-DEBT | PASS: net debt per person aged 15 to 64 at 31 Mar 2027 (Fiscal Monitor or Public Accounts; StatCan 17-10-0005-01) is lower than $54,007. FAILED: not lower | Minister of Finance | 30 Jun 2027 | SCHEDULED RELEASE: March 2027 Fiscal Monitor or Public Accounts, net debt at 31 Mar 2027 | LIVE | Fiscal Monitor (March 2026 edition; March 2027 scores) https://www.canada.ca/en/department-finance/services/publications/fiscal-monitor/2026/03.html | OPEN | OPEN | [publishes 3 Nov 2026] | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
@@ -400,7 +406,7 @@ ATIP-CIRNAC-149 | CIRNAC ATIP A-2026-00149 (EA2026_0195120; hectares settled ver
 
 SA2 | PASS: an official Saudi energy ministry or Saudi Aramco statement, or a named wire, reports Hormuz bypass pipeline capacity of about 10 million barrels a day by 12 Oct 2029. FAILED: no such report | Saudi Aramco / Saudi Ministry of Energy | 12 Oct 2029 | GOVERNMENT PROMISE: Saudi energy minister, 12 Oct 2026, two to three years; outer end used (row) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 12 Oct 2029 | OPEN | OPEN | OPEN
 
-QC-SEATMATH | PASS (for the thesis): the platform of the party that forms government after the next federal GE lacks a dated title-map commitment or a dated one-law-for-all commitment (finished legal order traded). FAILED (for the thesis): a majority forms with both dated commitments in its platform. Finished legal order means BOTH a dated title-map commitment AND a dated one-law-for-all commitment in the winning platform. A minority result is still scored on the platform and flagged MINORITY. Record seats won outside Quebec against Quebec seats (Elections Canada Table 7). Rules approved by Barry 21 Oct 2026 | Governing party after the next federal general election; scorer: the desk | 14 Dec 2029 | PROPOSED: 30 days after Elections Canada validated results of the next GE; fixed-date fallback GE Mon 15 Oct 2029 (Canada Elections Act s. 56.1(2), derived), score 14 Dec 2029; earlier if Parliament dissolves sooner | PROPOSED | Elections Canada official voting results Table 7 (seats by affiliation, by province) for the next GE; winning party platform text. Baseline 2025: https://www.elections.ca/res/rep/off/ovrGE45/62/table7E.html | OPEN | OPEN | drafts/QUEBEC-SEAT-MATH-BANKED-2026-10-21.md | OPEN until scoring date 14 Dec 2029 | OPEN | OPEN | OPEN
+QC-SEATMATH | PASS (for the thesis): the platform of the party that forms government after the next federal GE lacks a dated title-map commitment or a dated one-law-for-all commitment (finished legal order traded). FAILED (for the thesis): a majority forms with both dated commitments in its platform. Finished legal order means BOTH a dated title-map commitment AND a dated one-law-for-all commitment in the winning platform. A minority result is still scored on the platform and flagged MINORITY. Record seats won outside Quebec against Quebec seats (Elections Canada Table 7). Rules approved by Barry 21 Oct 2026 | Governing party after the next federal general election; scorer: the desk | 14 Dec 2029 | PROPOSED: 30 days after Elections Canada validated results of the next GE; fixed-date fallback GE Mon 15 Oct 2029 (Canada Elections Act s. 56.1(2), derived), score 14 Dec 2029; earlier if Parliament dissolves sooner | PROPOSED | Elections Canada official voting results Table 7 (seats by affiliation, by province) for the next GE; winning party platform text. Baseline 2025: https://www.elections.ca/res/rep/off/ovrGE45/62/table7E.html | OPEN | OPEN | [internal desk reference hidden in display, 22 Oct 2026] | OPEN until scoring date 14 Dec 2029 | OPEN | OPEN | OPEN
 
 Recorded facts and checkpoints (27)
 
@@ -470,7 +476,7 @@ A failed entry is never overwritten. A new promise gets a new ID, which cites th
 
 ID | Original deadline | Date failed | Original test | Blocking layer | Priced cost | Chosen instead
 
-No entries as at 21 October 2026.
+No entries as at 22 October 2026.
 
 Scored entries
 
@@ -482,3 +488,4 @@ Corrections: commit labels of 18 October 2026, a dated correction entry: https:/
 Corrections: Schedule 1 listing of Pacific Link, 19 October 2026, a dated correction entry: https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-19-schedule1-listing.md
 Corrections: Codeberg commit labels of update 2026-10-19e, 20 October 2026, a dated correction entry: https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-20-codeberg-commit-labels.md
 Corrections: Grays Bay Road and Port fact-check line, 20 October 2026, a dated transparency correction entry (no published piece was affected): https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-20-graysbay-factcheck.md
+Corrections: internal desk file path on public row QC-SEATMATH, 22 October 2026, a dated correction entry (hidden in display; no score, status or date affected): https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-22-qc-seatmath-internal-path.md
