@@ -15,6 +15,7 @@ import argparse, glob, hashlib, html, json, os, re, shutil, sys, tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import regcore as rc
 import hash_entries as he
+import reading_aids as ra
 
 ROOT = rc.ROOT
 
@@ -63,7 +64,9 @@ def render_readme(tpl, rows, csv_name, csv_sha, iso):
     a, b = t.find("Canadian files ("), t.find("Failure log\n")
     if a < 0 or b < a:
         raise rc.Fail("README: table block anchors not found")
-    return t[:a] + tables(rows) + t[b:]
+    fx = ra.display_fixes(rows)
+    drows = [dict(r, **fx.get(r["id"], {})) for r in rows]
+    return t[:a] + tables(drows) + t[b:]
 
 
 def next_on_clock(rows, iso, n=5):
@@ -104,6 +107,34 @@ def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
         t = one(r"<!-- NEXT-ON-CLOCK -->.*?<!-- /NEXT-ON-CLOCK -->\n", lambda m: strip, t, "index.html", re.S)
     else:
         t = t.replace("<h2>Entries (", strip + "<h2>Entries (", 1)
+    # Display-only reading aids (proposed rule entry R-2026-10-22-A): summary, how to read, essay links.
+    links = ra.load_links()
+    errs = ra.check_links(rows, links)
+    if errs:
+        raise rc.Fail("\n".join(errs))
+    blocks = (("STATUS-SUMMARY", ra.status_summary(rows, iso), "<h1>The Register</h1>\n", True),
+              ("HOW-TO-READ", ra.how_to_read(rows, links), "<details><summary>The rules</summary>", False),
+              ("ESSAYS", ra.essays_index(rows, links), "<h2>Failure log</h2>", False))
+    for mark, blk, anchor, after in blocks:
+        if "<!-- %s -->" % mark in t:
+            t = one(r"<!-- %s -->.*?<!-- /%s -->\n" % (mark, mark), lambda m, b=blk: b, t, "index.html", re.S)
+        else:
+            if anchor not in t:
+                raise rc.Fail("index.html: anchor for %s not found" % mark)
+            t = t.replace(anchor, (anchor + blk) if after else (blk + anchor), 1)
+    lj = '<script type="application/json" id="essaylinks">%s</script>' % ra.links_json(links)
+    if 'id="essaylinks"' in t:
+        t = one(r'<script type="application/json" id="essaylinks">.*?</script>', lambda m: lj, t, "index.html", re.S)
+    else:
+        t = t.replace("<script>\n", lj + "\n<script>\n", 1)
+    fj = '<script type="application/json" id="displayfix">%s</script>' % ra.fixes_json(rows)
+    if 'id="displayfix"' in t:
+        t = one(r'<script type="application/json" id="displayfix">.*?</script>', lambda m: fj, t, "index.html", re.S)
+    else:
+        t = t.replace(lj, lj + "\n" + fj, 1)
+    left = ra.scan_internal(rows)
+    if left:
+        raise rc.Fail("internal text still displayed: " + "; ".join(left))
     t = one(r"<h2>Entries \(\d+\)</h2>", "<h2>Entries (%d)</h2>" % len(rows), t, "index.html")
     t = one(r"Entries as at \d+ \w+ \d{4}\. Last change: \d+ \w+ \d{4}\.", "Entries as at %s. Last change: %s." % (ld, ld), t, "index.html")
     t = one(r"No entries as at \d+ \w+ \d{4}\.", "No entries as at %s." % ld, t, "index.html")
