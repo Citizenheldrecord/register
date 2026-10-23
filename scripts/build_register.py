@@ -220,6 +220,8 @@ def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
     bl = backlog_block(iso)
     if bl:
         blocks = blocks + (("BACKLOG", "<!-- BACKLOG --><section class=\"backlog\">%s</section><!-- /BACKLOG -->\n" % md_to_html(bl), "<h1>The Register</h1>\n", True),)
+    if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "plain-english.html")):
+        blocks = blocks + (("PLAIN-LINK", '<!-- PLAIN-LINK --><p><a href="plain-english.html">Read the register in plain English</a></p><!-- /PLAIN-LINK -->\n', "<h1>The Register</h1>\n", True),)
     for mark, blk, anchor, after in blocks:
         if "<!-- %s -->" % mark in t:
             t = one(r"<!-- %s -->.*?<!-- /%s -->\n" % (mark, mark), lambda m, b=blk: b, t, "index.html", re.S)
