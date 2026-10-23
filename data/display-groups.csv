@@ -185,3 +185,7 @@ C4-FILL,also_watched,test and date set by the register
 COVID-RESIDUE,also_watched,test and date set by the register
 KSM-SSD-DEC,also_watched,test and date set by the register
 C39-CTTE-SCORED-20261023,recorded,"recorded as fact, no pass line"
+FA3b-SCORED-20261023,recorded,result entry for FA3b (FAILED 23 Oct 2026); not a promise
+TR-ATA-USE,also_watched,no primary source link in the row yet
+TR-FTA-R1,government_promise,passes entry test
+TR-FTA-R1-SCHED,also_watched,no primary source link in the row yet
