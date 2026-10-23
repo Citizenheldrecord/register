@@ -125,5 +125,29 @@ def closed_by(rows):
     return {r["supersedes_id"]: r["id"] for r in rows if r.get("supersedes_id") and is_resolved(r)}
 
 
-def display_status(r, closers):
-    return "CLOSED: scored in %s" % closers[r["id"]] if r["id"] in closers else r["status"]
+def replaced_by(rows):
+    """Display only: map an entry id to the later non-scoring entry (new date or correction) that replaces it."""
+    return {r["supersedes_id"]: r["id"] for r in rows if r.get("supersedes_id") and not is_resolved(r)}
+
+
+CORRECTION_ID = re.compile(r"^(.+)-C(\d{8})$")
+CORRECTION_NOTE = re.compile(r"CORRECTION (\d{1,2} [A-Z][a-z]{2} \d{4}):")
+
+
+def is_correction(r, byid):
+    """True only for an entry explicitly marked as a correction: id <ORIGINAL>-C<YYYYMMDD>, a dated
+    'CORRECTION d Mon YYYY:' note in date_source, supersedes_id naming an existing unscored entry,
+    and the same test, scoring date and section as that entry."""
+    m = CORRECTION_ID.match(r.get("id", ""))
+    o = byid.get(r.get("supersedes_id", ""))
+    return bool(m and o and m.group(1) == o["id"] and CORRECTION_NOTE.search(r.get("date_source", ""))
+                and not is_resolved(o) and not is_resolved(r) and r["test"] == o["test"]
+                and r["scoring_date"] == o["scoring_date"] and r["sort_date"] == o["sort_date"] and r["section"] == o["section"])
+
+
+def display_status(r, closers, replaced=None):
+    if r["id"] in closers:
+        return "CLOSED: scored in %s" % closers[r["id"]]
+    if replaced and r["id"] in replaced:
+        return "REPLACED by %s; this entry is kept" % replaced[r["id"]]
+    return r["status"]

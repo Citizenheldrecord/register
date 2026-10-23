@@ -14,6 +14,10 @@ Scoring (a new dated entry; the scored entry stays unchanged):
       --evidence URL --cost-to-date "amount, source, URL, read DATE" or "FAILED: no public figure; held by ..." \
       --hype MATCHED --means OPEN --cost MIXED [--layer courts] [--id OLD-SCORED-20261030]
 
+Correction of an existing entry's wording (owner only; test, dates and section copied; the old entry stays):
+  python3 scripts/add_entry.py correct --supersedes OLD --owner "..." --corrected-on 2026-10-22 \
+      --reason "owner wording corrected" [--id OLD-C20261022]
+
 Put --dry-run before the subcommand to print the row without writing.
 """
 import argparse, os, sys
@@ -79,6 +83,11 @@ def main():
     for f in ("supersedes", "id", "scoring-date", "date-source"):
         r.add_argument("--" + f, required=True)
     r.add_argument("--test")
+    k = sub.add_parser("correct", help="append a correction of an existing entry's owner wording; the original stays unchanged")
+    for f in ("supersedes", "owner", "corrected-on"):
+        k.add_argument("--" + f, required=True)
+    k.add_argument("--reason", required=True, help="short public reason, e.g. 'owner wording corrected'")
+    k.add_argument("--id")
     s = sub.add_parser("score")
     for f in ("supersedes", "result", "scored-on", "evidence", "cost-to-date", "hype", "means", "cost"):
         s.add_argument("--" + f, required=True)
@@ -124,6 +133,22 @@ def main():
         for k in rc.SUBSCORE_COLS:
             new[k] = "OPEN"
         if a.test: new["test"] = a.test
+        append(header, rows, new, a.source, a.dry_run)
+
+    elif a.cmd == "correct":
+        old = byid.get(a.supersedes) or die("no entry %s" % a.supersedes)
+        if rc.is_resolved(old): die("%s is a scoring entry; correct it with a new scoring entry" % old["id"])
+        if old.get("supersedes_id"): die("%s itself replaces %s; correct the newest entry only" % (old["id"], old["supersedes_id"]))
+        if any(x.get("supersedes_id") == old["id"] for x in rows):
+            die("%s is already replaced or scored by another entry" % old["id"])
+        if a.owner == old["owner"]: die("--owner is unchanged; nothing to correct")
+        d = rc.short_date(a.corrected_on)
+        new = dict(old)
+        new.update({"id": a.id or "%s-C%s" % (old["id"], a.corrected_on.replace("-", "")), "owner": a.owner,
+                    "date_source": "%s. CORRECTION %s: %s; this entry replaces %s, which is kept unchanged in the record" % (old["date_source"].rstrip(". "), d, a.reason, old["id"]),
+                    "supersedes_id": old["id"], "supersedes_hash": he.fingerprint(old)})
+        if new["id"] in byid: die("id %s already exists" % new["id"])
+        if not rc.is_correction(new, byid): die("internal: row is not a well-formed correction")
         append(header, rows, new, a.source, a.dry_run)
 
     elif a.cmd == "score":

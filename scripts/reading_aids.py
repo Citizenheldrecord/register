@@ -40,7 +40,7 @@ def status_summary(rows, iso):
     secs = ", ".join("%s %d" % (s, sum(1 for r in rows if r["section"] == s)) for s in rc.SECTION_ORDER)
     a = lambda r: '<a href="#row-%s">%s</a>' % (E(r["id"]), E(r["id"]))
     pastline = ", ".join("%s (%s)" % (a(r), E(r["scoring_date"])) for r in past) or "none"
-    soonrows = "".join("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (E(r["scoring_date"]), a(r), E(r["section"]), E(r["owner"])) for r in soon)
+    soonrows = "".join("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (E(r["scoring_date"]), a(r), E(r["section"]), E(display_fixes([r]).get(r["id"], {}).get("owner", r["owner"]))) for r in soon)
     return ('<!-- STATUS-SUMMARY --><div class="panel summary"><b>Status at a glance, as at %s</b>'
             '<p>%d entries. Open and waiting for their scoring date: %d. Closed by a scoring entry: %d. Scoring entries: %d (PASS %d, FAILED %d, recorded as fact %d). Proposed, not yet live: %d.</p>'
             '<p>By section: %s.</p>'
@@ -65,7 +65,7 @@ def how_to_read(rows, links):
             '<li><b>Essay</b>: the column that names the essay that set the test, with a link once it is published.</li></ul>'
             '<p><b>One worked example.</b> Row <a href="#row-HR5334">HR5334</a>. The test: which applied on %s, a United States rate, a written waiver, or neither. Owner: %s. Date source: %s. Result: %s, recorded as fact. Essay: %s.</p>'
             '<p>To check a row yourself, download the CSV below and compare it with the checksum printed on this page. The rules underneath say exactly how.</p></div><!-- /HOW-TO-READ -->\n'
-            % (E(ex["scoring_date"]), E(ex["owner"]), E(ex["date_source"]), E(ex["status"]), essay))
+            % (E(ex["scoring_date"]), E(display_fixes([ex]).get(ex["id"], {}).get("owner", ex["owner"])), E(ex["date_source"]), E(ex["status"]), essay))
 
 
 def essays_index(rows, links):
@@ -93,7 +93,7 @@ HIDE = [
     re.compile(r"\s*\((?:[^()]*\bSOFTS\b[^()]*)\)"),
     re.compile(r"\s*\((?:[^()]*\bledger \d{1,2} \w{3}\b[^()]*)\)"),
 ]
-SCAN = re.compile(r"(drafts/|raw/|local/|\.md\b|\.py\b|\bSOFTS\b|\bledger \d{1,2} \w{3}\b|\broutine\b|\bdispatcher\b|DESK_DISPATCH|SCORING_CALENDAR|HOUSE_RULES|\b(?:PUBLISH|DRAFT|SIT|PRIME|CANON|JOIN|LIVE)-[\w\-]+)", re.I)
+SCAN = re.compile(r"(drafts/|raw/|local/|\.md\b|\.py\b|\bSOFTS\b|\bCoS\b|\bledger \d{1,2} \w{3}\b|\broutine\b|\bdispatcher\b|DESK_DISPATCH|SCORING_CALENDAR|HOUSE_RULES|\b(?:PUBLISH|DRAFT|SIT|PRIME|CANON|JOIN|LIVE)-[\w\-]+)", re.I)
 FIELDS = ("test", "owner", "date_source", "status", "measure", "money", "argument", "cost_to_date")
 
 
@@ -105,6 +105,7 @@ def display_fixes(rows):
             n = v
             for p in HIDE:
                 n = p.sub(lambda m: (" " if m.group(0).startswith((" ", "(")) or m.group(0)[:1].isspace() else "") + MARK, n)
+            n = n.replace("(CoS-assigned, unverified)", "(owner named by the register, unverified)")  # display only
             if n != v:
                 out.setdefault(r["id"], {})[f] = n.strip()
     return out
@@ -117,6 +118,7 @@ def scan_internal(rows):
     for r in rows:
         for f in FIELDS:
             v = fx.get(r["id"], {}).get(f, r.get(f, "") or "")
+            v = re.sub(r"https?://\S+", "", v)  # a public URL is not internal text (e.g. pm.gc.ca/.../prime-minister-...)
             m = SCAN.search(v)
             if m:
                 errs.append("%s.%s shows internal text near %r" % (r["id"], f, v[max(0, m.start() - 20):m.end() + 20]))

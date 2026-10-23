@@ -42,10 +42,94 @@ SECTION_HEADS = {
 RECORDED_LEAD = "These files record a fact, a status or a condition, or carry a reading or a scoring day the main table does not use. They are dated and kept, and are not counted in the main table.\n\n"
 
 
+GROUPS = os.path.join(rc.ROOT, "data", "display-groups.csv")
+GROUP_ORDER = ("government_promise", "also_watched", "recorded")
+GROUP_HEADS = {"government_promise": "Government promises (%d)", "also_watched": "Also watched (%d)", "recorded": "Recorded (%d)"}
+GROUP_LEADS = {
+    "government_promise": "Promises with a government owner, a primary source and a scoring date. Each row also names its file section.\n\n",
+    "also_watched": "Rows the register watches that are not government promises: the owner is not a government, or the row lacks a primary source link. Same rules apply.\n\n",
+    "recorded": "Facts, results and checkpoints, recorded and kept. They are not counted as open promises.\n\n",
+}
+
+
+def load_groups(rows):
+    """Display only: which page group each row sits in. Nothing in an entry changes.
+    Returns None if there is no groups file or it does not cover every row (then the page uses file sections)."""
+    import csv as _c
+    if not os.path.exists(GROUPS):
+        return None
+    g = {r["id"]: r["display_group"] for r in _c.DictReader(open(GROUPS, encoding="utf-8"))}
+    if any(r["id"] not in g for r in rows) or any(v not in GROUP_ORDER for v in g.values()):
+        return None
+    return g
+
+
+NOTES = os.path.join(rc.ROOT, "data", "display-notes.csv")
+
+
+def overlaps_md(rows):
+    """Display only: 'Possible overlaps under review' from data/display-notes.csv. Nothing in an entry changes."""
+    import csv as _c
+    if not os.path.exists(NOTES):
+        return None
+    ids = {r["id"] for r in rows}
+    notes = [n for n in _c.DictReader(open(NOTES, encoding="utf-8")) if n["kind"] == "possible_overlap"]
+    bad = [i for n in notes for i in n["ids"].split(";") if i not in ids]
+    if bad:
+        raise rc.Fail("data/display-notes.csv names ids not in data/entries.csv: %s" % bad)
+    if not notes:
+        return None
+    out = ["## Possible overlaps under review", "",
+           "These pairs of entries may test the same thing. Both entries in each pair are kept and stay live while the overlap is under review. Nothing has been removed or changed in either entry.", ""]
+    out += ["- **%s** (noted %s): %s" % (" and ".join(n["ids"].split(";")), n["noted"], n["text"]) for n in notes]
+    return "\n".join(out)
+
+
+def backlog_block(iso):
+    """Display only: the counter's block, counted from data/entries.csv on the build date."""
+    import subprocess
+    sc = os.path.join(rc.ROOT, "scripts", "backlog_counter.py")
+    if not os.path.exists(sc) or not os.path.exists(GROUPS):
+        return None
+    r = subprocess.run([sys.executable, sc, rc.SOURCE, iso, GROUPS], capture_output=True, text=True)
+    return r.stdout.strip() if r.returncode == 0 and r.stdout.strip() else None
+
+
+def md_to_html(md):
+    out, inlist, intable = [], False, False
+    b = lambda s: re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", html.escape(s, quote=False))
+    for ln in md.split("\n"):
+        if ln.startswith("- "):
+            if not inlist: out.append("<ul>"); inlist = True
+            out.append("<li>%s</li>" % b(ln[2:])); continue
+        if inlist: out.append("</ul>"); inlist = False
+        if ln.startswith("|"):
+            cells = [c.strip() for c in ln.strip().strip("|").split("|")]
+            if set("".join(cells)) <= set("-"): continue
+            if not intable:
+                out.append("<table><thead><tr>%s</tr></thead><tbody>" % "".join("<th>%s</th>" % b(c) for c in cells)); intable = True
+            else:
+                out.append("<tr>%s</tr>" % "".join("<td>%s</td>" % b(c) for c in cells))
+            continue
+        if intable: out.append("</tbody></table>"); intable = False
+        if ln.startswith("## "): out.append("<h2>%s</h2>" % b(ln[3:]))
+        elif ln.strip(): out.append("<p>%s</p>" % b(ln))
+    if inlist: out.append("</ul>")
+    if intable: out.append("</tbody></table>")
+    return "".join(out)
+
+
 def tables(rows):
-    closers = rc.closed_by(rows)
-    cell = lambda r, k: rc.display_status(r, closers) if k == "status" else r.get(k, "")
+    closers, replaced = rc.closed_by(rows), rc.replaced_by(rows)
+    cell = lambda r, k: rc.display_status(r, closers, replaced) if k == "status" else r.get(k, "")
     out = ""
+    groups = load_groups(rows)
+    if groups:
+        for gk in GROUP_ORDER:
+            rs = [r for r in rows if groups[r["id"]] == gk]
+            out += GROUP_HEADS[gk] % len(rs) + "\n\n" + GROUP_LEADS[gk]
+            out += "Section | " + TABLE_COLS + "\n\n" + "".join(SECTION_HEADS[r["section"]].split(" (")[0] + " | " + " | ".join(cell(r, k) for k in TABLE_KEYS) + "\n\n" for r in rs)
+        return out
     for s in rc.SECTION_ORDER:
         rs = [r for r in rows if r["section"] == s]
         out += SECTION_HEADS[s] % len(rs) + "\n\n"
@@ -61,23 +145,41 @@ def render_readme(tpl, rows, csv_name, csv_sha, iso):
     t = one(r"Checksum for this update: SHA-256 of public-live-rows-\d{4}-\d\d-\d\d[a-z]?\.csv \(all \d+ rows\) is [0-9a-f]{64}",
             "Checksum for this update: SHA-256 of %s (all %d rows) is %s" % (csv_name, len(rows), csv_sha), t, "README")
     t = one(r"No entries as at \d+ \w+ \d{4}\.", "No entries as at %s." % ld, t, "README")
-    a, b = t.find("Canadian files ("), t.find("Failure log\n")
+    bl = backlog_block(iso)
+    if bl:
+        if "<!-- BACKLOG -->" in t:
+            t = one(r"<!-- BACKLOG -->.*?<!-- /BACKLOG -->\n\n", lambda m: "<!-- BACKLOG -->\n\n%s\n\n<!-- /BACKLOG -->\n\n" % bl, t, "README", re.S)
+        else:
+            k = t.find("\n\n") + 2
+            t = t[:k] + "<!-- BACKLOG -->\n\n%s\n\n<!-- /BACKLOG -->\n\n" % bl + t[k:]
+    starts = [x for x in (t.find("Canadian files ("), t.find("Government promises (")) if x >= 0]
+    a, b = (min(starts) if starts else -1), t.find("Failure log\n")
     if a < 0 or b < a:
         raise rc.Fail("README: table block anchors not found")
     fx = ra.display_fixes(rows)
     drows = [dict(r, **fx.get(r["id"], {})) for r in rows]
-    return t[:a] + tables(drows) + t[b:]
+    t = t[:a] + tables(drows) + t[b:]
+    ov = overlaps_md(rows)
+    if ov:
+        blk = "<!-- OVERLAPS -->\n\n%s\n\n<!-- /OVERLAPS -->\n\n" % ov
+        if "<!-- OVERLAPS -->" in t:
+            t = one(r"<!-- OVERLAPS -->.*?<!-- /OVERLAPS -->\n\n", lambda m: blk, t, "README", re.S)
+        else:
+            k = t.find("<!-- /BACKLOG -->\n\n")
+            k = k + len("<!-- /BACKLOG -->\n\n") if k >= 0 else t.find("\n\n") + 2
+            t = t[:k] + blk + t[k:]
+    return t
 
 
 def next_on_clock(rows, iso, n=5):
     """Display only (rule entry R-2026-10-19-F): the n nearest LIVE entries not yet scored,
     on or after the build date, plus one line naming entries past their date and not yet scored."""
-    closers = rc.closed_by(rows)
-    open_ = [r for r in rows if r["status"] == "LIVE" and r["id"] not in closers and not rc.is_resolved(r)]
+    closers, replaced = rc.closed_by(rows), rc.replaced_by(rows)
+    open_ = [r for r in rows if r["status"] == "LIVE" and r["id"] not in closers and r["id"] not in replaced and not rc.is_resolved(r)]
     nxt = sorted([r for r in open_ if r["sort_date"] >= iso], key=lambda r: (r["sort_date"], r["id"]))[:n]
     past = sorted([r for r in open_ if r["sort_date"] < iso], key=lambda r: (r["sort_date"], r["id"]))
     cells = "".join("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (
-        html.escape(r["scoring_date"]), html.escape(r["id"]), html.escape(r["section"]), html.escape(r["owner"])) for r in nxt)
+        html.escape(r["scoring_date"]), html.escape(r["id"]), html.escape(r["section"]), html.escape(ra.display_fixes([r]).get(r["id"], {}).get("owner", r["owner"]))) for r in nxt)
     pd = ("Past their scoring date and not yet scored: %s." % ", ".join("%s (%s)" % (html.escape(r["id"]), html.escape(r["scoring_date"])) for r in past)) if past else "Past their scoring date and not yet scored: none."
     return ('<!-- NEXT-ON-CLOCK --><h2>Next on the clock</h2><p>The five nearest entries still to be scored, by scoring date, as at %s.</p>'
             '<table><thead><tr><th>Scoring date</th><th>ID</th><th>Section</th><th>Owner</th></tr></thead><tbody>%s</tbody></table><p>%s</p><!-- /NEXT-ON-CLOCK -->\n'
@@ -115,6 +217,9 @@ def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
     blocks = (("STATUS-SUMMARY", ra.status_summary(rows, iso), "<h1>The Register</h1>\n", True),
               ("HOW-TO-READ", ra.how_to_read(rows, links), "<details><summary>The rules</summary>", False),
               ("ESSAYS", ra.essays_index(rows, links), "<h2>Failure log</h2>", False))
+    bl = backlog_block(iso)
+    if bl:
+        blocks = blocks + (("BACKLOG", "<!-- BACKLOG --><section class=\"backlog\">%s</section><!-- /BACKLOG -->\n" % md_to_html(bl), "<h1>The Register</h1>\n", True),)
     for mark, blk, anchor, after in blocks:
         if "<!-- %s -->" % mark in t:
             t = one(r"<!-- %s -->.*?<!-- /%s -->\n" % (mark, mark), lambda m, b=blk: b, t, "index.html", re.S)
@@ -132,9 +237,22 @@ def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
         t = one(r'<script type="application/json" id="displayfix">.*?</script>', lambda m: fj, t, "index.html", re.S)
     else:
         t = t.replace(lj, lj + "\n" + fj, 1)
+    ov = overlaps_md(rows)
+    if ov:
+        ob = '<!-- OVERLAPS --><section class="overlaps">%s</section><!-- /OVERLAPS -->\n' % md_to_html(ov)
+        if "<!-- OVERLAPS -->" in t:
+            t = one(r"<!-- OVERLAPS -->.*?<!-- /OVERLAPS -->\n", lambda m: ob, t, "index.html", re.S)
+        else:
+            t = t.replace("<h2>Entries (", ob + "<h2>Entries (", 1)
     left = ra.scan_internal(rows)
     if left:
         raise rc.Fail("internal text still displayed: " + "; ".join(left))
+    groups = load_groups(rows)
+    gj = '<script type="application/json" id="displaygroups">%s</script>' % json.dumps(groups or {}, ensure_ascii=False)
+    if 'id="displaygroups"' in t:
+        t = one(r'<script type="application/json" id="displaygroups">.*?</script>', lambda m: gj, t, "index.html", re.S)
+    else:
+        t = t.replace(fj, fj + "\n" + gj, 1)
     t = one(r"<h2>Entries \(\d+\)</h2>", "<h2>Entries (%d)</h2>" % len(rows), t, "index.html")
     t = one(r"Entries as at \d+ \w+ \d{4}\. Last change: \d+ \w+ \d{4}\.", "Entries as at %s. Last change: %s." % (ld, ld), t, "index.html")
     t = one(r"No entries as at \d+ \w+ \d{4}\.", "No entries as at %s." % ld, t, "index.html")
