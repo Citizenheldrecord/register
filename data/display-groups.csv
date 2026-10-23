@@ -1,0 +1,180 @@
+id,display_group,reason
+GX1b,also_watched,owner is not a government
+AB1-PL,government_promise,passes entry test
+FA3b,government_promise,passes entry test
+C39-CTTE,government_promise,passes entry test
+TR1,government_promise,passes entry test
+BC1,also_watched,"owner is not a government; test and date set by the register, not printed in a government document"
+BC-PARCELS,government_promise,passes entry test
+DGR1,government_promise,passes entry test
+S2,government_promise,passes entry test
+S7,government_promise,passes entry test
+MTL-CLOSE,government_promise,passes entry test
+IRV1,also_watched,owner is not a government
+GX2,government_promise,passes entry test
+C39-366,also_watched,"test and date set by the register, not printed in a government document"
+DSL2,government_promise,passes entry test
+FIR1,government_promise,passes entry test
+FIR2,government_promise,passes entry test
+GX4,government_promise,passes entry test
+BEC1,also_watched,"owner is not a government; test and date set by the register, not printed in a government document"
+C2/S3,also_watched,"test and date set by the register, not printed in a government document"
+P4,also_watched,"test and date set by the register, not printed in a government document"
+MD1,also_watched,"test and date set by the register, not printed in a government document"
+C4,government_promise,passes entry test
+C3/O2,also_watched,"test and date set by the register, not printed in a government document"
+FB9,government_promise,passes entry test
+FA3,also_watched,"test and date set by the register, not printed in a government document"
+C39-D1,government_promise,passes entry test
+SINGLE-TAB,government_promise,passes entry test
+DUALUSE-PAGE,government_promise,passes entry test
+CGL-EQ2,also_watched,owner is not a government
+EA-LEAVE,government_promise,passes entry test
+CAN2,government_promise,passes entry test
+C1/O1,also_watched,"test and date set by the register, not printed in a government document"
+S8,government_promise,passes entry test
+TAR1,government_promise,passes entry test
+C5/FA8/TM1,also_watched,"test and date set by the register, not printed in a government document"
+IND5-CORRIDOR,government_promise,passes entry test
+USMCA-JR1,government_promise,passes entry test
+P2,also_watched,"test and date set by the register, not printed in a government document"
+FIR3,government_promise,passes entry test
+EIB-S12,government_promise,passes entry test
+SINGLE-TAB-FY,government_promise,passes entry test
+NUCH-SCC,government_promise,passes entry test
+IND2-INCOME,government_promise,passes entry test
+FOREST-ACT-COMP,government_promise,passes entry test
+BC-DRIPA-NEXT,government_promise,passes entry test
+A1,also_watched,"test and date set by the register, not printed in a government document"
+S4,also_watched,"test and date set by the register, not printed in a government document"
+N1,also_watched,"test and date set by the register, not printed in a government document"
+FA5,also_watched,"owner is not a government; test and date set by the register, not printed in a government document"
+FA6,also_watched,"test and date set by the register, not printed in a government document"
+FA7,also_watched,"test and date set by the register, not printed in a government document"
+C39,also_watched,"test and date set by the register, not printed in a government document"
+C39-D2,government_promise,passes entry test
+O3,also_watched,"test and date set by the register, not printed in a government document"
+IND1-DEBT,government_promise,passes entry test
+IND3-TFD,government_promise,passes entry test
+IND4-INVEST,government_promise,passes entry test
+PL1,government_promise,passes entry test
+PHARA-TRIAL,government_promise,passes entry test
+A2,also_watched,"owner is not a government; test and date set by the register, not printed in a government document"
+N2,also_watched,"test and date set by the register, not printed in a government document"
+TITLE-MAP,government_promise,passes entry test
+BOOMBUST-SUNSET,government_promise,passes entry test
+BOOMBUST-CORRIDOR,also_watched,"test and date set by the register, not printed in a government document"
+HOUSING-STARTS,government_promise,passes entry test
+N3,also_watched,"test and date set by the register, not printed in a government document"
+A3,also_watched,"test and date set by the register, not printed in a government document"
+PS-330,government_promise,passes entry test
+DT1,government_promise,passes entry test
+MEGA-TEST,government_promise,passes entry test
+A4,also_watched,"test and date set by the register, not printed in a government document"
+CPL-FREEZE,also_watched,owner is not a government
+SOTF,also_watched,owner is not a government
+READING-ANNUAL,also_watched,owner is not a government
+CPL-OWNER,also_watched,owner is not a government
+CPL-CODE,also_watched,owner is not a government
+CPL-RESULT,also_watched,owner is not a government
+RWE-READ,also_watched,owner is not a government
+AI1,also_watched,"owner is not a government; test and date set by the register, not printed in a government document"
+AI2,also_watched,"owner is not a government; test and date set by the register, not printed in a government document"
+PAUSE-RECIP,also_watched,"test and date set by the register, not printed in a government document"
+AI4,also_watched,"owner is not a government; test and date set by the register, not printed in a government document"
+DSL1,government_promise,passes entry test
+SA1,also_watched,owner is not a government
+TIGER-DU,also_watched,owner is not a government
+AI3,also_watched,"owner is not a government; test and date set by the register, not printed in a government document"
+MAN1-CHK,government_promise,passes entry test
+BM1,also_watched,"test and date set by the register, not printed in a government document"
+NS1,government_promise,passes entry test
+TIGER-UKCN,government_promise,passes entry test
+TIGER-UKMFG,government_promise,passes entry test
+SA2,also_watched,owner is not a government
+HR5334,recorded,"recorded as fact, no pass line"
+AB1,recorded,"recorded as fact, no pass line"
+BoC,recorded,"recorded as fact, no pass line"
+RU1,recorded,"recorded as fact, no pass line"
+N4,recorded,"recorded as fact, no pass line"
+LEVELS2729,recorded,"recorded as fact, no pass line"
+IR1,recorded,"recorded as fact, no pass line"
+HCAP-LVL,recorded,"recorded as fact, no pass line"
+CN-GRAPH,recorded,"recorded as fact, no pass line"
+AB-REMAIN-CLOSE,recorded,"recorded as fact, no pass line"
+AB-PROCEED-TT,recorded,"recorded as fact, no pass line"
+NOV1,recorded,"recorded as fact, no pass line"
+KEB-LEAVE,recorded,"recorded as fact, no pass line"
+NS1-CHK,recorded,"recorded as fact, no pass line"
+FA1,recorded,"recorded as fact, no pass line"
+SIX-mid,recorded,"recorded as fact, no pass line"
+AB-NINE,recorded,"recorded as fact, no pass line"
+USMCA-AUTO27,recorded,"recorded as fact, no pass line"
+NPR5,recorded,"recorded as fact, no pass line"
+CPL-RESPONSE,recorded,"recorded as fact, no pass line"
+SIX-final,recorded,"recorded as fact, no pass line"
+G1/G2,recorded,"recorded as fact, no pass line"
+LIM-ORIGIN,government_promise,passes entry test
+LIM-REBUILD,government_promise,passes entry test
+ATIP-FIN-377,government_promise,passes entry test
+MIL-QUESTURA,government_promise,passes entry test
+HCAP-LVL-28,recorded,"recorded as fact, no pass line"
+XFER-UA-GRAIN,government_promise,passes entry test
+PS-330-HOLD,recorded,"recorded as fact, no pass line"
+SUNSET-BCA-5,government_promise,passes entry test
+REVIEW-BCA-24,government_promise,passes entry test
+GUAR-DARL-PA,government_promise,passes entry test
+CAP-RATIO-27,government_promise,passes entry test
+CL-BASE,recorded,"recorded as fact, no pass line"
+CL-FINAL,government_promise,passes entry test
+CL-REGISTER,government_promise,passes entry test
+CL-ICA,recorded,"recorded as fact, no pass line"
+CL-FEESIMPLE,government_promise,passes entry test
+TR-CANDU,government_promise,passes entry test
+TR-OFFTAKE,government_promise,passes entry test
+DSRB-CAP,government_promise,passes entry test
+TR-FTA-ROUND,government_promise,passes entry test
+TR-UA-PAGE,government_promise,passes entry test
+TR-DEF,government_promise,passes entry test
+UK-M6-RESP,government_promise,passes entry test
+AB1-SCORED-20261020,recorded,"recorded as fact, no pass line"
+UK-M6-RESP-2,government_promise,passes entry test
+ATIP-CIRNAC-149,government_promise,passes entry test
+BUDGET26-TABLE,government_promise,passes entry test
+CDRC-CIF,government_promise,passes entry test
+WDG-VET,also_watched,owner is not a government
+REG-PROV1,also_watched,owner is not a government
+KAMLOOPS-EXCAV,government_promise,passes entry test
+QC-SEATMATH,also_watched,owner is not a government
+GDPPC-POP,also_watched,FLAG: no primary source link in the approved row
+MFG-EMP-CA,government_promise,"passes entry test (owner, primary source link, date source)"
+EU-RETURN,government_promise,"passes entry test (owner, primary source link, date source)"
+EU-STOCK,also_watched,FLAG: no source link in the approved row
+QC-STANDARD,government_promise,"passes entry test (owner, primary source link, date source)"
+TAX-HC3,government_promise,"passes entry test (owner, primary source link, date source)"
+AID-CLOSE,government_promise,"passes entry test (owner, primary source link, date source)"
+UKR-REPAY,government_promise,"passes entry test (owner, primary source link, date source)"
+CLIM-13B,government_promise,"passes entry test (owner, primary source link, date source)"
+FA3-MVH-DEC,government_promise,"passes entry test (owner, primary source link, date source)"
+LEVELS-1NOV,recorded,"recorded as fact, no pass line"
+DNG-CAP,government_promise,"passes entry test (owner, primary source link, date source)"
+PR380-2026,government_promise,"passes entry test (owner, primary source link, date source)"
+TRARR-2026,government_promise,"passes entry test (owner, primary source link, date source)"
+PR1PCT,government_promise,"passes entry test (owner, primary source link, date source)"
+PL-EARLYWORK,also_watched,owner is not a government (proponent companies)
+PL-FID,government_promise,"passes entry test (owner, primary source link, date source)"
+PL-FULLCON,also_watched,owner is not a government (proponent companies)
+PL-INSVC,also_watched,owner is not a government (proponent companies)
+AB-Q-LEG,government_promise,"passes entry test (owner, primary source link, date source)"
+AB-Q7-BIND,government_promise,"passes entry test (owner, primary source link, date source)"
+AB-Q9-BIND,government_promise,"passes entry test (owner, primary source link, date source)"
+CTF-PL-OPEN,also_watched,owner is not only a government (proponents); FLAG: source is a secondary transcript
+TCT-TRILAT,also_watched,"FLAG: source is a news report, not a primary source; owners are foreign governments"
+TCT-GUAR,also_watched,FLAG: no source link in the approved row
+EV-GHG-TEXT,government_promise,"passes entry test (owner, primary source link, date source)"
+TR-ACTION-PLAN,government_promise,"passes entry test (owner, primary source link, date source)"
+EA-REFORM,also_watched,FLAG: no source link in the approved row
+AB1-PL-SCORED-20261022,recorded,result entry for AB1-PL (FAILED 22 Oct 2026); not a promise
+MIL-QUESTURA-C20261022,government_promise,"correction of MIL-QUESTURA (owner wording), same group as the entry it replaces"
+LIM-ORIGIN-C20261022,government_promise,"correction of LIM-ORIGIN (owner wording), same group as the entry it replaces"
+LIM-REBUILD-C20261022,government_promise,"correction of LIM-REBUILD (owner wording), same group as the entry it replaces"
