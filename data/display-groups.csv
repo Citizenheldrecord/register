@@ -178,3 +178,10 @@ AB1-PL-SCORED-20261022,recorded,result entry for AB1-PL (FAILED 22 Oct 2026); no
 MIL-QUESTURA-C20261022,government_promise,"correction of MIL-QUESTURA (owner wording), same group as the entry it replaces"
 LIM-ORIGIN-C20261022,government_promise,"correction of LIM-ORIGIN (owner wording), same group as the entry it replaces"
 LIM-REBUILD-C20261022,government_promise,"correction of LIM-REBUILD (owner wording), same group as the entry it replaces"
+CPLOAN-SCHED,also_watched,test and date set by the register
+CROWN-LOAN-TABLE,also_watched,test set by the register; date is a government commitment
+CAN-SEED-RATE,also_watched,test and date set by the register
+C4-FILL,also_watched,test and date set by the register
+COVID-RESIDUE,also_watched,test and date set by the register
+KSM-SSD-DEC,also_watched,test and date set by the register
+C39-CTTE-SCORED-20261023,recorded,"recorded as fact, no pass line"
