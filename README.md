@@ -4,27 +4,27 @@
 
 ## Where the register stands
 
-Counted on 23 October 2026 from the register's data file, which holds 186 entries.
+Counted on 23 October 2026 from the register's data file, which holds 190 entries.
 
-- **Promises entered:** 183. 3 further entries record results against earlier promises.
+- **Promises entered:** 186. 4 further entries record results against earlier promises.
 - **Scored PASS:** 2 (C39-CTTE, AB1).
-- **Scored FAILED:** 1 (AB1-PL).
+- **Scored FAILED:** 2 (AB1-PL, FA3b).
 - **Recorded as fact, with no pass or fail line:** 1 (HR5334).
-- **Open and not yet due:** 170.
-- **Due or past due and not yet scored:** 2 (GX1b, 3 days past its date; FA3b, 2 days past its date).
+- **Open and not yet due:** 173.
+- **Due or past due and not yet scored:** 1 (GX1b, 3 days past its date).
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-These lines add up to the 183 promises entered.
+These lines add up to the 186 promises entered.
 
 By section:
 
 | Section | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|
-| Government promises | 94 | 1 | 1 | 0 | 86 | 1 | 4 | 1 | 0 |
-| Also watched | 62 | 0 | 0 | 0 | 60 | 1 | 0 | 1 | 0 |
+| Government promises | 95 | 1 | 2 | 0 | 87 | 0 | 4 | 1 | 0 |
+| Also watched | 64 | 0 | 0 | 0 | 62 | 1 | 0 | 1 | 0 |
 | Recorded entries | 27 | 1 | 0 | 1 | 24 | 0 | 0 | 0 | 1 |
 
 <!-- /BACKLOG -->
@@ -90,7 +90,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-23.csv (all 186 rows) is 13db20a9dd86a4f4d306c99063baaf6b7044807fb0e09f05c7cf9d6475731bd0
+Checksum for this update: SHA-256 of public-live-rows-2026-10-23b.csv (all 190 rows) is fab9228cbca0f59a4ad497b0119b4ec23f7cb165da5b7ac0707ea04468beb331
 
 Rule entries
 
@@ -196,7 +196,7 @@ Time horizons and concentrated interests: those paid by the process are organize
 
 This register records from outside the institutions it measures. It does not ask any of them to measure itself.
 
-Government promises (94)
+Government promises (95)
 
 Promises with a government owner, a primary source and a scoring date. Each row also names its file section.
 
@@ -204,7 +204,7 @@ Section | ID | Test | Owner | Scoring date | Date source | Status | Measure | Mo
 
 Canadian files | AB1-PL | PASS: by end of Wed 21 Oct, a Government of Alberta page or release of about one page names, for Pacific Link, a dated outcome, a date and an accountable owner. FAILED: statements, pressers or readouts without all three | Premier of Alberta / Alberta Executive Council | 21 Oct 2026 | DESK-SET: first business day after the Question 10 count, allowing 48 hours for the unofficial count (row) | CLOSED: scored in AB1-PL-SCORED-20261022 | Alberta Pacific Link page https://www.alberta.ca/pacific-link | Alberta 2026/27 Government Estimates, Executive Council, program 1.1 Office of the Premier / Executive Council $27,484 thousand; Executive Council expense vote $103,735 thousand (p. 108) https://open.alberta.ca/dataset/65514c30-e9f9-4951-9bae-7134edbe293c/resource/71713b5f-01ab-4ec5-9c01-7e49aec66fc1/download/budget-2026-estimates-government-2026-27.pdf. Amounts only: the page shows no volume driver, named deliverable or end date. | OPEN | [publishes 18 Oct 2026] | OPEN until scoring date 21 Oct 2026 | OPEN | OPEN | OPEN
 
-Canadian files | FA3b | PASS: the consolidated Schedule 1 text on laws-lois shows the Pacific Link / West Coast Oil Pipeline row, or Part II carries it. FAILED: it does not | Justice Canada / Privy Council | 21 Oct 2026 | SCHEDULED RELEASE: Canada Gazette Part II No. 21, 21 Oct 2026, the next read the desk named for Schedule 1 (a spike is not a pipe JOIN, 8 Oct) | LIVE | Building Canada Act text https://laws-lois.justice.gc.ca/eng/acts/B-9.89/FullText.html | OPEN | OPEN | OPEN | OPEN until scoring date 21 Oct 2026 | OPEN | OPEN | OPEN
+Canadian files | FA3b | PASS: the consolidated Schedule 1 text on laws-lois shows the Pacific Link / West Coast Oil Pipeline row, or Part II carries it. FAILED: it does not | Justice Canada / Privy Council | 21 Oct 2026 | SCHEDULED RELEASE: Canada Gazette Part II No. 21, 21 Oct 2026, the next read the desk named for Schedule 1 (a spike is not a pipe JOIN, 8 Oct) | CLOSED: scored in FA3b-SCORED-20261023 | Building Canada Act text https://laws-lois.justice.gc.ca/eng/acts/B-9.89/FullText.html | OPEN | OPEN | OPEN | OPEN until scoring date 21 Oct 2026 | OPEN | OPEN | OPEN
 
 Canadian files | C39-CTTE | PASS: the House special committee on Bill C-39 meets and calls witnesses by 23 Oct. FAILED: it has not | House special committee on C-39 / Government House Leader | 23 Oct 2026 | DESK-SET: end of the week iPolitics reported for the committee's witness meetings (week of 19 Oct; jobs-print JOIN, E4) | CLOSED: scored in C39-CTTE-SCORED-20261023 | CC39 meetings https://www.ourcommons.ca/Committees/en/CC39/Meetings | OPEN | OPEN | OPEN | OPEN until scoring date 23 Oct 2026 | OPEN | OPEN | OPEN
 
@@ -243,6 +243,8 @@ Canadian files | GX2 | PASS: a hearing date for SCC file 42200 appears on the do
 Canadian files | DSL2 | PASS: PMO, NRCan or CER publishes the method or source for the figure "well over a million barrels of diesel per day". FAILED: none | PMO | 30 Nov 2026 | DESK-SET: end of November, seven weeks after the 11 Oct PMO readout that used the figure [internal desk reference hidden in display, 22 Oct 2026] | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Nov 2026 | OPEN | OPEN | OPEN
 
 Canadian files | FIR1 | PASS: the public Foreign Influence Transparency Registry shows at least 32 entries by 30 Nov. FAILED: 31 or fewer, entered with the live count | Foreign Influence Transparency Commissioner (Anton Boegman) | 30 Nov 2026 | DESK-SET: end of November, eight weeks after the 3 Oct registration deadline, for the more than 30 deadline submissions to be validated and made public (row) | LIVE | OPEN | OPEN | OPEN | [publishes 25 Oct 2026] | OPEN until scoring date 30 Nov 2026 | OPEN | OPEN | OPEN
+
+Canadian files | TR-FTA-R1 | PASS: GAC, PMO or Türkiye's trade ministry confirms by 4 Dec 2026 that the first negotiating round took place (dates stated). FAILED: no official confirmation by 4 Dec 2026, or only a future date announced | GAC (Minister of International Trade) / PMO | 4 Dec 2026 | SCHEDULED EVENT: PMO release 23 Oct 2026 dates the first round 30 Nov to 4 Dec 2026 in Ankara; scored on the last day of the round | LIVE | https://www.pm.gc.ca/en/news/news-releases/2026/10/23/prime-minister-carneys-historic-visit-turkiye-launches-new-strategic | OPEN | OPEN | OPEN | OPEN until scoring date 4 Dec 2026 | OPEN | OPEN | OPEN
 
 Canadian files | FIR2 | PASS: the Public Safety Minister has appeared before the Procedure and House Affairs Committee on the registry by 11 Dec. FAILED: no appearance | Public Safety Minister (Gary Anandasangaree); PROC Chair | 11 Dec 2026 | DESK-SET: last December sitting day on the House of Commons 2026 sitting calendar (row check) | LIVE | OPEN | OPEN | OPEN | [publishes 25 Oct 2026] | OPEN until scoring date 11 Dec 2026 | OPEN | OPEN | OPEN
 
@@ -390,7 +392,7 @@ Outside files we watch | KAMLOOPS-EXCAV | PASS: by 31 Dec 2027 a forensic excava
 
 Outside files we watch | ATIP-CIRNAC-149 | CIRNAC ATIP A-2026-00149 (EA2026_0195120; hectares settled versus added, net title ledger, FY2015-16 to date). PASS: records released (full or partial package, or a written no-records answer) by the extended deadline, 21 Jan 2028. FAILED: not released by the extended deadline | Crown-Indigenous Relations and Northern Affairs Canada (CIRNAC) ATIP office | 21 Jan 2028 | DESK-SET: extended deadline computed by the desk, not stated by CIRNAC (clarified 23 Sep 2026; 30-day + 9(1)(a) 12 months + 9(1)(b) 90 days; s.27(1) third-party notice); extension letter 19 Oct 2026 states no due date | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 21 Jan 2028 | OPEN | OPEN | OPEN
 
-Also watched (62)
+Also watched (64)
 
 Rows the register watches that are not government promises: the owner is not a government, or the row lacks a primary source link. Same rules apply.
 
@@ -426,6 +428,8 @@ Canadian files | C1/O1 | PASS: one corridor with two independent financed or off
 
 Canadian files | C5/FA8/TM1 | PASS: dated settlement closures that shrink the title map are on record by 1 Jan 2027. FAILED: none. Each later year is a new entry | Canada / BC / First Nations treaty tables (CIRNAC) | 1 Jan 2027 | DESK-SET: the Wait Report master clock, before 1 Jan 2027, which ties the shrinking title map (FA8) to C1 (Wait Report scorecard) | LIVE | OPEN | Main Estimates 2026/27, Crown-Indigenous Relations and Northern Affairs, Vote 10 transfer payments: Grants to implement comprehensive land claims and self-government agreements $1,955,836,391; Contributions to support the negotiation and implementation of Treaties, Claims and self-government agreements $485,393,212 https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2026-27/transfer-payments.csv. Amounts only: the page shows no volume driver, named deliverable or end date. | OPEN | OPEN | OPEN until scoring date 1 Jan 2027 | OPEN | OPEN | OPEN
 
+Canadian files | TR-FTA-R1-SCHED | PASS: by 31 Dec 2026 no official text released by GAC, the PMO or Türkiye's Ministry of Trade contains a tariff or services market-access schedule (offer lists, tariff phase-out timetables or reservations lists) from the first Canada and Türkiye FTA round (Ankara, 30 Nov to 4 Dec 2026). WRONG: any such official text by 31 Dec 2026, even partial | Minister of International Trade / GAC | 2 Jan 2027 | DESK-SET: PMO release 23 Oct 2026 dates the first round 30 Nov to 4 Dec 2026 in Ankara | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 2 Jan 2027 | OPEN | OPEN | OPEN
+
 Canadian files | C4-FILL | PASS: GAC or CBSA publishes, or confirms on the record, total year one EV units entered against the 49,000 quota by 31 Mar 2027 (within 30 days of quota year end); fill rate recorded to 0.1 per cent. FAILED: no official figure by 31 Mar 2027. Baseline: 15,603 of 24,500 in the first window; 33,397 in the second window from 1 Sep 2026. Sub entry of C4 | GAC (Trade Controls) / Finance | 28 Feb 2027 | LEGAL DEADLINE: quota year ends 28 Feb 2027 (SOR/2026-32). DESK-SET: scoring on that date and the 31 Mar 2027 reporting window | LIVE | GAC 16 Jan 2026 https://www.international.gc.ca/news-nouvelles/2026/2026-01-16-china-chine.aspx?lang=eng | OPEN | OPEN | OPEN | OPEN until scoring date 28 Feb 2027 | OPEN | OPEN | OPEN
 
 Canadian files | P2 | PASS: PLA winter training stays cancelled, in writing. FAILED: it returns, or no written cancellation | DND | 31 Mar 2027 | DESK-SET: end of the 2026-27 winter season the test covers (proof test P2) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
@@ -449,6 +453,8 @@ Canadian files | C39 | PASS: Bill C-39 Royal Assent plus a published one year de
 Canadian files | O3 | PASS: a killable pilot default clause in the next major statute. FAILED: none | Parliament | 30 Jun 2027 | DESK-SET: proof test O3 had no date; 30 Jun 2027 was proposed on 12 Oct 2026 when every undated test was given a fixed date, and confirmed that day [internal desk reference hidden in display, 22 Oct 2026] | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
 Canadian files | CTF-PL-OPEN | PASS: by 30 Jun 2027 a proponent or CER notice of a Pacific Link open season (dated); FAILED: none | Pacific Link proponents; Minister of Energy and Natural Resources | 30 Jun 2027 | DESK-SET: minister said "likely next spring" (4 Oct 2026); end of spring 2027 set by the register | LIVE | https://ca.headtopics.com/news/hodgson-promises-pacific-link-pipeline-will-be-built-88435020 | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
+
+Canadian files | TR-ATA-USE | PASS: by 30 Jun 2027 any designated carrier publishes or operates a Canada and Türkiye schedule of more than 12 weekly passenger flights per side. FAILED: no such schedule by 30 Jun 2027 | Designated carriers / Transport Canada | 30 Jun 2027 | DESK-SET: PMO release 23 Oct 2026 gives the expanded Air Transport Agreement (12 to up to 21 weekly) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
 Canadian files | EA-REFORM | PASS: the Emergencies Act is amended so that any declaration must state an end condition and a success measure, or the SCC, in docket 42261 (appeal of 2026 FCA 6), sets the review test. Note: as of 22 Oct 2026 no amending bill found (S1); the SCC leave decision is reported in the news but not verified (S4). Result cells fill once under the 22 Oct 2026 rule | Minister of Public Safety; Supreme Court of Canada | 22 Oct 2027 | DESK-SET (Barry GO 22 Oct 2026): scoring date set by the register; first check 23 Oct 2026, Supreme Court leave decision | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 22 Oct 2027 | OPEN | OPEN | OPEN
 
@@ -520,7 +526,7 @@ Outside files we watch | SA2 | PASS: an official Saudi energy ministry or Saudi 
 
 Outside files we watch | QC-SEATMATH | PASS (for the thesis): the platform of the party that forms government after the next federal GE lacks a dated title-map commitment or a dated one-law-for-all commitment (finished legal order traded). FAILED (for the thesis): a majority forms with both dated commitments in its platform. Finished legal order means BOTH a dated title-map commitment AND a dated one-law-for-all commitment in the winning platform. A minority result is still scored on the platform and flagged MINORITY. Record seats won outside Quebec against Quebec seats (Elections Canada Table 7). Rules approved by Barry 21 Oct 2026 | Governing party after the next federal general election; scorer: the desk | 14 Dec 2029 | PROPOSED: 30 days after Elections Canada validated results of the next GE; fixed-date fallback GE Mon 15 Oct 2029 (Canada Elections Act s. 56.1(2), derived), score 14 Dec 2029; earlier if Parliament dissolves sooner | PROPOSED | Elections Canada official voting results Table 7 (seats by affiliation, by province) for the next GE; winning party platform text. Baseline 2025: https://www.elections.ca/res/rep/off/ovrGE45/62/table7E.html | OPEN | OPEN | [internal desk reference hidden in display, 22 Oct 2026] | OPEN until scoring date 14 Dec 2029 | OPEN | OPEN | OPEN
 
-Recorded (30)
+Recorded (31)
 
 Facts, results and checkpoints, recorded and kept. They are not counted as open promises.
 
@@ -529,6 +535,8 @@ Section | ID | Test | Owner | Scoring date | Date source | Status | Measure | Mo
 Canadian files | AB1-PL-SCORED-20261022 | PASS: by end of Wed 21 Oct, a Government of Alberta page or release of about one page names, for Pacific Link, a dated outcome, a date and an accountable owner. FAILED: statements, pressers or readouts without all three | Premier of Alberta / Alberta Executive Council | 21 Oct 2026 | DESK-SET: first business day after the Question 10 count, allowing 48 hours for the unofficial count (row) | SCORED 22 Oct 2026: FAILED (blocking layer: executive (Premier of Alberta / Alberta Executive Council)) | https://www.alberta.ca/news (no Pacific Link release from 19 to 21 Oct 2026); https://www.alberta.ca/premiers-address-to-the-province (an outcome and a date but no owner, and not a one-page commitment); https://www.alberta.ca/pacific-link (existed before, names no owner). Scored 22 Oct 2026, a day late because of an outage. | Alberta 2026/27 Government Estimates, Executive Council, program 1.1 Office of the Premier / Executive Council $27,484 thousand; Executive Council expense vote $103,735 thousand (p. 108) https://open.alberta.ca/dataset/65514c30-e9f9-4951-9bae-7134edbe293c/resource/71713b5f-01ab-4ec5-9c01-7e49aec66fc1/download/budget-2026-estimates-government-2026-27.pdf. Amounts only: the page shows no volume driver, named deliverable or end date. | OPEN | [publishes 18 Oct 2026] | FAILED: no public figure; held by Government of Alberta | MIXED | FAILED | OPEN
 
 Canadian files | C39-CTTE-SCORED-20261023 | PASS: the House special committee on Bill C-39 meets and calls witnesses by 23 Oct. FAILED: it has not | House special committee on C-39 / Government House Leader | 23 Oct 2026 | DESK-SET: end of the week iPolitics reported for the committee's witness meetings (week of 19 Oct; jobs-print JOIN, E4) | SCORED 23 Oct 2026: PASS | https://www.ourcommons.ca/DocumentViewer/en/45-1/CC39/meeting-2/minutes | OPEN | OPEN | OPEN | FAILED: no public figure; held by the House of Commons (no CC39 cost published) | OPEN | OPEN | OPEN
+
+Canadian files | FA3b-SCORED-20261023 | PASS: the consolidated Schedule 1 text on laws-lois shows the Pacific Link / West Coast Oil Pipeline row, or Part II carries it. FAILED: it does not | Justice Canada / Privy Council | 21 Oct 2026 | SCHEDULED RELEASE: Canada Gazette Part II No. 21, 21 Oct 2026, the next read the desk named for Schedule 1 (a spike is not a pipe JOIN, 8 Oct) | SCORED 23 Oct 2026: FAILED (blocking layer: consolidation (Justice Canada, Legislative Services Branch)) | https://laws-lois.justice.gc.ca/eng/acts/B-9.89/FullText.html (Schedule 1 shows its header row only, no Pacific Link / West Coast Oil Pipeline row, read 23 Oct 2026; current to date not shown). The listing order itself was made 1 Oct 2026 (P.C. 2026-925) and printed in Canada Gazette Part I on 10 Oct 2026: https://gazette.gc.ca/rp-pr/p1/2026/2026-10-10/html/order-decret-eng.html. Scoring ruling 23 Oct 2026: scored on the consolidated Justice Laws text only; the words or Part II carries it in the test are not counted as a way to pass, because the Building Canada Act s. 5(8) excludes the Statutory Instruments Act. The test wording is kept as entered. | OPEN | OPEN | OPEN | FAILED: no public figure; held by Justice Canada (Legislative Services Branch) | OPEN | MIXED | OPEN
 
 Recorded facts and checkpoints | HR5334 | Outside file. Which applied on 18 Oct: a rate under sections 112 or 113, a written section 115 waiver, or neither. Recorded as fact: SET-AND-WAIVED. The 16 Oct order set the duties at the statutory caps (500 and 100 per cent, section 2) and waived them under section 115 by written certification stated as submitted to Congress (section 4), effective 18 Oct. Certification text and Federal Register citation: OPEN. Recorded, not scored PASS or FAILED: every outcome is recorded as fact; none fails. | US Administration / US Treasury | 18 Oct 2026 | STATUTE: US Public Law 119-111 (H.R. 5334), sections 112, 113 and 115, deadline 18 Oct 2026 | SCORED 18 Oct 2026 | https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/ | OPEN | OPEN | [publishes 19 Oct 2026] | OPEN: scored on or before 18 Oct 2026; rule B is not retroactive | OPEN | OPEN | OPEN
 
