@@ -158,3 +158,41 @@ def display_status(r, closers, replaced=None):
     if replaced and r["id"] in replaced:
         return "REPLACED by %s; this entry is kept" % replaced[r["id"]]
     return r["status"]
+
+
+# --- Housekeeping (rule entry R-2026-10-24-A). Internal working notes may be removed from a row.
+# Every removal is listed in data/housekeeping-log.csv with the row's fingerprint before and after,
+# per fingerprint layout. The build accepts a changed fingerprint only when the log lists it, the
+# change touches only HOUSEKEEPING_FIELDS, and each change only deletes text or replaces it with OPEN.
+HOUSEKEEPING_LOG = os.path.join(ROOT, "data", "housekeeping-log.csv")
+HOUSEKEEPING_COLS = ["date", "update", "id", "field", "action", "layout", "entry_sha256_before", "entry_sha256_after"]
+HOUSEKEEPING_FIELDS = ("date_source", "measure", "money", "funding", "argument")
+
+
+def read_housekeeping(path=HOUSEKEEPING_LOG):
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8", newline="") as fh:
+        rdr = csv.DictReader(fh)
+        if list(rdr.fieldnames or []) != HOUSEKEEPING_COLS:
+            raise Fail("housekeeping-log.csv: header must be " + ",".join(HOUSEKEEPING_COLS))
+        return list(rdr)
+
+
+def is_removal(old, new):
+    """True if new is old with one stretch of text deleted (whitespace normalised), or new is OPEN."""
+    ws = re.compile(r"\s+")
+    o, n = ws.sub(" ", old or "").strip(), ws.sub(" ", new or "").strip()
+    if n == "OPEN":
+        return True
+    if n == o or len(n) >= len(o):
+        return False
+    p = 0
+    while p < len(n) and n[p] == o[p]:
+        p += 1
+    rest = n[p:]
+    if o.endswith(rest):
+        return True
+    # allow the space either side of the deleted stretch to collapse
+    return any((o[:k] + o[j:]).replace("  ", " ").strip() == n for k in range(max(0, p - 1), p + 1)
+               for j in range(k, len(o) + 1))

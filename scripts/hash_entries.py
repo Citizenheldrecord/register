@@ -96,6 +96,19 @@ def manifest_text(path, rows, date, version=None):
     return "\n".join(out) + "\n"
 
 
+def housekeeping_pairs(path):
+    """Fingerprint changes listed in data/housekeeping-log.csv (rule entry R-2026-10-24-A), looked up
+    beside the data file's repository. The build also checks the fields; this check matches hashes."""
+    import os
+    here = os.path.dirname(os.path.abspath(path))
+    for cand in (os.path.join(here, "data", "housekeeping-log.csv"), os.path.join(here, "housekeeping-log.csv"),
+                 os.path.join(os.path.dirname(here), "data", "housekeeping-log.csv")):
+        if os.path.exists(cand):
+            with open(cand, encoding="utf-8", newline="") as fh:
+                return {(h["id"], h["layout"], h["entry_sha256_before"], h["entry_sha256_after"]) for h in csv.DictReader(fh)}
+    return set()
+
+
 def check(path, rows, manifest):
     version = manifest_version(manifest)
     want = {}
@@ -109,6 +122,8 @@ def check(path, rows, manifest):
         if exp is None:
             print("NEW      %s %s" % (r["id"], got)); continue
         if got != exp:
+            if (r["id"], version, exp, got) in housekeeping_pairs(path):
+                print("HOUSEKEPT %s manifest %s now %s (logged in data/housekeeping-log.csv, rule entry R-2026-10-24-A)" % (r["id"], exp, got)); continue
             bad += 1; print("CHANGED  %s manifest %s now %s" % (r["id"], exp, got))
     for i in sorted(set(want) - {r["id"] for r in rows}):
         bad += 1; print("MISSING  %s (append only: an entry may not disappear)" % i)

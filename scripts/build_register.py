@@ -311,6 +311,36 @@ def previous_manifests(folder, uid):
     return out
 
 
+def housekeeping_ok(manifest, version, rid, before, after, rows):
+    """Rule entry R-2026-10-24-A. True if the change is a logged housekeeping edit; an error string if it
+    is logged but breaks the rule; None if it is not logged (then it is an ordinary CHANGED error)."""
+    log = [h for h in rc.read_housekeeping() if h["id"] == rid and h["layout"] == version]
+    if not log:
+        return None
+    if not any(h["entry_sha256_before"] == before and h["entry_sha256_after"] == after for h in log):
+        return "HOUSEKEEPING %s: log lists it but not fingerprint %s -> %s (%s)" % (rid, before, after, os.path.basename(manifest))
+    src = None
+    for line in open(manifest, encoding="utf-8"):
+        if line.startswith("# source_file:"):
+            src = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(manifest))), line.split(":", 1)[1].strip())
+    if not src or not os.path.exists(src):
+        return "HOUSEKEEPING %s: cannot read the published file named by %s" % (rid, os.path.basename(manifest))
+    import csv as _c
+    old = next((r for r in _c.DictReader(open(src, encoding="utf-8", newline="")) if r["id"] == rid), None)
+    new = next(r for r in rows if r["id"] == rid)
+    if old is None or he.fingerprint(old, version) != before:
+        return "HOUSEKEEPING %s: published row in %s does not match fingerprint %s" % (rid, os.path.basename(src), before)
+    diff = [f for f in he.LAYOUTS[version] if he.norm(old.get(f, "")) != he.norm(new.get(f, ""))]
+    logged = {h["field"] for h in rc.read_housekeeping() if h["id"] == rid}
+    bad = [f for f in diff if f not in rc.HOUSEKEEPING_FIELDS or f not in logged or not rc.is_removal(old.get(f, ""), new.get(f, ""))]
+    if bad:
+        return "HOUSEKEEPING %s: not a housekeeping removal in %s (only %s may lose text or become OPEN, and each must be logged)" % (rid, ", ".join(bad), ", ".join(rc.HOUSEKEEPING_FIELDS))
+    return True
+
+
+HOUSEKEPT = {}   # manifest path -> ids accepted as logged housekeeping edits (printed, never silent)
+
+
 def manifest_problems(manifest, rows):
     version = he.manifest_version(manifest)
     want = {}
@@ -319,15 +349,23 @@ def manifest_problems(manifest, rows):
         for rec in _c.DictReader([l for l in fh if not l.startswith("#")]):
             want[rec["id"]] = rec["entry_sha256"]
     have = {r["id"]: he.fingerprint(r, version) for r in rows}
-    errs = []
+    errs, housekept = [], []
     for i, h in want.items():
         if i not in have:
             errs.append("VANISHED %s (in %s). The record is append only." % (i, os.path.basename(manifest)))
         elif have[i] != h:
+            hk = housekeeping_ok(manifest, version, i, h, have[i], rows)
+            if hk is True:
+                housekept.append(i)
+                continue
+            if hk:
+                errs.append(hk)
+                continue
             sup = [r["id"] for r in rows if r.get("supersedes_id") == i]
             errs.append("CHANGED %s: fingerprint %s in %s, now %s. Prior entries are never edited; enter a new dated entry citing it%s." %
                         (i, h, os.path.basename(manifest), have[i], " (superseded by %s, but the original must stay unchanged)" % ", ".join(sup) if sup else ""))
     new = [i for i in have if i not in want]
+    HOUSEKEPT[manifest] = housekept
     return errs, new
 
 
@@ -366,6 +404,11 @@ def build(uid, out_dir, source):
     open(os.path.join(stage, "index.html"), "w", encoding="utf-8").write(index)
     mname = "manifest/entry-hashes-v2-%s.csv" % uid
     mtext = he.manifest_text(os.path.join(stage, csv_name), rows, uid, "chr-entry-v2")
+    if os.path.exists(rc.HOUSEKEEPING_LOG):
+        hk = rc.read_housekeeping()
+        hl = "# housekeeping_log: data/housekeeping-log.csv sha256 %s, %d logged removals in %d entries (rule entry R-2026-10-24-A)\n" % (
+            sha(open(rc.HOUSEKEEPING_LOG, "rb").read()), len({(h["id"], h["field"]) for h in hk}), len({h["id"] for h in hk}))
+        mtext = mtext.replace("\nmanifest_date,id,", "\n" + hl + "manifest_date,id,", 1)
     open(os.path.join(stage, mname), "w", encoding="utf-8", newline="\n").write(mtext)
     open(os.path.join(stage, mname + ".sha256"), "w").write("%s  %s\n" % (sha(mtext.encode()), mname))
     errs = printed_checks(stage)
@@ -408,7 +451,9 @@ def main():
         rows, csv_sha, prevs, new_ids, written = build(a.date, os.path.abspath(a.out_dir), a.source)
         print("BUILD OK %s: %d entries, CSV sha256 %s" % (a.date, len(rows), csv_sha))
         for prev in prevs:
-            print("checked against previous manifest %s (%s): 0 changed, 0 vanished" % (os.path.relpath(prev, ROOT), he.manifest_version(prev)))
+            hk = HOUSEKEPT.get(prev, [])
+            print("checked against previous manifest %s (%s): 0 changed, 0 vanished%s" % (os.path.relpath(prev, ROOT), he.manifest_version(prev),
+                  ", %d housekeeping edits as logged in data/housekeeping-log.csv %s" % (len(hk), hk) if hk else ""))
         print("%d new since the latest manifest %s" % (len(new_ids), new_ids if new_ids else ""))
         for s, rel in written:
             print("  %-9s %s" % (s, rel))
