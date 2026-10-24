@@ -111,4 +111,25 @@ closed={r['supersedes_id'] for r in rows if r['supersedes_id']}
 assert not set(ids)&closed and 'Past their scoring date' in m.group(1)
 PY
 
+echo "14. housekeeping (R-2026-10-24-A): unlogged removal fails; logged removal passes; logged edit to a protected field fails"
+hk(){ python3 - "$@" <<'PY'
+import csv,sys,glob
+sys.path.insert(0,'scripts'); import hash_entries as he
+field,new,log=sys.argv[1],sys.argv[2],sys.argv[3]=='log'
+p='data/entries.csv'; rd=csv.DictReader(open(p,encoding='utf-8',newline='')); h=rd.fieldnames; rows=list(rd)
+r=next(x for x in rows if x['id']=='EA-REFORM'); before=he.fingerprint(r,'chr-entry-v2'); r[field]=new
+w=csv.DictWriter(open(p,'w',encoding='utf-8',newline=''),fieldnames=h,lineterminator='\r\n'); w.writeheader(); w.writerows(rows)
+if log:
+    open('data/housekeeping-log.csv','a',encoding='utf-8',newline='').write('2099-12-31,2099-12-31,EA-REFORM,%s,test,chr-entry-v2,%s,%s\n'%(field,before,he.fingerprint(r,'chr-entry-v2')))
+PY
+}
+fresh; hk date_source "scoring date set by the register; first check 23 Oct 2026, Supreme Court leave decision" nolog
+PATTERN="CHANGED EA-REFORM\|HOUSEKEEPING EA-REFORM: log lists it but not fingerprint" expect_fail "unlogged removal caught" build $SCRATCH
+fresh; hk date_source "DESK-SET: scoring date set by the register" log
+build $SCRATCH >/tmp/pl.out 2>&1 && grep -q "housekeeping edits as logged" /tmp/pl.out && grep -q "^# housekeeping_log: data/housekeeping-log.csv" manifest/entry-hashes-v2-$SCRATCH.csv && ok "logged removal accepted, printed and named in the manifest" || { bad "logged removal"; cat /tmp/pl.out; }
+fresh; hk owner "Someone else" log
+PATTERN="not a housekeeping removal in owner" expect_fail "logged owner edit refused" build $SCRATCH
+fresh; hk date_source "DESK-SET: scoring date set by the register, now with added words" log
+PATTERN="not a housekeeping removal in date_source" expect_fail "logged addition refused" build $SCRATCH
+
 echo; [ $fails -eq 0 ] && echo "PIPELINE TESTS: ALL PASSED" || echo "PIPELINE TESTS: $fails FAILED"; exit $fails
