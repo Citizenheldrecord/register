@@ -90,7 +90,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-24a.csv (all 223 rows) is 6fb40ee32b7deae8d4d331cb0cde357249d4c7b57d3c4751cc62e90a6a98fee4
+Checksum for this update: SHA-256 of public-live-rows-2026-10-24b.csv (all 223 rows) is 6fb40ee32b7deae8d4d331cb0cde357249d4c7b57d3c4751cc62e90a6a98fee4
 
 Rule entries
 
