@@ -18,6 +18,9 @@ Correction of an existing entry's wording (owner only; test, dates and section c
   python3 scripts/add_entry.py correct --supersedes OLD --owner "..." --corrected-on 2026-10-22 \
       --reason "owner wording corrected" [--id OLD-C20261022]
 
+Follow-up link (fill once, no other cell changes):
+  python3 scripts/add_entry.py follows --id NEW --follows OLD   (or --follows OLD on commit)
+
 Put --dry-run before the subcommand to print the row without writing.
 """
 import argparse, os, sys
@@ -68,10 +71,41 @@ def add_subscore_columns(path):
     print("added columns %s (OPEN on existing rows)" % rc.SUBSCORE_COLS)
 
 
+def add_follows_column(path):
+    header, rows = rc.read_source(path)
+    if rc.FOLLOWS_COL in header:
+        print("follows_id column already present"); return
+    header.append(rc.FOLLOWS_COL)
+    for r in rows:
+        r[rc.FOLLOWS_COL] = ""
+    open(path, "w", encoding="utf-8", newline="").write(rc.write_csv_text(header, rows))
+    print("added column %s (blank on existing rows; fingerprints unchanged)" % rc.FOLLOWS_COL)
+
+
+def set_follows(path, rid, fid):
+    """Fill follows_id once on an existing row. Only that cell; refuses if already filled with another id."""
+    header, rows = rc.read_source(path)
+    if rc.FOLLOWS_COL not in header: die("no follows_id column; run --add-follows-column first")
+    byid = {x["id"]: x for x in rows}
+    r = byid.get(rid) or die("no entry %s" % rid)
+    if fid not in byid: die("no entry %s to follow" % fid)
+    cur = r.get(rc.FOLLOWS_COL, "")
+    if cur == fid: print("%s already follows %s" % (rid, fid)); return
+    if cur: die("%s already follows %s (fill-once)" % (rid, cur))
+    before = he.fingerprint(r)
+    r[rc.FOLLOWS_COL] = fid
+    if he.fingerprint(r) != before: die("internal: follows_id changed a fingerprint")
+    errs = rc.validate(header, rows)
+    if errs: die("\n".join(errs))
+    open(path, "w", encoding="utf-8", newline="").write(rc.write_csv_text(header, rows))
+    print("%s follows %s (fingerprint unchanged %s)" % (rid, fid, before))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--source", default=rc.SOURCE)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--add-follows-column", action="store_true", help="schema addition, Barry GO 24 Oct 2026: adds follows_id, blank on existing rows")
     ap.add_argument("--add-subscore-columns", action="store_true", help="schema change, Barry call: adds hype_score, means_score, cost_score")
     sub = ap.add_subparsers(dest="cmd")
     c = sub.add_parser("commit")
@@ -79,6 +113,9 @@ def main():
         c.add_argument("--" + f, required=True)
     for f, d in (("measure", "OPEN"), ("money", "OPEN"), ("funding", "OPEN"), ("argument", "OPEN"), ("status", "LIVE")):
         c.add_argument("--" + f, default=d)
+    c.add_argument("--follows", default="", help="id of the entry this one follows (follows_id)")
+    f = sub.add_parser("follows", help="fill follows_id once on an existing entry (no other cell changes)")
+    f.add_argument("--id", required=True); f.add_argument("--follows", required=True)
     r = sub.add_parser("redate")
     for f in ("supersedes", "id", "scoring-date", "date-source"):
         r.add_argument("--" + f, required=True)
@@ -95,6 +132,11 @@ def main():
     s.add_argument("--id")
     a = ap.parse_args()
 
+    if a.add_follows_column:
+        add_follows_column(a.source)
+        if not a.cmd: return
+    if a.cmd == "follows":
+        set_follows(a.source, a.id, a.follows); return
     if a.add_subscore_columns:
         add_subscore_columns(a.source)
         if not a.cmd: return
@@ -113,6 +155,9 @@ def main():
                "money": a.money, "funding": a.funding, "argument": a.argument,
                "cost_to_date": "OPEN until scoring date %s" % a.scoring_date,
                "hype_score": "OPEN", "means_score": "OPEN", "cost_score": "OPEN"}
+        if a.follows:
+            if rc.FOLLOWS_COL not in header: die("no follows_id column; run --add-follows-column first")
+            new[rc.FOLLOWS_COL] = a.follows
         if a.id in byid: die("id %s already exists" % a.id)
         if a.id.upper().startswith("XFER-"):
             closers = rc.closed_by(rows)

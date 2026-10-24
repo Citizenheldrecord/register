@@ -6,6 +6,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOURCE = os.path.join(ROOT, "data", "entries.csv")
 SECTION_ORDER = ["CANADA", "DESK", "WATCH", "RECORDED"]
 SUBSCORE_COLS = ["hype_score", "means_score", "cost_score"]
+FOLLOWS_COL = "follows_id"  # optional link to the entry this one follows (Barry 24 Oct 2026: PASS is not delivery); blank by default, not part of the fingerprint
 REQUIRED = ["id", "section", "sort_date", "scoring_date", "test", "owner", "date_source", "status", "cost_to_date"] + SUBSCORE_COLS
 SUBSCORE_VALUES = {"MATCHED", "MIXED", "FAILED", "OPEN"}
 RULE_START = "2026-10-18"   # rules A and B apply to entries scored after this date
@@ -87,6 +88,12 @@ def validate(header, rows):
             errs.append(where + ": supersedes_id and supersedes_hash must both be set or both empty")
         if sid and sid not in seen and sid not in {x["id"] for x in rows}:
             errs.append(where + ": supersedes unknown id %s" % sid)
+        fid = (r.get(FOLLOWS_COL) or "").strip()
+        if fid:
+            if fid == rid:
+                errs.append(where + ": follows_id points at itself")
+            elif fid not in {x["id"] for x in rows}:
+                errs.append(where + ": follows unknown id %s" % fid)
         for c in SUBSCORE_COLS:
             if r.get(c, "") not in SUBSCORE_VALUES:
                 errs.append(where + ": %s must be MATCHED, MIXED, FAILED or OPEN (got %r)" % (c, r.get(c, "")))

@@ -121,7 +121,7 @@ def md_to_html(md):
 
 def tables(rows):
     closers, replaced = rc.closed_by(rows), rc.replaced_by(rows)
-    cell = lambda r, k: rc.display_status(r, closers, replaced) if k == "status" else r.get(k, "")
+    cell = lambda r, k: rc.display_status(r, closers, replaced) if k == "status" else (r["id"] + (" (follows %s)" % r[rc.FOLLOWS_COL] if r.get(rc.FOLLOWS_COL) else "")) if k == "id" else r.get(k, "")
     out = ""
     groups = load_groups(rows)
     if groups:

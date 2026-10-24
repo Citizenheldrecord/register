@@ -60,6 +60,8 @@ def how_to_read(rows, links):
             '<ul><li><b>LIVE</b>: the test is set and waiting for its date.</li>'
             '<li><b>PROPOSED</b>: drafted, not yet a live test.</li>'
             '<li><b>PASS</b> or <b>FAILED</b>: the result on the scoring date. A result is a new row; the old row is never edited. A scored row shows as CLOSED and links to the row that scored it.</li>'
+            '<li><b>Follow-ups</b>: a PASS is not delivery. Each promise is tracked from the very start to total completion: every PASS gets a new follow-up row testing the next real step, linked back by its follows_id and shown as (follows ID), and the chain closes only at full delivery or at a recorded FAILED.</li>'
+            '<li><b>Fill once</b>: a row\'s blank result cells are filled once, on or after its scoring date, each pointing to a dated entry added at the bottom; after that the row is frozen and any correction is a new dated entry.</li>'
             '<li><b>OPEN</b> in a cell: not yet found in a public source. It is never filled with a guess.</li>'
             '<li><b>Sections</b>: Canadian files; this desk\'s own commitments; outside files we watch; recorded facts and checkpoints, which are dated records rather than pass or fail tests.</li>'
             '<li><b>Essay</b>: the column that names the essay that set the test, with a link once it is published.</li></ul>'
