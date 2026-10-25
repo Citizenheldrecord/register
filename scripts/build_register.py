@@ -59,8 +59,14 @@ def load_groups(rows):
     if not os.path.exists(GROUPS):
         return None
     g = {r["id"]: r["display_group"] for r in _c.DictReader(open(GROUPS, encoding="utf-8"))}
-    if any(r["id"] not in g for r in rows) or any(v not in GROUP_ORDER for v in g.values()):
-        return None
+    for r in rows:   # a new date, correction or scoring entry sits in the group of the entry it cites
+        if r["id"] not in g and r.get("supersedes_id") in g:
+            g[r["id"]] = g[r["supersedes_id"]]
+    miss = [r["id"] for r in rows if r["id"] not in g]
+    bad = sorted(k for k, v in g.items() if v not in GROUP_ORDER)
+    if miss or bad:
+        # 25 Oct 2026: never fall back silently; a row missing from the groups file left counts short.
+        raise rc.Fail("display-groups.csv: rows not grouped %s; unknown groups %s" % (miss, bad))
     return g
 
 
@@ -87,12 +93,9 @@ def overlaps_md(rows):
 
 def backlog_block(iso):
     """Display only: the counter's block, counted from data/entries.csv on the build date."""
-    import subprocess
-    sc = os.path.join(rc.ROOT, "scripts", "backlog_counter.py")
-    if not os.path.exists(sc) or not os.path.exists(GROUPS):
-        return None
-    r = subprocess.run([sys.executable, sc, rc.SOURCE, iso, GROUPS], capture_output=True, text=True)
-    return r.stdout.strip() if r.returncode == 0 and r.stdout.strip() else None
+    import backlog_counter as bc
+    _, rows = rc.read_source(rc.SOURCE)
+    return bc.block(rows, iso)[0]
 
 
 def md_to_html(md):
@@ -139,6 +142,28 @@ def tables(rows):
     return out
 
 
+GITHUB = "https://github.com/citizenheldrecord/register/blob/main/"
+
+
+def build_stamp(uid, iso, src_sha, n):
+    return ("Build stamp: update %s, counted as at %s, from data/entries.csv, %d rows, SHA-256 %s. "
+            "The build stops if this file, its row count or any count on this page does not match." % (uid, rc.long_date(iso), n, src_sha))
+
+
+def audit_md(uid, iso, src_sha, n):
+    hk = rc.read_housekeeping()
+    hk_sha = sha(open(rc.HOUSEKEEPING_LOG, "rb").read()) if os.path.exists(rc.HOUSEKEEPING_LOG) else "none"
+    man = "manifest/entry-hashes-v2-%s.csv" % uid
+    return "\n\n".join([
+        "## How to check this update",
+        build_stamp(uid, iso, src_sha, n),
+        "Entry fingerprints for this update: [%s](%s%s). Housekeeping log: [data/housekeeping-log.csv](%sdata/housekeeping-log.csv), SHA-256 %s, %d lines." % (man, GITHUB, man, GITHUB, hk_sha, len(hk)),
+        "How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.",
+        "Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.",
+        "Limits of this register. A fingerprint or checksum proves a file or row has not changed since it was published. It does not prove the evidence is complete, that the test is fair, or that a date set by the register is the right benchmark. Anyone may challenge any row: open an issue naming the row id and the reason, and the answer goes in as a dated entry.",
+    ])
+
+
 def render_readme(tpl, rows, csv_name, csv_sha, iso):
     ld = rc.long_date(iso)
     t = one(r"Entries as at \d+ \w+ \d{4}\. Last change: \d+ \w+ \d{4}\.", "Entries as at %s. Last change: %s." % (ld, ld), tpl, "README")
@@ -159,6 +184,14 @@ def render_readme(tpl, rows, csv_name, csv_sha, iso):
     fx = ra.display_fixes(rows)
     drows = [dict(r, **fx.get(r["id"], {})) for r in rows]
     t = t[:a] + tables(drows) + t[b:]
+    au = "<!-- AUDIT -->\n\n%s\n\n<!-- /AUDIT -->\n\n" % audit_md(STAMP["uid"], iso, STAMP["sha"], STAMP["n"])
+    if "<!-- AUDIT -->" in t:
+        t = one(r"<!-- AUDIT -->.*?<!-- /AUDIT -->\n\n", lambda m: au, t, "README", re.S)
+    else:
+        k = t.find("Failure log\n")
+        if k < 0:
+            raise rc.Fail("README: Failure log anchor not found")
+        t = t[:k] + au + t[k:]
     ov = overlaps_md(rows)
     if ov:
         blk = "<!-- OVERLAPS -->\n\n%s\n\n<!-- /OVERLAPS -->\n\n" % ov
@@ -216,7 +249,8 @@ def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
         raise rc.Fail("\n".join(errs))
     blocks = (("STATUS-SUMMARY", ra.status_summary(rows, iso), "<h1>The Register</h1>\n", True),
               ("HOW-TO-READ", ra.how_to_read(rows, links), "<details><summary>The rules</summary>", False),
-              ("ESSAYS", ra.essays_index(rows, links), "<h2>Failure log</h2>", False))
+              ("ESSAYS", ra.essays_index(rows, links), "<h2>Failure log</h2>", False),
+              ("AUDIT", "<!-- AUDIT --><section class=\"audit\">%s</section><!-- /AUDIT -->\n" % md_to_html(re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r"\1 (\2)", audit_md(STAMP["uid"], iso, STAMP["sha"], STAMP["n"]))), "<h2>Failure log</h2>", False))
     bl = backlog_block(iso)
     if bl:
         blocks = blocks + (("BACKLOG", "<!-- BACKLOG --><section class=\"backlog\">%s</section><!-- /BACKLOG -->\n" % md_to_html(bl), "<h1>The Register</h1>\n", True),)
@@ -255,17 +289,51 @@ def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
         t = one(r'<script type="application/json" id="displaygroups">.*?</script>', lambda m: gj, t, "index.html", re.S)
     else:
         t = t.replace(fj, fj + "\n" + gj, 1)
+    t = one(r"Last updated \d+ \w+ \d{4} \(update \d{4}-\d\d-\d\d[a-z]?\)\.", "Last updated %s (update %s)." % (ld, STAMP["uid"]), t, "index.html")
     t = one(r"<h2>Entries \(\d+\)</h2>", "<h2>Entries (%d)</h2>" % len(rows), t, "index.html")
     t = one(r"Entries as at \d+ \w+ \d{4}\. Last change: \d+ \w+ \d{4}\.", "Entries as at %s. Last change: %s." % (ld, ld), t, "index.html")
     t = one(r"No entries as at \d+ \w+ \d{4}\.", "No entries as at %s." % ld, t, "index.html")
     return t
 
 
-def printed_checks(folder, iso=None):
+def stamp_checks(readme, index, source):
+    """25 Oct 2026: the build stamp must name the data file as it is, and the count block must be the one
+    count_states() gives for that file on the stamped date."""
+    errs = []
+    m = re.search(r"Build stamp: update ([^,\s]+), counted as at (\d+ \w+ \d{4}), from data/entries.csv, (\d+) rows, SHA-256 ([0-9a-f]{64})\.", readme)
+    if not m:
+        return ["README: no build stamp"]
+    uid, ld, n, h = m.groups()
+    if build_stamp(uid, rc.split_uid(uid)[0], h, int(n)) not in index.replace("&#x27;", "'"):
+        errs.append("index.html build stamp differs from README")
+    if not os.path.exists(source):
+        return errs + ["build stamp: %s not found" % source]
+    if sha(open(source, "rb").read()) != h:
+        errs.append("build stamp SHA-256 %s does not match data/entries.csv" % h)
+    _, rows = rc.read_source(source)
+    if len(rows) != int(n):
+        errs.append("build stamp says %s rows, data/entries.csv has %d" % (n, len(rows)))
+    import backlog_counter as bc
+    iso = rc.split_uid(uid)[0]
+    try:
+        blk = bc.block(rows, iso)[0]
+        if blk not in readme:
+            errs.append("README count block is not the block computed from data/entries.csv as at %s" % iso)
+        if md_to_html(blk) not in index:
+            errs.append("index.html count block is not the block computed from data/entries.csv as at %s" % iso)
+    except rc.Fail as e:
+        errs.append(str(e))
+    if rc.long_date(iso) != ld:
+        errs.append("build stamp date %s does not match update %s" % (ld, uid))
+    return errs
+
+
+def printed_checks(folder, iso=None, source=None):
     """Every printed checksum must equal the CSV it names. Returns problems."""
     errs = []
     readme = open(os.path.join(folder, "README.md"), encoding="utf-8").read()
     index = open(os.path.join(folder, "index.html"), encoding="utf-8").read()
+    errs += stamp_checks(readme, index, source or os.path.join(folder, "data", "entries.csv"))
     m = re.search(r"SHA-256 of (public-live-rows-[\da-z-]+\.csv) \(all (\d+) rows\) is ([0-9a-f]{64})", readme)
     if not m:
         return ["README: no printed checksum line"]
@@ -312,7 +380,7 @@ def previous_manifests(folder, uid):
 
 
 def housekeeping_ok(manifest, version, rid, before, after, rows):
-    """Rule entry R-2026-10-24-A. True if the change is a logged housekeeping edit; an error string if it
+    """Rule entries R-2026-10-24-A and R-2026-10-25-A. True if the change is a logged housekeeping edit; an error string if it
     is logged but breaks the rule; None if it is not logged (then it is an ordinary CHANGED error)."""
     log = [h for h in rc.read_housekeeping() if h["id"] == rid and h["layout"] == version]
     if not log:
@@ -332,9 +400,9 @@ def housekeeping_ok(manifest, version, rid, before, after, rows):
         return "HOUSEKEEPING %s: published row in %s does not match fingerprint %s" % (rid, os.path.basename(src), before)
     diff = [f for f in he.LAYOUTS[version] if he.norm(old.get(f, "")) != he.norm(new.get(f, ""))]
     logged = {h["field"] for h in rc.read_housekeeping() if h["id"] == rid}
-    bad = [f for f in diff if f not in rc.HOUSEKEEPING_FIELDS or f not in logged or not rc.is_removal(old.get(f, ""), new.get(f, ""))]
+    bad = [f for f in diff if f not in rc.HOUSEKEEPING_FIELDS or f not in logged or not rc.is_removal(old.get(f, ""), new.get(f, ""), f)]
     if bad:
-        return "HOUSEKEEPING %s: not a housekeeping removal in %s (only %s may lose text or become OPEN, and each must be logged)" % (rid, ", ".join(bad), ", ".join(rc.HOUSEKEEPING_FIELDS))
+        return "HOUSEKEEPING %s: not a housekeeping removal in %s (only %s may lose text or become OPEN, the test field may only lose text, and each must be logged)" % (rid, ", ".join(bad), ", ".join(rc.HOUSEKEEPING_FIELDS))
     return True
 
 
@@ -369,8 +437,12 @@ def manifest_problems(manifest, rows):
     return errs, new
 
 
+STAMP = {}
+
+
 def build(uid, out_dir, source):
     header, rows = rc.read_source(source)
+    STAMP.update(uid=uid, sha=sha(open(source, "rb").read()), n=len(rows))
     errs = rc.validate(header, rows)
     rows = rc.sort_rows(rows)
     iso, _ = rc.split_uid(uid)
@@ -383,6 +455,11 @@ def build(uid, out_dir, source):
             new_ids = n2      # new since the latest manifest of the current layout
     if not prevs:
         errs.append("no previous manifest found in manifest/ (refusing to build without one)")
+    od = rc.overdue_problems(rows, iso)
+    if od and os.environ.get("REGISTER_OVERDUE") == "warn":   # tests of unrelated rules only; preflight never sets it
+        print("OVERDUE GUARD SET TO WARN (test use only):\n" + "\n".join(od), file=sys.stderr)
+    else:
+        errs += od
     if errs:
         raise rc.Fail("\n".join(errs))
     csv_text = rc.write_csv_text(header, rows)
@@ -406,12 +483,12 @@ def build(uid, out_dir, source):
     mtext = he.manifest_text(os.path.join(stage, csv_name), rows, uid, "chr-entry-v2")
     if os.path.exists(rc.HOUSEKEEPING_LOG):
         hk = rc.read_housekeeping()
-        hl = "# housekeeping_log: data/housekeeping-log.csv sha256 %s, %d logged removals in %d entries (rule entry R-2026-10-24-A)\n" % (
+        hl = "# housekeeping_log: data/housekeeping-log.csv sha256 %s, %d logged removals in %d entries (rule entries R-2026-10-24-A and R-2026-10-25-A)\n" % (
             sha(open(rc.HOUSEKEEPING_LOG, "rb").read()), len({(h["id"], h["field"]) for h in hk}), len({h["id"] for h in hk}))
         mtext = mtext.replace("\nmanifest_date,id,", "\n" + hl + "manifest_date,id,", 1)
     open(os.path.join(stage, mname), "w", encoding="utf-8", newline="\n").write(mtext)
     open(os.path.join(stage, mname + ".sha256"), "w").write("%s  %s\n" % (sha(mtext.encode()), mname))
-    errs = printed_checks(stage)
+    errs = printed_checks(stage, source=source)
     e3, _ = manifest_problems(os.path.join(stage, mname), rows)
     errs += e3
     if errs:

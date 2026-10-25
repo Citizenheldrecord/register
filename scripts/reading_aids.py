@@ -28,27 +28,33 @@ def _open(rows):
 
 
 def status_summary(rows, iso):
-    open_, closers = _open(rows)
+    c = rc.count_states(rows, iso)
+    n = {k: sum(1 for v in c["state"].values() if v == k) for k in rc.STATE_ORDER}
     d0 = date.fromisoformat(iso)
     end = (d0 + timedelta(days=30)).isoformat()
-    proposed = [r for r in rows if r["status"] == "PROPOSED"]
-    scoring = [r for r in rows if rc.is_resolved(r)]
-    passes = [r for r in scoring if "PASS" in r["status"]]
-    fails = [r for r in scoring if "FAILED" in r["status"]]
-    past = sorted([r for r in open_ if r["sort_date"] < iso], key=lambda r: (r["sort_date"], r["id"]))
-    soon = sorted([r for r in open_ if iso <= r["sort_date"] <= end], key=lambda r: (r["sort_date"], r["id"]))
+    byid = {r["id"]: r for r in rows}
+    past = sorted([byid[i] for i in c["due_days"]], key=lambda r: (r["sort_date"], r["id"]))
+    soon = sorted([byid[i] for i, v in c["state"].items() if v == "Open" and byid[i]["sort_date"] <= end], key=lambda r: (r["sort_date"], r["id"]))
     secs = ", ".join("%s %d" % (s, sum(1 for r in rows if r["section"] == s)) for s in rc.SECTION_ORDER)
     a = lambda r: '<a href="#row-%s">%s</a>' % (E(r["id"]), E(r["id"]))
-    pastline = ", ".join("%s (%s)" % (a(r), E(r["scoring_date"])) for r in past) or "none"
+    def pl(r):
+        p = rc.pending_reason(r["id"], iso)
+        return "%s (%s%s)" % (a(r), E(r["scoring_date"]), ("; scoring pending, noted %s, read again by %s" % (E(rc.long_date(p["noted"])), E(rc.long_date(p["recheck_by"])))) if p else "")
+    pastline = ", ".join(pl(r) for r in past) or "none"
     soonrows = "".join("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (E(r["scoring_date"]), a(r), E(r["section"]), E(display_fixes([r]).get(r["id"], {}).get("owner", r["owner"]))) for r in soon)
+    basis = {}
+    for r in rows:
+        basis[date_basis(r)] = basis.get(date_basis(r), 0) + 1
     return ('<!-- STATUS-SUMMARY --><div class="panel summary"><b>Status at a glance, as at %s</b>'
-            '<p>%d entries. Open and waiting for their scoring date: %d. Closed by a scoring entry: %d. Scoring entries: %d (PASS %d, FAILED %d, recorded as fact %d). Proposed, not yet live: %d.</p>'
+            '<p>%d entries = %d promises + %d scoring entries. Of the %d promises: PASS %d, FAILED %d, recorded as fact %d, open %d, due %d, replaced %d, proposed %d, repeating %d. The same numbers, with their definitions, are in the count block on this page.</p>'
             '<p>By section: %s.</p>'
+            '<p>Date basis: %d entries have a benchmark date set by the register, %d an outside date with a scoring window set by the register, %d a date set by an outside source. Each row is labelled in its date source cell.</p>'
             '<p><b>Past their scoring date and not yet scored: %s.</b></p>'
             '<details><summary>Due in the next 30 days (%d), to %s</summary><table><thead><tr><th>Scoring date</th><th>ID</th><th>Section</th><th>Owner</th></tr></thead><tbody>%s</tbody></table></details>'
-            '<p class="small">Built from the table below each update. Display only: it changes no entry.</p></div><!-- /STATUS-SUMMARY -->\n'
-            % (rc.long_date(iso), len(rows), len(open_), len(closers), len(scoring), len(passes), len(fails), len(scoring) - len(passes) - len(fails),
-               len(proposed), secs, pastline, len(soon), rc.long_date(end), soonrows or '<tr><td colspan="4" class="empty">None.</td></tr>'))
+            '<p class="small">Built from data/entries.csv each update. Display only: it changes no entry.</p></div><!-- /STATUS-SUMMARY -->\n'
+            % (rc.long_date(iso), c["total"], c["promises"], c["scoring_entries"], c["promises"], n["PASS"], n["FAILED"], n["Recorded"], n["Open"], n["Due"],
+               n["Replaced"], n["Proposed"], n["Repeating"], secs, basis.get("desk", 0), basis.get("mixed", 0), basis.get("outside", 0),
+               pastline, len(soon), rc.long_date(end), soonrows or '<tr><td colspan="4" class="empty">None.</td></tr>'))
 
 
 def how_to_read(rows, links):
@@ -62,6 +68,7 @@ def how_to_read(rows, links):
             '<li><b>PASS</b> or <b>FAILED</b>: the result on the scoring date. A result is a new row; the old row is never edited. A scored row shows as CLOSED and links to the row that scored it.</li>'
             '<li><b>Follow-ups</b>: a PASS is not delivery. Each promise is tracked from the very start to total completion: every PASS gets a new follow-up row testing the next real step, linked back by its follows_id and shown as (follows ID), and the chain closes only at full delivery or at a recorded FAILED.</li>'
             '<li><b>Fill once</b>: a row\'s blank result cells are filled once, on or after its scoring date, each pointing to a dated entry added at the bottom; after that the row is frozen and any correction is a new dated entry.</li>'
+            '<li><b>Date basis</b>: each date source cell starts with a label. A benchmark set by the register is a date this desk chose to test a promise against; it is not a date the owner set. Other dates come from a court, statute, government, company or scheduled release.</li>'
             '<li><b>OPEN</b> in a cell: not yet found in a public source. It is never filled with a guess.</li>'
             '<li><b>Sections</b>: Canadian files; this desk\'s own commitments; outside files we watch; recorded facts and checkpoints, which are dated records rather than pass or fail tests.</li>'
             '<li><b>Essay</b>: the column that names the essay that set the test, with a link once it is published.</li></ul>'
@@ -99,6 +106,23 @@ SCAN = re.compile(r"(drafts/|raw/|local/|\.md\b|\.py\b|\bSOFTS\b|\bCoS\b|\bledge
 FIELDS = ("test", "owner", "date_source", "status", "measure", "money", "argument", "cost_to_date")
 
 
+# Date basis label (25 October 2026). Display only, derived from the start of the date source field:
+# no entry changes. DESK-SET at the start: the register chose the date as a benchmark. Any other
+# prefix (DOCKET, STATUTE, SCHEDULED RELEASE, GOVERNMENT PROMISE, COMPANY TIMETABLE and so on):
+# the date comes from an outside source; if DESK-SET appears later in the field, the register set
+# the scoring window around that outside date.
+BASIS = {"desk": "[Date basis: benchmark set by the register]",
+         "mixed": "[Date basis: outside date, scoring window set by the register]",
+         "outside": "[Date basis: set by an outside source]"}
+
+
+def date_basis(r):
+    d = (r.get("date_source") or "").strip()
+    if d.upper().startswith("DESK-SET"):
+        return "desk"
+    return "mixed" if "DESK-SET" in d.upper() else "outside"
+
+
 def display_fixes(rows):
     out = {}
     for r in rows:
@@ -108,6 +132,8 @@ def display_fixes(rows):
             for p in HIDE:
                 n = p.sub(lambda m: (" " if m.group(0).startswith((" ", "(")) or m.group(0)[:1].isspace() else "") + MARK, n)
             n = n.replace("(CoS-assigned, unverified)", "(owner named by the register, unverified)")  # display only
+            if f == "date_source":
+                n = BASIS[date_basis(r)] + " " + n
             if n != v:
                 out.setdefault(r["id"], {})[f] = n.strip()
     return out

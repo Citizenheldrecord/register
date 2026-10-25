@@ -1,5 +1,6 @@
 """Shared rules for the Citizen-Held Register pipeline. Standard library only."""
 import csv, io, re, sys, os
+import datetime as _dt
 from datetime import date, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -166,7 +167,10 @@ def display_status(r, closers, replaced=None):
 # change touches only HOUSEKEEPING_FIELDS, and each change only deletes text or replaces it with OPEN.
 HOUSEKEEPING_LOG = os.path.join(ROOT, "data", "housekeeping-log.csv")
 HOUSEKEEPING_COLS = ["date", "update", "id", "field", "action", "layout", "entry_sha256_before", "entry_sha256_after"]
-HOUSEKEEPING_FIELDS = ("date_source", "measure", "money", "funding", "argument")
+HOUSEKEEPING_FIELDS = ("date_source", "measure", "money", "funding", "argument", "test")
+# Rule entry R-2026-10-25-A extends the rule to the test field, for internal approval notes only:
+# a test may only lose one stretch of text; it may never be replaced with OPEN.
+NO_OPEN_FIELDS = ("test",)
 
 
 def read_housekeeping(path=HOUSEKEEPING_LOG):
@@ -179,12 +183,13 @@ def read_housekeeping(path=HOUSEKEEPING_LOG):
         return list(rdr)
 
 
-def is_removal(old, new):
-    """True if new is old with one stretch of text deleted (whitespace normalised), or new is OPEN."""
+def is_removal(old, new, field=None):
+    """True if new is old with one stretch of text deleted (whitespace normalised), or new is OPEN
+    (OPEN is refused for NO_OPEN_FIELDS, rule entry R-2026-10-25-A)."""
     ws = re.compile(r"\s+")
     o, n = ws.sub(" ", old or "").strip(), ws.sub(" ", new or "").strip()
     if n == "OPEN":
-        return True
+        return field not in NO_OPEN_FIELDS
     if n == o or len(n) >= len(o):
         return False
     p = 0
@@ -196,3 +201,109 @@ def is_removal(old, new):
     # allow the space either side of the deleted stretch to collapse
     return any((o[:k] + o[j:]).replace("  ", " ").strip() == n for k in range(max(0, p - 1), p + 1)
                for j in range(k, len(o) + 1))
+
+
+# --- One set of counts (correction of 25 October 2026). Every count printed on the page and in the
+# README comes from count_states(); nothing else counts. Definitions, used everywhere:
+#   promise: an entry that sets a test (every entry except one that records a result against an earlier entry)
+#   open:    a promise that is LIVE, not scored, not replaced, whose scoring date is on or after the count date
+#   due:     a promise that is LIVE, not scored, not replaced, whose scoring date is before the count date
+PENDING = os.path.join(ROOT, "data", "scoring-pending.csv")
+PENDING_COLS = ["id", "noted", "reason", "recheck_by"]
+GRACE_DAYS = 1   # a result is normally entered on its scoring date; one day of grace before the guard stops a build
+STATE_ORDER = ["PASS", "FAILED", "Recorded", "Open", "Due", "Replaced", "Proposed", "Repeating"]
+
+
+def read_pending(path=PENDING):
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8", newline="") as fh:
+        rdr = csv.DictReader(fh)
+        if list(rdr.fieldnames or []) != PENDING_COLS:
+            raise Fail("scoring-pending.csv: header must be " + ",".join(PENDING_COLS))
+        return list(rdr)
+
+
+def _plain_date(s):
+    m = re.fullmatch(r"(\d{1,2}) ([A-Z][a-z]{2}) (\d{4})", (s or "").strip())
+    if not m:
+        return None
+    try:
+        return _dt.datetime.strptime(m.group(0), "%d %b %Y").date()
+    except ValueError:
+        return None
+
+
+def count_states(rows, iso):
+    """Returns {"total", "promises", "scoring_entries", "state": {id: state}, "due_days": {id: days}}."""
+    today = _dt.date.fromisoformat(iso)
+    scorers, redated = {}, {}
+    for r in rows:
+        sup = r.get("supersedes_id", "").strip()
+        if sup:
+            (scorers if r["status"].upper().startswith("SCORED") else redated)[sup] = r
+    scoring_ids = {r["id"] for r in scorers.values()}
+    state, due_days = {}, {}
+    for r in rows:
+        rid, st = r["id"], r["status"].strip().upper()
+        if rid in scoring_ids:
+            continue
+        if rid in redated:
+            state[rid] = "Replaced"; continue
+        res = scorers[rid]["status"].upper() if rid in scorers else (st if st.startswith("SCORED") else None)
+        if res is not None:
+            state[rid] = "PASS" if "PASS" in res else "FAILED" if "FAIL" in res else "Recorded"; continue
+        if st == "PROPOSED":
+            state[rid] = "Proposed"; continue
+        d = _plain_date(r["scoring_date"])
+        if d is None:
+            try:
+                sd = _dt.date.fromisoformat(r["sort_date"])
+            except ValueError:
+                sd = None
+            if sd is None or sd.year == 9999:
+                state[rid] = "Repeating"; continue
+            d = sd
+        if d < today:
+            state[rid] = "Due"; due_days[rid] = (today - d).days
+        else:
+            state[rid] = "Open"
+    n = len(state)
+    if n + len(scoring_ids) != len(rows):
+        raise Fail("COUNT MISMATCH: %d promises + %d scoring entries != %d entries" % (n, len(scoring_ids), len(rows)))
+    return {"total": len(rows), "promises": n, "scoring_entries": len(scoring_ids), "state": state, "due_days": due_days}
+
+
+def overdue_problems(rows, iso, pending=None):
+    """Guard (25 October 2026): every promise past its scoring date and not scored must have a dated
+    line in data/scoring-pending.csv, noted on or after its scoring date and with a recheck date not
+    already passed. Returns a list of problems (empty when clean)."""
+    pending = read_pending() if pending is None else pending
+    c = count_states(rows, iso)
+    byid = {r["id"]: r for r in rows}
+    pmap = {}
+    for p in pending:
+        pmap.setdefault(p["id"], []).append(p)
+    errs = []
+    for p in pending:
+        if p["id"] not in byid:
+            errs.append("scoring-pending.csv: %s is not an entry" % p["id"])
+        for k in ("noted", "recheck_by"):
+            try:
+                _dt.date.fromisoformat(p[k])
+            except ValueError:
+                errs.append("scoring-pending.csv: %s %s %r is not YYYY-MM-DD" % (p["id"], k, p[k]))
+    for rid, days in sorted(c["due_days"].items()):
+        if days <= GRACE_DAYS:
+            continue
+        sd = (_dt.date.fromisoformat(iso) - _dt.timedelta(days=days)).isoformat()
+        ok = [p for p in pmap.get(rid, []) if p["noted"] >= sd and p["recheck_by"] >= iso and p["reason"].strip()]
+        if not ok:
+            errs.append("OVERDUE %s: scoring date %s passed %d days ago, not scored, no dated scoring-pending reason current on %s" % (rid, byid[rid]["scoring_date"], days, iso))
+    return errs
+
+
+def pending_reason(rid, iso, pending=None):
+    pending = read_pending() if pending is None else pending
+    ok = sorted([p for p in pending if p["id"] == rid and p["recheck_by"] >= iso], key=lambda p: p["noted"])
+    return ok[-1] if ok else None
