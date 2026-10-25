@@ -7,6 +7,8 @@ and looks each up in data/entries.csv. The build fails, naming the id, when an i
   SCORED    the entry is resolved, or a later scoring entry closes it
   REPLACED  a later non-scoring entry (new date or correction) supersedes it
   PAST      its scoring date has passed by more than rc.GRACE_DAYS with no result
+  DATE      the item's printed "Scored:" date is missing, unreadable, or differs from the leading
+            date of the row's scoring_date cell (added 25 October 2026)
 A failure means the list needs a swap (a dated line and Barry's go); this script never edits it.
 
 Usage: python3 scripts/check_ten_to_watch.py YYYY-MM-DD [--page plain-english.html] [--source data/entries.csv]
@@ -15,6 +17,60 @@ Exit 0 when all ten are current, 1 otherwise.
 import argparse, datetime as dt, html, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import regcore as rc
+
+
+_MON = {m: i for i, m in enumerate(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], 1)}
+
+
+def leading_date(s):
+    """The first date at the start of a cell: '2026-11-06...' or '6 Nov 2026...' (also 'Fri 6 Nov 2026', '6 November 2026')."""
+    s = re.sub(r"^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*\.? ", "", (s or "").strip())
+    m = re.match(r"(\d{4})-(\d{2})-(\d{2})", s)
+    try:
+        if m:
+            return dt.date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+        m = re.match(r"(\d{1,2}) ([A-Z][a-z]{2})[a-z]*\.? (\d{4})", s)
+        if m and m.group(2) in _MON:
+            return dt.date(int(m.group(3)), _MON[m.group(2)], int(m.group(1)))
+    except ValueError:
+        return None
+    return None
+
+
+def ten_items(text):
+    """[(id, plain text of the item)] in list order."""
+    m = re.search(r"<h2>Ten to watch</h2>.*?<ol>(.*?)</ol>", text, re.S)
+    if not m:
+        raise rc.Fail("plain-english.html: no Ten to watch <ol> found")
+    out = []
+    for attrs, body in re.findall(r"<li\b([^>]*)>(.*?)</li>", m.group(1), re.S):
+        a = re.search(r'data-id="([^"]+)"', attrs)
+        out.append((html.unescape(a.group(1)) if a else None, html.unescape(re.sub(r"<[^>]+>", "", body))))
+    return out
+
+
+def date_problems(items, rows):
+    byid = {r["id"]: r for r in rows}
+    errs = []
+    for n, (i, body) in enumerate(items, 1):
+        r = byid.get(i)
+        if not i or r is None:
+            continue
+        m = re.search(r"Scored: (.*)", body)
+        printed = leading_date(m.group(1)) if m else None
+        want = leading_date(r["scoring_date"])
+        if want is None:
+            try:
+                want = dt.date.fromisoformat(r["sort_date"])
+            except ValueError:
+                want = None
+        if printed is None:
+            errs.append("DATE %s (item %d): no readable 'Scored:' date printed" % (i, n))
+        elif want is None:
+            errs.append("DATE %s (item %d): row scoring date %r is not readable" % (i, n, r["scoring_date"]))
+        elif printed != want:
+            errs.append("DATE %s (item %d): page prints %s, row scoring_date reads %r" % (i, n, printed, r["scoring_date"]))
+    return errs
 
 
 def ten_ids(text):
@@ -64,7 +120,7 @@ def main():
     a = ap.parse_args()
     _, rows = rc.read_source(a.source)
     ids = ten_ids(open(a.page, encoding="utf-8").read())
-    errs = problems(ids, rows, a.date[:10])
+    errs = problems(ids, rows, a.date[:10]) + date_problems(ten_items(open(a.page, encoding="utf-8").read()), rows)
     for e in errs:
         print("TEN-TO-WATCH FAIL " + e)
     bad = len([e for e in errs if not e.startswith("LIST")])

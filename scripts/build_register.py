@@ -273,6 +273,25 @@ def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
         t = one(r'<script type="application/json" id="displayfix">.*?</script>', lambda m: fj, t, "index.html", re.S)
     else:
         t = t.replace(lj, lj + "\n" + fj, 1)
+    # Baseline label (correction of 25 October 2026), display only: a scored row whose own test says it is
+    # recorded, not scored, and its scoring entry, show "Baseline" in the status cell. No row changes.
+    scorer_of = {r["supersedes_id"].strip(): r["id"] for r in rows if r.get("supersedes_id", "").strip() and r["status"].upper().startswith("SCORED")}
+    base = set()
+    for r in rows:
+        if rc.is_baseline(r) and r["id"] in scorer_of:
+            base.update((r["id"], scorer_of[r["id"]]))
+    bj = '<script type="application/json" id="baselines">%s</script>' % json.dumps(sorted(base))
+    if 'id="baselines"' in t:
+        t = one(r'<script type="application/json" id="baselines">.*?</script>', lambda m: bj, t, "index.html", re.S)
+    else:
+        t = t.replace(fj, fj + "\n" + bj, 1)
+    js_old = '</td><td class="test">'
+    js_new = '${BASE.has(r.id)?\' <span class="badge BASELINE">Baseline</span> <span class="small">recorded baseline, not counted as PASS or FAILED</span>\':\'\'}</td><td class="test">'
+    if js_new not in t:
+        if t.count(js_old) != 1:
+            raise rc.Fail("index.html: id cell template for the Baseline label not found")
+        t = t.replace(js_old, js_new, 1)
+        t = t.replace('const OWN=r=>', 'const BASE=new Set(JSON.parse((document.getElementById("baselines")||{textContent:"[]"}).textContent));const OWN=r=>', 1)
     ov = overlaps_md(rows)
     if ov:
         ob = '<!-- OVERLAPS --><section class="overlaps">%s</section><!-- /OVERLAPS -->\n' % md_to_html(ov)

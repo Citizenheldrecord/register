@@ -234,6 +234,14 @@ def _plain_date(s):
         return None
 
 
+BASELINE_PREFIXES = ("RECORDED, not scored", "RECORDED, not PASS/FAILED")
+
+
+def is_baseline(r):
+    """A recorded baseline: its own test text says it is not a pass/fail test (correction of 25 October 2026)."""
+    return (r.get("test") or "").lstrip().startswith(BASELINE_PREFIXES)
+
+
 def count_states(rows, iso):
     """Returns {"total", "promises", "scoring_entries", "state": {id: state}, "due_days": {id: days}}."""
     today = _dt.date.fromisoformat(iso)
@@ -252,7 +260,9 @@ def count_states(rows, iso):
             state[rid] = "Replaced"; continue
         res = scorers[rid]["status"].upper() if rid in scorers else (st if st.startswith("SCORED") else None)
         if res is not None:
-            state[rid] = "PASS" if "PASS" in res else "FAILED" if "FAIL" in res else "Recorded"; continue
+            # Baseline rows (correction of 25 October 2026): a row whose own test says it is recorded, not
+            # scored, counts as recorded as fact whatever word its scoring entry carries. No row is changed.
+            state[rid] = "Recorded" if is_baseline(r) else "PASS" if "PASS" in res else "FAILED" if "FAIL" in res else "Recorded"; continue
         if st == "PROPOSED":
             state[rid] = "Proposed"; continue
         d = _plain_date(r["scoring_date"])
