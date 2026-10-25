@@ -91,6 +91,46 @@ def overlaps_md(rows):
     return "\n".join(out)
 
 
+RELATED_INTRO = "These rows are linked because they test related things. Each is scored on its own date; neither replaces the other."
+
+
+def related_notes(rows):
+    """Display only: see_also notes from data/display-notes.csv. Nothing in an entry changes."""
+    import csv as _c
+    if not os.path.exists(NOTES):
+        return []
+    ids = {r["id"] for r in rows}
+    notes = [n for n in _c.DictReader(open(NOTES, encoding="utf-8")) if n["kind"] == "see_also"]
+    bad = [i for n in notes for i in n["ids"].split(";") if i not in ids]
+    if bad:
+        raise rc.Fail("data/display-notes.csv names ids not in data/entries.csv: %s" % bad)
+    return notes
+
+
+def related_md(rows):
+    notes = related_notes(rows)
+    if not notes:
+        return None
+    out = ["## Related rows", "", RELATED_INTRO, ""]
+    out += ["- **%s** (noted %s): %s" % (" and ".join(n["ids"].split(";")), n["noted"], n["text"]) for n in notes]
+    return "\n".join(out)
+
+
+def related_html(rows):
+    notes = related_notes(rows)
+    if not notes:
+        return None
+    e = lambda s: html.escape(s, quote=True)
+    link = lambda i: '<a href="#row-%s">%s</a>' % (e(i), e(i))
+    def text(n):
+        t = e(n["text"])
+        for i in sorted(n["ids"].split(";"), key=len, reverse=True):
+            t = re.sub(r"(?<![A-Za-z0-9-])%s(?![A-Za-z0-9-])" % re.escape(e(i)), lambda m: link(i), t)
+        return t
+    lis = "".join('<li><strong>%s</strong> (noted %s): %s</li>' % (" and ".join(link(i) for i in n["ids"].split(";")), e(n["noted"]), text(n)) for n in notes)
+    return '<h2>Related rows</h2><p>%s</p><ul>%s</ul>' % (e(RELATED_INTRO), lis)
+
+
 def backlog_block(iso):
     """Display only: the counter's block, counted from data/entries.csv on the build date."""
     import backlog_counter as bc
@@ -201,6 +241,15 @@ def render_readme(tpl, rows, csv_name, csv_sha, iso):
             k = t.find("<!-- /BACKLOG -->\n\n")
             k = k + len("<!-- /BACKLOG -->\n\n") if k >= 0 else t.find("\n\n") + 2
             t = t[:k] + blk + t[k:]
+    rl = related_md(rows)
+    if rl:
+        rb = "<!-- RELATED -->\n\n%s\n\n<!-- /RELATED -->\n\n" % rl
+        if "<!-- RELATED -->" in t:
+            t = one(r"<!-- RELATED -->.*?<!-- /RELATED -->\n\n", lambda m: rb, t, "README", re.S)
+        elif "<!-- /OVERLAPS -->\n\n" in t:
+            t = t.replace("<!-- /OVERLAPS -->\n\n", "<!-- /OVERLAPS -->\n\n" + rb, 1)
+        else:
+            raise rc.Fail("README: anchor for Related rows not found")
     return t
 
 
@@ -299,6 +348,13 @@ def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
             t = one(r"<!-- OVERLAPS -->.*?<!-- /OVERLAPS -->\n", lambda m: ob, t, "index.html", re.S)
         else:
             t = t.replace("<h2>Entries (", ob + "<h2>Entries (", 1)
+    rh = related_html(rows)
+    if rh:
+        rbk = '<!-- RELATED --><section class="related">%s</section><!-- /RELATED -->\n' % rh
+        if "<!-- RELATED -->" in t:
+            t = one(r"<!-- RELATED -->.*?<!-- /RELATED -->\n", lambda m: rbk, t, "index.html", re.S)
+        else:
+            t = t.replace("<h2>Entries (", rbk + "<h2>Entries (", 1)
     left = ra.scan_internal(rows)
     if left:
         raise rc.Fail("internal text still displayed: " + "; ".join(left))
