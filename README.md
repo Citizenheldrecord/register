@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 25 October 2026 from data/entries.csv, which holds 237 entries.
+Counted on 25 October 2026 from data/entries.csv, which holds 238 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 237 = 230 promises + 7 scoring entries.
+- **Entries:** 238 = 231 promises + 7 scoring entries.
 - **Scored PASS:** 3 (AB1, C39-CTTE, TR-FTA-ROUND).
 - **Scored FAILED:** 3 (AB1-PL, BC1, FA3b).
 - **Recorded as fact, with no pass or fail line:** 2 (CL-BASE, HR5334).
-- **Open:** 207.
+- **Open:** 208.
 - **Due:** 8 (GX1b, 5 days past its date; scoring pending, noted 23 October 2026: The court docket has shown filings late: a respondent's record printed on 15 Oct 2026 first appeared on the docket as filed on 23 Oct 2026. The docket is read again on 26 Oct 2026 and the result is entered then, within the 30 day window; BC-PARCELS, 1 day past its date; scoring pending, noted 24 October 2026: Provisional: no Government of BC or BC NDP list of the about 400 parcels with combined area found by 8 PM PT 24 Oct 2026 (news.gov.bc.ca, bcndp.ca/plan, gov.bc.ca First Nations negotiations page read 24 Oct 2026 23:58 MT). The entry requires a recheck 24 to 48 hours after before FAILED is entered; recheck 25 to 26 Oct 2026; DSRB-CAP, 1 day past its date; scoring pending, noted 25 October 2026: No visit document mentions the Defence, Security and Resilience Bank, and no new member or capital was found. The row is read again on 26 Oct 2026 against all official sources and the result is entered then; TR-CANDU, 1 day past its date; scoring pending, noted 25 October 2026: Only a 22 Oct 2026 energy joint statement and readout describing talks on Türkiye's New Nuclear Project were found; no signed reactor or finance document. The row is read again on 26 Oct 2026 and the result is entered then; TR-DEF, 1 day past its date; scoring pending, noted 25 October 2026: A Defence Sector Partnerships MOU was announced on 22 to 23 Oct 2026 with no published end-use or re-export terms. The row is read again on 26 Oct 2026 and the result is entered then; TR-OFFTAKE, 1 day past its date; scoring pending, noted 25 October 2026: Only opportunity language was found (LNG discussions with potential off-takers; an export credit MOU with no dollar value or dates). The row is read again on 26 Oct 2026 and the result is entered then; TR-UA-PAGE, 1 day past its date; scoring pending, noted 25 October 2026: The joint statement mentions Ukraine only in a general peace and security line, and the readout says views were exchanged; no concrete Ukraine item was found. The row is read again on 26 Oct 2026 and the result is entered then; TR1, 1 day past its date; scoring pending, noted 25 October 2026: The 22 Oct 2026 joint statement names a three-year Action Plan with four pillars but gives no dated chapter list and no persons or exclusions language. The row is read again on 26 Oct 2026, 24 to 48 hours after the visit closed, and the result is entered then).
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 230 promises = 3 PASS + 3 FAILED + 2 recorded + 207 open + 8 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 231 promises = 3 PASS + 3 FAILED + 2 recorded + 208 open + 8 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 237 entries):
+By section of the data file (every entry counted once; the four sections add up to all 238 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 145 | 5 | 140 | 2 | 3 | 0 | 127 | 8 | 0 | 0 | 0 |
+| Canadian files | 146 | 5 | 141 | 2 | 3 | 0 | 128 | 8 | 0 | 0 | 0 |
 | This desk's own commitments | 10 | 0 | 10 | 0 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
 | Outside files we watch | 53 | 0 | 53 | 0 | 0 | 0 | 47 | 0 | 4 | 2 | 0 |
 | Recorded facts and checkpoints | 29 | 2 | 27 | 1 | 0 | 2 | 23 | 0 | 0 | 0 | 1 |
-| Total | 237 | 7 | 230 | 3 | 3 | 2 | 207 | 8 | 4 | 2 | 1 |
+| Total | 238 | 7 | 231 | 3 | 3 | 2 | 208 | 8 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -94,7 +94,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-25g.csv (all 237 rows) is f02a2ca57b437e91b412bd602e94e2e50a9053103d744ca8ca7a114be998d470
+Checksum for this update: SHA-256 of public-live-rows-2026-10-25i.csv (all 238 rows) is e8e179a0eeb4ba86c030412cea7861369bacd19722c73eefcb9c83bc4cc605e8
 
 Rule entries
 
@@ -448,7 +448,7 @@ Outside files we watch | KAMLOOPS-EXCAV | PASS: by 31 Dec 2027 a forensic excava
 
 Outside files we watch | ATIP-CIRNAC-149 | CIRNAC ATIP A-2026-00149 (EA2026_0195120; hectares settled versus added, net title ledger, FY2015-16 to date). PASS: records released (full or partial package, or a written no-records answer) by the extended deadline, 21 Jan 2028. FAILED: not released by the extended deadline | Crown-Indigenous Relations and Northern Affairs Canada (CIRNAC) ATIP office | 21 Jan 2028 | [Date basis: benchmark set by the register] DESK-SET: extended deadline computed by the desk, not stated by CIRNAC (clarified 23 Sep 2026; 30-day + 9(1)(a) 12 months + 9(1)(b) 90 days; s.27(1) third-party notice); extension letter 19 Oct 2026 states no due date | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 21 Jan 2028 | OPEN | OPEN | OPEN
 
-Also watched (95)
+Also watched (96)
 
 Rows the register watches that are not government promises: the owner is not a government, or the row lacks a primary source link. Same rules apply.
 
@@ -529,6 +529,8 @@ Canadian files | CTF-PL-OPEN | PASS: by 30 Jun 2027 a proponent or CER notice of
 Canadian files | TR-ATA-USE | PASS: by 30 Jun 2027 any designated carrier publishes or operates a Canada and Türkiye schedule of more than 12 weekly passenger flights per side. FAILED: no such schedule by 30 Jun 2027 | Designated carriers / Transport Canada | 30 Jun 2027 | [Date basis: benchmark set by the register] DESK-SET: PMO release 23 Oct 2026 gives the expanded Air Transport Agreement (12 to up to 21 weekly) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
 Canadian files | EA-REFORM | PASS: the Emergencies Act is amended so that any declaration must state an end condition and a success measure, or the SCC, in docket 42261 (appeal of 2026 FCA 6), sets the review test. Note: as of 22 Oct 2026 no amending bill found (S1); the SCC leave decision is reported in the news but not verified (S4). Result cells fill once under the 22 Oct 2026 rule | Minister of Public Safety; Supreme Court of Canada | 22 Oct 2027 | [Date basis: benchmark set by the register] DESK-SET: scoring date set by the register; first check 23 Oct 2026, Supreme Court leave decision | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 22 Oct 2027 | OPEN | OPEN | OPEN
+
+Canadian files | CHARTER-LIMIT-REG | PASS: by 25 Oct 2027, Parliament enacts, or the Government of Canada adopts by a published order or policy, a rule in force that every federal measure limiting a Charter right (emergency order, health order, mandate, regulator statement or government request) must state (1) the measurable result it is meant to achieve, (2) a fixed end date, renewable only by a fresh public vote or order with the outcome data attached, and (3) one named minister or official who answers for it. FAILED: no such rule is in force on the scoring date; the entry names the blocking layer. Standalone entry. See also EA-REFORM: EA-REFORM covers the Emergencies Act only; this entry covers all federal measures that limit Charter rights. Neither replaces the other | Minister of Justice and Attorney General of Canada | 25 Oct 2027 | [Date basis: benchmark set by the register] DESK-SET: scoring date set by the register, Mon 25 Oct 2027, one year after the essay went live (25 Oct 2026; Wayback https://web.archive.org/web/20261025191426/https://barryesharp.substack.com/p/where-the-test-began-covid-consent). Checked at scoring on Justice Laws https://laws-lois.justice.gc.ca/ , LEGISinfo https://www.parl.ca/legisinfo/ and the Canada Gazette https://gazette.gc.ca/ | LIVE | Justice Laws https://laws-lois.justice.gc.ca/ ; LEGISinfo https://www.parl.ca/legisinfo/ ; Canada Gazette https://gazette.gc.ca/ | OPEN | OPEN | https://barryesharp.substack.com/p/where-the-test-began-covid-consent | OPEN until scoring date 25 Oct 2027 | OPEN | OPEN | OPEN
 
 Canadian files | PL-EARLYWORK (follows PL1) | PASS: by 31 Oct 2027 a proponent or Government of Alberta/Canada release, or CER/MPO record, shows physical early works started on Pacific Link, dated; FAILED: none; dated entry within 30 days; no extension. Depends on PL1 | Pacific Link proponents (development led by Trans Mountain Corporation, Pembina as investor) | 31 Oct 2027 | [Date basis: set by an outside source] COMPANY TIMETABLE: proponent timeline, "October 2027: Early construction begins" | LIVE | https://www.pacificlinkpipeline.ca/timeline | OPEN | OPEN | OPEN | OPEN until scoring date 31 Oct 2027 | OPEN | OPEN | OPEN
 
@@ -718,9 +720,9 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 ## How to check this update
 
-Build stamp: update 2026-10-25g, counted as at 25 October 2026, from data/entries.csv, 237 rows, SHA-256 6fab31a0b4940c4514cd45de6d899f468be59f1daa12fc3a28e9f737b93e075a. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-10-25i, counted as at 25 October 2026, from data/entries.csv, 238 rows, SHA-256 fe05bdd0010747804db769661d65fe783cd3ce79c3542e8624e9a90329acb14a. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-25g.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-25g.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-25i.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-25i.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
