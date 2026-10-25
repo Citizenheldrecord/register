@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 25 October 2026 from data/entries.csv, which holds 229 entries.
+Counted on 25 October 2026 from data/entries.csv, which holds 232 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 229 = 225 promises + 4 scoring entries.
+- **Entries:** 232 = 226 promises + 6 scoring entries.
 - **Scored PASS:** 2 (AB1, C39-CTTE).
-- **Scored FAILED:** 2 (AB1-PL, FA3b).
+- **Scored FAILED:** 4 (AB1-PL, BC1, CL-BASE, FA3b).
 - **Recorded as fact, with no pass or fail line:** 1 (HR5334).
-- **Open:** 202.
-- **Due:** 11 (GX1b, 5 days past its date; scoring pending, noted 23 October 2026: The court docket has shown filings late: a respondent's record printed on 15 Oct 2026 first appeared on the docket as filed on 23 Oct 2026. The docket is read again on 26 Oct 2026 and the result is entered then, within the 30 day window; BC-PARCELS, 1 day past its date; BC1, 1 day past its date; CL-BASE, 1 day past its date; DSRB-CAP, 1 day past its date; TR-CANDU, 1 day past its date; TR-DEF, 1 day past its date; TR-FTA-ROUND, 1 day past its date; TR-OFFTAKE, 1 day past its date; TR-UA-PAGE, 1 day past its date; TR1, 1 day past its date).
+- **Open:** 203.
+- **Due:** 9 (GX1b, 5 days past its date; scoring pending, noted 23 October 2026: The court docket has shown filings late: a respondent's record printed on 15 Oct 2026 first appeared on the docket as filed on 23 Oct 2026. The docket is read again on 26 Oct 2026 and the result is entered then, within the 30 day window; BC-PARCELS, 1 day past its date; scoring pending, noted 24 October 2026: Provisional: no Government of BC or BC NDP list of the about 400 parcels with combined area found by 8 PM PT 24 Oct 2026 (news.gov.bc.ca, bcndp.ca/plan, gov.bc.ca First Nations negotiations page read 24 Oct 2026 23:58 MT). The entry requires a recheck 24 to 48 hours after before FAILED is entered; recheck 25 to 26 Oct 2026; DSRB-CAP, 1 day past its date; TR-CANDU, 1 day past its date; TR-DEF, 1 day past its date; TR-FTA-ROUND, 1 day past its date; TR-OFFTAKE, 1 day past its date; TR-UA-PAGE, 1 day past its date; TR1, 1 day past its date).
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 225 promises = 2 PASS + 2 FAILED + 1 recorded + 202 open + 11 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 226 promises = 2 PASS + 4 FAILED + 1 recorded + 203 open + 9 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 229 entries):
+By section of the data file (every entry counted once; the four sections add up to all 232 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 138 | 3 | 135 | 1 | 2 | 0 | 122 | 10 | 0 | 0 | 0 |
+| Canadian files | 140 | 4 | 136 | 1 | 3 | 0 | 123 | 9 | 0 | 0 | 0 |
 | This desk's own commitments | 10 | 0 | 10 | 0 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
 | Outside files we watch | 53 | 0 | 53 | 0 | 0 | 0 | 47 | 0 | 4 | 2 | 0 |
-| Recorded facts and checkpoints | 28 | 1 | 27 | 1 | 0 | 1 | 23 | 1 | 0 | 0 | 1 |
-| Total | 229 | 4 | 225 | 2 | 2 | 1 | 202 | 11 | 4 | 2 | 1 |
+| Recorded facts and checkpoints | 29 | 2 | 27 | 1 | 1 | 1 | 23 | 0 | 0 | 0 | 1 |
+| Total | 232 | 6 | 226 | 2 | 4 | 1 | 203 | 9 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -94,7 +94,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-25a.csv (all 229 rows) is 0bdefab2fcd2cbefd532bbea0c8fdce5ae42410542530d4441c645d8840e4d8e
+Checksum for this update: SHA-256 of public-live-rows-2026-10-25b.csv (all 232 rows) is e0f97cfc2617ddd51522fe398d73cbfd6336a6fac3895c7620e41b539f99eacd
 
 Rule entries
 
@@ -446,7 +446,7 @@ Outside files we watch | KAMLOOPS-EXCAV | PASS: by 31 Dec 2027 a forensic excava
 
 Outside files we watch | ATIP-CIRNAC-149 | CIRNAC ATIP A-2026-00149 (EA2026_0195120; hectares settled versus added, net title ledger, FY2015-16 to date). PASS: records released (full or partial package, or a written no-records answer) by the extended deadline, 21 Jan 2028. FAILED: not released by the extended deadline | Crown-Indigenous Relations and Northern Affairs Canada (CIRNAC) ATIP office | 21 Jan 2028 | [Date basis: benchmark set by the register] DESK-SET: extended deadline computed by the desk, not stated by CIRNAC (clarified 23 Sep 2026; 30-day + 9(1)(a) 12 months + 9(1)(b) 90 days; s.27(1) third-party notice); extension letter 19 Oct 2026 states no due date | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 21 Jan 2028 | OPEN | OPEN | OPEN
 
-Also watched (89)
+Also watched (91)
 
 Rows the register watches that are not government promises: the owner is not a government, or the row lacks a primary source link. Same rules apply.
 
@@ -454,7 +454,9 @@ Section | ID | Test | Owner | Scoring date | Date source | Status | Measure | Mo
 
 Canadian files | GX1b | PASS: the SCC 42200 docket (Gitxaala) shows the respondents' printed factums and records filed by 20 Oct. FAILED: still marked due after 20 Oct. Process stamp only | Respondents in 42200 (Gitxaala; Manahan et al.) | 20 Oct 2026 | [Date basis: set by an outside source] DOCKET: SCC file 42200, printed versions due 20 Oct 2026 | LIVE | SCC docket https://www.scc-csc.ca/cases-dossiers/search-recherche/42200/ | OPEN | OPEN | OPEN | OPEN until scoring date 20 Oct 2026 | OPEN | OPEN | OPEN
 
-Canadian files | BC1 | PASS: one major BC party publishes a one page answer covering all three cells: a DRIPA positive law answer, lender readable title and a Cowichan statute answer. FAILED: none does | BC parties (NDP, Conservatives, CentreBC, Greens) | 24 Oct 2026 | [Date basis: benchmark set by the register] DESK-SET: BC general election day, 24 Oct 2026 (Wait Report calendar lock) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
+Canadian files | BC1 | PASS: one major BC party publishes a one page answer covering all three cells: a DRIPA positive law answer, lender readable title and a Cowichan statute answer. FAILED: none does | BC parties (NDP, Conservatives, CentreBC, Greens) | 24 Oct 2026 | [Date basis: benchmark set by the register] DESK-SET: BC general election day, 24 Oct 2026 (Wait Report calendar lock) | CLOSED: scored in BC1-SCORED-20261024 | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
+
+Canadian files | BC1-SCORED-20261024 | PASS: one major BC party publishes a one page answer covering all three cells: a DRIPA positive law answer, lender readable title and a Cowichan statute answer. FAILED: none does | BC parties (NDP, Conservatives, CentreBC, Greens) | 24 Oct 2026 | [Date basis: benchmark set by the register] DESK-SET: BC general election day, 24 Oct 2026 (Wait Report calendar lock) | SCORED 24 Oct 2026: FAILED (blocking layer: political choice) | https://conservativebc.ca/wp-content/uploads/2026/10/20261016_BCC_Platform2026_8-5x11-Draft-18_compressed.pdf (nearest attempt, page 46 of a 71 page platform, read 24 Oct 2026 23:58 MT: 'Repeal DRIPA'; 'Repeal section 8.1 of the Interpretation Act'; 'Property Rights Defence Act ... upholding the validity of the Land Title Act on all fee-simple properties in BC'). One section of a full platform, not a one page answer; no party published a one page answer covering all three cells before polls closed. Blocking layer: the party campaigns (political choice). Also opened 24 Oct 2026 23:58 MT, nothing found: https://www.bcndp.ca/plan ; https://centrebc.ca/platform ; BC Greens platform (desk copy 24 Oct). Follow-up: BC-GOV-FORM (10 Nov 2026). | OPEN | OPEN | OPEN | FAILED: no published figure; held by the BC parties (no costing of the three cells published) | FAILED | OPEN | FAILED
 
 Canadian files | Q10-NEXT (follows AB1-SCORED-20261020) | PASS: by Mon 2 Nov 2026, the Government of Alberta publishes the Q10 result together with a named owner, a dated next step and the step itself (for remain: a written statement that the process file is closed). FAILED: result reported with no owner, date or next step by then | Government of Alberta (Premier / Executive Council); Elections Alberta for the official result | 2 Nov 2026 | [Date basis: benchmark set by the register] DESK-SET: two weeks after polling day (19 Oct 2026); no statutory date found | LIVE | O.C. 160/2026 text via Elections Alberta https://www.elections.ab.ca/elections/referendum/ | OPEN | OPEN | OPEN | OPEN until scoring date 2 Nov 2026 | OPEN | OPEN | OPEN
 
@@ -493,6 +495,8 @@ Canadian files | C4-FILL | PASS: GAC or CBSA publishes, or confirms on the recor
 Canadian files | P2 | PASS: PLA winter training stays cancelled, in writing. FAILED: it returns, or no written cancellation | DND | 31 Mar 2027 | [Date basis: benchmark set by the register] DESK-SET: end of the 2026-27 winter season the test covers (proof test P2) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
 
 Canadian files | TCT-GUAR | PASS: a Government of Canada document dated by 31 Mar 2027 states Canada's security-guarantee commitment to Ukraine with a cost or force figure; FAILED: none | PMO / DND / GAC | 31 Mar 2027 | [Date basis: benchmark set by the register] DESK-SET: no date in the source | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
+
+Canadian files | CL-REG-NEWGOV (follows CL-BASE-SCORED-20261024) | The government formed after the 24 Oct 2026 BC general election publishes a public register of Aboriginal title and claims files that lists closed files (finality and release in force) separately from open ones. PASS: by 30 Apr 2027 the Government of BC publishes a register listing claims, title and treaty or reconciliation land files, each marked closed or open. FAILED: none published, or a list of open or active files only. Follows CL-BASE (closers baseline, scored entry CL-BASE-SCORED-20261024) | Government of BC (Premier / Ministry of Indigenous Relations and Reconciliation) | 30 Apr 2027 | [Date basis: set by an outside source] STATUTE: Budget Transparency and Accountability Act s.6(3), main estimates due on or before the later of 30 April 2027 and 150 days after the designated date following the general election (general voting day 24 Oct 2026 is not the third Saturday in October), https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/00023_01 , read 25 Oct 2026 | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Apr 2027 | OPEN | OPEN | OPEN
 
 Canadian files | A1 | PASS: at least one Building Canada Act project at dated financial close or shovels in the ground. FAILED: none | Major Projects Office / proponents | 30 Jun 2027 | [Date basis: benchmark set by the register] DESK-SET: date set in the access essay of 6 Sep 2026: "By 30 June 2027: either at least one Building Canada Act national-interest energy or minerals project has financial close" | LIVE | MPO projects https://www.canada.ca/en/privy-council/major-projects-office/projects/national.html | Main Estimates 2026/27, Privy Council Office, Vote 1 Program expenditures $224,349,806 (organization summary; the Major Projects Office has no vote of its own) https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2026-27/organization-summary.csv; Supplementary Estimates (A) 2026/27, Privy Council Office, Funding for the Major Projects Office (Budget 2025) $7,507,508 https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/supplementary-estimates/explanation-requirements-a-2026-27.csv. Amounts only: the page shows no volume driver, named deliverable or end date. | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
@@ -630,7 +634,7 @@ Outside files we watch | QC-SEATMATH | PASS (for the thesis): the platform of th
 
 Outside files we watch | QC-SEATMATH-L20261024 | PASS (for the thesis): the platform of the party that forms government after the next federal general election lacks a dated title-map commitment, or lacks a dated one-law-for-all commitment, or both. FAILED (for the thesis): that platform contains BOTH a dated title-map commitment AND a dated one-law-for-all commitment, whether the government is a majority or a minority. A minority result is scored the same way and flagged MINORITY. Recorded, not scored: seats won outside Quebec against Quebec seats (Elections Canada official results, Table 7). Scored 30 days after Elections Canada's validated results, or 14 Dec 2029 if the election is held on the fixed date | Governing party after the next federal general election; scorer: the desk | 14 Dec 2029 | [Date basis: benchmark set by the register] DESK-SET: fixed-date general election Mon 15 Oct 2029 under Canada Elections Act s. 56.1(2) (third Monday of October in the fourth calendar year after the 28 Apr 2025 polling day) https://laws-lois.justice.gc.ca/eng/acts/e-2.01/page-6.html ; scored 14 Dec 2029, or 30 days after validated results if Parliament is dissolved sooner. Replaces the PROPOSED entry QC-SEATMATH, which stays as filed | LIVE | Elections Canada official voting results Table 7 (seats by affiliation, by province) for the next general election; winning party platform text. Baseline 2025 (GE45): Quebec 78 of 343 seats https://www.elections.ca/res/rep/off/ovrGE45/62/table7E.html | OPEN | OPEN | OPEN | OPEN until scoring date 14 Dec 2029 | OPEN | OPEN | OPEN
 
-Recorded (31)
+Recorded (32)
 
 Facts, results and checkpoints, recorded and kept. They are not counted as open promises.
 
@@ -648,7 +652,9 @@ Recorded facts and checkpoints | AB1 | Alberta referendum Question 10: remain, o
 
 Recorded facts and checkpoints | AB1-SCORED-20261020 | Alberta referendum Question 10: remain, or a second ballot authorised, on the unofficial Elections Alberta result on election night or the next day. Recorded, not scored PASS or FAILED: the result is recorded as fact. | Alberta / Elections Alberta | 19 Oct 2026 | [Date basis: set by an outside source] SCHEDULED RELEASE: Elections Alberta unofficial Question 10 result, referendum day 19 Oct 2026 | SCORED 20 Oct 2026: PASS | https://results.elections.ab.ca/ Recorded as fact, not a desk position. PASS here means only that the result was published and recorded on its date; the register takes no side. Result: Question 10, Option 1 (Remain) leads on the unofficial count: Option 1 (Remain) 1,380,677; Option 2 (Referendum) 447,695; 4,479 of 5,586 voting areas or locations reporting, read 20 October 2026, 7:39 AM MT (lastUpdated 13:39 UTC). Scoring date 19 October 2026 (referendum day, the entry's date); result read and entered 20 October 2026, the next day, as the entry allows. Official results 29 October 2026. | OPEN | OPEN | OPEN | FAILED: no public cost-to-date figure for the referendum; held by Elections Alberta, which has published no referendum cost (Budget 2026 added a $20 million allocation, an allocation, not a cost) | OPEN | OPEN | FAILED
 
-Recorded facts and checkpoints | CL-BASE | RECORDED, not scored: for each of four closers (finality with transfer phase-down; closed-versus-open register; ICA-equivalent screen; statutory fee-simple certainty) and each party (BC NDP, BC Conservatives, BC Greens), the URL of a platform commitment made before polls close, or "none found as of 24 Oct 2026". Scored with BC-PARCELS | Desk (Barry Sharp) | 24 Oct 2026 | [Date basis: benchmark set by the register] DESK-SET: BC general election day, 24 Oct 2026 | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
+Recorded facts and checkpoints | CL-BASE | RECORDED, not scored: for each of four closers (finality with transfer phase-down; closed-versus-open register; ICA-equivalent screen; statutory fee-simple certainty) and each party (BC NDP, BC Conservatives, BC Greens), the URL of a platform commitment made before polls close, or "none found as of 24 Oct 2026". Scored with BC-PARCELS | Desk (Barry Sharp) | 24 Oct 2026 | [Date basis: benchmark set by the register] DESK-SET: BC general election day, 24 Oct 2026 | CLOSED: scored in CL-BASE-SCORED-20261024 | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
+
+Recorded facts and checkpoints | CL-BASE-SCORED-20261024 | RECORDED, not scored: for each of four closers (finality with transfer phase-down; closed-versus-open register; ICA-equivalent screen; statutory fee-simple certainty) and each party (BC NDP, BC Conservatives, BC Greens), the URL of a platform commitment made before polls close, or "none found as of 24 Oct 2026". Scored with BC-PARCELS | Desk (Barry Sharp) | 24 Oct 2026 | [Date basis: benchmark set by the register] DESK-SET: BC general election day, 24 Oct 2026 | SCORED 24 Oct 2026: FAILED (blocking layer: political choice) | https://conservativebc.ca/wp-content/uploads/2026/10/20261016_BCC_Platform2026_8-5x11-Draft-18_compressed.pdf (page 46, read 24 Oct 2026 23:58 MT). Recorded grid, as of 24 Oct 2026. BC Conservatives: statutory fee-simple certainty FOUND, 'Property Rights Defence Act. We will protect private-property rights by upholding the validity of the Land Title Act on all fee-simple properties in BC' (p.46); closed-versus-open register NOT MET, near miss 'Aboriginal Title Transparency Act. We will publish maps and information about active claims, negotiations, legal actions and agreements' (p.46; open files only, no closed-versus-open register); finality with transfer phase-down: none found as of 24 Oct 2026; ICA-equivalent screen: none found as of 24 Oct 2026. BC NDP (https://www.bcndp.ca/plan) and BC Greens (platform, desk copy 24 Oct): none found as of 24 Oct 2026 on all four. CentreBC (https://centrebc.ca/platform, not a listed party): none found. BC-PARCELS: pending recheck 25 to 26 Oct 2026. | OPEN | OPEN | OPEN | FAILED: no published figure; held by the BC parties | MIXED | OPEN | FAILED
 
 Recorded facts and checkpoints | BoC | Bank of Canada rate decision issued, as a dated print. Recorded, not scored PASS or FAILED: the decision is recorded as fact. | Bank of Canada | 28 Oct 2026 | [Date basis: set by an outside source] SCHEDULED RELEASE: Bank of Canada rate decision, 28 Oct 2026 (jobs-print JOIN, E8) | LIVE | Bank of Canada https://www.bankofcanada.ca/core-functions/monetary-policy/ | OPEN | OPEN | OPEN | OPEN until scoring date 28 Oct 2026 | OPEN | OPEN | OPEN
 
@@ -702,9 +708,9 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 ## How to check this update
 
-Build stamp: update 2026-10-25a, counted as at 25 October 2026, from data/entries.csv, 229 rows, SHA-256 1047cd6a73a43f4429929aa87ec813321cf2d93c995b274907972566bcce6365. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-10-25b, counted as at 25 October 2026, from data/entries.csv, 232 rows, SHA-256 8bb1926d84c2290854428ea893de8c96a5082f9a60970e12cc4af6b09cba8a7d. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-25a.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-25a.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-25b.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-25b.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
@@ -735,3 +741,4 @@ Corrections: Schedule 1 listing of Pacific Link, 19 October 2026, a dated correc
 Corrections: Codeberg commit labels of update 2026-10-19e, 20 October 2026, a dated correction entry: https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-20-codeberg-commit-labels.md
 Corrections: Grays Bay Road and Port fact-check line, 20 October 2026, a dated transparency correction entry (no published piece was affected): https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-20-graysbay-factcheck.md
 Corrections: internal desk file path on public row QC-SEATMATH, 22 October 2026, a dated correction entry (hidden in display; no score, status or date affected): https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-22-qc-seatmath-internal-path.md
+Corrections: CL-BASE is a recorded baseline, not a pass/fail test, 25 October 2026, a dated note (no entry changed): https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-25-cl-base-baseline-note.md
