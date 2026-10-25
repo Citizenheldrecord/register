@@ -7,10 +7,13 @@ ok(){ echo "  PASS $1"; }; bad(){ echo "  FAIL $1"; fails=$((fails+1)); }
 expect_fail(){ local name=$1; shift; if "$@" >/tmp/pl.out 2>&1; then bad "$name (build should have failed)"; else grep -q "$PATTERN" /tmp/pl.out && ok "$name: $(grep -m1 "$PATTERN" /tmp/pl.out | cut -c1-110)" || { bad "$name (wrong reason)"; cat /tmp/pl.out; }; fi; }
 build(){ python3 scripts/build_register.py --date ${1:-$D}; }
 # Scratch update id for builds in tests: must sort after every real update, so the latest real manifest is the one checked.
-SCRATCH=2099-12-31
+# 25 Oct 2026: the letter z on the latest update date, so the overdue guard counts as at a real date.
+SCRATCH=${D:0:10}z
+# Tests 7 to 14 move the clock forward to score synthetic rows; the overdue guard is tested on its own in test 17.
+export REGISTER_OVERDUE=warn
 
 echo "1. full build reproduces the current update ($D) byte for byte; first 18 Oct files untouched"
-fresh; T=$(mktemp -d); python3 scripts/build_register.py --date $D --out-dir $T >/dev/null || bad "build"
+fresh; T=$(mktemp -d); REGISTER_OVERDUE=strict python3 scripts/build_register.py --date $D --out-dir $T >/dev/null || bad "build"
 [ "$(sha256sum "$ROOT/public-live-rows-2026-10-18.csv" | cut -c1-64)" = a640b60b737d8e2688588fb8e6230b9af2fa7f7291ad305104c209ed0a357624 ] && ok "18 Oct CSV still a640b60b..." || bad "18 Oct CSV changed"
 for f in README.md index.html public-live-rows-$D.csv public-live-rows-$D.csv.sha256 public-live-rows-$D.json manifest/entry-hashes-v2-$D.csv manifest/entry-hashes-v2-$D.csv.sha256; do
   cmp -s "$ROOT/$f" "$T/$f" && ok "identical $f" || bad "differs $f"; done
@@ -53,7 +56,7 @@ before=$(python3 scripts/hash_entries.py data/entries.csv --show AI1 | sha256sum
 python3 scripts/add_entry.py score --supersedes AI1 --result PASS --scored-on 2026-10-31 --evidence https://example.org/x --cost-to-date "FAILED: no public figure; held by Anthropic" --hype OPEN --means OPEN --cost FAILED >/tmp/pl.out && ok "scoring entry appended: $(cut -c1-80 /tmp/pl.out)" || { bad "score"; cat /tmp/pl.out; }
 [ "$before" = "$(python3 scripts/hash_entries.py data/entries.csv --show AI1 | sha256sum)" ] && ok "AI1 row unchanged in the data" || bad "AI1 changed"
 build 2026-10-31 >/tmp/pl.out 2>&1 && ok "build after scoring: $(grep -m1 'new since' /tmp/pl.out)" || { bad "build after scoring"; cat /tmp/pl.out; }
-grep -q "^AI1 | .* | CLOSED: scored in AI1-SCORED-20261031 | " README.md && ok "README shows AI1 as CLOSED: scored in AI1-SCORED-20261031" || bad "README closed display"
+grep -Eq "^([A-Za-z ]+ \| )?AI1 \| .* \| CLOSED: scored in AI1-SCORED-20261031 \| " README.md && ok "README shows AI1 as CLOSED: scored in AI1-SCORED-20261031" || bad "README closed display"
 grep -q 'CLOSED\[r.id\]' index.html && ok "page links closed rows to the scoring entry" || bad "page closed display"
 python3 scripts/hash_entries.py public-live-rows-2026-10-31.csv --check manifest/entry-hashes-v2-2026-10-18b.csv | tail -1 | grep -q ", 0 problems" && ok "all 118 prior v2 fingerprints unchanged" || bad "prior changed"
 PATTERN="already has a scoring entry" expect_fail "double scoring refused" python3 scripts/add_entry.py score --supersedes AI1 --result FAILED --layer courts --scored-on 2026-11-01 --evidence https://example.org/y --cost-to-date "FAILED: held by Anthropic" --hype OPEN --means OPEN --cost FAILED
@@ -131,5 +134,43 @@ fresh; hk owner "Someone else" log
 PATTERN="not a housekeeping removal in owner" expect_fail "logged owner edit refused" build $SCRATCH
 fresh; hk date_source "DESK-SET: scoring date set by the register, now with added words" log
 PATTERN="not a housekeeping removal in date_source" expect_fail "logged addition refused" build $SCRATCH
+echo "14b. housekeeping in the test field (R-2026-10-25-A): logged deletion passes; logged OPEN refused; unlogged deletion fails"
+TEST0=$(python3 -c "import csv;print(next(r['test'] for r in csv.DictReader(open('data/entries.csv',encoding='utf-8')) if r['id']=='EA-REFORM'))")
+fresh; hk test "${TEST0:0:$(( ${#TEST0} - 10 ))}" log
+build $SCRATCH >/tmp/pl.out 2>&1 && grep -q "housekeeping edits as logged" /tmp/pl.out && ok "logged test deletion accepted" || { bad "logged test deletion"; cat /tmp/pl.out; }
+fresh; hk test "OPEN" log
+PATTERN="not a housekeeping removal in test" expect_fail "logged test replaced with OPEN refused" build $SCRATCH
+fresh; hk test "${TEST0:0:$(( ${#TEST0} - 10 ))}" nolog
+PATTERN="CHANGED EA-REFORM\|HOUSEKEEPING EA-REFORM: log lists it but not fingerprint" expect_fail "unlogged test deletion caught" build $SCRATCH
+
+unset REGISTER_OVERDUE
+echo "15. one count: block, glance and section table reconcile; every section including DESK counted; ungrouped row fails"
+fresh; python3 - <<'PY2' && ok "counts reconcile from data/entries.csv" || bad "counts"
+import sys, re, csv; sys.path.insert(0, 'scripts'); import regcore as rc, backlog_counter as bc
+_, rows = rc.read_source(rc.SOURCE); iso = open('README.md').read().split('counted as at ')[1].split(',')[0]
+import datetime; iso = datetime.datetime.strptime(iso, '%d %B %Y').date().isoformat()
+blk, c = bc.block(rows, iso)
+assert c['total'] == len(rows) == c['promises'] + c['scoring_entries']
+assert "| This desk's own commitments | %d |" % sum(1 for r in rows if r['section'] == 'DESK') in blk
+tot = re.search(r"\| Total \| (\d+) \|", blk).group(1); assert int(tot) == len(rows)
+assert blk in open('README.md').read()
+ix = open('index.html').read(); m = re.search(r"(\d+) entries = (\d+) promises \+ (\d+) scoring entries", ix)
+assert m and tuple(map(int, m.groups())) == (c['total'], c['promises'], c['scoring_entries'])
+PY2
+fresh; sed -i '/^MRNA-OS,/d' data/display-groups.csv
+PATTERN="rows not grouped" expect_fail "ungrouped row caught" build $SCRATCH
+
+echo "16. build stamp: a changed data file or a hand-edited count fails verify"
+fresh; printf '\n' >> data/entries.csv
+PATTERN="build stamp SHA-256" expect_fail "changed data file caught" python3 scripts/build_register.py --verify
+fresh; sed -i 's/- \*\*Open:\*\* \([0-9]*\)\./- **Open:** 999./' README.md
+PATTERN="README count block is not the block computed" expect_fail "hand-edited count caught" python3 scripts/build_register.py --verify
+
+echo "17. overdue guard: a promise past its date with no dated scoring-pending reason stops the build"
+fresh; python3 scripts/add_entry.py redate --supersedes FIR1 --id FIR1-OD --scoring-date "1 Oct 2026" --date-source "DESK-SET: test overdue" >/dev/null 2>&1
+PATTERN="OVERDUE FIR1-OD" expect_fail "overdue without reason caught" build $SCRATCH
+printf 'FIR1-OD,2026-10-02,"test reason",2099-12-31\n' >> data/scoring-pending.csv
+build $SCRATCH >/tmp/pl.out 2>&1 && grep -q "FIR1-OD" README.md && ok "dated reason accepted and shown" || { bad "pending reason"; cat /tmp/pl.out; }
+fresh; PATTERN="OVERDUE CHECK FAILED" expect_fail "check_overdue fails when a reason lapses" python3 scripts/check_overdue.py 2099-12-31
 
 echo; [ $fails -eq 0 ] && echo "PIPELINE TESTS: ALL PASSED" || echo "PIPELINE TESTS: $fails FAILED"; exit $fails
