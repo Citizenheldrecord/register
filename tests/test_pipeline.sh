@@ -173,4 +173,11 @@ printf 'FIR1-OD,2026-10-02,"test reason",2099-12-31\n' >> data/scoring-pending.c
 build $SCRATCH >/tmp/pl.out 2>&1 && grep -q "FIR1-OD" README.md && ok "dated reason accepted and shown" || { bad "pending reason"; cat /tmp/pl.out; }
 fresh; PATTERN="OVERDUE CHECK FAILED" expect_fail "check_overdue fails when a reason lapses" python3 scripts/check_overdue.py 2099-12-31
 
+echo "18. see_also notes render under Related rows with row links; overlaps section unchanged"
+fresh; build $SCRATCH >/tmp/pl.out 2>&1 || { bad "build"; cat /tmp/pl.out; }
+grep -q '<section class="related"><h2>Related rows</h2>' index.html && ok "Related rows section present" || bad "Related rows section missing"
+grep -q 'href="#row-EA-REFORM">EA-REFORM</a>' index.html && grep -q 'href="#row-CHARTER-LIMIT-REG">CHARTER-LIMIT-REG</a>' index.html && ok "row ids linked to row anchors" || bad "row links"
+grep -o '<section class="overlaps">.*</section><!-- /OVERLAPS -->' index.html | grep -q 'SA-EA-CHARTER\|Related rows\|CHARTER-LIMIT-REG' && bad "see_also leaked into overlaps" || ok "overlaps section has no see_also note"
+grep -q '^## Related rows' README.md && ok "README shows Related rows" || bad "README Related rows"
+
 echo; [ $fails -eq 0 ] && echo "PIPELINE TESTS: ALL PASSED" || echo "PIPELINE TESTS: $fails FAILED"; exit $fails
