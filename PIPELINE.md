@@ -4,6 +4,8 @@ One source. Every entry lives in data/entries.csv, one row per entry. That file 
 
 Housekeeping (rule entry R-2026-10-24-A, 24 October 2026). The one exception: internal working notes (approval notes, timestamps, internal file references) may be removed from the date source, measure, money, funding or essay field of a row, by deleting the text or replacing it with OPEN. Each removal is first listed in data/housekeeping-log.csv (date, update, id, field, action, fingerprint layout, fingerprint before and after; one line per layout the row appears in). The build accepts such a changed fingerprint only if the log lists it and the published file named by the previous manifest shows the change is only that; it prints each accepted edit, and the new manifest names the log and its checksum.
 
+Housekeeping in the test field (rule entry R-2026-10-25-A, 25 October 2026). The same rule applies to the test field for internal approval notes only. A test may only lose one stretch of text; it is never replaced with OPEN. Logged and checked the same way.
+
 Adding to it. Use scripts/add_entry.py, never a text editor.
 - commit: a new test, with outcome (PASS and FAILED), scoring date, owner and date source. Cost to date starts as OPEN until the scoring date.
 - redate: a new date for an existing test. The new row gets its own id and cites the old row's id and fingerprint. The old row stays.
