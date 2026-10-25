@@ -44,6 +44,16 @@ These pairs of entries may test the same thing. Both entries in each pair are ke
 
 <!-- /OVERLAPS -->
 
+<!-- RELATED -->
+
+## Related rows
+
+These rows are linked because they test related things. Each is scored on its own date; neither replaces the other.
+
+- **EA-REFORM and CHARTER-LIMIT-REG** (noted 25 Oct 2026): See also CHARTER-LIMIT-REG. EA-REFORM covers the Emergencies Act only. CHARTER-LIMIT-REG, entered 25 Oct 2026, covers all federal measures that limit Charter rights (emergency orders, health orders, mandates, regulator statements and government requests). Each is scored on its own date; neither replaces the other. The EA-REFORM entry is not changed.
+
+<!-- /RELATED -->
+
 The Register
 
 Entries as at 25 October 2026. Last change: 25 October 2026.
@@ -94,7 +104,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-25i.csv (all 238 rows) is e8e179a0eeb4ba86c030412cea7861369bacd19722c73eefcb9c83bc4cc605e8
+Checksum for this update: SHA-256 of public-live-rows-2026-10-25j.csv (all 238 rows) is e8e179a0eeb4ba86c030412cea7861369bacd19722c73eefcb9c83bc4cc605e8
 
 Rule entries
 
@@ -720,9 +730,9 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 ## How to check this update
 
-Build stamp: update 2026-10-25i, counted as at 25 October 2026, from data/entries.csv, 238 rows, SHA-256 fe05bdd0010747804db769661d65fe783cd3ce79c3542e8624e9a90329acb14a. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-10-25j, counted as at 25 October 2026, from data/entries.csv, 238 rows, SHA-256 fe05bdd0010747804db769661d65fe783cd3ce79c3542e8624e9a90329acb14a. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-25i.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-25i.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-25j.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-25j.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
