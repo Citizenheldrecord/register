@@ -13,6 +13,8 @@ nogo=0; step(){ echo; echo "== $1"; }
 step "build $D"; python3 scripts/build_register.py --date "$D" || nogo=1
 step "overdue guard (every promise past its date is scored or has a dated scoring-pending reason)"
 python3 scripts/check_overdue.py "${D:0:10}" ${REGISTER_CALENDAR:+--calendar "$REGISTER_CALENDAR"} || nogo=1
+step "ten to watch (each listed id is in the register, not scored, not replaced, not past its date)"
+python3 scripts/check_ten_to_watch.py "${D:0:10}" || nogo=1
 step "verify printed checksums and grammar"; python3 scripts/build_register.py --verify || nogo=1
 step "fingerprint tests"; bash tests/test_hash_entries.sh > /tmp/pf-hash.out 2>&1 && tail -1 /tmp/pf-hash.out || { cat /tmp/pf-hash.out; nogo=1; }
 step "pipeline tests"; bash tests/test_pipeline.sh > /tmp/pf-pipe.out 2>&1 && tail -1 /tmp/pf-pipe.out || { grep -E "FAIL|PIPELINE" /tmp/pf-pipe.out; nogo=1; }
