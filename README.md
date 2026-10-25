@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 25 October 2026 from data/entries.csv, which holds 232 entries.
+Counted on 25 October 2026 from data/entries.csv, which holds 234 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 232 = 226 promises + 6 scoring entries.
+- **Entries:** 234 = 228 promises + 6 scoring entries.
 - **Scored PASS:** 2 (AB1, C39-CTTE).
 - **Scored FAILED:** 4 (AB1-PL, BC1, CL-BASE, FA3b).
 - **Recorded as fact, with no pass or fail line:** 1 (HR5334).
-- **Open:** 203.
+- **Open:** 205.
 - **Due:** 9 (GX1b, 5 days past its date; scoring pending, noted 23 October 2026: The court docket has shown filings late: a respondent's record printed on 15 Oct 2026 first appeared on the docket as filed on 23 Oct 2026. The docket is read again on 26 Oct 2026 and the result is entered then, within the 30 day window; BC-PARCELS, 1 day past its date; scoring pending, noted 24 October 2026: Provisional: no Government of BC or BC NDP list of the about 400 parcels with combined area found by 8 PM PT 24 Oct 2026 (news.gov.bc.ca, bcndp.ca/plan, gov.bc.ca First Nations negotiations page read 24 Oct 2026 23:58 MT). The entry requires a recheck 24 to 48 hours after before FAILED is entered; recheck 25 to 26 Oct 2026; DSRB-CAP, 1 day past its date; TR-CANDU, 1 day past its date; TR-DEF, 1 day past its date; TR-FTA-ROUND, 1 day past its date; TR-OFFTAKE, 1 day past its date; TR-UA-PAGE, 1 day past its date; TR1, 1 day past its date).
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 226 promises = 2 PASS + 4 FAILED + 1 recorded + 203 open + 9 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 228 promises = 2 PASS + 4 FAILED + 1 recorded + 205 open + 9 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 232 entries):
+By section of the data file (every entry counted once; the four sections add up to all 234 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 140 | 4 | 136 | 1 | 3 | 0 | 123 | 9 | 0 | 0 | 0 |
+| Canadian files | 142 | 4 | 138 | 1 | 3 | 0 | 125 | 9 | 0 | 0 | 0 |
 | This desk's own commitments | 10 | 0 | 10 | 0 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
 | Outside files we watch | 53 | 0 | 53 | 0 | 0 | 0 | 47 | 0 | 4 | 2 | 0 |
 | Recorded facts and checkpoints | 29 | 2 | 27 | 1 | 1 | 1 | 23 | 0 | 0 | 0 | 1 |
-| Total | 232 | 6 | 226 | 2 | 4 | 1 | 203 | 9 | 4 | 2 | 1 |
+| Total | 234 | 6 | 228 | 2 | 4 | 1 | 205 | 9 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -94,7 +94,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-25b.csv (all 232 rows) is e0f97cfc2617ddd51522fe398d73cbfd6336a6fac3895c7620e41b539f99eacd
+Checksum for this update: SHA-256 of public-live-rows-2026-10-25c.csv (all 234 rows) is d16c8df78d3bb4c19a931843d21f9fb55c3903db70f5a035eff2d1e444b17a1f
 
 Rule entries
 
@@ -446,7 +446,7 @@ Outside files we watch | KAMLOOPS-EXCAV | PASS: by 31 Dec 2027 a forensic excava
 
 Outside files we watch | ATIP-CIRNAC-149 | CIRNAC ATIP A-2026-00149 (EA2026_0195120; hectares settled versus added, net title ledger, FY2015-16 to date). PASS: records released (full or partial package, or a written no-records answer) by the extended deadline, 21 Jan 2028. FAILED: not released by the extended deadline | Crown-Indigenous Relations and Northern Affairs Canada (CIRNAC) ATIP office | 21 Jan 2028 | [Date basis: benchmark set by the register] DESK-SET: extended deadline computed by the desk, not stated by CIRNAC (clarified 23 Sep 2026; 30-day + 9(1)(a) 12 months + 9(1)(b) 90 days; s.27(1) third-party notice); extension letter 19 Oct 2026 states no due date | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 21 Jan 2028 | OPEN | OPEN | OPEN
 
-Also watched (91)
+Also watched (93)
 
 Rows the register watches that are not government promises: the owner is not a government, or the row lacks a primary source link. Same rules apply.
 
@@ -497,6 +497,10 @@ Canadian files | P2 | PASS: PLA winter training stays cancelled, in writing. FAI
 Canadian files | TCT-GUAR | PASS: a Government of Canada document dated by 31 Mar 2027 states Canada's security-guarantee commitment to Ukraine with a cost or force figure; FAILED: none | PMO / DND / GAC | 31 Mar 2027 | [Date basis: benchmark set by the register] DESK-SET: no date in the source | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
 
 Canadian files | CL-REG-NEWGOV (follows CL-BASE-SCORED-20261024) | The government formed after the 24 Oct 2026 BC general election publishes a public register of Aboriginal title and claims files that lists closed files (finality and release in force) separately from open ones. PASS: by 30 Apr 2027 the Government of BC publishes a register listing claims, title and treaty or reconciliation land files, each marked closed or open. FAILED: none published, or a list of open or active files only. Follows CL-BASE (closers baseline, scored entry CL-BASE-SCORED-20261024) | Government of BC (Premier / Ministry of Indigenous Relations and Reconciliation) | 30 Apr 2027 | [Date basis: set by an outside source] STATUTE: Budget Transparency and Accountability Act s.6(3), main estimates due on or before the later of 30 April 2027 and 150 days after the designated date following the general election (general voting day 24 Oct 2026 is not the third Saturday in October), https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/00023_01 , read 25 Oct 2026 | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Apr 2027 | OPEN | OPEN | OPEN
+
+Canadian files | BC-TITLE-MAP (follows CL-REG-NEWGOV) | The Government of BC publishes the claims map promised in the Conservative Party of BC 2026 platform's Aboriginal Title Transparency Act ("maps and information about active claims, negotiations, legal actions and agreements affecting public or private land", platform PDF p. 46, https://conservativebc.ca/wp-content/uploads/2026/10/20261016_BCC_Platform2026_8-5x11-Draft-18_compressed.pdf ). PASS: by 30 Apr 2027 the Government of BC publishes that map as a public, dated register. FAILED: no publication, or a statement of intent only. Follows CL-REG-NEWGOV (register closer, CL-BASE chain) | BC Cabinet | 30 Apr 2027 | [Date basis: set by an outside source] STATUTE: aligned with CL-REG-NEWGOV, Budget Transparency and Accountability Act s.6(3), main estimates due on or before the later of 30 April 2027 and 150 days after the designated date following the general election, https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/00023_01 , read 25 Oct 2026 | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Apr 2027 | OPEN | OPEN | OPEN
+
+Canadian files | BC-DRIPA-SPRING | PASS: by 20 May 2027 a bill repealing the Declaration on the Rights of Indigenous Peoples Act (SBC 2019, c. 44) is introduced (first reading) in the BC Legislative Assembly. FAILED: no such bill at first reading by that date. Hype exhibit: Conservative Party of BC platform 2026, PDF p. 46, "Repeal DRIPA", https://conservativebc.ca/wp-content/uploads/2026/10/20261016_BCC_Platform2026_8-5x11-Draft-18_compressed.pdf . Earlier checkpoint for BC-DRIPA-NEXT (31 May 2027); does not replace or move it | Premier and BC Cabinet | 20 May 2027 | [Date basis: set by an outside source] HOUSE CALENDAR: Thu 20 May 2027, the last sitting day of the spring 2027 sitting under the Standing Orders of the Legislative Assembly of British Columbia: SO 2(2)(a)(i) "the second Tuesday in February to the last Thursday in May inclusive" (27 May 2027) and SO 2(2)(b) "The House shall stand adjourned during ... the week of Victoria Day" (Victoria Day 2027 is Mon 24 May), https://ppbc.leg.bc.ca/standing_orders.html , read 25 Oct 2026. If the Clerk's 2027 parliamentary calendar (SO 2(2)(c)) shows a different last sitting day, it is recorded as a new dated line; this row stays fill-once | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 20 May 2027 | OPEN | OPEN | OPEN
 
 Canadian files | A1 | PASS: at least one Building Canada Act project at dated financial close or shovels in the ground. FAILED: none | Major Projects Office / proponents | 30 Jun 2027 | [Date basis: benchmark set by the register] DESK-SET: date set in the access essay of 6 Sep 2026: "By 30 June 2027: either at least one Building Canada Act national-interest energy or minerals project has financial close" | LIVE | MPO projects https://www.canada.ca/en/privy-council/major-projects-office/projects/national.html | Main Estimates 2026/27, Privy Council Office, Vote 1 Program expenditures $224,349,806 (organization summary; the Major Projects Office has no vote of its own) https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2026-27/organization-summary.csv; Supplementary Estimates (A) 2026/27, Privy Council Office, Funding for the Major Projects Office (Budget 2025) $7,507,508 https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/supplementary-estimates/explanation-requirements-a-2026-27.csv. Amounts only: the page shows no volume driver, named deliverable or end date. | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
@@ -708,9 +712,9 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 ## How to check this update
 
-Build stamp: update 2026-10-25b, counted as at 25 October 2026, from data/entries.csv, 232 rows, SHA-256 8bb1926d84c2290854428ea893de8c96a5082f9a60970e12cc4af6b09cba8a7d. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-10-25c, counted as at 25 October 2026, from data/entries.csv, 234 rows, SHA-256 1c095475b0bdbb5f69426a23e15685e72f23f699677cf7654bae08c3afa2e3ec. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-25b.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-25b.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-25c.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-25c.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
