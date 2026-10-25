@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 25 October 2026 from data/entries.csv, which holds 236 entries.
+Counted on 25 October 2026 from data/entries.csv, which holds 237 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 236 = 230 promises + 6 scoring entries.
-- **Scored PASS:** 2 (AB1, C39-CTTE).
+- **Entries:** 237 = 230 promises + 7 scoring entries.
+- **Scored PASS:** 3 (AB1, C39-CTTE, TR-FTA-ROUND).
 - **Scored FAILED:** 3 (AB1-PL, BC1, FA3b).
 - **Recorded as fact, with no pass or fail line:** 2 (CL-BASE, HR5334).
 - **Open:** 207.
-- **Due:** 9 (GX1b, 5 days past its date; scoring pending, noted 23 October 2026: The court docket has shown filings late: a respondent's record printed on 15 Oct 2026 first appeared on the docket as filed on 23 Oct 2026. The docket is read again on 26 Oct 2026 and the result is entered then, within the 30 day window; BC-PARCELS, 1 day past its date; scoring pending, noted 24 October 2026: Provisional: no Government of BC or BC NDP list of the about 400 parcels with combined area found by 8 PM PT 24 Oct 2026 (news.gov.bc.ca, bcndp.ca/plan, gov.bc.ca First Nations negotiations page read 24 Oct 2026 23:58 MT). The entry requires a recheck 24 to 48 hours after before FAILED is entered; recheck 25 to 26 Oct 2026; DSRB-CAP, 1 day past its date; scoring pending, noted 25 October 2026: No visit document mentions the Defence, Security and Resilience Bank, and no new member or capital was found. The row is read again on 26 Oct 2026 against all official sources and the result is entered then; TR-CANDU, 1 day past its date; scoring pending, noted 25 October 2026: Only a 22 Oct 2026 energy joint statement and readout describing talks on Türkiye's New Nuclear Project were found; no signed reactor or finance document. The row is read again on 26 Oct 2026 and the result is entered then; TR-DEF, 1 day past its date; scoring pending, noted 25 October 2026: A Defence Sector Partnerships MOU was announced on 22 to 23 Oct 2026 with no published end-use or re-export terms. The row is read again on 26 Oct 2026 and the result is entered then; TR-FTA-ROUND, 1 day past its date; TR-OFFTAKE, 1 day past its date; scoring pending, noted 25 October 2026: Only opportunity language was found (LNG discussions with potential off-takers; an export credit MOU with no dollar value or dates). The row is read again on 26 Oct 2026 and the result is entered then; TR-UA-PAGE, 1 day past its date; scoring pending, noted 25 October 2026: The joint statement mentions Ukraine only in a general peace and security line, and the readout says views were exchanged; no concrete Ukraine item was found. The row is read again on 26 Oct 2026 and the result is entered then; TR1, 1 day past its date; scoring pending, noted 25 October 2026: The 22 Oct 2026 joint statement names a three-year Action Plan with four pillars but gives no dated chapter list and no persons or exclusions language. The row is read again on 26 Oct 2026, 24 to 48 hours after the visit closed, and the result is entered then).
+- **Due:** 8 (GX1b, 5 days past its date; scoring pending, noted 23 October 2026: The court docket has shown filings late: a respondent's record printed on 15 Oct 2026 first appeared on the docket as filed on 23 Oct 2026. The docket is read again on 26 Oct 2026 and the result is entered then, within the 30 day window; BC-PARCELS, 1 day past its date; scoring pending, noted 24 October 2026: Provisional: no Government of BC or BC NDP list of the about 400 parcels with combined area found by 8 PM PT 24 Oct 2026 (news.gov.bc.ca, bcndp.ca/plan, gov.bc.ca First Nations negotiations page read 24 Oct 2026 23:58 MT). The entry requires a recheck 24 to 48 hours after before FAILED is entered; recheck 25 to 26 Oct 2026; DSRB-CAP, 1 day past its date; scoring pending, noted 25 October 2026: No visit document mentions the Defence, Security and Resilience Bank, and no new member or capital was found. The row is read again on 26 Oct 2026 against all official sources and the result is entered then; TR-CANDU, 1 day past its date; scoring pending, noted 25 October 2026: Only a 22 Oct 2026 energy joint statement and readout describing talks on Türkiye's New Nuclear Project were found; no signed reactor or finance document. The row is read again on 26 Oct 2026 and the result is entered then; TR-DEF, 1 day past its date; scoring pending, noted 25 October 2026: A Defence Sector Partnerships MOU was announced on 22 to 23 Oct 2026 with no published end-use or re-export terms. The row is read again on 26 Oct 2026 and the result is entered then; TR-OFFTAKE, 1 day past its date; scoring pending, noted 25 October 2026: Only opportunity language was found (LNG discussions with potential off-takers; an export credit MOU with no dollar value or dates). The row is read again on 26 Oct 2026 and the result is entered then; TR-UA-PAGE, 1 day past its date; scoring pending, noted 25 October 2026: The joint statement mentions Ukraine only in a general peace and security line, and the readout says views were exchanged; no concrete Ukraine item was found. The row is read again on 26 Oct 2026 and the result is entered then; TR1, 1 day past its date; scoring pending, noted 25 October 2026: The 22 Oct 2026 joint statement names a three-year Action Plan with four pillars but gives no dated chapter list and no persons or exclusions language. The row is read again on 26 Oct 2026, 24 to 48 hours after the visit closed, and the result is entered then).
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 230 promises = 2 PASS + 3 FAILED + 2 recorded + 207 open + 9 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 230 promises = 3 PASS + 3 FAILED + 2 recorded + 207 open + 8 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 236 entries):
+By section of the data file (every entry counted once; the four sections add up to all 237 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 144 | 4 | 140 | 1 | 3 | 0 | 127 | 9 | 0 | 0 | 0 |
+| Canadian files | 145 | 5 | 140 | 2 | 3 | 0 | 127 | 8 | 0 | 0 | 0 |
 | This desk's own commitments | 10 | 0 | 10 | 0 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
 | Outside files we watch | 53 | 0 | 53 | 0 | 0 | 0 | 47 | 0 | 4 | 2 | 0 |
 | Recorded facts and checkpoints | 29 | 2 | 27 | 1 | 0 | 2 | 23 | 0 | 0 | 0 | 1 |
-| Total | 236 | 6 | 230 | 2 | 3 | 2 | 207 | 9 | 4 | 2 | 1 |
+| Total | 237 | 7 | 230 | 3 | 3 | 2 | 207 | 8 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -94,7 +94,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-25e.csv (all 236 rows) is aeea126e8c6d2c874e95bffe533a1c6e8351a480f0368e418331f2c861cf312a
+Checksum for this update: SHA-256 of public-live-rows-2026-10-25f.csv (all 237 rows) is f02a2ca57b437e91b412bd602e94e2e50a9053103d744ca8ca7a114be998d470
 
 Rule entries
 
@@ -222,7 +222,7 @@ Time horizons and concentrated interests: those paid by the process are organize
 
 This register records from outside the institutions it measures. It does not ask any of them to measure itself.
 
-Government promises (109)
+Government promises (110)
 
 Promises with a government owner, a primary source and a scoring date. Each row also names its file section.
 
@@ -244,11 +244,13 @@ Canadian files | TR-OFFTAKE | PASS: a published signed critical-minerals, uraniu
 
 Canadian files | DSRB-CAP | PASS: a published primary by 24 Oct shows a new founding member of the Defence, Security and Resilience Bank beyond the nine reported on 30 Aug 2026, or paid-in or subscribed capital above about EUR 5 billion. FAILED: restatement only | Department of Finance / PMO | 24 Oct 2026 | [Date basis: set by an outside source] GOVERNMENT PROMISE: PMO release 6 Oct 2026 gives the visit as 21 to 24 Oct; scored at trip close | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
 
-Canadian files | TR-FTA-ROUND | PASS: GAC or PMO publishes by 24 Oct a dated first (or next) Canada-Turkiye free trade agreement negotiating round. FAILED: talks continue only | GAC (Minister of International Trade) | 24 Oct 2026 | [Date basis: set by an outside source] GOVERNMENT PROMISE: PMO release 6 Oct 2026 gives the visit as 21 to 24 Oct; scored at trip close | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
+Canadian files | TR-FTA-ROUND | PASS: GAC or PMO publishes by 24 Oct a dated first (or next) Canada-Turkiye free trade agreement negotiating round. FAILED: talks continue only | GAC (Minister of International Trade) | 24 Oct 2026 | [Date basis: set by an outside source] GOVERNMENT PROMISE: PMO release 6 Oct 2026 gives the visit as 21 to 24 Oct; scored at trip close | CLOSED: scored in TR-FTA-ROUND-SCORED-20261024 | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
 
 Canadian files | TR-UA-PAGE | PASS: the visit's joint statement or PMO readout by 24 Oct carries a concrete Ukraine item (prisoner-exchange facilitation, corridor language, or a dated diplomatic step) in the same document as the commercial items. FAILED: absent, or in a separate document only | PMO | 24 Oct 2026 | [Date basis: set by an outside source] GOVERNMENT PROMISE: PMO release 6 Oct 2026 gives the visit as 21 to 24 Oct; scored at trip close | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
 
 Canadian files | TR-DEF | PASS: if a defence-industrial, export or procurement item is announced by 24 Oct, the published text states end-use or re-export conditions (Notice to Exporters 1108 standard or stronger). FAILED: an announcement with no stated end-use terms. NO SCORE if no defence item is announced | GAC (export controls) / DND | 24 Oct 2026 | [Date basis: set by an outside source] GOVERNMENT PROMISE: PMO release 6 Oct 2026 gives the visit as 21 to 24 Oct; scored at trip close | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 24 Oct 2026 | OPEN | OPEN | OPEN
+
+Canadian files | TR-FTA-ROUND-SCORED-20261024 | PASS: GAC or PMO publishes by 24 Oct a dated first (or next) Canada-Turkiye free trade agreement negotiating round. FAILED: talks continue only | GAC (Minister of International Trade) | 24 Oct 2026 | [Date basis: set by an outside source] GOVERNMENT PROMISE: PMO release 6 Oct 2026 gives the visit as 21 to 24 Oct; scored at trip close | SCORED 25 Oct 2026: PASS | https://www.pm.gc.ca/en/news/news-releases/2026/10/23/prime-minister-carneys-historic-visit-turkiye-launches-new-strategic (PMO release 23 Oct 2026, read 25 Oct 2026 06:07 MT: 'the first round of negotiations toward a comprehensive free trade agreement (FTA) will take place from November 30 to December 4, 2026, in Ankara'). Published before the 24 Oct scoring date; scored late 25 Oct 2026 by the desk. | OPEN | OPEN | OPEN | FAILED: no published figure for the negotiations; held by Global Affairs Canada | OPEN | MATCHED | FAILED
 
 Canadian files | DGR1 | PASS: after the DGR notice comment period closes, a dated list or refuse decision track is on record. FAILED: none. A listing is not a CNSC licence and not a loan | Privy Council (Governor in Council) / NWMO / NRCan | 26 Oct 2026 | [Date basis: set by an outside source] GOVERNMENT PROMISE: Canada Gazette notice, comment period closes 26 Oct 2026 (Wait Report calendar lock, FA3c) | LIVE | Canada Gazette Part II https://gazette.gc.ca/rp-pr/p2/2026/index-eng.html | OPEN | OPEN | OPEN | OPEN until scoring date 26 Oct 2026 | OPEN | OPEN | OPEN
 
@@ -716,9 +718,9 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 ## How to check this update
 
-Build stamp: update 2026-10-25e, counted as at 25 October 2026, from data/entries.csv, 236 rows, SHA-256 87337aac3328ef4a2e6227756c0bc39e8642f13c666df4d9c3c35b6cf2518fb7. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-10-25f, counted as at 25 October 2026, from data/entries.csv, 237 rows, SHA-256 6fab31a0b4940c4514cd45de6d899f468be59f1daa12fc3a28e9f737b93e075a. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-25e.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-25e.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-25f.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-25f.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
