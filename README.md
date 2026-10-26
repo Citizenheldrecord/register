@@ -114,7 +114,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-26c.csv (all 259 rows) is 199bee4af7f34e2abd2e17d4fcb84468b242ffe358619eda1d386fb159aa54ed
+Checksum for this update: SHA-256 of public-live-rows-2026-10-26d.csv (all 259 rows) is 199bee4af7f34e2abd2e17d4fcb84468b242ffe358619eda1d386fb159aa54ed
 
 Rule entries
 
@@ -782,9 +782,9 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 ## How to check this update
 
-Build stamp: update 2026-10-26c, counted as at 26 October 2026, from data/entries.csv, 259 rows, SHA-256 e508a7998c4cd3ca35bc012c424863c4d0c949f3df53c8dc461aae25b146fa1f. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-10-26d, counted as at 26 October 2026, from data/entries.csv, 259 rows, SHA-256 e508a7998c4cd3ca35bc012c424863c4d0c949f3df53c8dc461aae25b146fa1f. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-26c.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-26c.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-26d.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-26d.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
