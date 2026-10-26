@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 26 October 2026 from data/entries.csv, which holds 260 entries.
+Counted on 26 October 2026 from data/entries.csv, which holds 263 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 260 = 245 promises + 15 scoring entries.
+- **Entries:** 263 = 248 promises + 15 scoring entries.
 - **Scored PASS:** 3 (AB1, C39-CTTE, TR-FTA-ROUND).
 - **Scored FAILED:** 11 (AB1-PL, BC-PARCELS, BC1, DSRB-CAP, FA3b, GX1b, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
 - **Recorded as fact, with no pass or fail line:** 2 (CL-BASE, HR5334).
-- **Open:** 222.
+- **Open:** 225.
 - **Due:** 0.
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 245 promises = 3 PASS + 11 FAILED + 2 recorded + 222 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 248 promises = 3 PASS + 11 FAILED + 2 recorded + 225 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 260 entries):
+By section of the data file (every entry counted once; the four sections add up to all 263 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 161 | 13 | 148 | 2 | 11 | 0 | 135 | 0 | 0 | 0 | 0 |
+| Canadian files | 164 | 13 | 151 | 2 | 11 | 0 | 138 | 0 | 0 | 0 | 0 |
 | This desk's own commitments | 10 | 0 | 10 | 0 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
 | Outside files we watch | 60 | 0 | 60 | 0 | 0 | 0 | 54 | 0 | 4 | 2 | 0 |
 | Recorded facts and checkpoints | 29 | 2 | 27 | 1 | 0 | 2 | 23 | 0 | 0 | 0 | 1 |
-| Total | 260 | 15 | 245 | 3 | 11 | 2 | 222 | 0 | 4 | 2 | 1 |
+| Total | 263 | 15 | 248 | 3 | 11 | 2 | 225 | 0 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -114,7 +114,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-26e.csv (all 260 rows) is 19351a20274e57676856ff054f36138e2fccef61562f825ca6a5ad4c76670492
+Checksum for this update: SHA-256 of public-live-rows-2026-10-26f.csv (all 263 rows) is 5fb4cf095d04a0c0427e8cb8a086f33479a359e2686843c1741d47cb8d48b812
 
 Rule entries
 
@@ -484,7 +484,7 @@ Outside files we watch | KAMLOOPS-EXCAV | PASS: by 31 Dec 2027 a forensic excava
 
 Outside files we watch | ATIP-CIRNAC-149 | CIRNAC ATIP A-2026-00149 (EA2026_0195120; hectares settled versus added, net title ledger, FY2015-16 to date). PASS: records released (full or partial package, or a written no-records answer) by the extended deadline, 21 Jan 2028. FAILED: not released by the extended deadline | Crown-Indigenous Relations and Northern Affairs Canada (CIRNAC) ATIP office | 21 Jan 2028 | [Date basis: benchmark set by the register] DESK-SET: extended deadline computed by the desk, not stated by CIRNAC (clarified 23 Sep 2026; 30-day + 9(1)(a) 12 months + 9(1)(b) 90 days; s.27(1) third-party notice); extension letter 19 Oct 2026 states no due date | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 21 Jan 2028 | OPEN | OPEN | OPEN
 
-Also watched (110)
+Also watched (113)
 
 Rows the register watches that are not government promises: the owner is not a government, or the row lacks a primary source link. Same rules apply.
 
@@ -544,6 +544,8 @@ Canadian files | P2 | PASS: PLA winter training stays cancelled, in writing. FAI
 
 Canadian files | TCT-GUAR | PASS: a Government of Canada document dated by 31 Mar 2027 states Canada's security-guarantee commitment to Ukraine with a cost or force figure; FAILED: none | PMO / DND / GAC | 31 Mar 2027 | [Date basis: benchmark set by the register] DESK-SET: no date in the source | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
 
+Canadian files | CGL-P2-CONST | PASS: by 31 Mar 2027 TC Energy, Coastal GasLink Pipeline Limited Partnership or LNG Canada (Phase 2 Execution Manager) publishes a dated release recording that Coastal GasLink Phase 2 construction has started. FAILED: no such dated release by 31 Mar 2027; a dated miss is recorded. The date holds TC Energy to its own words, construction 'expected to commence in early 2027'. Next real step after the CGL Phase 2 FID of 29 Sep 2026 | TC Energy / Coastal GasLink Pipeline Limited Partnership; LNG Canada as Phase 2 Execution Manager | 31 Mar 2027 | [Date basis: set by an outside source] COMPANY TIMETABLE: TC Energy release of 29 Sep 2026, https://www.tcenergy.com/announcements/2026/2026-09-29-coastal-gaslink-phase-2-to-proceed-following-lng-canada-final-investment-decision/ : 'CGL Phase 2 construction is expected to commence in early 2027, with anticipated in-service in the early 2030s.' End of Q1 2027 used, holding the owner to its own 'early 2027' (read 26 Oct 2026). Independent: Reuters 29 Sep 2026, https://www.reuters.com/business/energy/tc-energy-advances-coastal-gaslink-after-lng-canada-decision-2026-09-29/ | LIVE | https://www.tcenergy.com/announcements/2026/2026-09-29-coastal-gaslink-phase-2-to-proceed-following-lng-canada-final-investment-decision/ | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
+
 Canadian files | CL-REG-NEWGOV (follows CL-BASE-SCORED-20261024) | The government formed after the 24 Oct 2026 BC general election publishes a public register of Aboriginal title and claims files that lists closed files (finality and release in force) separately from open ones. PASS: by 30 Apr 2027 the Government of BC publishes a register listing claims, title and treaty or reconciliation land files, each marked closed or open. FAILED: none published, or a list of open or active files only. Follows CL-BASE (closers baseline, scored entry CL-BASE-SCORED-20261024) | Government of BC (Premier / Ministry of Indigenous Relations and Reconciliation) | 30 Apr 2027 | [Date basis: set by an outside source] STATUTE: Budget Transparency and Accountability Act s.6(3), main estimates due on or before the later of 30 April 2027 and 150 days after the designated date following the general election (general voting day 24 Oct 2026 is not the third Saturday in October), https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/00023_01 , read 25 Oct 2026 | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Apr 2027 | OPEN | OPEN | OPEN
 
 Canadian files | BC-TITLE-MAP (follows CL-REG-NEWGOV) | The Government of BC publishes the claims map promised in the Conservative Party of BC 2026 platform's Aboriginal Title Transparency Act ("maps and information about active claims, negotiations, legal actions and agreements affecting public or private land", platform PDF p. 46, https://conservativebc.ca/wp-content/uploads/2026/10/20261016_BCC_Platform2026_8-5x11-Draft-18_compressed.pdf ). PASS: by 30 Apr 2027 the Government of BC publishes that map as a public, dated register. FAILED: no publication, or a statement of intent only. Follows CL-REG-NEWGOV (register closer, CL-BASE chain) | BC Cabinet | 30 Apr 2027 | [Date basis: set by an outside source] STATUTE: aligned with CL-REG-NEWGOV, Budget Transparency and Accountability Act s.6(3), main estimates due on or before the later of 30 April 2027 and 150 days after the designated date following the general election, https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/00023_01 , read 25 Oct 2026 | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Apr 2027 | OPEN | OPEN | OPEN
@@ -574,6 +576,8 @@ Canadian files | TR-ATA-USE | PASS: by 30 Jun 2027 any designated carrier publis
 
 Canadian files | DSRB-CHARTER-2027 (follows DSRB-CAP) | PASS: by 30 Jun 2027, the Defence, Security and Resilience Bank charter is signed and its paid-in capital is published on a government primary, with a dated first loan. FAILED: still announcement only on the scoring date. Next step after DSRB-CAP | Department of Finance / PMO | 30 Jun 2027 | [Date basis: benchmark set by the register] DESK-SET: scoring date set by the register (entered 25 Oct 2026) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
+Canadian files | KOMOKS-FED | PASS: by 30 Jun 2027 a federal Act giving effect to the K'omoks Treaty has Royal Assent and Canada, BC and K'omoks First Nation have published a dated Effective Date. FAILED: no federal Royal Assent, or no dated Effective Date, by 30 Jun 2027; a dated miss is recorded. On PASS the register then tests T1 against the treaty's parcel map. Follows the BC K'omoks Treaty Act, Royal Assent 28 May 2026 | Government of Canada (Crown-Indigenous Relations and Northern Affairs Canada) | 30 Jun 2027 | [Date basis: benchmark set by the register] DESK-SET: chosen by the register; no government date for federal ratification was found. BC K'omoks Treaty Act, SBC 2026 c 18, https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/26018 (Royal Assent 28 May 2026). BC Treaty Commission release of 29 May 2026, https://bctreaty.ca/wp-content/uploads/2026/05/BC-Komoks-Treaty-Act-Ratified-May-28-2026.pdf : 'The next step is federal ratification through the Parliament of Canada. Following federal Royal Assent, K'omoks First Nation, BC, and Canada, will work together to determine an Effective Date' (both read 26 Oct 2026) | LIVE | LEGISinfo https://www.parl.ca/legisinfo/en/bills | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
+
 Canadian files | EA-REFORM | PASS: the Emergencies Act is amended so that any declaration must state an end condition and a success measure, or the SCC, in docket 42261 (appeal of 2026 FCA 6), sets the review test. Note: as of 22 Oct 2026 no amending bill found (S1); the SCC leave decision is reported in the news but not verified (S4). Result cells fill once under the 22 Oct 2026 rule | Minister of Public Safety; Supreme Court of Canada | 22 Oct 2027 | [Date basis: benchmark set by the register] DESK-SET: scoring date set by the register; first check 23 Oct 2026, Supreme Court leave decision | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 22 Oct 2027 | OPEN | OPEN | OPEN
 
 Canadian files | CHARTER-LIMIT-REG | PASS: by 25 Oct 2027, Parliament enacts, or the Government of Canada adopts by a published order or policy, a rule in force that every federal measure limiting a Charter right (emergency order, health order, mandate, regulator statement or government request) must state (1) the measurable result it is meant to achieve, (2) a fixed end date, renewable only by a fresh public vote or order with the outcome data attached, and (3) one named minister or official who answers for it. FAILED: no such rule is in force on the scoring date; the entry names the blocking layer. Standalone entry. See also EA-REFORM: EA-REFORM covers the Emergencies Act only; this entry covers all federal measures that limit Charter rights. Neither replaces the other | Minister of Justice and Attorney General of Canada | 25 Oct 2027 | [Date basis: benchmark set by the register] DESK-SET: scoring date set by the register, Mon 25 Oct 2027, one year after the essay went live (25 Oct 2026; Wayback https://web.archive.org/web/20261025191426/https://barryesharp.substack.com/p/where-the-test-began-covid-consent). Checked at scoring on Justice Laws https://laws-lois.justice.gc.ca/ , LEGISinfo https://www.parl.ca/legisinfo/ and the Canada Gazette https://gazette.gc.ca/ | LIVE | Justice Laws https://laws-lois.justice.gc.ca/ ; LEGISinfo https://www.parl.ca/legisinfo/ ; Canada Gazette https://gazette.gc.ca/ | OPEN | OPEN | https://barryesharp.substack.com/p/where-the-test-began-covid-consent | OPEN until scoring date 25 Oct 2027 | OPEN | OPEN | OPEN
@@ -595,6 +599,8 @@ Canadian files | N3 | PASS: the industrial carbon price is confined in statute. 
 Canadian files | A3 | PASS: interprovincial mutual recognition for goods with a measured barrier cut. FAILED: none | Provinces / Internal Trade | 30 Jun 2028 | [Date basis: benchmark set by the register] DESK-SET: date set in the access essay of 6 Sep 2026: "By 30 June 2028" | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2028 | OPEN | OPEN | OPEN
 
 Canadian files | PL-FULLCON | PASS: dated release or regulator record of full construction start by 30 Sep 2028; FAILED: none; no extension | Pacific Link proponents | 30 Sep 2028 | [Date basis: set by an outside source] COMPANY TIMETABLE: proponent timeline, "September 2028: Authorization is granted and full construction begins" | LIVE | https://www.pacificlinkpipeline.ca/timeline | OPEN | OPEN | OPEN | OPEN until scoring date 30 Sep 2028 | OPEN | OPEN | OPEN
+
+Canadian files | CEDAR-ISD | PASS: by 31 Dec 2028 Cedar LNG, Pembina or the Haisla Nation publishes a dated release, or a regulator record shows, that Cedar LNG is in service with its first LNG cargo loaded. FAILED: no first cargo recorded by 31 Dec 2028; a dated miss is recorded. Next real step on a financed project (FID 25 Jun 2024) | Cedar LNG Partners LP (Haisla Nation / Pembina Pipeline Corporation) | 31 Dec 2028 | [Date basis: set by an outside source] COMPANY TIMETABLE: Cedar LNG FID release of 25 Jun 2024, https://www.cedarlng.com/2024/06/25/cedar-lng-announces-positive-final-investment-decision/ : 'The Project is anticipated to be in service in late 2028.' Repeated by Pembina release of 5 Nov 2025, https://www.sec.gov/Archives/edgar/data/1546066/000154606625000096/november52025pressrelease.htm : 'expected in-service date in late 2028'. Year end set by the register (read 26 Oct 2026). Independent: The Globe and Mail 15 Jul 2026, https://www.theglobeandmail.com/business/article-cedar-lng-receives-bc-regulators-approval-to-increase-future/ | LIVE | https://www.cedarlng.com/news/ | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2028 | OPEN | OPEN | OPEN
 
 Canadian files | CAF-STRENGTH-2032 | PASS: a DND primary shows Regular Force strength of at least 71,500 (the authorized strength) before 31 Mar 2032, on DND's State of the CAF page. FAILED: the latest DND figure on the scoring date is below 71,500. OPEN only if no DND figure is published. Baseline: 68,714 at 31 Aug 2026. The Departmental Plan target of at least 95 per cent of the Regular Force establishment filled was rejected for this test because a percentage target alone counts as process. HYPE exhibit: State of the CAF page, 'rebuilding the military to an authorized strength of 71,500 Regular Force' https://www.canada.ca/en/department-national-defence/corporate/organizational-structure/military-personnel-command/state-of-the-canadian-armed-forces.html | Minister of National Defence / Chief of the Defence Staff (DND/CAF) | 31 Mar 2032 | [Date basis: set by an outside source] GOVERNMENT PROMISE: the scoring date is DND's own commitment date, 'prior to March 31, 2032', on the State of the CAF page https://www.canada.ca/en/department-national-defence/corporate/organizational-structure/military-personnel-command/state-of-the-canadian-armed-forces.html ; not set by the register | LIVE | https://www.canada.ca/en/department-national-defence/corporate/organizational-structure/military-personnel-command/state-of-the-canadian-armed-forces.html | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2032 | OPEN | OPEN | OPEN
 
@@ -784,9 +790,9 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 ## How to check this update
 
-Build stamp: update 2026-10-26e, counted as at 26 October 2026, from data/entries.csv, 260 rows, SHA-256 265e62db6dafeaf365b3e8fbd66b8997926c5c5290a15049f94c1145c65ceae1. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-10-26f, counted as at 26 October 2026, from data/entries.csv, 263 rows, SHA-256 2349302b6f2dd4dc7f404639afc49db3ae027e0bdc05874c31fab811eb9197a1. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-26e.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-26e.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-26f.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-26f.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
