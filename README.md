@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 25 October 2026 from data/entries.csv, which holds 257 entries.
+Counted on 26 October 2026 from data/entries.csv, which holds 258 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 257 = 242 promises + 15 scoring entries.
+- **Entries:** 258 = 243 promises + 15 scoring entries.
 - **Scored PASS:** 3 (AB1, C39-CTTE, TR-FTA-ROUND).
 - **Scored FAILED:** 11 (AB1-PL, BC-PARCELS, BC1, DSRB-CAP, FA3b, GX1b, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
 - **Recorded as fact, with no pass or fail line:** 2 (CL-BASE, HR5334).
-- **Open:** 219.
+- **Open:** 220.
 - **Due:** 0.
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 242 promises = 3 PASS + 11 FAILED + 2 recorded + 219 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 243 promises = 3 PASS + 11 FAILED + 2 recorded + 220 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 257 entries):
+By section of the data file (every entry counted once; the four sections add up to all 258 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 158 | 13 | 145 | 2 | 11 | 0 | 132 | 0 | 0 | 0 | 0 |
+| Canadian files | 159 | 13 | 146 | 2 | 11 | 0 | 133 | 0 | 0 | 0 | 0 |
 | This desk's own commitments | 10 | 0 | 10 | 0 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
 | Outside files we watch | 60 | 0 | 60 | 0 | 0 | 0 | 54 | 0 | 4 | 2 | 0 |
 | Recorded facts and checkpoints | 29 | 2 | 27 | 1 | 0 | 2 | 23 | 0 | 0 | 0 | 1 |
-| Total | 257 | 15 | 242 | 3 | 11 | 2 | 219 | 0 | 4 | 2 | 1 |
+| Total | 258 | 15 | 243 | 3 | 11 | 2 | 220 | 0 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -59,12 +59,13 @@ These rows are linked because they test related things. Each is scored on its ow
 - **PL1 and FA3b** (noted 25 Oct 2026): Note 25 Oct 2026: PL1 cites OIC 49090; the order adding Pacific Link to Schedule 1 is P.C. 2026-925, made 1 Oct 2026 (Canada Gazette Part I, 10 Oct 2026). Read PL1's order reference as P.C. 2026-925. CORRECTIONS/2026-10-25-pl1-order-number.md. PL1 is not edited.
 - **DSRB-LEGAL-2027 and DSRB-CAP and DSRB-CHARTER-2027** (noted 25 Oct 2026): See also DSRB-CAP and DSRB-CHARTER-2027. DSRB-LEGAL-2027 tests the DSRB's legal basis in Canadian law (an Act with Royal Assent or a Part II order); DSRB-CHARTER-2027 tests charter signature, paid-in capital and a first loan; DSRB-CAP tested members or capital. Each is scored on its own date; none replaces another. No entry is changed.
 - **BND-TAR-90 and BND-PRICED** (noted 26 Oct 2026): These two rows test a pattern in outcomes. They do not test the mechanism in 'The unclosed file', which stays inference. A RECORDED result on BND-PRICED means too few priced files to compare, not a pass.
+- **BC-PARCELS-2027 and BC-PARCELS** (noted 26 Oct 2026): BC-PARCELS-2027 follows BC-PARCELS, scored FAILED on 25 Oct 2026 (BC-PARCELS-SCORED-20261025). That result is not changed. The details of the arrangement are not published.
 
 <!-- /RELATED -->
 
 The Register
 
-Entries as at 25 October 2026. Last change: 25 October 2026.
+Entries as at 26 October 2026. Last change: 26 October 2026.
 
 This page is a citizen-held register of Canadian public commitments. Each line is a test: what counts as a pass, the date it is scored and who answers for it. The main table holds files owned by Canadian governments, legislatures, courts, regulators, Crown bodies and companies, and foreign decisions a Canadian file depends on. My own commitments, and outside files I watch, sit in short sections of their own under the same rules.
 
@@ -112,7 +113,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-25n.csv (all 257 rows) is 0173a223855233ab91b667e8c4ee23ab873d63ab1064e3b7af19616cbf92a43e
+Checksum for this update: SHA-256 of public-live-rows-2026-10-26.csv (all 258 rows) is 3b138e6e68ff2d27fce93b86069524b49621941c41c6bc916d7604a1d1fde6f9
 
 Rule entries
 
@@ -240,7 +241,7 @@ Time horizons and concentrated interests: those paid by the process are organize
 
 This register records from outside the institutions it measures. It does not ask any of them to measure itself.
 
-Government promises (117)
+Government promises (118)
 
 Promises with a government owner, a primary source and a scoring date. Each row also names its file section.
 
@@ -395,6 +396,8 @@ Canadian files | IND3-TFD | PASS: the Fraser Tax Freedom Day 2027 share is lower
 Canadian files | C39-DELIVERY (follows C39-CTTE) | PASS: by 30 Jun 2027 at least one project, region or port measure is designated or ordered under the enacted Building Canada Strong Act, by a named instrument (an Order in Council, a Canada Gazette notice or a ministerial order) with its number and date. The Act's Royal Assent, its Canada Gazette Part III printing and its Justice Laws consolidation are recorded separately and do not count. FAILED: no such instrument on file by that date; a no-file, a press release or an announcement does not count. Follows C39-CTTE | Minister designated under the Building Canada Act (Part 1, Division 2 of the bill) / Minister of Transport (Canada Marine Act port measures, Part 2, Division 3) | 30 Jun 2027 | [Date basis: benchmark set by the register] DESK-SET: fixed date 30 Jun 2027 (Royal Assent + 180 days cannot be set; the bill has no Royal Assent yet, LEGISinfo read 24 Oct 2026). Follows C39-CTTE | LIVE | https://www.parl.ca/legisinfo/en/bill/45-1/C-39 | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
 Canadian files | ETH-SCREEN-HP | PASS: by 30 Jun 2027 the Privy Council Office, the PMO or the Ethics Commissioner publishes whether the Prime Minister's Brookfield ethics screen was raised or applied on National Heat Pump Rebate decisions (program design, Eligible Products List, launch), with outcome. FAILED: only aggregate counts or nothing by that date | Privy Council Office / Conflict of Interest and Ethics Commissioner | 30 Jun 2027 | [Date basis: benchmark set by the register] DESK-SET: no government date; set to follow the early-2027 launch | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
+
+Canadian files | BC-PARCELS-2027 (follows BC-PARCELS) | PASS: the Government of BC publishes the list of about 400 Crown parcels committed for transfer under the arrangement made with First Nations before the 24 Oct 2026 election, with their combined area, or tables the agreement in the Legislative Assembly, on or before 30 Jun 2027. FAILED: neither the list with combined area nor the agreement is published or tabled by 30 Jun 2027. | Government of British Columbia (Premier's Office; Ministry of Indigenous Relations and Reconciliation; Ministry of Forests) | 30 Jun 2027 | [Date basis: benchmark set by the register] DESK-SET: no government date exists (BC Gov News, Legislative Assembly and Elections BC checked 26 Oct 2026); 30 Jun 2027 allows the first sitting and first budget of the new Parliament | LIVE | OPEN | BC 2026/27 Estimates, Indigenous Relations and Reconciliation: Land Transfers $50,000 thousand; Declaration Act Secretariat $4,147 thousand (line totals, not file specific) https://www.bcbudget.gov.bc.ca/2026/pdf/2026_Estimates.pdf | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
 Canadian files | IND4-INVEST | PASS: the Fraser (or StatCan and BEA cross check) 2025 investment per worker ratio, Canada to US, is above 54.0 per cent. FAILED: not above | Minister of Finance | 31 Jul 2027 | [Date basis: set by an outside source] SCHEDULED RELEASE: Fraser investment per worker comparison, next edition (current edition covers 2007 to 2024) | LIVE | Fraser study https://www.fraserinstitute.org/studies/comparing-business-investment-per-worker-canada-and-united-states-2007-2024 | OPEN | OPEN | [publishes 3 Nov 2026] | OPEN until scoring date 31 Jul 2027 | OPEN | OPEN | OPEN
 
@@ -776,9 +779,9 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 ## How to check this update
 
-Build stamp: update 2026-10-25n, counted as at 25 October 2026, from data/entries.csv, 257 rows, SHA-256 06c5d4a8909ed7eb64765de4f471584de489873c4ac5ecc9004b620d0c6861e4. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-10-26, counted as at 26 October 2026, from data/entries.csv, 258 rows, SHA-256 aa459ea90b67b2ed7c52e15dbc470c7143c7ff5478a85ede68a40f1df9c3d3a4. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-25n.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-25n.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-26.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-26.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
@@ -814,7 +817,7 @@ AB1-PL | 21 Oct 2026 | 22 Oct 2026 | PASS: by end of Wed 21 Oct, a Government of
 FA3b | 21 Oct 2026 | 23 Oct 2026 | PASS: the consolidated Schedule 1 text on laws-lois shows the Pacific Link / West Coast Oil Pipeline row, or Part II carries it. FAILED: it does not | OTHER (named): consolidation (register: consolidation). Actor: Justice Canada, Legislative Services Branch. Evidence: https://laws-lois.justice.gc.ca/eng/acts/B-9.89/FullText.html | FAILED: no public figure; held by Justice Canada (Legislative Services Branch). Entry FA3b-SCORED-20261023 | An order in council (P.C. 2026-925, 1 Oct) and a Gazette Part I printing (10 Oct); the consolidated text still showed an empty Schedule 1: https://gazette.gc.ca/rp-pr/p1/2026/2026-10-10/html/order-decret-eng.html. New promise: FA3c
 BC1 | 24 Oct 2026 | 24 Oct 2026 | PASS: one major BC party publishes a one page answer covering all three cells: a DRIPA positive law answer, lender readable title and a Cowichan statute answer. FAILED: none does | political choice. Actors: BC party campaigns (NDP, Conservatives, CentreBC, Greens). Evidence: https://www.bcndp.ca/plan | FAILED: no published figure; held by the BC parties. Entry BC1-SCORED-20261024 | Platform pledges and plan pages without the one-page answer (BC Conservatives: repeal DRIPA and Interpretation Act s. 8.1, Property Rights Defence Act; BC NDP: headings-only plan page and a costing plan)
 
-Entries as at 25 October 2026: 3.
+Entries as at 26 October 2026: 3.
 
 <!-- /FAILLOG -->
 
