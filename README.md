@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 26 October 2026 from data/entries.csv, which holds 259 entries.
+Counted on 26 October 2026 from data/entries.csv, which holds 260 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 259 = 244 promises + 15 scoring entries.
+- **Entries:** 260 = 245 promises + 15 scoring entries.
 - **Scored PASS:** 3 (AB1, C39-CTTE, TR-FTA-ROUND).
 - **Scored FAILED:** 11 (AB1-PL, BC-PARCELS, BC1, DSRB-CAP, FA3b, GX1b, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
 - **Recorded as fact, with no pass or fail line:** 2 (CL-BASE, HR5334).
-- **Open:** 221.
+- **Open:** 222.
 - **Due:** 0.
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 244 promises = 3 PASS + 11 FAILED + 2 recorded + 221 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 245 promises = 3 PASS + 11 FAILED + 2 recorded + 222 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 259 entries):
+By section of the data file (every entry counted once; the four sections add up to all 260 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 160 | 13 | 147 | 2 | 11 | 0 | 134 | 0 | 0 | 0 | 0 |
+| Canadian files | 161 | 13 | 148 | 2 | 11 | 0 | 135 | 0 | 0 | 0 | 0 |
 | This desk's own commitments | 10 | 0 | 10 | 0 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
 | Outside files we watch | 60 | 0 | 60 | 0 | 0 | 0 | 54 | 0 | 4 | 2 | 0 |
 | Recorded facts and checkpoints | 29 | 2 | 27 | 1 | 0 | 2 | 23 | 0 | 0 | 0 | 1 |
-| Total | 259 | 15 | 244 | 3 | 11 | 2 | 221 | 0 | 4 | 2 | 1 |
+| Total | 260 | 15 | 245 | 3 | 11 | 2 | 222 | 0 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -114,7 +114,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-26d.csv (all 259 rows) is 199bee4af7f34e2abd2e17d4fcb84468b242ffe358619eda1d386fb159aa54ed
+Checksum for this update: SHA-256 of public-live-rows-2026-10-26e.csv (all 260 rows) is 19351a20274e57676856ff054f36138e2fccef61562f825ca6a5ad4c76670492
 
 Rule entries
 
@@ -484,7 +484,7 @@ Outside files we watch | KAMLOOPS-EXCAV | PASS: by 31 Dec 2027 a forensic excava
 
 Outside files we watch | ATIP-CIRNAC-149 | CIRNAC ATIP A-2026-00149 (EA2026_0195120; hectares settled versus added, net title ledger, FY2015-16 to date). PASS: records released (full or partial package, or a written no-records answer) by the extended deadline, 21 Jan 2028. FAILED: not released by the extended deadline | Crown-Indigenous Relations and Northern Affairs Canada (CIRNAC) ATIP office | 21 Jan 2028 | [Date basis: benchmark set by the register] DESK-SET: extended deadline computed by the desk, not stated by CIRNAC (clarified 23 Sep 2026; 30-day + 9(1)(a) 12 months + 9(1)(b) 90 days; s.27(1) third-party notice); extension letter 19 Oct 2026 states no due date | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 21 Jan 2028 | OPEN | OPEN | OPEN
 
-Also watched (109)
+Also watched (110)
 
 Rows the register watches that are not government promises: the owner is not a government, or the row lacks a primary source link. Same rules apply.
 
@@ -535,6 +535,8 @@ Canadian files | C5/FA8/TM1 | PASS: dated settlement closures that shrink the ti
 Canadian files | C1-C20261025 (follows C1/O1) | PASS: by 1 Jan 2027, one Canadian energy or minerals corridor (a new or expanded energy or minerals transport or export project: a pipeline, transmission line, rail line or port, or export terminal) shows a named final investment decision plus a second financed or offtake signature on the same corridor, independent of the first signatory (a separate lender, offtaker or equity investor under signed terms; not a contractor award, MOU, heads of agreement, open season notice or government listing), with BOTH signatures dated on or after 17 Sep 2026 and each on a primary. FAILED: not met | Government of Canada (PMO / Major Projects Office) and corridor proponents | 1 Jan 2027 | [Date basis: benchmark set by the register] DESK-SET: set ahead of the US tariff line on Canadian vehicles and steel due 1 Jan 2027 (proof test O1; see TAR1). NARROWED 25 Oct 2026, after the Cedar LNG hit: C1/O1 as printed set no start date and no corridor definition, and Cedar LNG (named FID 25 Jun 2024, bank syndicate construction loan, 20-year tolling with ARC Resources) meets it on the record although it predates the test, which was set publicly on 17 Sep 2026. The desk meant a corridor financed after the test was set and did not write that down. This entry adds that start date and a plain corridor definition so that whether new corridors are being delivered is scored on its own. C1/O1 is kept unchanged and is scored on its printed wording | LIVE | MPO projects https://www.canada.ca/en/privy-council/major-projects-office/projects/national.html | Main Estimates 2026/27, Privy Council Office, Vote 1 Program expenditures $224,349,806 (organization summary; the Major Projects Office has no vote of its own) https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2026-27/organization-summary.csv; Supplementary Estimates (A) 2026/27, Privy Council Office, Funding for the Major Projects Office (Budget 2025) $7,507,508 https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/supplementary-estimates/explanation-requirements-a-2026-27.csv. Amounts only: the page shows no volume driver, named deliverable or end date. | OPEN | https://barryesharp.substack.com/p/the-face-is-not-the-factory | OPEN until scoring date 1 Jan 2027 | OPEN | OPEN | OPEN
 
 Canadian files | TR-FTA-R1-SCHED | PASS: by 31 Dec 2026 no official text released by GAC, the PMO or Türkiye's Ministry of Trade contains a tariff or services market-access schedule (offer lists, tariff phase-out timetables or reservations lists) from the first Canada and Türkiye FTA round (Ankara, 30 Nov to 4 Dec 2026). WRONG: any such official text by 31 Dec 2026, even partial | Minister of International Trade / GAC | 2 Jan 2027 | [Date basis: benchmark set by the register] DESK-SET: PMO release 23 Oct 2026 dates the first round 30 Nov to 4 Dec 2026 in Ankara | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 2 Jan 2027 | OPEN | OPEN | OPEN
+
+Canadian files | BC-DRIPA-PET | PASS: Elections BC records, on its initiative page or in a news release, that the proponent of initiative petition IP-2026-001 (Initiative: Repeal Declaration on the Rights of Indigenous Peoples Act, issued 26 Oct 2026) submitted signature sheets by the petition deadline. FAILED: Elections BC records no submission by the deadline, or records that the petition lapsed or was withdrawn. The petition succeeds only if it carries signatures from 10 per cent of registered voters in each of the 93 electoral districts (district figures TBD on the Elections BC initiative table at entry). Whether that threshold is met is Elections BC's later verification and is not scored here. The petition is not binding: success means referral to the Legislative Assembly | Proponent of IP-2026-001 / Elections BC (verification) | 26 Jan 2027 | [Date basis: set by an outside source] STATUTORY: Recall and Initiative Act, RSBC 1996, c. 398. Elections BC news release, https://elections.bc.ca/news/application-for-initiative-petition-approved/ : "The petition will be issued to [the proponent] on Monday, October 26, 2026. Signature sheets must be submitted to Elections BC by Monday, January 25, 2027." The Elections BC initiative table, https://elections.bc.ca/events-services/initiative/ , shows Date due "Monday, January 26, 2027". The two primaries differ by one day; this row scores on the later date, 26 Jan 2027, and the result line records which date Elections BC applied. Both read 26 Oct 2026 | LIVE | EVIDENCE-HOLDER: INDEPENDENT. Elections BC initiative page https://elections.bc.ca/events-services/initiative/ ; Reasons for Decision https://elections.bc.ca/INITIATIVE/IP-2026-001_Reasons-for-Decision.pdf | OPEN | OPEN | OPEN | OPEN until scoring date 26 Jan 2027 | OPEN | OPEN | OPEN
 
 Canadian files | C4-FILL | PASS: GAC or CBSA publishes, or confirms on the record, total year one EV units entered against the 49,000 quota by 31 Mar 2027 (within 30 days of quota year end); fill rate recorded to 0.1 per cent. FAILED: no official figure by 31 Mar 2027. Baseline: 15,603 of 24,500 in the first window; 33,397 in the second window from 1 Sep 2026. Sub entry of C4 | GAC (Trade Controls) / Finance | 28 Feb 2027 | [Date basis: outside date, scoring window set by the register] LEGAL DEADLINE: quota year ends 28 Feb 2027 (SOR/2026-32). DESK-SET: scoring on that date and the 31 Mar 2027 reporting window | LIVE | GAC 16 Jan 2026 https://www.international.gc.ca/news-nouvelles/2026/2026-01-16-china-chine.aspx?lang=eng | OPEN | OPEN | OPEN | OPEN until scoring date 28 Feb 2027 | OPEN | OPEN | OPEN
 
@@ -782,9 +784,9 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 ## How to check this update
 
-Build stamp: update 2026-10-26d, counted as at 26 October 2026, from data/entries.csv, 259 rows, SHA-256 e508a7998c4cd3ca35bc012c424863c4d0c949f3df53c8dc461aae25b146fa1f. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-10-26e, counted as at 26 October 2026, from data/entries.csv, 260 rows, SHA-256 265e62db6dafeaf365b3e8fbd66b8997926c5c5290a15049f94c1145c65ceae1. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-26d.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-26d.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-26e.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-26e.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
