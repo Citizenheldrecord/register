@@ -248,3 +248,6 @@ DSRB-LEGAL-2027,also_watched,"test and date set by the register, not printed in 
 BC-PARCELS-2027,government_promise,passes entry test
 UA-CN-ONE-PAGE,also_watched,"test and date set by the register, not printed in a government document"
 BC-DRIPA-PET,also_watched,"owner is not a government; test set by the register; date printed by Elections BC (news release 25 Jan 2027, initiative table 26 Jan 2027; scored on the later date)"
+CGL-P2-CONST,also_watched,"owner is not a government; date from the owner's own timetable (TC Energy, early 2027), end of Q1 2027 set by the register"
+CEDAR-ISD,also_watched,"owner is not a government; date from the owner's own timetable (late 2028), year end set by the register"
+KOMOKS-FED,also_watched,"test and date set by the register, not printed in a government document; no government date found"
