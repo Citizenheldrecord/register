@@ -237,3 +237,11 @@ CHARTER-LIMIT-REG,also_watched,"test and date set by the register, not printed i
 FA3c,also_watched,"date set by the register (about 60 days after the 1 Oct order), not printed in a government document; follows FA3b-SCORED-20261023"
 BND-TAR-90,also_watched,owner is not a government (desk boundary test)
 BND-PRICED,also_watched,owner is not a government (desk boundary test)
+RU-LNG-EU-2027,also_watched,"test and date set by the register, not printed in a government document"
+US-EUR-POSTURE-2026,also_watched,"test and date set by the register, not printed in a government document"
+MADURO-TRIAL-2027,also_watched,"test and date set by the register, not printed in a government document"
+CRINK-PROD-2027,also_watched,"test and date set by the register, not printed in a government document"
+DSRB-CHARTER-2027,also_watched,"test and date set by the register, not printed in a government document"
+US-TOMAHAWK-2029,also_watched,"test and date set by the register, not printed in a government document"
+CAF-STRENGTH-2032,also_watched,"test set by the register; date printed by DND on the State of the CAF page"
+DSRB-LEGAL-2027,also_watched,"test and date set by the register, not printed in a government document"
