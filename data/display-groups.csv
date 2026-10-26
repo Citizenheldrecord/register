@@ -246,3 +246,4 @@ US-TOMAHAWK-2029,also_watched,"test and date set by the register, not printed in
 CAF-STRENGTH-2032,also_watched,"test set by the register; date printed by DND on the State of the CAF page"
 DSRB-LEGAL-2027,also_watched,"test and date set by the register, not printed in a government document"
 BC-PARCELS-2027,government_promise,passes entry test
+UA-CN-ONE-PAGE,also_watched,"test and date set by the register, not printed in a government document"
