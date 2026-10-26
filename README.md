@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 26 October 2026 from data/entries.csv, which holds 258 entries.
+Counted on 26 October 2026 from data/entries.csv, which holds 259 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 258 = 243 promises + 15 scoring entries.
+- **Entries:** 259 = 244 promises + 15 scoring entries.
 - **Scored PASS:** 3 (AB1, C39-CTTE, TR-FTA-ROUND).
 - **Scored FAILED:** 11 (AB1-PL, BC-PARCELS, BC1, DSRB-CAP, FA3b, GX1b, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
 - **Recorded as fact, with no pass or fail line:** 2 (CL-BASE, HR5334).
-- **Open:** 220.
+- **Open:** 221.
 - **Due:** 0.
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 243 promises = 3 PASS + 11 FAILED + 2 recorded + 220 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 244 promises = 3 PASS + 11 FAILED + 2 recorded + 221 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 258 entries):
+By section of the data file (every entry counted once; the four sections add up to all 259 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 159 | 13 | 146 | 2 | 11 | 0 | 133 | 0 | 0 | 0 | 0 |
+| Canadian files | 160 | 13 | 147 | 2 | 11 | 0 | 134 | 0 | 0 | 0 | 0 |
 | This desk's own commitments | 10 | 0 | 10 | 0 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
 | Outside files we watch | 60 | 0 | 60 | 0 | 0 | 0 | 54 | 0 | 4 | 2 | 0 |
 | Recorded facts and checkpoints | 29 | 2 | 27 | 1 | 0 | 2 | 23 | 0 | 0 | 0 | 1 |
-| Total | 258 | 15 | 243 | 3 | 11 | 2 | 220 | 0 | 4 | 2 | 1 |
+| Total | 259 | 15 | 244 | 3 | 11 | 2 | 221 | 0 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -60,6 +60,7 @@ These rows are linked because they test related things. Each is scored on its ow
 - **DSRB-LEGAL-2027 and DSRB-CAP and DSRB-CHARTER-2027** (noted 25 Oct 2026): See also DSRB-CAP and DSRB-CHARTER-2027. DSRB-LEGAL-2027 tests the DSRB's legal basis in Canadian law (an Act with Royal Assent or a Part II order); DSRB-CHARTER-2027 tests charter signature, paid-in capital and a first loan; DSRB-CAP tested members or capital. Each is scored on its own date; none replaces another. No entry is changed.
 - **BND-TAR-90 and BND-PRICED** (noted 26 Oct 2026): These two rows test a pattern in outcomes. They do not test the mechanism in 'The unclosed file', which stays inference. A RECORDED result on BND-PRICED means too few priced files to compare, not a pass.
 - **BC-PARCELS-2027 and BC-PARCELS** (noted 26 Oct 2026): BC-PARCELS-2027 follows BC-PARCELS, scored FAILED on 25 Oct 2026 (BC-PARCELS-SCORED-20261025). That result is not changed. The details of the arrangement are not published.
+- **UA-CN-ONE-PAGE and C4** (noted 26 Oct 2026): See also C4, which scores the 49,000 EV quota on the same date. UA-CN-ONE-PAGE tests only whether one public page puts the quota use beside Ukraine commitments and Chinese dual-use flows.
 
 <!-- /RELATED -->
 
@@ -113,7 +114,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-26.csv (all 258 rows) is 3b138e6e68ff2d27fce93b86069524b49621941c41c6bc916d7604a1d1fde6f9
+Checksum for this update: SHA-256 of public-live-rows-2026-10-26b.csv (all 259 rows) is 199bee4af7f34e2abd2e17d4fcb84468b242ffe358619eda1d386fb159aa54ed
 
 Rule entries
 
@@ -483,7 +484,7 @@ Outside files we watch | KAMLOOPS-EXCAV | PASS: by 31 Dec 2027 a forensic excava
 
 Outside files we watch | ATIP-CIRNAC-149 | CIRNAC ATIP A-2026-00149 (EA2026_0195120; hectares settled versus added, net title ledger, FY2015-16 to date). PASS: records released (full or partial package, or a written no-records answer) by the extended deadline, 21 Jan 2028. FAILED: not released by the extended deadline | Crown-Indigenous Relations and Northern Affairs Canada (CIRNAC) ATIP office | 21 Jan 2028 | [Date basis: benchmark set by the register] DESK-SET: extended deadline computed by the desk, not stated by CIRNAC (clarified 23 Sep 2026; 30-day + 9(1)(a) 12 months + 9(1)(b) 90 days; s.27(1) third-party notice); extension letter 19 Oct 2026 states no due date | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 21 Jan 2028 | OPEN | OPEN | OPEN
 
-Also watched (108)
+Also watched (109)
 
 Rows the register watches that are not government promises: the owner is not a government, or the row lacks a primary source link. Same rules apply.
 
@@ -524,6 +525,8 @@ Canadian files | FA3 (follows FA3b-SCORED-20261023) | PASS: MVH and RBT2 listed 
 Canadian files | CGL-EQ2 | PASS: TC Energy or a partner announces the close of the second planned Indigenous investment transaction on Coastal GasLink by 31 Dec. FAILED: no close; a dated miss is recorded. Process stamp only, never a C1 PASS | TC Energy | 31 Dec 2026 | [Date basis: set by an outside source] COMPANY TIMETABLE: TC Energy release of 13 Oct 2026 gives Q4 2026 for the close of the second transaction; end of Q4 used (row) | LIVE | OPEN | OPEN | OPEN | https://barryesharp.substack.com/p/the-molecule-moves-the-register-does | OPEN until scoring date 31 Dec 2026 | OPEN | OPEN | OPEN
 
 Canadian files | CPLOAN-SCHED | PASS: by 31 Dec 2026 the Government of Canada (Finance or PSPC) or Canada Post publishes a dated repayment schedule, or revised MOU terms with dates, covering the $2.042 billion in repayable funding (up to $1.034 billion, PSPC 24 Jan 2025, P.C. 2025-56; up to $1.008 billion, OIC 30 Jan 2026). FAILED: none published by 31 Dec 2026 | Minister of Finance; PSPC; Canada Post | 31 Dec 2026 | [Date basis: benchmark set by the register] DESK-SET: chosen to match the MOU's December 2026 revisit by the Minister of Finance (MOU date per Canada Post CFO, OGGO 11 Dec 2025 https://www.ourcommons.ca/DocumentViewer/en/45-1/OGGO/meeting-22/evidence); a revisit date, not a government repayment date | LIVE | PSPC QP note PSPC-2026-QP-00014 https://search.open.canada.ca/qpnotes/record/pwgsc-tpsgc%2CPSPC-2026-QP-00014 ; OIC 30 Jan 2026 https://orders-in-council.canada.ca/attachment.php?attach=48030&lang=en | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2026 | OPEN | OPEN | OPEN
+
+Canadian files | UA-CN-ONE-PAGE | PASS: by 31 Dec 2026 the Government of Canada publishes one public page, updated at least weekly, placing Canadian Ukraine commitments, Chinese dual-use flows to Russian production and Chinese EV quota utilization in one table, with a named official and a next-review date. FAILED: no such page by 31 Dec 2026. | Minister of Foreign Affairs (Global Affairs Canada), with the Department of Finance | 31 Dec 2026 | [Date basis: benchmark set by the register] DESK-SET: no government date exists; test and date set by the register (entered 26 Oct 2026); 31 Dec 2026 is the end of the calendar year | LIVE | OPEN | OPEN | OPEN | [publishes 11 Nov 2026] | OPEN until scoring date 31 Dec 2026 | OPEN | OPEN | OPEN
 
 Canadian files | C1/O1 | PASS: one corridor with two independent financed or offtake signatures, a named FID plus a second financed or offtake signature on the same corridor. FAILED: not met | Government of Canada (PMO / Major Projects Office) and corridor proponents | 1 Jan 2027 | [Date basis: benchmark set by the register] DESK-SET: set ahead of the US tariff line on Canadian vehicles and steel due 1 Jan 2027 (proof test O1; see TAR1) | LIVE | MPO projects https://www.canada.ca/en/privy-council/major-projects-office/projects/national.html | Main Estimates 2026/27, Privy Council Office, Vote 1 Program expenditures $224,349,806 (organization summary; the Major Projects Office has no vote of its own) https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2026-27/organization-summary.csv; Supplementary Estimates (A) 2026/27, Privy Council Office, Funding for the Major Projects Office (Budget 2025) $7,507,508 https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/supplementary-estimates/explanation-requirements-a-2026-27.csv. Amounts only: the page shows no volume driver, named deliverable or end date. | OPEN | https://barryesharp.substack.com/p/the-face-is-not-the-factory | OPEN until scoring date 1 Jan 2027 | OPEN | OPEN | OPEN
 
@@ -779,9 +782,9 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 ## How to check this update
 
-Build stamp: update 2026-10-26, counted as at 26 October 2026, from data/entries.csv, 258 rows, SHA-256 aa459ea90b67b2ed7c52e15dbc470c7143c7ff5478a85ede68a40f1df9c3d3a4. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-10-26b, counted as at 26 October 2026, from data/entries.csv, 259 rows, SHA-256 e508a7998c4cd3ca35bc012c424863c4d0c949f3df53c8dc461aae25b146fa1f. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-26.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-26.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-26b.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-26b.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
