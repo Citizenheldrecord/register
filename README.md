@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 25 October 2026 from data/entries.csv, which holds 245 entries.
+Counted on 25 October 2026 from data/entries.csv, which holds 248 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 245 = 231 promises + 14 scoring entries.
+- **Entries:** 248 = 234 promises + 14 scoring entries.
 - **Scored PASS:** 3 (AB1, C39-CTTE, TR-FTA-ROUND).
 - **Scored FAILED:** 10 (AB1-PL, BC1, DSRB-CAP, FA3b, GX1b, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
 - **Recorded as fact, with no pass or fail line:** 2 (CL-BASE, HR5334).
-- **Open:** 208.
+- **Open:** 211.
 - **Due:** 1 (BC-PARCELS, 1 day past its date; scoring pending, noted 24 October 2026: Provisional: no Government of BC or BC NDP list of the about 400 parcels with combined area found by 8 PM PT 24 Oct 2026 (news.gov.bc.ca, bcndp.ca/plan, gov.bc.ca First Nations negotiations page read 24 Oct 2026 23:58 MT). The entry requires a recheck 24 to 48 hours after before FAILED is entered; recheck 25 to 26 Oct 2026).
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 231 promises = 3 PASS + 10 FAILED + 2 recorded + 208 open + 1 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 234 promises = 3 PASS + 10 FAILED + 2 recorded + 211 open + 1 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 245 entries):
+By section of the data file (every entry counted once; the four sections add up to all 248 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 153 | 12 | 141 | 2 | 10 | 0 | 128 | 1 | 0 | 0 | 0 |
+| Canadian files | 154 | 12 | 142 | 2 | 10 | 0 | 129 | 1 | 0 | 0 | 0 |
 | This desk's own commitments | 10 | 0 | 10 | 0 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
-| Outside files we watch | 53 | 0 | 53 | 0 | 0 | 0 | 47 | 0 | 4 | 2 | 0 |
+| Outside files we watch | 55 | 0 | 55 | 0 | 0 | 0 | 49 | 0 | 4 | 2 | 0 |
 | Recorded facts and checkpoints | 29 | 2 | 27 | 1 | 0 | 2 | 23 | 0 | 0 | 0 | 1 |
-| Total | 245 | 14 | 231 | 3 | 10 | 2 | 208 | 1 | 4 | 2 | 1 |
+| Total | 248 | 14 | 234 | 3 | 10 | 2 | 211 | 1 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -51,6 +51,12 @@ These pairs of entries may test the same thing. Both entries in each pair are ke
 These rows are linked because they test related things. Each is scored on its own date; neither replaces the other.
 
 - **EA-REFORM and CHARTER-LIMIT-REG** (noted 25 Oct 2026): See also CHARTER-LIMIT-REG. EA-REFORM covers the Emergencies Act only. CHARTER-LIMIT-REG, entered 25 Oct 2026, covers all federal measures that limit Charter rights (emergency orders, health orders, mandates, regulator statements and government requests). Each is scored on its own date; neither replaces the other. The EA-REFORM entry is not changed.
+- **CL-BASE-SCORED-20261024 and CL-BASE** (noted 25 Oct 2026): CL-BASE-NOTE-20261026: the FAILED word in CL-BASE-SCORED-20261024 is the scoring tool's two-value output. Read it as RECORDED 24 Oct 2026: baseline of the four closers; grid in the entry. Note: CORRECTIONS/2026-10-25-cl-base-status-word.md. The entry is not edited.
+- **AB1-PL-SCORED-20261022 and AB1-PL** (noted 25 Oct 2026): Grade line 25 Oct 2026: COST FAILED (was OPEN), rule R-2026-10-25-B. Layer read as OTHER (named): executive publication. CORRECTIONS/2026-10-25-grade-lines.md. The entry is not edited.
+- **FA3b-SCORED-20261023 and FA3c** (noted 25 Oct 2026): Grade line 25 Oct 2026: COST FAILED (was OPEN), rule R-2026-10-25-B. Layer read as OTHER (named): consolidation. FA3c is the new promise that follows the FA3b failure. The entry is not edited.
+- **C39-CTTE-SCORED-20261023 and C39-CTTE** (noted 25 Oct 2026): Grade line 25 Oct 2026: COST FAILED (was OPEN), rule R-2026-10-25-B; the result stays PASS. The entry is not edited.
+- **BC1-SCORED-20261024 and BC1** (noted 25 Oct 2026): Grade line 25 Oct 2026: HYPE OPEN (was FAILED). No announcement text on file as the exhibit. The entry is not edited.
+- **PL1 and FA3b** (noted 25 Oct 2026): Note 25 Oct 2026: PL1 cites OIC 49090; the order adding Pacific Link to Schedule 1 is P.C. 2026-925, made 1 Oct 2026 (Canada Gazette Part I, 10 Oct 2026). Read PL1's order reference as P.C. 2026-925. CORRECTIONS/2026-10-25-pl1-order-number.md. PL1 is not edited.
 
 <!-- /RELATED -->
 
@@ -104,7 +110,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-25k.csv (all 245 rows) is 5a204647b2b76418fc5cb4f45ed3d1e861b41e33e9880453ed383ccbbdc8cd2b
+Checksum for this update: SHA-256 of public-live-rows-2026-10-25l.csv (all 248 rows) is 01bd1590f39267daba64898c9b7c54428641398ebd8362f2c4bc7f09530c379a
 
 Rule entries
 
@@ -470,7 +476,7 @@ Outside files we watch | KAMLOOPS-EXCAV | PASS: by 31 Dec 2027 a forensic excava
 
 Outside files we watch | ATIP-CIRNAC-149 | CIRNAC ATIP A-2026-00149 (EA2026_0195120; hectares settled versus added, net title ledger, FY2015-16 to date). PASS: records released (full or partial package, or a written no-records answer) by the extended deadline, 21 Jan 2028. FAILED: not released by the extended deadline | Crown-Indigenous Relations and Northern Affairs Canada (CIRNAC) ATIP office | 21 Jan 2028 | [Date basis: benchmark set by the register] DESK-SET: extended deadline computed by the desk, not stated by CIRNAC (clarified 23 Sep 2026; 30-day + 9(1)(a) 12 months + 9(1)(b) 90 days; s.27(1) third-party notice); extension letter 19 Oct 2026 states no due date | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 21 Jan 2028 | OPEN | OPEN | OPEN
 
-Also watched (97)
+Also watched (100)
 
 Rows the register watches that are not government promises: the owner is not a government, or the row lacks a primary source link. Same rules apply.
 
@@ -493,6 +499,8 @@ Canadian files | BC-GOV-FORM (follows BC1) | PASS: Elections BC declares the fin
 Canadian files | IRV1 | PASS: Irving Oil reports Saint John refinery operations resumed (Operation Osprey) by 18 Nov. FAILED: not resumed by 18 Nov; the slip is recorded in the entry | Irving Oil | 18 Nov 2026 | [Date basis: set by an outside source] COMPANY TIMETABLE: Irving Oil Operation Osprey turnaround, stream to stream 8 Sep to 18 Nov 2026, on the Irving Oil turnaround page [internal desk reference hidden in display, 22 Oct 2026] | LIVE | Irving Oil turnaround page https://www.irvingoil.com/en-CA/discover-irving/fall-turnaround | OPEN | OPEN | OPEN | OPEN until scoring date 18 Nov 2026 | OPEN | OPEN | OPEN
 
 Canadian files | C39-366 (follows C39-CTTE) | PASS: the Bill C-39 legislative committee moves an amendment writing a consequence for day 366 of the one year clock in s. 65(10): a deemed decision, automatic referral to a named decision maker with its own fixed date, or a permanent published failure entry naming the official, cause and cost. FAILED: none moved. The entry records whether it carried | Legislative Committee on Bill C-39 (Chair James Maloney) | 27 Nov 2026 | [Date basis: benchmark set by the register] DESK-SET: the Friday after clause-by-clause (week of 16 Nov), scored against committee minutes (Day 366 essay) | LIVE | CC39 meetings https://www.ourcommons.ca/Committees/en/CC39/Meetings | OPEN | OPEN | [publishes 22 Oct 2026] | OPEN until scoring date 27 Nov 2026 | OPEN | OPEN | OPEN
+
+Canadian files | FA3c (follows FA3b-SCORED-20261023) | PASS: the consolidated Schedule 1 text of the Building Canada Act on laws-lois (https://laws-lois.justice.gc.ca/eng/acts/B-9.89/FullText.html) shows the Pacific Link / West Coast Oil Pipeline row by 30 Nov 2026. FAILED: it does not | Justice Canada (Legislative Services Branch) | 30 Nov 2026 | [Date basis: benchmark set by the register] DESK-SET: end of November, about 60 days after the 1 Oct order (P.C. 2026-925); follows the FA3b failure entry (failure protocol rule 3) | LIVE | Building Canada Act text https://laws-lois.justice.gc.ca/eng/acts/B-9.89/FullText.html | OPEN | OPEN | OPEN | OPEN until scoring date 30 Nov 2026 | OPEN | OPEN | OPEN
 
 Canadian files | BEC1 | PASS: a public final investment decision on the Becancour anode plant by 31 Dec 2026. FAILED: no FID by 31 Dec 2026; a written miss is recorded in the entry | Nouveau Monde / Becancour proponents; ISED | 31 Dec 2026 | [Date basis: benchmark set by the register] DESK-SET: date set in the handshake essay of 8 Oct 2026: "By 31 December, the canola holiday is extended in writing or it is not. Bécancour is FID or a written miss." Re-dated 17 Oct 2026 from 31 Oct to match the published essay. A correction to match the published record, not an extension | LIVE | OPEN | OPEN | OPEN | https://barryesharp.substack.com/p/the-handshake-is-not-the-clock | OPEN until scoring date 31 Dec 2026 | OPEN | OPEN | OPEN
 
@@ -650,6 +658,8 @@ Outside files we watch | BM1 | PASS: the UK government has one public register o
 
 Outside files we watch | QC-BIO-REG | PASS: by 31 Mar 2027 a draft or final regulation on biometric data in Quebec's national digital identity is published in the Gazette officielle du Quebec, stating permitted uses of facial data. FAILED: nothing published by that date | Quebec Minister of Cybersecurity and Digital Technology | 31 Mar 2027 | [Date basis: benchmark set by the register] DESK-SET: about one year after the consultation closed on 19 Apr 2026 | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
 
+Outside files we watch | BND-TAR-90 | PASS (for the boundary condition): within 90 days after the US tariff line scored by TAR1 takes effect on 1 Jan 2027, at least one of C1-C20261025, C39-ASSENT (or a dated successor), or an FA3 successor row records PASS on the register, with URL. FAILED: none does; the 'cost becomes legible' boundary is not supported on this case. NO SCORE if TAR1 records that the tariff line did not take effect | Desk (Barry Sharp) | 1 Apr 2027 | [Date basis: benchmark set by the register] DESK-SET: 90 days after 1 Jan 2027 (TAR1 date) | LIVE | Cites: essay of 14 Oct 2026 'what we do to ourselves' (boundary condition); TAR1; C1-C20261025; C39-ASSENT | OPEN | OPEN | OPEN | OPEN until scoring date 1 Apr 2027 | OPEN | OPEN | OPEN
+
 Outside files we watch | APF-INDEMNITY-FY27 | PASS (for the thesis): HM Treasury cash transfers to the Bank of England Asset Purchase Facility for FY2026-27 (ONS public sector finances, March 2027 release, series MF7A) are at or above £10 billion AND the indemnity cash incidence is unchanged at 31 Mar 2027. FAILED: transfers under £10 billion, OR the indemnity is amended to cap or end HM Treasury's cash incidence by 31 Mar 2027 | HM Treasury (Chancellor) with the Bank of England (Governor); scorer: the desk | 30 Apr 2027 | [Date basis: benchmark set by the register] DESK-SET: scored 30 Apr 2027 on the ONS PSF March 2027 release (April 2027); BoE operational notice due by April 2027 (Market Notice 17 Sep 2026) | LIVE | ONS PSF series MF7A; baseline OBR forecast 2026-27 £15,500m (HL3519, 1 Oct 2026); HYPE exhibit Chancellor letter 17 Sep 2026 https://www.bankofengland.co.uk/-/media/boe/files/letter/2026/letter-from-the-chancellor-to-the-governor-apf.pdf | OPEN | OPEN | OPEN | OPEN until scoring date 30 Apr 2027 | OPEN | OPEN | OPEN
 
 Outside files we watch | KOMOKS-S15 | PASS: by 31 May 2027 an Order in Council bringing K'omoks Treaty Act (SBC 2026 c 18) sections 13 to 21, including s.15 (woodlot surrender and Forest Act Part 16 compensation agreements), into force is published. The entry records the OIC date, the BC Gazette date and the bclaws date separately. FAILED: bclaws still shows ss.13 to 21 "Not in force" and no such OIC on file by that date | BC Lieutenant Governor in Council | 31 May 2027 | [Date basis: benchmark set by the register] DESK-SET: aligned with FOREST-ACT-COMP (31 May 2027); ss.13 to 21 come into force "By regulation of the Lieutenant Governor in Council" (bclaws https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/26018 , Royal Assent 28 May 2026) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 May 2027 | OPEN | OPEN | OPEN
@@ -657,6 +667,8 @@ Outside files we watch | KOMOKS-S15 | PASS: by 31 May 2027 an Order in Council b
 Outside files we watch | HEM-BEJUCAL | PASS: a CSIS or equivalent open-source imagery update by 30 Jun 2027 shows the Bejucal antenna array intact or active. FAILED: it shows the array dismantled. No update by that date: OPEN | Government of Cuba | 30 Jun 2027 | [Date basis: benchmark set by the register] DESK-SET: CSIS imagery analysis, 18 Jun 2026 | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
 Outside files we watch | HEM-IRAN | PASS: no new published Iranian oil, logistics or defence agreement with a Western Hemisphere state by 30 Jun 2027. FAILED: one is published | Government of Iran and any hemispheric counterpart | 30 Jun 2027 | [Date basis: benchmark set by the register] DESK-SET: joint statement of the United States and nine partner governments, including Canada, 5 Oct 2026 | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
+
+Outside files we watch | BND-PRICED | PASS (for the boundary condition): of register entries resolved between 26 Oct 2026 and 30 Jun 2027, the PASS rate among those whose owner, the Parliamentary Budget Officer or a finance department published a priced cost of delay (URL, dated before the scoring date) exceeds the PASS rate among those whose cost cell reads 'no public figure' by at least 15 percentage points, with at least 10 entries in each group. FAILED: the gap is under 15 points. RECORDED, not scored, if either group has fewer than 10 entries | Desk (Barry Sharp) | 30 Jun 2027 | [Date basis: benchmark set by the register] DESK-SET: end of the spring 2027 sitting | LIVE | Method fixed now, before any counting; classification by the cost cell as frozen at scoring; CPL rows not counted | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
 Outside files we watch | PA-NOTE28-27 | PASS: BC Public Accounts 2026/27 Note 28 lists provincial Crown land committed for Final Agreement and Incremental Treaty Agreement tables whose listed lines sum to more than 135,425.3 hectares or number more than 20, or gives a dollar figure for compensation to third parties. FAILED: listed lines sum to 135,425.3 hectares or less, number 20 or fewer, and third-party compensation is still "not determinable". Note 28 prints no total; the desk sums the listed lines and counts them | BC Office of the Comptroller General (Ministry of Finance) | 31 Aug 2027 | [Date basis: benchmark set by the register] DESK-SET: Public Accounts 2025/26 is dated 10 Aug 2026; set to 31 Aug 2027 for the 2026/27 edition. Baseline: Public Accounts 2025/26 Note 28, p.82, 20 lines summing to 135,425.3 hectares, "Those costs are not determinable at this time" https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2025-26/public-accounts-2025-26.pdf | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Aug 2027 | OPEN | OPEN | OPEN
 
@@ -744,13 +756,15 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 ## How to check this update
 
-Build stamp: update 2026-10-25k, counted as at 25 October 2026, from data/entries.csv, 245 rows, SHA-256 2b66e30ee99690b5af32b6ee4274193c4a1d5ee1461a5d6c83f215358661f73c. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-10-25l, counted as at 25 October 2026, from data/entries.csv, 248 rows, SHA-256 b82d922831c65e579aa253156e8f261578b1e446fc245fbb2e272dc035b8ab0b. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-25k.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-25k.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-25l.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-25l.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
 Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.
+
+How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note set a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-10-25j, of 238 entries, 149 (about 63 per cent) carry a benchmark date set by the register, 2 an outside date with a scoring window set by the register, and 87 (about 37 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
 
 Limits of this register. A fingerprint or checksum proves a file or row has not changed since it was published. It does not prove the evidence is complete, that the test is fair, or that a date set by the register is the right benchmark. Anyone may challenge any row: open an issue naming the row id and the reason, and the answer goes in as a dated entry.
 
@@ -764,7 +778,15 @@ A failed entry is never overwritten. A new promise gets a new ID, which cites th
 
 ID | Original deadline | Date failed | Original test | Blocking layer | Priced cost | Chosen instead
 
-No entries as at 25 October 2026.
+<!-- FAILLOG -->
+
+AB1-PL | 21 Oct 2026 | 22 Oct 2026 | PASS: by end of Wed 21 Oct, a Government of Alberta page or release of about one page names, for Pacific Link, a dated outcome, a date and an accountable owner. FAILED: statements, pressers or readouts without all three | OTHER (named): executive publication (register: executive). Actor: Premier of Alberta / Alberta Executive Council. Evidence: https://www.alberta.ca/pacific-link | FAILED: no public figure; held by Government of Alberta. Entry AB1-PL-SCORED-20261022 | A province-wide address (outcome and date, no owner) and the existing project page: https://www.alberta.ca/premiers-address-to-the-province
+FA3b | 21 Oct 2026 | 23 Oct 2026 | PASS: the consolidated Schedule 1 text on laws-lois shows the Pacific Link / West Coast Oil Pipeline row, or Part II carries it. FAILED: it does not | OTHER (named): consolidation (register: consolidation). Actor: Justice Canada, Legislative Services Branch. Evidence: https://laws-lois.justice.gc.ca/eng/acts/B-9.89/FullText.html | FAILED: no public figure; held by Justice Canada (Legislative Services Branch). Entry FA3b-SCORED-20261023 | An order in council (P.C. 2026-925, 1 Oct) and a Gazette Part I printing (10 Oct); the consolidated text still showed an empty Schedule 1: https://gazette.gc.ca/rp-pr/p1/2026/2026-10-10/html/order-decret-eng.html. New promise: FA3c
+BC1 | 24 Oct 2026 | 24 Oct 2026 | PASS: one major BC party publishes a one page answer covering all three cells: a DRIPA positive law answer, lender readable title and a Cowichan statute answer. FAILED: none does | political choice. Actors: BC party campaigns (NDP, Conservatives, CentreBC, Greens). Evidence: https://www.bcndp.ca/plan | FAILED: no published figure; held by the BC parties. Entry BC1-SCORED-20261024 | Platform pledges and plan pages without the one-page answer (BC Conservatives: repeal DRIPA and Interpretation Act s. 8.1, Property Rights Defence Act; BC NDP: headings-only plan page and a costing plan)
+
+Entries as at 25 October 2026: 3.
+
+<!-- /FAILLOG -->
 
 Scored entries
 
@@ -779,3 +801,9 @@ Corrections: Grays Bay Road and Port fact-check line, 20 October 2026, a dated t
 Corrections: internal desk file path on public row QC-SEATMATH, 22 October 2026, a dated correction entry (hidden in display; no score, status or date affected): https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-22-qc-seatmath-internal-path.md
 Corrections: CL-BASE is a recorded baseline, not a pass/fail test, 25 October 2026, a dated note (no entry changed): https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-25-cl-base-baseline-note.md
 Corrections: CL-BASE counted as recorded, not FAILED, 25 October 2026, a dated correction entry (display and count only; no entry changed): https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-25-cl-base-counted-as-recorded.md
+
+Corrections: CL-BASE-NOTE-20261026, status word on CL-BASE-SCORED-20261024, 25 October 2026, a dated note (display and count only; no entry changed): https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-25-cl-base-status-word.md
+
+Corrections: Grade lines under rule R-2026-10-25-B and one HYPE regrade, 25 October 2026, dated grade lines (no entry changed): https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-25-grade-lines.md
+
+Corrections: PL1 order number, 25 October 2026, a dated note (PL1 not edited): https://github.com/citizenheldrecord/register/blob/main/CORRECTIONS/2026-10-25-pl1-order-number.md
