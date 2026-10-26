@@ -107,6 +107,33 @@ def related_notes(rows):
     return notes
 
 
+def failure_rows():
+    import csv as _c
+    p = os.path.join(os.path.dirname(NOTES), "failure-log.csv")
+    if not os.path.exists(p):
+        return []
+    return list(_c.DictReader(open(p, encoding="utf-8")))
+
+
+FL_KEYS = ["id", "original_deadline", "date_failed", "test", "layer", "cost", "chosen_instead"]
+
+
+def failure_md(ld):
+    fr = failure_rows()
+    if not fr:
+        return "No entries as at %s." % ld
+    return "\n".join("%s" % " | ".join(r[k].replace("|", "/") for k in FL_KEYS) for r in fr) + "\n\nEntries as at %s: %d." % (ld, len(fr))
+
+
+def failure_html(ld):
+    fr = failure_rows()
+    e = lambda s: html.escape(s, quote=True)
+    if not fr:
+        return '<tr><td colspan="7" class="empty">No entries as at %s.</td></tr>' % ld
+    return "".join("<tr>%s</tr>" % "".join("<td>%s</td>" % e(r[k]) for k in FL_KEYS) for r in fr)
+
+
+
 def related_md(rows):
     notes = related_notes(rows)
     if not notes:
@@ -200,6 +227,7 @@ def audit_md(uid, iso, src_sha, n):
         "Entry fingerprints for this update: [%s](%s%s). Housekeeping log: [data/housekeeping-log.csv](%sdata/housekeeping-log.csv), SHA-256 %s, %d lines." % (man, GITHUB, man, GITHUB, hk_sha, len(hk)),
         "How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.",
         "Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.",
+        "How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note set a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in \"Government promises\" have a government owner; entries with a desk-set test or a non-government owner sit in \"Also watched\"; baselines sit in \"Recorded\". Dates: as at update 2026-10-25j, of 238 entries, 149 (about 63 per cent) carry a benchmark date set by the register, 2 an outside date with a scoring window set by the register, and 87 (about 37 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.",
         "Limits of this register. A fingerprint or checksum proves a file or row has not changed since it was published. It does not prove the evidence is complete, that the test is fair, or that a date set by the register is the right benchmark. Anyone may challenge any row: open an issue naming the row id and the reason, and the answer goes in as a dated entry.",
     ])
 
@@ -209,7 +237,7 @@ def render_readme(tpl, rows, csv_name, csv_sha, iso):
     t = one(r"Entries as at \d+ \w+ \d{4}\. Last change: \d+ \w+ \d{4}\.", "Entries as at %s. Last change: %s." % (ld, ld), tpl, "README")
     t = one(r"Checksum for this update: SHA-256 of public-live-rows-\d{4}-\d\d-\d\d[a-z]?\.csv \(all \d+ rows\) is [0-9a-f]{64}",
             "Checksum for this update: SHA-256 of %s (all %d rows) is %s" % (csv_name, len(rows), csv_sha), t, "README")
-    t = one(r"No entries as at \d+ \w+ \d{4}\.", "No entries as at %s." % ld, t, "README")
+    t = one(r"<!-- FAILLOG -->.*?<!-- /FAILLOG -->|No entries as at \d+ \w+ \d{4}\.", lambda m: "<!-- FAILLOG -->\n\n%s\n\n<!-- /FAILLOG -->" % failure_md(ld), t, "README", re.S)
     bl = backlog_block(iso)
     if bl:
         if "<!-- BACKLOG -->" in t:
@@ -367,7 +395,7 @@ def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
     t = one(r"Last updated \d+ \w+ \d{4} \(update \d{4}-\d\d-\d\d[a-z]?\)\.", "Last updated %s (update %s)." % (ld, STAMP["uid"]), t, "index.html")
     t = one(r"<h2>Entries \(\d+\)</h2>", "<h2>Entries (%d)</h2>" % len(rows), t, "index.html")
     t = one(r"Entries as at \d+ \w+ \d{4}\. Last change: \d+ \w+ \d{4}\.", "Entries as at %s. Last change: %s." % (ld, ld), t, "index.html")
-    t = one(r"No entries as at \d+ \w+ \d{4}\.", "No entries as at %s." % ld, t, "index.html")
+    t = one(r"<!-- FAILLOG -->.*?<!-- /FAILLOG -->|<tr><td colspan=\"7\" class=\"empty\">No entries as at \d+ \w+ \d{4}\.</td></tr>", lambda m: "<!-- FAILLOG -->%s<!-- /FAILLOG -->" % failure_html(ld), t, "index.html", re.S)
     return t
 
 
