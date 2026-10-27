@@ -251,3 +251,18 @@ BC-DRIPA-PET,also_watched,"owner is not a government; test set by the register; 
 CGL-P2-CONST,also_watched,"owner is not a government; date from the owner's own timetable (TC Energy, early 2027), end of Q1 2027 set by the register"
 CEDAR-ISD,also_watched,"owner is not a government; date from the owner's own timetable (late 2028), year end set by the register"
 KOMOKS-FED,also_watched,"test and date set by the register, not printed in a government document; no government date found"
+FA6-FID-2026,also_watched,"owner is not a government; date from the owner's own timetable (by the end of 2026), year end set by the register; follows FA6"
+EA-HEARING,also_watched,"test and date set by the register, not printed in a government document; follows EA-LEAVE"
+WATER-ZERO-LTDWA-2027,also_watched,"test and date set by the register; no government target date for zero long-term advisories found"
+C37-CHAIN-2027,also_watched,"test and date set by the register, not printed in a government document"
+EM-1,also_watched,"test set by the register; date printed by the government (Budget 2026, 5 Nov 2026, Prime Minister's remarks 26 Oct 2026); the release names no owner"
+POL-1,also_watched,"test set by the register; date printed by the government (Budget 2026, 5 Nov 2026, Prime Minister's remarks 26 Oct 2026)"
+LANE-1,also_watched,owner is not a government
+DLV-C15,government_promise,passes entry test
+DLV-C15-SCORED-20261026,recorded,result entry for DLV-C15 (PASS 26 Oct 2026); not a promise
+DLV-CTR,also_watched,"owners are a port authority and a Crown lender; date from the owners' own financing record"
+DLV-CTR-SCORED-20261026,recorded,result entry for DLV-CTR (PASS 26 Oct 2026); not a promise
+DLV-DEN,also_watched,owner is not a government
+DLV-DEN-SCORED-20261026,recorded,result entry for DLV-DEN (PASS 26 Oct 2026); not a promise
+DLV-ONLTC,government_promise,passes entry test
+DLV-ONLTC-SCORED-20261026,recorded,result entry for DLV-ONLTC (FAILED 26 Oct 2026); not a promise
