@@ -2,7 +2,7 @@
 # Pipeline tests. Each runs on a scratch copy of the repository; the real files are never touched.
 set -uo pipefail
 ROOT=$(cd "$(dirname "$0")/.." && pwd); D=$(ls "$ROOT"/public-live-rows-*.csv | sed -E "s/.*public-live-rows-(.+)\.csv/\1/" | sort | tail -1); fails=0
-fresh(){ W=$(mktemp -d); cp -r "$ROOT"/. "$W"/; rm -rf "$W/local"; cd "$W"; }
+fresh(){ W=$(mktemp -d); cp -r "$ROOT"/. "$W"/; rm -rf "$W/local"; mkdir -p "$W/local"; cp "$ROOT/local/published-files.txt" "$W/local/" 2>/dev/null; cd "$W"; }   # 27 Oct 2026: keep the published-files list (guardrail 1)
 ok(){ echo "  PASS $1"; }; bad(){ echo "  FAIL $1"; fails=$((fails+1)); }
 expect_fail(){ local name=$1; shift; if "$@" >/tmp/pl.out 2>&1; then bad "$name (build should have failed)"; else grep -q "$PATTERN" /tmp/pl.out && ok "$name: $(grep -m1 "$PATTERN" /tmp/pl.out | cut -c1-110)" || { bad "$name (wrong reason)"; cat /tmp/pl.out; }; fi; }
 build(){ python3 scripts/build_register.py --date ${1:-$D}; }
@@ -11,6 +11,14 @@ build(){ python3 scripts/build_register.py --date ${1:-$D}; }
 SCRATCH=${D:0:10}z
 # Tests 7 to 14 move the clock forward to score synthetic rows; the overdue guard is tested on its own in test 17.
 export REGISTER_OVERDUE=warn
+# 28 Oct 2026 (Barry go pt2242u): the sources gate (27 Oct) blocks any row without a record (record-before-entry) and any
+# real forward row whose scoring date has passed unscored. Fixtures that append synthetic rows, or move the clock
+# forward, now satisfy the gate the way the desk does: a record for each synthetic row, and real rows due by the
+# fixture date scored in the scratch copy. The gate itself is unchanged.
+fixture_record(){ sed -e "s/^# SOURCES RECORD: .*/# SOURCES RECORD: $1/" -e "s/^- Row ID: .*/- Row ID: $1/" sources/FIR1.md > "sources/$1.md"; }
+score_due(){ local fwd=$1 id; for id in $(python3 scripts/check_sources.py --staging . --allowlist data/sources-gate-allowlist.csv --audit-date "$fwd" 2>/dev/null | sed -n -E 's/^GATE BLOCK ([^ ]+) .*SCORING DATE PASSED.*/\1/p; s/^FORWARD EXPIRED ([^ ]+) .*/\1/p' | sort -u); do
+  python3 scripts/add_entry.py score --supersedes "$id" --result PASS --scored-on "$fwd" --evidence https://example.org/fixture --cost-to-date "FAILED: fixture; no public figure" --hype OPEN --means OPEN --cost FAILED >/dev/null || echo "fixture score failed for $id"
+  fixture_record "$id-SCORED-${fwd//-/}"; done; }
 
 echo "1. full build reproduces the current update ($D) byte for byte; first 18 Oct files untouched"
 fresh; T=$(mktemp -d); REGISTER_OVERDUE=strict python3 scripts/build_register.py --date $D --out-dir $T >/dev/null || bad "build"
@@ -54,6 +62,7 @@ PATTERN="blocking layer" expect_fail "FAILED without layer refused" python3 scri
 PATTERN="MATCHED, MIXED, FAILED or OPEN" expect_fail "bad sub-score refused" python3 scripts/add_entry.py score --supersedes AI1 --result PASS --scored-on 2026-10-31 --evidence https://example.org/x --cost-to-date "FAILED: held by Anthropic" --hype GOOD --means OPEN --cost FAILED
 before=$(python3 scripts/hash_entries.py data/entries.csv --show AI1 | sha256sum)
 python3 scripts/add_entry.py score --supersedes AI1 --result PASS --scored-on 2026-10-31 --evidence https://example.org/x --cost-to-date "FAILED: no public figure; held by Anthropic" --hype OPEN --means OPEN --cost FAILED >/tmp/pl.out && ok "scoring entry appended: $(cut -c1-80 /tmp/pl.out)" || { bad "score"; cat /tmp/pl.out; }
+fixture_record AI1-SCORED-20261031; score_due 2026-10-31
 [ "$before" = "$(python3 scripts/hash_entries.py data/entries.csv --show AI1 | sha256sum)" ] && ok "AI1 row unchanged in the data" || bad "AI1 changed"
 build 2026-10-31 >/tmp/pl.out 2>&1 && ok "build after scoring: $(grep -m1 'new since' /tmp/pl.out)" || { bad "build after scoring"; cat /tmp/pl.out; }
 grep -Eq "^([A-Za-z ]+ \| )?AI1 \| .* \| CLOSED: scored in AI1-SCORED-20261031 \| " README.md && ok "README shows AI1 as CLOSED: scored in AI1-SCORED-20261031" || bad "README closed display"
@@ -79,7 +88,7 @@ PY
 PATTERN="needs cost to date" expect_fail "resolved without cost caught" build $SCRATCH
 
 echo "9. redate appends a new entry citing the old fingerprint"
-fresh; python3 scripts/add_entry.py redate --supersedes FIR1 --id FIR1-R1 --scoring-date "15 Jan 2027" --date-source "DESK-SET: test redate" >/tmp/pl.out && build $SCRATCH >/tmp/pl2.out 2>&1 && grep -q "1 new since the latest manifest \['FIR1-R1'\]" /tmp/pl2.out && ok "redate built; old FIR1 kept" || { bad "redate"; cat /tmp/pl.out /tmp/pl2.out; }
+fresh; python3 scripts/add_entry.py redate --supersedes FIR1 --id FIR1-R1 --scoring-date "15 Jan 2027" --date-source "DESK-SET: test redate" >/tmp/pl.out && fixture_record FIR1-R1 && build $SCRATCH >/tmp/pl2.out 2>&1 && grep -q "1 new since the latest manifest \['FIR1-R1'\]" /tmp/pl2.out && ok "redate built; old FIR1 kept" || { bad "redate"; cat /tmp/pl.out /tmp/pl2.out; }
 
 
 echo "10. page logic: a synthetic scored row marks its original CLOSED with a link (node, temp copy)"
@@ -167,7 +176,7 @@ fresh; sed -i 's/- \*\*Open:\*\* \([0-9]*\)\./- **Open:** 999./' README.md
 PATTERN="README count block is not the block computed" expect_fail "hand-edited count caught" python3 scripts/build_register.py --verify
 
 echo "17. overdue guard: a promise past its date with no dated scoring-pending reason stops the build"
-fresh; python3 scripts/add_entry.py redate --supersedes FIR1 --id FIR1-OD --scoring-date "1 Oct 2026" --date-source "DESK-SET: test overdue" >/dev/null 2>&1
+fresh; python3 scripts/add_entry.py redate --supersedes FIR1 --id FIR1-OD --scoring-date "1 Oct 2026" --date-source "DESK-SET: test overdue" >/dev/null 2>&1; fixture_record FIR1-OD
 PATTERN="OVERDUE FIR1-OD" expect_fail "overdue without reason caught" build $SCRATCH
 printf 'FIR1-OD,2026-10-02,"test reason",2099-12-31\n' >> data/scoring-pending.csv
 build $SCRATCH >/tmp/pl.out 2>&1 && grep -q "FIR1-OD" README.md && ok "dated reason accepted and shown" || { bad "pending reason"; cat /tmp/pl.out; }

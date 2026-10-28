@@ -266,3 +266,16 @@ DLV-DEN,also_watched,owner is not a government
 DLV-DEN-SCORED-20261026,recorded,result entry for DLV-DEN (PASS 26 Oct 2026); not a promise
 DLV-ONLTC,government_promise,passes entry test
 DLV-ONLTC-SCORED-20261026,recorded,result entry for DLV-ONLTC (FAILED 26 Oct 2026); not a promise
+PL-DEVFUND-B26,also_watched,test set by the register; date is a government commitment
+PL-DEVFUND,also_watched,test set by the register; date is a government commitment
+CLFNS-JR,also_watched,test set by the register; owner includes a court and a First Nation
+DSRB-SIGN-2026,government_promise,passes entry test
+OE-Q1561,government_promise,passes entry test
+INDACT-PATH,also_watched,"test and date set by the register, not printed in a government document; baseline PMO release 26 Oct 2026 (path beyond the Indian Act)"
+ONRES-EMP,also_watched,"test set by the register; date is a desk estimate of the 2026 Census labour release, not a published date"
+MTL-LABEL,government_promise,passes entry test
+FIR4,government_promise,passes entry test
+MPA-3PCT-2027,government_promise,passes entry test
+CEPA-UAE-EIF,government_promise,passes entry test
+CFR-GAZ-30OCT,government_promise,passes entry test
+IRCC-REG-1,also_watched,"test set by the register; baseline IRCC opening remarks to CIMM 4 May 2026 (exit-confirmation system and review of flagged cases by the end of 2026)"

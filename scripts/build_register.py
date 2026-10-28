@@ -3,7 +3,18 @@
 
   python3 scripts/build_register.py --date 2026-10-18              build into the repository
   python3 scripts/build_register.py --date 2026-10-18 --out-dir X  build into a scratch folder
+  python3 scripts/build_register.py --date 2026-10-18 --draft      build into local/draft-build-<date>/ (scoring and staging jobs)
   python3 scripts/build_register.py --verify                       check the published files only
+
+Guardrails (Barry go 27 Oct 2026):
+  1. No overwrite of published files. Before anything is written, the dated outputs
+     (public-live-rows-*, manifest/entry-hashes-v2-* and their .sha256) are compared with
+     the published listing in local/published-files.txt (from GitHub; see
+     scripts/check_published_unchanged.py). If a name is already published and the new
+     bytes differ, the build stops. README.md and index.html are exempt.
+     --allow-overwrite lifts this; it is never used by routines or scheduled jobs.
+  2. --draft builds into local/draft-build-<date>/ and never touches the upload root.
+     Scoring and staging jobs use --draft; only the upload step (on Barry's go) builds to the root.
 
 Fails loudly (exit 1, every problem listed) if: a row breaks the data rules
 (outcome, scoring date, owner, cost to date, sub-scores on resolved entries,
@@ -11,7 +22,8 @@ supersedes fields), house grammar fails anywhere public, a prior entry changed o
 vanished against the previous manifest, or a printed checksum does not match.
 Nothing is written to the repository unless every check passes.
 """
-import argparse, glob, hashlib, html, json, os, re, shutil, sys, tempfile
+import subprocess
+import argparse, csv, glob, hashlib, html, json, os, re, shutil, sys, tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import regcore as rc
 import hash_entries as he
@@ -217,11 +229,36 @@ def build_stamp(uid, iso, src_sha, n):
             "The build stops if this file, its row count or any count on this page does not match." % (uid, rc.long_date(iso), n, src_sha))
 
 
+SOURCES_COUNTS = os.path.join(rc.ROOT, "data", "sources-check-counts.csv")
+SOURCES_NOTE = ("Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. "
+    "On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters "
+    "rather than against the body that made the decision, and that in a few rows the wording went further than the source. "
+    "Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. "
+    "A row shows as sourced only when that record backs its whole claim. As of this build: {S} rows are sourced, {X} secondary-sourced, {O} have their promise sourced with the outcome pending, "
+    "{P} partly sourced and {U} unsourced, and {M} do not yet have a record. These counts will be updated with each build until every row is done. "
+    "Corrections from the audit are entered as new dated lines, and no score has been changed.")
+
+
+def sources_note(iso):
+    """Page note staged 27 Oct 2026 (Barry go 14:18 CST). Shown only when data/sources-check-counts.csv was
+    written by tools/check_sources.py --counts-out for this build date; older builds reproduce unchanged."""
+    if not os.path.exists(SOURCES_COUNTS):
+        return None
+    with open(SOURCES_COUNTS, newline="") as f:
+        r = list(csv.DictReader(f))
+    if not r or r[0].get("date") != iso:
+        print("SOURCES NOTE LEFT OUT: data/sources-check-counts.csv is not dated %s; run tools/check_sources.py --counts-out" % iso, file=sys.stderr)
+        return None
+    c = r[0]
+    return SOURCES_NOTE.format(S=int(c["sourced"]), X=int(c.get("secondary_sourced") or 0), O=int(c.get("promise_outcome_pending") or 0), P=int(c["partly_sourced"]), U=int(c["unsourced"]), M=int(c["missing_record"]))
+
+
 def audit_md(uid, iso, src_sha, n):
     hk = rc.read_housekeeping()
     hk_sha = sha(open(rc.HOUSEKEEPING_LOG, "rb").read()) if os.path.exists(rc.HOUSEKEEPING_LOG) else "none"
     man = "manifest/entry-hashes-v2-%s.csv" % uid
-    return "\n\n".join([
+    note = sources_note(iso)
+    return "\n\n".join(([note] if note else []) + [
         "## How to check this update",
         build_stamp(uid, iso, src_sha, n),
         "Entry fingerprints for this update: [%s](%s%s). Housekeeping log: [data/housekeeping-log.csv](%sdata/housekeeping-log.csv), SHA-256 %s, %d lines." % (man, GITHUB, man, GITHUB, hk_sha, len(hk)),
@@ -310,6 +347,21 @@ def copies_line(uid):
     return ('<!-- COPIES --><p class="copies">Copies of this record: GitHub (this site) and Codeberg, <a href="%s">%s</a> '
             '(manual copy; the desk refreshes it to update %s after each push and checks the checksum below).</p><!-- /COPIES -->'
             % (CODEBERG, CODEBERG, html.escape(uid)))
+
+
+CC_BY = "https://creativecommons.org/licenses/by/4.0/"
+FOOTER = ('<!-- COPYRIGHT --><footer class="copyright"><p class="small">&copy; 2026 Barry Sharp. Sovereign Realism register. '
+          'Licensed under <a href="%s" rel="license">CC BY 4.0</a>: share and adapt with credit. '
+          'Full licence text: <a href="LICENSE">LICENSE</a>.</p></footer><!-- /COPYRIGHT -->\n' % CC_BY)
+
+
+def apply_footer(t, name):
+    """Copyright notice and CC BY 4.0 licence line (Barry approval 27 Oct 2026 16:30 CST), on both register pages."""
+    if "<!-- COPYRIGHT -->" in t:
+        return one(r"<!-- COPYRIGHT -->.*?<!-- /COPYRIGHT -->\n", lambda m: FOOTER, t, name, re.S)
+    if t.count("</body>") != 1:
+        raise rc.Fail("%s: </body> anchor for the copyright footer not found" % name)
+    return t.replace("</body>", FOOTER + "</body>", 1)
 
 
 def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
@@ -401,6 +453,7 @@ def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
     t = one(r"Last updated \d+ \w+ \d{4} \(update \d{4}-\d\d-\d\d[a-z]?\)\.", "Last updated %s (update %s)." % (ld, STAMP["uid"]), t, "index.html")
     t = one(r"<h2>Entries \(\d+\)</h2>", "<h2>Entries (%d)</h2>" % len(rows), t, "index.html")
     t = one(r"Entries as at \d+ \w+ \d{4}\. Last change: \d+ \w+ \d{4}\.", "Entries as at %s. Last change: %s." % (ld, ld), t, "index.html")
+    t = apply_footer(t, "index.html")
     t = one(r"<!-- FAILLOG -->.*?<!-- /FAILLOG -->|<tr><td colspan=\"7\" class=\"empty\">No entries as at \d+ \w+ \d{4}\.</td></tr>", lambda m: "<!-- FAILLOG -->%s<!-- /FAILLOG -->" % failure_html(ld), t, "index.html", re.S)
     return t
 
@@ -549,7 +602,45 @@ def manifest_problems(manifest, rows):
 STAMP = {}
 
 
-def build(uid, out_dir, source):
+import check_published_unchanged as cpu
+
+DATED_OUTPUT = re.compile(r"^(public-live-rows-.+\.(csv|json)|manifest/entry-hashes-v2-.+\.csv)(\.sha256)?$")
+
+
+def published_conflicts(stage, rels):
+    """Guardrail 1: dated outputs whose name is already published with different bytes."""
+    if not os.path.exists(cpu.CACHE):
+        raise rc.Fail("published-files list %s is missing; run scripts/check_published_unchanged.py --refresh first "
+                      "(refusing to build without knowing what is already published)" % os.path.relpath(cpu.CACHE, ROOT))
+    pub = cpu.read_cache()
+    out = []
+    for rel in rels:
+        if DATED_OUTPUT.match(rel) and rel in pub:
+            if cpu.blob_sha(open(os.path.join(stage, rel), "rb").read()) != pub[rel][0]:
+                out.append(rel)
+    return out
+
+
+def sources_gate(iso, out_dir):
+    """Hard gate (Barry approval 27 Oct 2026 15:17 CST): scripts/check_sources.py without --report-only, after the
+    row checks and before any page is written. A build into the upload root also writes data/sources-check-counts.csv
+    for the page note; draft and --out-dir builds run the gate read-only so the upload root stays untouched."""
+    gate = [sys.executable, os.path.join(ROOT, "scripts", "check_sources.py"), "--staging", ROOT,
+            "--allowlist", os.path.join(ROOT, "data", "sources-gate-allowlist.csv"), "--audit-date", iso]
+    if os.path.abspath(out_dir) == os.path.abspath(ROOT):
+        gate += ["--counts-out", SOURCES_COUNTS, "--counts-date", iso]
+    # Forward-row fixtures (Barry go 27 Oct 2026 15:50 CST) run on every build, before the real gate.
+    t = subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "check_sources.py"), "--staging", ROOT, "--selftest"],
+                       capture_output=True, text=True)
+    if t.returncode != 0:
+        raise rc.Fail("SOURCES GATE SELFTEST FAILED (forward-row fixtures)\n%s%s" % (t.stdout, t.stderr))
+    g = subprocess.run(gate, capture_output=True, text=True)
+    if g.returncode != 0:
+        raise rc.Fail("SOURCES GATE FAILED (scripts/check_sources.py exit %d)\n%s%s" % (g.returncode, g.stdout, g.stderr))
+    print("SOURCES GATE OK: " + g.stdout.splitlines()[0])
+
+
+def build(uid, out_dir, source, allow_overwrite=False):
     header, rows = rc.read_source(source)
     STAMP.update(uid=uid, sha=sha(open(source, "rb").read()), n=len(rows))
     errs = rc.validate(header, rows)
@@ -571,13 +662,16 @@ def build(uid, out_dir, source):
         errs += od
     if errs:
         raise rc.Fail("\n".join(errs))
+    sources_gate(iso, out_dir)
     csv_text = rc.write_csv_text(header, rows)
     csv_name, json_name = "public-live-rows-%s.csv" % uid, "public-live-rows-%s.json" % uid
     csv_sha = sha(csv_text.encode("utf-8"))
     readme = render_readme(open(os.path.join(ROOT, "README.md"), encoding="utf-8").read(), rows, csv_name, csv_sha, iso)
     index = render_index(open(os.path.join(ROOT, "index.html"), encoding="utf-8").read(), rows, csv_text, csv_name, json_name, csv_sha, iso)
+    pe_path = os.path.join(ROOT, "plain-english.html")
+    plain = apply_footer(open(pe_path, encoding="utf-8").read(), "plain-english.html") if os.path.exists(pe_path) else None
     json_text = json.dumps(rows, ensure_ascii=False, indent=1)
-    for name, text in (("README.md", readme), ("index.html", index), (csv_name, csv_text), (json_name, json_text)):
+    for name, text in (("README.md", readme), ("index.html", index), (csv_name, csv_text), (json_name, json_text)) + ((("plain-english.html", plain),) if plain else ()):
         errs += rc.grammar_check_text(name, text)
     if errs:
         raise rc.Fail("\n".join(errs))
@@ -588,6 +682,8 @@ def build(uid, out_dir, source):
     open(os.path.join(stage, json_name), "w", encoding="utf-8").write(json_text)
     open(os.path.join(stage, "README.md"), "w", encoding="utf-8").write(readme)
     open(os.path.join(stage, "index.html"), "w", encoding="utf-8").write(index)
+    if plain:
+        open(os.path.join(stage, "plain-english.html"), "w", encoding="utf-8").write(plain)
     mname = "manifest/entry-hashes-v2-%s.csv" % uid
     mtext = he.manifest_text(os.path.join(stage, csv_name), rows, uid, "chr-entry-v2")
     if os.path.exists(rc.HOUSEKEEPING_LOG):
@@ -602,9 +698,18 @@ def build(uid, out_dir, source):
     errs += e3
     if errs:
         raise rc.Fail("post-build check failed:\n" + "\n".join(errs))
+    rels = ("README.md", "index.html", csv_name, csv_name + ".sha256", json_name, mname, mname + ".sha256") + (("plain-english.html",) if plain else ())
+    clash = [] if allow_overwrite else published_conflicts(stage, rels)
+    if clash:
+        shutil.rmtree(stage)
+        raise rc.Fail("REFUSED: update id %s would overwrite already-published file(s) with different bytes: %s. "
+                      "Published files are never replaced. Use the next free letter (for example --date %s<letter>), "
+                      "or, only on Barry's explicit go, --allow-overwrite." % (uid, ", ".join(clash), uid))
+    if allow_overwrite:
+        print("WARNING: --allow-overwrite set; published-file guard skipped", file=sys.stderr)
     os.makedirs(os.path.join(out_dir, "manifest"), exist_ok=True)
     written = []
-    for rel in ("README.md", "index.html", csv_name, csv_name + ".sha256", json_name, mname, mname + ".sha256"):
+    for rel in rels:
         dst = os.path.join(out_dir, rel)
         if os.path.exists(dst) and open(dst, "rb").read() == open(os.path.join(stage, rel), "rb").read():
             status = "unchanged"
@@ -622,6 +727,8 @@ def main():
     ap.add_argument("--out-dir", default=ROOT)
     ap.add_argument("--source", default=rc.SOURCE)
     ap.add_argument("--verify", action="store_true")
+    ap.add_argument("--draft", action="store_true", help="build into local/draft-build-<date>/; never writes the upload root (scoring and staging jobs)")
+    ap.add_argument("--allow-overwrite", action="store_true", help="replace an already-published dated file; only on Barry's explicit go, never in routines")
     a = ap.parse_args()
     try:
         if a.verify:
@@ -634,7 +741,14 @@ def main():
             return 0
         if not a.date:
             raise rc.Fail("--date YYYY-MM-DD is required")
-        rows, csv_sha, prevs, new_ids, written = build(a.date, os.path.abspath(a.out_dir), a.source)
+        out_dir = os.path.abspath(a.out_dir)
+        if a.draft:
+            if out_dir != os.path.abspath(ROOT):
+                raise rc.Fail("--draft and --out-dir are exclusive")
+            out_dir = os.path.join(ROOT, "local", "draft-build-%s" % a.date)
+        rows, csv_sha, prevs, new_ids, written = build(a.date, out_dir, a.source, a.allow_overwrite)
+        if a.draft:
+            print("DRAFT build in %s (upload root untouched)" % os.path.relpath(out_dir, ROOT))
         print("BUILD OK %s: %d entries, CSV sha256 %s" % (a.date, len(rows), csv_sha))
         for prev in prevs:
             hk = HOUSEKEPT.get(prev, [])

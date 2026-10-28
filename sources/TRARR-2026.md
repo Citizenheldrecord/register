@@ -1,0 +1,18 @@
+# SOURCES RECORD: TRARR-2026
+
+Status: UNSOURCED
+Claim coverage: none
+Claim tested (row wording, verbatim): PASS: IRCC publishes 2026 TR arrivals at or below 385,000. FAILED: above. If IRCC publishes no comparable count by this date: dated OPEN entry, no extension
+Claim class: OUTSIDE-CLAIM (reclassified 2026-10-27, batch 3)
+Test definition: desk publication https://github.com/citizenheldrecord/register/blob/main/public-live-rows-2026-10-22b.csv, line "DESK-SET: first IRCC full-year publication, no later than 30 Nov 2027". It defines the pass test and the scoring date only; it is a lead, not a source.
+
+## Sources
+- none found: no holder primary read against this row as of 2026-10-27.
+
+Reason class (batch 4, 2026-10-27): no primary exists yet
+
+## Leads (not sources)
+- https://github.com/citizenheldrecord/register/blob/main/public-live-rows-2026-10-22b.csv (desk publication; test definition "DESK-SET: first IRCC full-year publication, no later than 30 Nov 2027")
+
+## Desk action
+Find the holder primary; re-score on due date.

@@ -1,0 +1,25 @@
+# SOURCES RECORD: FA3b
+
+Status: PARTIAL
+Claim coverage: partial
+Claim tested (row wording, verbatim): PASS: the consolidated Schedule 1 text on laws-lois shows the Pacific Link / West Coast Oil Pipeline row, or Part II carries it. FAILED: it does not
+
+## Source 1
+- Row ID: FA3b
+- Claim tested: the row's date source: SCHEDULED RELEASE: Canada Gazette Part II No. 21, 21 Oct 2026, the next read the desk named for Schedule 1 (a spike is not a pipe JOIN, 8 Oct)
+- Primary URL: https://laws-lois.justice.gc.ca/eng/acts/B-9.89/page-1.html
+- Publisher: Justice Canada (consolidated Acts)
+- Source type: statute
+- Document date: current to date of read
+- Exact supporting line (verbatim, straight quotes): "An order made under subsection (1), (3) or (4), and the reasons for it, must be published in the Canada Gazette as soon as feasible after it is made."
+- Supports: partial
+- Read date: 2026-10-27
+- Read by: desk (executor)
+- Wayback snapshot URL: not checked
+- Notes: Read with WebFetch; direct fetch from the desk box times out or is refused (403). Supports that a listing order appears in the Gazette; it does not name Part II No. 21 or 21 Oct. The choice of Part II No. 21 as the next read is the desk own. The issue itself was not read. Outcome pending, scored on 21 Oct 2026.
+
+## Leads (not sources)
+- none
+
+## Desk action
+Re-score on due date.
