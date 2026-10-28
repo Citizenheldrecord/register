@@ -2,6 +2,8 @@
 # Pipeline tests. Each runs on a scratch copy of the repository; the real files are never touched.
 set -uo pipefail
 ROOT=$(cd "$(dirname "$0")/.." && pwd); D=$(ls "$ROOT"/public-live-rows-*.csv | sed -E "s/.*public-live-rows-(.+)\.csv/\1/" | sort | tail -1); fails=0
+# 28 Oct 2026: every scratch copy goes under one parent folder that is removed on exit (Barry go), so /tmp never fills up again.
+_TP=$(mktemp -d); export TMPDIR="$_TP"; trap 'cd /; rm -rf "$_TP"' EXIT
 fresh(){ W=$(mktemp -d); cp -r "$ROOT"/. "$W"/; rm -rf "$W/local"; mkdir -p "$W/local"; cp "$ROOT/local/published-files.txt" "$W/local/" 2>/dev/null; cd "$W"; }   # 27 Oct 2026: keep the published-files list (guardrail 1)
 ok(){ echo "  PASS $1"; }; bad(){ echo "  FAIL $1"; fails=$((fails+1)); }
 expect_fail(){ local name=$1; shift; if "$@" >/tmp/pl.out 2>&1; then bad "$name (build should have failed)"; else grep -q "$PATTERN" /tmp/pl.out && ok "$name: $(grep -m1 "$PATTERN" /tmp/pl.out | cut -c1-110)" || { bad "$name (wrong reason)"; cat /tmp/pl.out; }; fi; }

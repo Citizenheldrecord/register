@@ -367,7 +367,8 @@ def copies_line(uid):
 CC_BY = "https://creativecommons.org/licenses/by/4.0/"
 FOOTER = ('<!-- COPYRIGHT --><footer class="copyright"><p class="small">&copy; 2026 Barry Sharp. Sovereign Realism register. '
           'Licensed under <a href="%s" rel="license">CC BY 4.0</a>: share and adapt with credit. '
-          'Full licence text: <a href="LICENSE">LICENSE</a>.</p></footer><!-- /COPYRIGHT -->\n' % CC_BY)
+          'Full licence text: <a href="LICENSE">LICENSE</a>.</p>'
+          '<p class="small">First published by Barry Sharp in 2026. Every entry is dated, archived and kept in public history on <a href="https://github.com/Citizenheldrecord/register">GitHub</a> and <a href="https://codeberg.org/citizen-held-record/register">Codeberg</a>, so the record shows who built it and when.</p></footer><!-- /COPYRIGHT -->\n' % CC_BY)
 
 
 def apply_footer(t, name):
