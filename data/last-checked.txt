@@ -1,4 +1,4 @@
-Last checked: 28 Oct 2026, 07:40 CST
-Rows: 287. Sourced 108; secondary-sourced 0; promise sourced, outcome pending 2; promise sourced, outcome scored 0; partly sourced 90; unsourced 87; missing record 0.
-Over-claims 0; secondary fails 0; failed entries 14 (incomplete 0); scoring date passed, not scored 0.
+Last checked: 28 Oct 2026, 08:45 CST
+Rows: 293. Sourced 109; secondary-sourced 0; promise sourced, outcome pending 7; promise sourced, outcome scored 0; partly sourced 90; unsourced 87; missing record 0.
+Over-claims 0; secondary fails 0; failed entries 14, of which 13 are FAILED results and 1 is the recorded baseline CL-BASE-SCORED-20261024 (incomplete 0); scoring date passed, not scored 0.
 Allow-list: 177 rows, all expire 26 Nov 2026.

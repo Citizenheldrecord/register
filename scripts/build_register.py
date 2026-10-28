@@ -253,6 +253,21 @@ def sources_note(iso):
     return SOURCES_NOTE.format(S=int(c["sourced"]), X=int(c.get("secondary_sourced") or 0), O=int(c.get("promise_outcome_pending") or 0), P=int(c["partly_sourced"]), U=int(c["unsourced"]), M=int(c["missing_record"]))
 
 
+
+def date_share(uid):
+    # T-082 (28 Oct 2026): the share is recounted from data/entries.csv at each build, with the same
+    # date_basis classifier as the index status summary, so README and index agree.
+    with open(rc.SOURCE, encoding="utf-8", newline="") as fh:
+        rows = list(csv.DictReader(fh))
+    n = len(rows)
+    b = {"desk": 0, "mixed": 0, "outside": 0}
+    for r in rows:
+        b[ra.date_basis(r)] += 1
+    pc = lambda k: int(round(100.0 * b[k] / n)) if n else 0
+    return ("Dates: as at update %s, of %d entries, %d (about %d per cent) carry a benchmark date set by the register, "
+            "%d an outside date with a scoring window set by the register, and %d (about %d per cent) a date set by an outside source"
+            % (uid, n, b["desk"], pc("desk"), b["mixed"], b["outside"], pc("outside")))
+
 def audit_md(uid, iso, src_sha, n):
     hk = rc.read_housekeeping()
     hk_sha = sha(open(rc.HOUSEKEEPING_LOG, "rb").read()) if os.path.exists(rc.HOUSEKEEPING_LOG) else "none"
@@ -264,7 +279,7 @@ def audit_md(uid, iso, src_sha, n):
         "Entry fingerprints for this update: [%s](%s%s). Housekeeping log: [data/housekeeping-log.csv](%sdata/housekeeping-log.csv), SHA-256 %s, %d lines." % (man, GITHUB, man, GITHUB, hk_sha, len(hk)),
         "How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.",
         "Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.",
-        "How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in \"Government promises\" have a government owner; entries with a desk-set test or a non-government owner sit in \"Also watched\"; baselines sit in \"Recorded\". Dates: as at update 2026-10-25j, of 238 entries, 149 (about 63 per cent) carry a benchmark date set by the register, 2 an outside date with a scoring window set by the register, and 87 (about 37 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.",
+        "How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in \"Government promises\" have a government owner; entries with a desk-set test or a non-government owner sit in \"Also watched\"; baselines sit in \"Recorded\". " + date_share(uid) + " (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.",
         "Provenance (rule R-2026-10-26-A, 26 October 2026). Posts and press reports are leads only. No row is scored on them alone: every row must rest on a primary, a publication by the body that made the decision or holds the record. A row whose date, fact or evidence rests only on a news report or post is flagged with a dated replacement task, the primary the desk will look for and the date by which it will look. A primary found later is recorded in a new dated line; the row's own cells are not edited. Flags and replacements are in the CORRECTIONS folder; the first six (C39-CTTE, C39-D1, S2, S7, MTL-CLOSE, NOV1) are in CORRECTIONS/2026-10-26-provenance-six-rows.md.",
         "Limits of this register. A fingerprint or checksum proves a file or row has not changed since it was published. It does not prove the evidence is complete, that the test is fair, or that a date set by the register is the right benchmark. Anyone may challenge any row: open an issue naming the row id and the reason, and the answer goes in as a dated entry.",
         '## How rows are chosen, and how to propose a test',
