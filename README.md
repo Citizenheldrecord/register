@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 28 October 2026 from data/entries.csv, which holds 296 entries.
+Counted on 29 October 2026 from data/entries.csv, which holds 301 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 296 = 276 promises + 20 scoring entries.
-- **Scored PASS:** 6 (AB1, C39-CTTE, DLV-C15, DLV-CTR, DLV-DEN, TR-FTA-ROUND).
+- **Entries:** 301 = 280 promises + 21 scoring entries.
+- **Scored PASS:** 7 (AB1, BoC, C39-CTTE, DLV-C15, DLV-CTR, DLV-DEN, TR-FTA-ROUND).
 - **Scored FAILED:** 13 (AB1-PL, BC-PARCELS, BC1, DGR1, DLV-ONLTC, DSRB-CAP, FA3b, GX1b, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
 - **Recorded as fact, with no pass or fail line:** 2 (CL-BASE, HR5334).
-- **Open:** 248.
+- **Open:** 251.
 - **Due:** 0.
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 276 promises = 6 PASS + 13 FAILED + 2 recorded + 248 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 280 promises = 7 PASS + 13 FAILED + 2 recorded + 251 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 296 entries):
+By section of the data file (every entry counted once; the four sections add up to all 301 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 193 | 18 | 175 | 5 | 13 | 0 | 157 | 0 | 0 | 0 | 0 |
+| Canadian files | 195 | 18 | 177 | 5 | 13 | 0 | 159 | 0 | 0 | 0 | 0 |
 | This desk's own commitments | 12 | 0 | 12 | 0 | 0 | 0 | 12 | 0 | 0 | 0 | 0 |
-| Outside files we watch | 62 | 0 | 62 | 0 | 0 | 0 | 56 | 0 | 4 | 2 | 0 |
-| Recorded facts and checkpoints | 29 | 2 | 27 | 1 | 0 | 2 | 23 | 0 | 0 | 0 | 1 |
-| Total | 296 | 20 | 276 | 6 | 13 | 2 | 248 | 0 | 4 | 2 | 1 |
+| Outside files we watch | 64 | 0 | 64 | 0 | 0 | 0 | 58 | 0 | 4 | 2 | 0 |
+| Recorded facts and checkpoints | 30 | 3 | 27 | 2 | 0 | 2 | 22 | 0 | 0 | 0 | 1 |
+| Total | 301 | 21 | 280 | 7 | 13 | 2 | 251 | 0 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -62,12 +62,13 @@ These rows are linked because they test related things. Each is scored on its ow
 - **BC-PARCELS-2027 and BC-PARCELS** (noted 26 Oct 2026): BC-PARCELS-2027 follows BC-PARCELS, scored FAILED on 25 Oct 2026 (BC-PARCELS-SCORED-20261025). That result is not changed. The details of the arrangement are not published.
 - **UA-CN-ONE-PAGE and C4** (noted 26 Oct 2026): See also C4, which scores the 49,000 EV quota on the same date. UA-CN-ONE-PAGE tests only whether one public page puts the quota use beside Ukraine commitments and Chinese dual-use flows.
 - **DNG-CAP and HCAP-LVL** (noted 28 Oct 2026): MEANS note 28 Oct 2026 (CF-GAP folded into DNG-CAP): at scoring on 6 Nov 2026 the desk also records whether the levels plan gives a completion date for its housing figure (yes or no), and whether that figure is sized against CMHC's gap of 187,000 to 238,000 homes a year (CMHC Housing Supply Report, 10 Sep 2026, Table 1, https://www.cmhc-schl.gc.ca/professionals/housing-markets-data-and-research/market-reports/housing-market/housing-supply-report).
+- **ETH-SCREEN-HP and ETH-LIST** (noted 28 Oct 2026): Linked condition 28 Oct 2026 (recusal-log test folded into ETH-SCREEN-HP; the entry is not edited): at scoring on 30 Jun 2027 the desk also records whether the Privy Council Office, the PMO or the Ethics Commissioner has published a dated public log of screen applications (date, file or decision, entity), yes or no with URL. A running count such as raised 13, applied six (CBC, https://www.cbc.ca/news/politics/brookfield-ethics-committee-9.6990751) without dates and files is a no. Recorded beside the ETH-SCREEN-HP result; it does not change that row's PASS or FAILED line. See also ETH-LIST (31 Mar 2027).
 
 <!-- /RELATED -->
 
 The Register
 
-Entries as at 28 October 2026. Last change: 28 October 2026.
+Entries as at 29 October 2026. Last change: 29 October 2026.
 
 This page is a citizen-held register of Canadian public commitments. Each line is a test: what counts as a pass, the date it is scored and who answers for it. The main table holds files owned by Canadian governments, legislatures, courts, regulators, Crown bodies and companies, and foreign decisions a Canadian file depends on. My own commitments, and outside files I watch, sit in short sections of their own under the same rules.
 
@@ -107,7 +108,7 @@ Some files cannot be scored PASS or FAILED on one fixed date as written: they re
 
 Every update prints the SHA-256 checksum of the full table as a CSV file, and a Wayback Machine snapshot is taken of this page and the record. Anyone who downloads the CSV can check it against the printed checksum.
 
-On 2 January each year the register states the files: every entry closed, open or failed, owners named, with the checksum of the whole register.
+On 3 January each year the register states the files: every entry closed, open or failed, owners named, with the checksum of the whole register.
 
 The register's only product is the score. No advocacy, no grants, no policy shop.
 
@@ -115,7 +116,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-28g.csv (all 296 rows) is 55ef1a1cf507aeffa4aa0bd5b984918daad7af58c6520460724b62873547e104
+Checksum for this update: SHA-256 of public-live-rows-2026-10-29.csv (all 301 rows) is c0d90b8a62d9658e5a089fa030681571d60684d3b47b6fa8139dfeb2188d902e
 
 Rule entries
 
@@ -241,9 +242,15 @@ The ratchet: each crisis leaves a higher baseline of spending, staffing and auth
 
 Time horizons and concentrated interests: those paid by the process are organized and those who pay are diffuse, and the payoff of reform arrives after the next election while the pain arrives before it.
 
+Every entry is a dated test those four have to get past.
+
 This register records from outside the institutions it measures. It does not ask any of them to measure itself.
 
-Government promises (130)
+How the record keeps itself honest
+
+The rule book is written to stop the register's own keeper from cheating. Fingerprints (SHA-256), a published manifest, Wayback snapshots and an append-only rule make silent edits noisy. A new date is a new entry citing the old fingerprint. Cost stays OPEN until the scoring date; on that day it is a public figure with a URL and date, or it is FAILED.
+
+Government promises (134)
 
 Promises with a government owner, a primary source and a scoring date. Each row also names its file section.
 
@@ -381,6 +388,8 @@ Canadian files | AID-CLOSE | PASS: the 2025-26 Report to Parliament or Statistic
 
 Canadian files | EV-GHG-TEXT | PASS: by 31 Mar 2027, replacement light-duty vehicle GHG standards (MY 2030 onward) published in Canada Gazette (Part I proposed or Part II final). FAILED: no published text by that date (pause only); dated FAILED entry next day, publish within 30 days, no extension | ECCC / Minister of the Environment, Climate Change and Nature (owner named by the register) | 31 Mar 2027 | [Date basis: benchmark set by the register] DESK-SET: no date in the source | LIVE | https://www.canada.ca/en/global-affairs/news/2026/02/minister-sidhu-highlights-plan-to-transform-canadas-auto-industry-in-brampton.html | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
 
+Canadian files | ETH-LIST | PASS: by 31 Mar 2027 the PMO, the Privy Council Office, the Ethics Commissioner or Brookfield publishes a comprehensive list of the Brookfield-related entities against which the Prime Minister's ethics screen is administered, beyond the public Annex A (about 103 entities, against more than 2,000 businesses per Brookfield's chief operating officer at the Commons ethics committee, 24 Nov 2025). FAILED: no such list by that date | Prime Minister (PMO chief of staff and Clerk of the Privy Council as screen administrators) / Conflict of Interest and Ethics Commissioner | 31 Mar 2027 | [Date basis: benchmark set by the register] DESK-SET: no government date; set by the desk | LIVE | https://www.ourcommons.ca/documentviewer/en/45-1/ETHI/meeting-18/evidence | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
+
 Canadian files | SINGLE-TAB-FY | PASS: before fiscal year 2027-28 begins, the Government of Canada publishes one dated table carrying four columns in the same week: Russian fossil revenues by buyer, Chinese dual use flows, Ukraine aid and the Nord Stream trial outcome. FAILED: none | PMO / Finance / GAC / DND | 1 Apr 2027 | [Date basis: benchmark set by the register] DESK-SET: start of fiscal year 2027-28, reading "before the next fiscal year" (row) | LIVE | OPEN | OPEN | OPEN | [publishes 26 Oct 2026] | OPEN until scoring date 1 Apr 2027 | OPEN | OPEN | OPEN
 
 Canadian files | NUCH-SCC | PASS: the SCC 42379 docket (BC v. Nuchatlaht) shows a hearing date set by 16 Apr 2027. FAILED: no hearing date by then. The decision becomes a new entry once the hearing is set | SCC; Attorney General of BC (appellant) | 16 Apr 2027 | [Date basis: set by an outside source] DOCKET: SCC file 42379, Registrar schedule of 15 Oct 2026, last filing (intervener factums) 16 Apr 2027 | LIVE | SCC docket https://www.scc-csc.ca/case-dossier/info/dock-regi-eng.aspx?cas=42379 | OPEN | OPEN | https://barryesharp.substack.com/p/canada-does-not-lack-resources-it | OPEN until scoring date 16 Apr 2027 | OPEN | OPEN | OPEN
@@ -422,6 +431,8 @@ Canadian files | IND4-INVEST | PASS: the Fraser (or StatCan and BEA cross check)
 Canadian files | CL-FINAL | PASS: by 31 Aug 2027 at least one published agreement transferring any of the about 400 committed Crown parcels or the 135,425 ha in the Public Accounts contains modification-and-release language and a dated schedule reducing ongoing program transfers as own-source revenue rises. FAILED: parcels or hectares transferred in the period with neither. NO TRANSFER: recorded, not scored | Government of British Columbia (Indigenous Relations and Reconciliation); Canada (CIRNAC) for the fiscal half | 31 Aug 2027 | [Date basis: benchmark set by the register] DESK-SET: August 2027 Public Accounts give the next hectare count | LIVE | OPEN | INSTRUMENT: OPEN | OPEN | OPEN | OPEN until scoring date 31 Aug 2027 | OPEN | OPEN | OPEN
 
 Canadian files | PL1 (follows AB1-PL-SCORED-20261022) | PASS: Pacific Link conditions finalised and published. FAILED: not | Major Projects Office / CER | 1 Sep 2027 | [Date basis: set by an outside source] GOVERNMENT PROMISE: PMO release 1 Oct 2026, "The MPO will work to finalise those conditions by September 1, 2027" | LIVE | OPEN | Main Estimates 2026/27, Privy Council Office, Vote 1 Program expenditures $224,349,806 (organization summary; the Major Projects Office has no vote of its own) https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2026-27/organization-summary.csv; Supplementary Estimates (A) 2026/27, Privy Council Office, Funding for the Major Projects Office (Budget 2025) $7,507,508 https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/supplementary-estimates/explanation-requirements-a-2026-27.csv. Canadian Energy Regulator, Vote 1 Program expenditures $105,900,587 (organization summary) https://www.canada.ca/content/dam/tbs-sct/documents/planned-government-spending/main-estimates/2026-27/organization-summary.csv. Amounts only: the page shows no volume driver, named deliverable or end date. | OPEN | [publishes 10 Nov 2026] | OPEN until scoring date 1 Sep 2027 | OPEN | OPEN | OPEN
+
+Canadian files | PBO-DEBT-BASE | PASS: the Parliamentary Budget Officer's fall 2027 Economic and Fiscal Outlook (or the latest PBO outlook on 31 Oct 2027) projects 2030-31 public debt charges below the October 2026 baseline of $83.0 billion. FAILED: at or above $83.0 billion | Government of Canada (Minister of Finance) | 31 Oct 2027 | [Date basis: benchmark set by the register] DESK-SET: scored on the PBO fall outlook; no government date | LIVE | https://www.pbo-dpb.ca/en/publications/RP-2627-011-S--economic-fiscal-outlook-october-2026--perspectives-economiques-financieres-octobre-2026 | OPEN | OPEN | OPEN | OPEN until scoring date 31 Oct 2027 | OPEN | OPEN | OPEN
 
 Canadian files | PHARA-TRIAL | PASS: the PHARA v. BC constitutional trial on DRIPA (16 days, BC Supreme Court) opens on 22 Nov 2027 as scheduled. FAILED: adjourned, with the reason recorded | BC Supreme Court / Attorney General of BC | 22 Nov 2027 | [Date basis: set by an outside source] DOCKET: BC Supreme Court trial set for 22 Nov 2027, per the PHARA trial date release (court file number not in desk files) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 22 Nov 2027 | OPEN | OPEN | OPEN
 
@@ -491,6 +502,8 @@ Outside files we watch | NS1 | PASS: the Hamburg Higher Regional Court delivers 
 
 Outside files we watch | UK-UKR-AD-WINTER | PASS: by 31 Mar 2027 the UK government (Ministry of Defence or HM Treasury) publishes what the £500 million for Ukraine's air defences announced on 28 Oct 2026 bought or delivered (systems, interceptors or quantities, with delivery dates), by URL. FAILED: no such publication by 31 Mar 2027 (announcement restated only). Hype exhibit: HM Treasury, Further support for Ukraine, 28 Oct 2026, https://www.gov.uk/government/news/further-support-for-ukraine | Ministry of Defence (Secretary of State for Defence) | 31 Mar 2027 | [Date basis: benchmark set by the register] DESK-SET: 31 Mar 2027, end of the winter the £500 million was announced for (Barry go 28 Oct 2026 1:08 PM CST, t2284u). Primary: https://www.gov.uk/government/news/further-support-for-ukraine , read 28 Oct 2026 | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
 
+Outside files we watch | UK-FISCAL-PATH | PASS: by 31 Mar 2027 HM Treasury publishes, at the next UK fiscal event (expected Spring Statement 2027) or in another fiscal document, a dated path for productivity, housing completions and energy resilience, each with a named owner. FAILED: no such document by that date, or any of the three without a date or a named owner | HM Treasury (Chancellor of the Exchequer) | 31 Mar 2027 | [Date basis: benchmark set by the register] DESK-SET: scored on the next UK fiscal event; no government date | LIVE | https://assets.publishing.service.gov.uk/media/6ae20b9039d29f3f9b9b3f55/E03668986_HMT_Budget_2026_TEXT_PRINT__1_.pdf | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
+
 Outside files we watch | LIM-REBUILD | A dated and financed reconstruction plan for the Limoges Hotel de Ville (MH-inscribed facades and roofs, 1975). PASS: by 17 Apr 2027 (six months) the Ville de Limoges and/or the State publish a reconstruction or restoration plan with BOTH a dated timetable (works start or completion date) AND a financing table naming funders and amounts (city, State/Culture, insurer, region, public subscription). Announcements without dates and money do not count. FAILED: dated entry within 30 days; no extension | Ville de Limoges (mayor Guillaume Guerin, owner of the building per Merimee); Ministere de la Culture / DRAC Nouvelle-Aquitaine (owner named by the register, unverified) | 17 Apr 2027 | [Date basis: benchmark set by the register] DESK-SET: six months, as recorded in the test (by 17 Apr 2027 (six months)) | REPLACED by LIM-REBUILD-C20261022; this entry is kept | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 17 Apr 2027 | OPEN | OPEN | OPEN
 
 Outside files we watch | LIM-REBUILD-C20261022 | A dated and financed reconstruction plan for the Limoges Hotel de Ville (MH-inscribed facades and roofs, 1975). PASS: by 17 Apr 2027 (six months) the Ville de Limoges and/or the State publish a reconstruction or restoration plan with BOTH a dated timetable (works start or completion date) AND a financing table naming funders and amounts (city, State/Culture, insurer, region, public subscription). Announcements without dates and money do not count. FAILED: dated entry within 30 days; no extension | Ville de Limoges (mayor Guillaume Guerin, owner of the building per Merimee); Ministere de la Culture / DRAC Nouvelle-Aquitaine (owner named by the register, unverified) | 17 Apr 2027 | [Date basis: benchmark set by the register] DESK-SET: six months, as recorded in the test (by 17 Apr 2027 (six months)). CORRECTION 22 Oct 2026: owner wording corrected from the earlier internal label to (owner named by the register, unverified); this entry replaces LIM-REBUILD, which is kept unchanged in the record | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 17 Apr 2027 | OPEN | OPEN | OPEN
@@ -500,6 +513,8 @@ Outside files we watch | UK-M6-RESP | PASS: by 20 Apr 2027 the UK government pub
 Outside files we watch | EU-RETURN | PASS: Eurostat quarterly data for Q1 to Q4 2026 (Q4 release expected about end March 2027) show returns to third countries summed over 2026 divided by orders to leave summed over 2026 above 28.0 per cent, AND the 2026 return count above 136,665. FAILED: ratio at or below 28.0 per cent. Ratio is a desk measure, not a cohort completion rate; say so in the entry. If Q4 2026 is not published by 30 Apr 2027, written entry "not published as of 30 Apr", score within 3 days of release | European Commission (DG HOME) and member-state return authorities; Eurostat publishes; desk scores | 30 Apr 2027 | [Date basis: benchmark set by the register] DESK-SET: allows for the Eurostat Q4 2026 release, expected about end March 2027 | LIVE | https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Returns_of_irregular_migrants_-_quarterly_statistics | OPEN | OPEN | OPEN | OPEN until scoring date 30 Apr 2027 | OPEN | OPEN | OPEN
 
 Outside files we watch | TIGER-UKCN | PASS: the DBT or ONS figure for the year to March 2027 shows the UK goods deficit with China below £52.5bn. FAILED: at or above. Only the number is scored | UK Government (DBT) | 30 Jun 2027 | [Date basis: set by an outside source] SCHEDULED RELEASE: DBT or ONS trade figure, year to March 2027 | LIVE | DBT China factsheet 24 Sep 2026 https://assets.publishing.service.gov.uk/media/6ab147d44c0f475de0a66afa/china-trade-and-investment-factsheet-2026-09-24.pdf | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
+
+Outside files we watch | UK-UKR-AUDIT | PASS: by 30 Jun 2027 HM Treasury, the FCDO or UK Export Finance publishes the audit and conditions that apply to the £10 billion Ukraine package announced at the 28 October 2026 Budget (including the £6.5 billion UKEF cover limit directed on 25 Oct 2026) before further drawdown. FAILED: drawdown continues with no published audit or conditions by that date | HM Treasury / Foreign, Commonwealth and Development Office / UK Export Finance | 30 Jun 2027 | [Date basis: benchmark set by the register] DESK-SET: no government date | LIVE | https://www.gov.uk/government/publications/increase-of-uk-export-finance-cover-limit-for-ukraine | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
 Outside files we watch | TIGER-UKMFG | PASS: the World Bank 2026 value for UK manufacturing share of GDP is at or above 7.68 per cent. FAILED: below | UK Government | 31 Dec 2027 | [Date basis: set by an outside source] SCHEDULED RELEASE: World Bank manufacturing share series, 2026 value | LIVE | World Bank series https://data.worldbank.org/indicator/NV.IND.MANF.ZS?locations=GB | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2027 | OPEN | OPEN | OPEN
 
@@ -775,7 +790,7 @@ Outside files we watch | QC-SEATMATH-L20261024 | PASS (for the thesis): the plat
 
 Outside files we watch | US-TOMAHAWK-2029 | PASS: Tomahawk deliveries at or above 1,000 a year under the seven-year Navy contract, shown in a Navy budget justification or an official delivery figure. FAILED: an official figure shows fewer than 1,000 a year by the scoring date; no official figure is OPEN. HYPE exhibit: RTX, 17 Aug 2026, 'annual production ramp to more than 1,000 Tomahawk missiles' https://www.rtx.com/news/news-center/2026/08/17/rtxs-raytheon-awarded-seven-year-contract-for-tomahawk-cruise-missiles | US Navy / RTX (Raytheon) | 31 Dec 2029 | [Date basis: benchmark set by the register] DESK-SET: scoring date set by the register (entered 25 Oct 2026), within the seven-year contract of 17 Aug 2026 | LIVE | https://www.rtx.com/news/news-center/2026/08/17/rtxs-raytheon-awarded-seven-year-contract-for-tomahawk-cruise-missiles | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2029 | OPEN | OPEN | OPEN
 
-Recorded (36)
+Recorded (37)
 
 Facts, results and checkpoints, recorded and kept. They are not counted as open promises.
 
@@ -805,7 +820,9 @@ Recorded facts and checkpoints | CL-BASE | RECORDED, not scored: for each of fou
 
 Recorded facts and checkpoints | CL-BASE-SCORED-20261024 | RECORDED, not scored: for each of four closers (finality with transfer phase-down; closed-versus-open register; ICA-equivalent screen; statutory fee-simple certainty) and each party (BC NDP, BC Conservatives, BC Greens), the URL of a platform commitment made before polls close, or "none found as of 24 Oct 2026". Scored with BC-PARCELS | Desk (Barry Sharp) | 24 Oct 2026 | [Date basis: benchmark set by the register] DESK-SET: BC general election day, 24 Oct 2026 | SCORED 24 Oct 2026: FAILED (blocking layer: political choice) | https://conservativebc.ca/wp-content/uploads/2026/10/20261016_BCC_Platform2026_8-5x11-Draft-18_compressed.pdf (page 46, read 24 Oct 2026 23:58 MT). Recorded grid, as of 24 Oct 2026. BC Conservatives: statutory fee-simple certainty FOUND, 'Property Rights Defence Act. We will protect private-property rights by upholding the validity of the Land Title Act on all fee-simple properties in BC' (p.46); closed-versus-open register NOT MET, near miss 'Aboriginal Title Transparency Act. We will publish maps and information about active claims, negotiations, legal actions and agreements' (p.46; open files only, no closed-versus-open register); finality with transfer phase-down: none found as of 24 Oct 2026; ICA-equivalent screen: none found as of 24 Oct 2026. BC NDP (https://www.bcndp.ca/plan) and BC Greens (platform, desk copy 24 Oct): none found as of 24 Oct 2026 on all four. CentreBC (https://centrebc.ca/platform, not a listed party): none found. BC-PARCELS: pending recheck 25 to 26 Oct 2026. | OPEN | OPEN | OPEN | FAILED: no published figure; held by the BC parties | MIXED | OPEN | FAILED
 
-Recorded facts and checkpoints | BoC | Bank of Canada rate decision issued, as a dated print. Recorded, not scored PASS or FAILED: the decision is recorded as fact. | Bank of Canada | 28 Oct 2026 | [Date basis: set by an outside source] SCHEDULED RELEASE: Bank of Canada rate decision, 28 Oct 2026 (jobs-print JOIN, E8) | LIVE | Bank of Canada https://www.bankofcanada.ca/core-functions/monetary-policy/ | OPEN | OPEN | OPEN | OPEN until scoring date 28 Oct 2026 | OPEN | OPEN | OPEN
+Recorded facts and checkpoints | BoC | Bank of Canada rate decision issued, as a dated print. Recorded, not scored PASS or FAILED: the decision is recorded as fact. | Bank of Canada | 28 Oct 2026 | [Date basis: set by an outside source] SCHEDULED RELEASE: Bank of Canada rate decision, 28 Oct 2026 (jobs-print JOIN, E8) | CLOSED: scored in BoC-SCORED-20261028 | Bank of Canada https://www.bankofcanada.ca/core-functions/monetary-policy/ | OPEN | OPEN | OPEN | OPEN until scoring date 28 Oct 2026 | OPEN | OPEN | OPEN
+
+Recorded facts and checkpoints | BoC-SCORED-20261028 | Bank of Canada rate decision issued, as a dated print. Recorded, not scored PASS or FAILED: the decision is recorded as fact. | Bank of Canada | 28 Oct 2026 | [Date basis: set by an outside source] SCHEDULED RELEASE: Bank of Canada rate decision, 28 Oct 2026 (jobs-print JOIN, E8) | SCORED 28 Oct 2026: PASS | https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/ Recorded as fact, not a desk position. PASS here means only that the decision was issued as a dated print on its date; the register takes no side. Press release dated October 28, 2026, Ottawa: "The Bank of Canada today increased its target for the overnight rate by 25 basis points to 2.5%, with the Bank Rate at 2.75% and the deposit rate at 2.45%." Read 28 October 2026, 7:12 PM and 9:14 PM MT (saved under _primary/boc-fad-2026-10-28-1912CST.html and -2114CST.html). | OPEN | OPEN | OPEN | n/a: not a spending test (a rate decision carries no programme cost to date) | OPEN | OPEN | OPEN
 
 Recorded facts and checkpoints | RU1 | Outside file. Two legs: Russia's producer diesel export ban lifted or not extended past 31 Oct; and the first Russian origin diesel cargo under GL 135 reported loaded or landed. Recorded, not scored PASS or FAILED: both legs are recorded as fact. | Russian government / OFAC / market reporters | 31 Oct 2026 | [Date basis: set by an outside source] GOVERNMENT PROMISE: Russian producer diesel export ban runs to 31 Oct (row) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Oct 2026 | OPEN | OPEN | OPEN
 
@@ -855,19 +872,19 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 <!-- AUDIT -->
 
-Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 109 rows are sourced, 0 secondary-sourced, 10 have their promise sourced with the outcome pending, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
+Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 110 rows are sourced, 0 secondary-sourced, 14 have their promise sourced with the outcome pending, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
 
 ## How to check this update
 
-Build stamp: update 2026-10-28g, counted as at 28 October 2026, from data/entries.csv, 296 rows, SHA-256 6fb5794557ad46839a30fb2bb81b664b63e93294efe2fd72fa9c92e2c2887f78. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-10-29, counted as at 29 October 2026, from data/entries.csv, 301 rows, SHA-256 2307bdda1dd2102b887b3720a2f4fc59a33552ac4e322bc2704080008df8ae6c. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-28g.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-28g.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-29.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-29.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
 Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.
 
-How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-10-28g, of 296 entries, 167 (about 56 per cent) carry a benchmark date set by the register, 2 an outside date with a scoring window set by the register, and 127 (about 43 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
+How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-10-29, of 301 entries, 171 (about 57 per cent) carry a benchmark date set by the register, 2 an outside date with a scoring window set by the register, and 128 (about 43 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
 
 Provenance (rule R-2026-10-26-A, 26 October 2026). Posts and press reports are leads only. No row is scored on them alone: every row must rest on a primary, a publication by the body that made the decision or holds the record. A row whose date, fact or evidence rests only on a news report or post is flagged with a dated replacement task, the primary the desk will look for and the date by which it will look. A primary found later is recorded in a new dated line; the row's own cells are not edited. Flags and replacements are in the CORRECTIONS folder; the first six (C39-CTTE, C39-D1, S2, S7, MTL-CLOSE, NOV1) are in CORRECTIONS/2026-10-26-provenance-six-rows.md.
 
@@ -916,7 +933,7 @@ DSRB-CAP | 24 Oct 2026 | 25 Oct 2026 | PASS: a published primary by 24 Oct shows
 DGR1 | 26 Oct 2026 | 26 Oct 2026 | PASS: after the DGR notice comment period closes, a dated list or refuse decision track is on record. FAILED: none. A listing is not a CNSC licence and not a loan | political choice (Governor in Council). Actor: Governor in Council (Privy Council Office / Major Projects Office). Evidence: https://gazette.gc.ca/rp-pr/p2/2026/index-eng.html | FAILED: no public figure on the cost of the delay; held by the Major Projects Office (Privy Council Office) / NWMO. Entry DGR1-SCORED-20261026 | No Canada Gazette order and no dated written refusal on the DGR (Part I 24 Oct 2026, Part II 21 Oct 2026). Order P.C. 2026-925 of 1 Oct 2026 listed Pacific Link under the same Act. The MPO page still reads 'being considered for listing': https://www.canada.ca/en/privy-council/major-projects-office/projects/national/geo.html ; https://laws-lois.justice.gc.ca/eng/acts/B-9.89/FullText.html
 DLV-ONLTC | 31 Mar 2025 | 26 Oct 2026 | PASS: Ontario long-term care homes reach an average of four hours of direct care per resident per day by nurses and personal support workers by March 2025 (legislated target, Fixing Long-Term Care Act, 2021). FAILED: below four hours at March 2025. A later quarter above target is a new entry, not a re-score | OTHER (named): workforce supply. Actor: Ontario Ministry of Long-Term Care. Evidence: https://www.ontario.ca/page/better-place-live-better-place-work-ontarios-long-term-care-staffing-plan | FAILED: no public cost-to-date figure; held by the Ontario Ministry of Long-Term Care. Entry DLV-ONLTC-SCORED-20261026 | 95.5 per cent of the four-hour goal at March 2025 (about 3 hours 49 minutes), 98 per cent from January to March 2025; the province names global health human resource shortages; more than $4.9 billion allocated since 2020 to 2021 (an allocation, not a cost): https://www.ontario.ca/page/better-place-live-better-place-work-ontarios-long-term-care-staffing-plan
 
-Entries as at 28 October 2026: 13.
+Entries as at 29 October 2026: 13.
 
 <!-- /FAILLOG -->
 

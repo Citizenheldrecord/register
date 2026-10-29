@@ -283,3 +283,7 @@ USE-OUTSIDE,also_watched,test and date set by the register
 UK-UKR-AD-WINTER,government_promise,"passes entry test (owner, primary source link, date source)"
 UK-DEF3-PATH,government_promise,"passes entry test (owner, primary source link, date source)"
 RBT2-FAA-OCT,also_watched,"decision date printed by the applicant (port authority) as a joint commitment with government, not in a government document; follows FA3"
+ETH-LIST,government_promise,passes entry test
+PBO-DEBT-BASE,government_promise,passes entry test
+UK-FISCAL-PATH,government_promise,passes entry test
+UK-UKR-AUDIT,government_promise,passes entry test
