@@ -16,3 +16,11 @@ Reason class (batch 4, 2026-10-27): no primary exists yet
 
 ## Desk action
 Find the holder primary; re-score on due date.
+
+## Primary added 2026-10-31
+- Added on: 31 Oct 2026 (append only; the lines above, the row's test and its date are unchanged)
+- Primary URL: https://www.canada.ca/en/department-finance/news/2026/09/government-of-canada-introduces-new-productivity-mega-deduction-to-boost-canadas-advantage-as-the-most-competitive-g7-country-for-new-business-inve.html
+- Publisher: Department of Finance Canada (Sep 2026)
+- Exact supporting line (verbatim): "the Government of Canada proposes to implement the Productivity Mega Deduction, which will provide immediate expensing for a broad-based range of depreciable property on a permanent basis"
+- Covers the row's premise only: proposed for property acquired on or after September 15, 2026. Not enacted. Effect: none on the test.
+- Read date: 2026-10-31 (HTTP 200 from the box). From SOURCE-TRACE-2026-10-31 (Barry t2640u).

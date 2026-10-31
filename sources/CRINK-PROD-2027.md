@@ -16,3 +16,11 @@ Reason class (batch 4, 2026-10-27): no primary exists yet
 
 ## Desk action
 Find the holder primary; re-score on due date.
+
+## Primary added 2026-10-31 (leg 2 only)
+- Added on: 31 Oct 2026 (append only; the lines above, the row's test and its date are unchanged)
+- Primary URL: https://defence-industry-space.ec.europa.eu/around-eu2-billion-strengthen-eus-defence-industry-readiness-including-ramp-ammunition-production-2-2024-03-15_en
+- Publisher: European Commission, DG Defence Industry and Space, 15 Mar 2024
+- Exact supporting line (verbatim): "This will allow the European defence industry to ramp up its ammunition production capacity to 2 million per year by the end of 2025."
+- Supports: the 2 million a year capacity line in leg 2 only. No outcome figure. Leg 1 (US Patriot and THAAD inventories) not covered; still needs a DoD primary.
+- Read date: 2026-10-31 (HTTP 200 from the box). From REGISTER-EVIDENCE-GAP-AUDIT-2026-10-31 (B).

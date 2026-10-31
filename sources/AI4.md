@@ -16,3 +16,11 @@ Reason class (batch 4, 2026-10-27): no primary exists yet
 
 ## Desk action
 Find the holder primary; re-score on due date.
+
+## Primary added 2026-10-31
+- Added on: 31 Oct 2026 (append only; the lines above, the row's test and its date are unchanged)
+- Primary URL: https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents
+- Publisher: Anthropic (9 Sep 2026)
+- Exact supporting line (verbatim): "Our initial agreement runs for eight weeks, with the option to extend by mutual agreement."
+- Covers the row's premise only: the METR independent investigation and its eight-week initial term. No METR report yet. Effect: none on the test.
+- Read date: 2026-10-31 (HTTP 200 from the box). From SOURCE-TRACE-2026-10-31 (Barry t2640u).

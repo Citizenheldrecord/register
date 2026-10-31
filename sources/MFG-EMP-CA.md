@@ -18,3 +18,11 @@ Reason class (batch 4, 2026-10-27): no primary exists yet
 
 ## Desk action
 Find and read a primary.
+
+## Primary added 2026-10-31
+- Added on: 31 Oct 2026 (append only; the lines above, the row's test and its date are unchanged)
+- Primary URL: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410002301
+- Publisher: Statistics Canada, table 14-10-0023-01, "Labour force characteristics by industry, annual (x 1,000)", release date 2026-01-09
+- Covers the row's measure: annual LFS employment, Canada, by industry, with "Manufacturing" and total employment members (the table the row's 2025 baseline cites). The 8.78 per cent share is desk arithmetic from it.
+- Effect: none on the test. Outcome (2027 annual average) pending; scored on 31 Jan 2028.
+- Read date: 2026-10-31 (HTTP 200 from the box). From REGISTER-EVIDENCE-GAP-AUDIT-2026-10-31 (B).

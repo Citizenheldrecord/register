@@ -16,3 +16,11 @@ Reason class (batch 4, 2026-10-27): no primary exists yet
 
 ## Desk action
 Find the holder primary; re-score on due date.
+
+## Primary added 2026-10-31
+- Added on: 31 Oct 2026 (append only; the lines above, the row's test and its date are unchanged)
+- Primary URL: https://gazette.gc.ca/rp-pr/p1/2026/2026-08-29/html/notice-avis-eng.html
+- Publisher: Canada Gazette Part I, Vol. 160 No. 35 (29 Aug 2026)
+- Exact supporting line (verbatim): "notice is hereby given that the Governor in Council may amend Schedule 1 of the Act to list the Mackenzie Valley Highway as a project of national interest"
+- Covers the row's premise only: notice given (same wording for Roberts Bank Terminal 2), views due by October 1, 2026. No listing decision yet. Effect: none on the test.
+- Read date: 2026-10-31 (HTTP 200 from the box). From SOURCE-TRACE-2026-10-31 (Barry t2640u).
