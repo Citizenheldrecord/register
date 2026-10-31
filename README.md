@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 31 October 2026 from data/entries.csv, which holds 339 entries.
+Counted on 31 October 2026 from data/entries.csv, which holds 340 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 339 = 304 promises + 35 scoring entries.
+- **Entries:** 340 = 305 promises + 35 scoring entries.
 - **Scored PASS:** 11 (AB1, AB1-OFFICIAL, AI1, BoC, C39-CTTE, DLV-C15, DLV-CTR, DLV-DEN, MTL-LABEL, S338-SCOPE, TR-FTA-ROUND).
 - **Scored FAILED:** 22 (AB1-PL, AI2, BC-PARCELS, BC1, CFR-GAZ-30OCT, COAL-EXPORT-2030, DGR1, DLV-ONLTC, DSRB-CAP, FA3b, GX1b, MIL-QUESTURA-C20261022, MRNA-ESMO-FULL, MTL-CLOSE, PAUSE-RECIP, S2, S7, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
 - **Recorded as fact, with no pass or fail line:** 3 (CL-BASE, HR5334, RU1).
-- **Open:** 261.
+- **Open:** 262.
 - **Due:** 0.
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 304 promises = 11 PASS + 22 FAILED + 3 recorded + 261 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 305 promises = 11 PASS + 22 FAILED + 3 recorded + 262 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 339 entries):
+By section of the data file (every entry counted once; the four sections add up to all 340 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Canadian files | 215 | 26 | 189 | 8 | 18 | 0 | 163 | 0 | 0 | 0 | 0 |
 | This desk's own commitments | 12 | 0 | 12 | 0 | 0 | 0 | 12 | 0 | 0 | 0 | 0 |
-| Outside files we watch | 81 | 5 | 76 | 1 | 4 | 0 | 65 | 0 | 4 | 2 | 0 |
+| Outside files we watch | 82 | 5 | 77 | 1 | 4 | 0 | 66 | 0 | 4 | 2 | 0 |
 | Recorded facts and checkpoints | 31 | 4 | 27 | 2 | 0 | 3 | 21 | 0 | 0 | 0 | 1 |
-| Total | 339 | 35 | 304 | 11 | 22 | 3 | 261 | 0 | 4 | 2 | 1 |
+| Total | 340 | 35 | 305 | 11 | 22 | 3 | 262 | 0 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -127,7 +127,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-10-31c.csv (all 339 rows) is fabd4bc354d4a0191303255eea3f4f962ab263b5b2fadf46bb1e0f3aa090b44e
+Checksum for this update: SHA-256 of public-live-rows-2026-10-31d.csv (all 340 rows) is 5db4772925811a0ff7f7192aa17609b2edae0157e3f88b0be7dc10149616e7ec
 
 Rule entries
 
@@ -573,7 +573,7 @@ Outside files we watch | ATIP-CIRNAC-149 | CIRNAC ATIP A-2026-00149 (EA2026_0195
 
 Outside files we watch | TSTS-SUBCOMP-2031 | PASS: Public Services and Procurement Canada or the operating department (National Research Council of Canada or Transportation Safety Board of Canada) publicly records substantial completion of the Transportation Safety and Technology Science (TSTS) facility on the NRC Montreal Road campus in Ottawa on or before 31 Dec 2031. FAILED: no such public record by 31 Dec 2031, or a published revised completion date after 2031. A contract option exercised is a stage, not delivery. Hype exhibit: Public Services and Procurement Canada, 30 Oct 2026, construction management services option with Bird Construction Group Ltd. "valued at approximately $404.9 million"; quick fact: "Substantial completion is expected in 2031." https://www.canada.ca/en/public-services-procurement/news/2026/10/government-of-canada-advances-major-infrastructure-project-to-strengthen-transportation-safety-science-and-security.html | Public Services and Procurement Canada (Minister of Government Transformation, Public Works and Procurement) | 31 Dec 2031 | [Date basis: set by an outside source] HOLDER DATE: "Substantial completion is expected in 2031." (PSPC news release, 30 Oct 2026; Barry go 30 Oct 2026 7:25 AM CST, t2449u). Primary: https://www.canada.ca/en/public-services-procurement/news/2026/10/government-of-canada-advances-major-infrastructure-project-to-strengthen-transportation-safety-science-and-security.html , read 30 Oct 2026 | LIVE | https://www.canada.ca/en/public-services-procurement/news/2026/10/government-of-canada-advances-major-infrastructure-project-to-strengthen-transportation-safety-science-and-security.html | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2031 | OPEN | OPEN | OPEN
 
-Also watched (147)
+Also watched (148)
 
 Rows the register watches that are not government promises: the owner is not a government, or the row lacks a primary source link. Same rules apply.
 
@@ -863,6 +863,8 @@ Outside files we watch | CRINK-PROD-2027 | PASS: by 31 Dec 2027, official figure
 
 Outside files we watch | EU-ASSOC-DEF | PASS: the 2027 EU-Canada summit publishes a written definition of "ever-closer association" with an exclusions page (free movement, dynamic alignment, CJEU, budget). FAILED: it publishes none, or one without exclusions. Scored on the 2027 summit date, hard stop 31 Dec 2027. Mandate sub-check: was a Commons motion or bill tabled before it (LEGISinfo)? | PMO, GAC, Council and Commission | 31 Dec 2027 | [Date basis: benchmark set by the register] DESK-SET: the 2027 summit date, hard stop 31 Dec 2027; Joint Statement para 45 says "by the 2027 EU-Canada Summit" with no date; test set by the desk 30 Oct 2026 (Barry go t2585u) | LIVE | pm.gc.ca and consilium.europa.eu joint statement https://www.pm.gc.ca/en/news/statements/2026/10/30/joint-statement-canada-and-european-union-building-together-alliance | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2027 | OPEN | OPEN | OPEN
 
+Outside files we watch | EXCL-TABLE (follows EU-ASSOC-DEF) | PASS: by 31 Dec 2027 any Canada-EU association instrument is tabled in the House of Commons under the Policy on Tabling of Treaties with a page listing what Canada is not taking on (free movement, dynamic alignment, CJEU jurisdiction, EU budget), and the twenty-one sitting day period is observed before Canada is bound. FAILED: an instrument binds Canada without that, or there is no instrument by 31 Dec 2027 while alignment work continues. Scored against the House of Commons Journals and treaty-accord.gc.ca. | Minister of Foreign Affairs (tabling) and Minister of International Trade | 31 Dec 2027 | [Date basis: benchmark set by the register] DESK-SET: hard stop 31 Dec 2027, same as EU-ASSOC-DEF; Joint Statement para 45 sets the 2027 Summit with no date; test approved by Barry 31 Oct 2026 (t2654u) | LIVE | Joint statement https://www.pm.gc.ca/en/news/statements/2026/10/30/joint-statement-canada-and-european-union-building-together-alliance ; Policy on Tabling of Treaties https://www.treaty-accord.gc.ca/procedures.aspx?lang=eng | OPEN | OPEN | OPEN until scoring date 31 Dec 2027 | OPEN until scoring date 31 Dec 2027 | OPEN | OPEN | OPEN
+
 Outside files we watch | STBL-VOLUME | PASS: by 31 Dec 2028 Bank of Canada data or an issuer report shows at least one Canadian dollar stablecoin issuer at or above $500 million outstanding on a dated record. FAILED: none on file by that date | Registered stablecoin issuers | 31 Dec 2028 | [Date basis: benchmark set by the register] DESK-SET: test uses the $500 million outstanding fee tier in the draft regulations; date one year after the stated in-force window | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2028 | OPEN | OPEN | OPEN
 
 Outside files we watch | SA2 | PASS: an official Saudi energy ministry or Saudi Aramco statement, or a named wire, reports Hormuz bypass pipeline capacity of about 10 million barrels a day by 12 Oct 2029. FAILED: no such report | Saudi Aramco / Saudi Ministry of Energy | 12 Oct 2029 | [Date basis: set by an outside source] GOVERNMENT PROMISE: Saudi energy minister, 12 Oct 2026, two to three years; outer end used (row) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 12 Oct 2029 | OPEN | OPEN | OPEN
@@ -959,19 +961,19 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 <!-- AUDIT -->
 
-Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 125 rows are sourced, 0 secondary-sourced, 36 have their promise sourced with the outcome pending, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
+Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 125 rows are sourced, 0 secondary-sourced, 37 have their promise sourced with the outcome pending, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
 
 ## How to check this update
 
-Build stamp: update 2026-10-31c, counted as at 31 October 2026, from data/entries.csv, 339 rows, SHA-256 3f485865319cd8c1ab41f856b6f2932a4670de3c66a2c1b28d0d5875591875f4. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-10-31d, counted as at 31 October 2026, from data/entries.csv, 340 rows, SHA-256 01adb507c609553b48f1f39a71663dec933343f4cf7f88daef250dccc9b71ba3. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-31c.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-31c.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-10-31d.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-10-31d.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
 Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.
 
-How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-10-31c, of 339 entries, 189 (about 56 per cent) carry a benchmark date set by the register, 2 an outside date with a scoring window set by the register, and 148 (about 44 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
+How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-10-31d, of 340 entries, 190 (about 56 per cent) carry a benchmark date set by the register, 2 an outside date with a scoring window set by the register, and 148 (about 44 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
 
 Provenance (rule R-2026-10-26-A, 26 October 2026). Posts and press reports are leads only. No row is scored on them alone: every row must rest on a primary, a publication by the body that made the decision or holds the record. A row whose date, fact or evidence rests only on a news report or post is flagged with a dated replacement task, the primary the desk will look for and the date by which it will look. A primary found later is recorded in a new dated line; the row's own cells are not edited. Flags and replacements are in the CORRECTIONS folder; the first six (C39-CTTE, C39-D1, S2, S7, MTL-CLOSE, NOV1) are in CORRECTIONS/2026-10-26-provenance-six-rows.md.
 
