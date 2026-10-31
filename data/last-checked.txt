@@ -1,4 +1,4 @@
-Last checked: 30 Oct 2026, 18:52 CST
-Rows: 319. Sourced 114; secondary-sourced 0; promise sourced, outcome pending 28; promise sourced, outcome scored 0; partly sourced 90; unsourced 87; missing record 0.
+Last checked: 30 Oct 2026, 21:20 CST
+Rows: 329. Sourced 115; secondary-sourced 0; promise sourced, outcome pending 37; promise sourced, outcome scored 0; partly sourced 90; unsourced 87; missing record 0.
 Over-claims 0; secondary fails 0; failed entries 16 (incomplete 0); scoring date passed, not scored 0.
 Allow-list: 177 rows, all expire 26 Nov 2026.

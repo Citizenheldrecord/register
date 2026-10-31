@@ -303,3 +303,12 @@ DGR-CLOSE-15JAN,also_watched,"test and date set by the register, not printed in 
 COAL-EXPORT-2030,government_promise,passes entry test
 COAL-EXPORT-2030-SCORED-20261029,recorded,result entry for COAL-EXPORT-2030 (FAILED 29 Oct 2026); not a promise
 COAL-RATIONALE-PUB,government_promise,passes entry test
+EMIS-2030-TRAJ,government_promise,passes entry test
+CAN-UKL-500,government_promise,passes entry test
+CORRIDOR-FIN-2027,also_watched,"test and date set by the register, not printed in a government document"
+EU-ASSOC-DEF,also_watched,"test and date set by the register, not printed in a government document"
+CA-EU-DTA,also_watched,"test and date set by the register, not printed in a government document"
+CA-SAFE-AWARD,also_watched,"test and date set by the register, not printed in a government document"
+POL-BASE,also_watched,"test and date set by the register, not printed in a government document"
+ECA-DEF,also_watched,"test and date set by the register, not printed in a government document"
+CETA-RAT,also_watched,"test and date set by the register, not printed in a government document"
