@@ -300,3 +300,6 @@ RBT2-REGISTRY-30D,government_promise,passes entry test
 RBT2-SCHED1-GAZ,also_watched,"test and date set by the register, not printed in a government document"
 RBT2-FID-MID27,government_promise,passes entry test
 DGR-CLOSE-15JAN,also_watched,"test and date set by the register, not printed in a government document"
+COAL-EXPORT-2030,government_promise,passes entry test
+COAL-EXPORT-2030-SCORED-20261029,recorded,result entry for COAL-EXPORT-2030 (FAILED 29 Oct 2026); not a promise
+COAL-RATIONALE-PUB,government_promise,passes entry test
