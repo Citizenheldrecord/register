@@ -16,3 +16,6 @@ Reason class (batch 4, 2026-10-27): no primary exists yet
 
 ## Desk action
 Find the holder primary; re-score on due date.
+
+## Result line 2026-10-31
+Scored FAILED in PAUSE-RECIP-SCORED-20261031 (blocking layer: political choice). Primary: https://www.dtek-dnem.com.ua/ua/news/masovani-ataki-na-energoob-yekti-dnipropetrovshchini-v-oblasti-diyut-ekstreni-vidklyuchennya (DTEK, 30 Oct 2026; continued Russian strikes on the Dnipro grid). No reciprocal pause confirmed. Press reports are leads only.

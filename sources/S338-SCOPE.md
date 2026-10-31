@@ -23,3 +23,6 @@ Claim tested (row wording, verbatim): PASS (recorded as fact): the 23 Oct 2026 S
 
 ## Desk action
 Re-score on due date.
+
+## Result line 2026-10-31
+Scored PASS (recorded as fact) in S338-SCOPE-SCORED-20261030. Primaries: https://content.govdelivery.com/accounts/USDHSCBP/bulletins/430e931 ; https://www.federalregister.gov/documents/2026/10/30/2026-22292/further-modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset

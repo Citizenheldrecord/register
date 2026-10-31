@@ -59,18 +59,19 @@ PATTERN="index.html printed" expect_fail "printed mismatch caught" python3 scrip
 
 echo "7. scoring is a new entry; rules enforced; prior untouched; page shows the original as closed"
 fresh
-PATTERN="never OPEN" expect_fail "OPEN cost on scoring day refused" python3 scripts/add_entry.py score --supersedes AI1 --result PASS --scored-on 2026-10-31 --evidence https://example.org/x --cost-to-date "OPEN" --hype OPEN --means OPEN --cost FAILED
-PATTERN="blocking layer" expect_fail "FAILED without layer refused" python3 scripts/add_entry.py score --supersedes AI1 --result FAILED --scored-on 2026-10-31 --evidence https://example.org/x --cost-to-date "FAILED: no public figure; held by Anthropic" --hype OPEN --means OPEN --cost FAILED
-PATTERN="MATCHED, MIXED, FAILED or OPEN" expect_fail "bad sub-score refused" python3 scripts/add_entry.py score --supersedes AI1 --result PASS --scored-on 2026-10-31 --evidence https://example.org/x --cost-to-date "FAILED: held by Anthropic" --hype GOOD --means OPEN --cost FAILED
-before=$(python3 scripts/hash_entries.py data/entries.csv --show AI1 | sha256sum)
-python3 scripts/add_entry.py score --supersedes AI1 --result PASS --scored-on 2026-10-31 --evidence https://example.org/x --cost-to-date "FAILED: no public figure; held by Anthropic" --hype OPEN --means OPEN --cost FAILED >/tmp/pl.out && ok "scoring entry appended: $(cut -c1-80 /tmp/pl.out)" || { bad "score"; cat /tmp/pl.out; }
-fixture_record AI1-SCORED-20261031; score_due 2026-10-31
-[ "$before" = "$(python3 scripts/hash_entries.py data/entries.csv --show AI1 | sha256sum)" ] && ok "AI1 row unchanged in the data" || bad "AI1 changed"
-build 2026-10-31 >/tmp/pl.out 2>&1 && ok "build after scoring: $(grep -m1 'new since' /tmp/pl.out)" || { bad "build after scoring"; cat /tmp/pl.out; }
-grep -Eq "^([A-Za-z ]+ \| )?AI1 \| .* \| CLOSED: scored in AI1-SCORED-20261031 \| " README.md && ok "README shows AI1 as CLOSED: scored in AI1-SCORED-20261031" || bad "README closed display"
+# 31 Oct 2026: fixture moved from AI1 to AI3, because AI1 was really scored (AI1-SCORED-20261031); builds use the scratch id because 2026-10-31 is published.
+PATTERN="never OPEN" expect_fail "OPEN cost on scoring day refused" python3 scripts/add_entry.py score --supersedes AI3 --result PASS --scored-on 2026-10-31 --evidence https://example.org/x --cost-to-date "OPEN" --hype OPEN --means OPEN --cost FAILED
+PATTERN="blocking layer" expect_fail "FAILED without layer refused" python3 scripts/add_entry.py score --supersedes AI3 --result FAILED --scored-on 2026-10-31 --evidence https://example.org/x --cost-to-date "FAILED: no public figure; held by Anthropic" --hype OPEN --means OPEN --cost FAILED
+PATTERN="MATCHED, MIXED, FAILED or OPEN" expect_fail "bad sub-score refused" python3 scripts/add_entry.py score --supersedes AI3 --result PASS --scored-on 2026-10-31 --evidence https://example.org/x --cost-to-date "FAILED: held by Anthropic" --hype GOOD --means OPEN --cost FAILED
+before=$(python3 scripts/hash_entries.py data/entries.csv --show AI3 | sha256sum)
+python3 scripts/add_entry.py score --supersedes AI3 --result PASS --scored-on 2026-10-31 --evidence https://example.org/x --cost-to-date "FAILED: no public figure; held by Anthropic" --hype OPEN --means OPEN --cost FAILED >/tmp/pl.out && ok "scoring entry appended: $(cut -c1-80 /tmp/pl.out)" || { bad "score"; cat /tmp/pl.out; }
+fixture_record AI3-SCORED-20261031; score_due 2026-10-31
+[ "$before" = "$(python3 scripts/hash_entries.py data/entries.csv --show AI3 | sha256sum)" ] && ok "AI3 row unchanged in the data" || bad "AI3 changed"
+build $SCRATCH >/tmp/pl.out 2>&1 && ok "build after scoring: $(grep -m1 'new since' /tmp/pl.out)" || { bad "build after scoring"; cat /tmp/pl.out; }
+grep -Eq "^([A-Za-z ]+ \| )?AI3 \| .* \| CLOSED: scored in AI3-SCORED-20261031 \| " README.md && ok "README shows AI3 as CLOSED: scored in AI3-SCORED-20261031" || bad "README closed display"
 grep -q 'CLOSED\[r.id\]' index.html && ok "page links closed rows to the scoring entry" || bad "page closed display"
-python3 scripts/hash_entries.py public-live-rows-2026-10-31.csv --check manifest/entry-hashes-v2-2026-10-18b.csv | tail -1 | grep -q ", 0 problems" && ok "all 118 prior v2 fingerprints unchanged" || bad "prior changed"
-PATTERN="already has a scoring entry" expect_fail "double scoring refused" python3 scripts/add_entry.py score --supersedes AI1 --result FAILED --layer courts --scored-on 2026-11-01 --evidence https://example.org/y --cost-to-date "FAILED: held by Anthropic" --hype OPEN --means OPEN --cost FAILED
+python3 scripts/hash_entries.py public-live-rows-$SCRATCH.csv --check manifest/entry-hashes-v2-2026-10-18b.csv | tail -1 | grep -q ", 0 problems" && ok "all 118 prior v2 fingerprints unchanged" || bad "prior changed"
+PATTERN="already has a scoring entry" expect_fail "double scoring refused" python3 scripts/add_entry.py score --supersedes AI3 --result FAILED --layer courts --scored-on 2026-11-01 --evidence https://example.org/y --cost-to-date "FAILED: held by Anthropic" --hype OPEN --means OPEN --cost FAILED
 
 echo "7b. a changed sub-score on an existing entry fails (v2)"
 fresh; python3 - <<'PY2'
