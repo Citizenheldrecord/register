@@ -287,3 +287,16 @@ ETH-LIST,government_promise,passes entry test
 PBO-DEBT-BASE,government_promise,passes entry test
 UK-FISCAL-PATH,government_promise,passes entry test
 UK-UKR-AUDIT,government_promise,passes entry test
+MRNA-NEJM-PUB,also_watched,"owner is a company, not a government"
+SOV-COMPUTE-1,government_promise,passes entry test
+CF-GAP,also_watched,"test and date set by the register, not printed in a government document; tabling clock from IRPA s.94(1); see also DNG-CAP and HCAP-LVL"
+CN-GRAPH-EXT,also_watched,prediction set by the register; owner is not a Canadian government; follows CN-GRAPH
+B26-BIA-1R,also_watched,"prediction set by the register, not printed in a government document; follows BUDGET26-TABLE"
+BCA-CLOCK,government_promise,passes entry test
+NSS-LEGIS-1Y,government_promise,passes entry test
+FUEL-EXC-SUNSET,government_promise,passes entry test
+TSTS-SUBCOMP-2031,government_promise,passes entry test
+RBT2-REGISTRY-30D,government_promise,passes entry test
+RBT2-SCHED1-GAZ,also_watched,"test and date set by the register, not printed in a government document"
+RBT2-FID-MID27,government_promise,passes entry test
+DGR-CLOSE-15JAN,also_watched,"test and date set by the register, not printed in a government document"

@@ -1,0 +1,5 @@
+Dated note, 29 October 2026: BC-DRIPA-PET petition status
+
+Entered 30 October 2026 (Barry go 29 Oct 2026, 4:10 PM CST, t2396u; AS-113). This line is new and dated. No row and no date in data/entries.csv was changed.
+
+BC-DRIPA-PET: NOTE 29 Oct 2026: Elections BC's initiative page (https://elections.bc.ca/events-services/initiative/, read 29 Oct 2026) lists IP-2026-001 as "Currently suspended (pending 2026 Provincial General Election close-out activities)", with date due and signatures required both TBD. The deadline of Monday 25 Jan 2027 in the Chief Electoral Officer's Reasons for Decision (https://elections.bc.ca/INITIATIVE/IP-2026-001_Reasons-for-Decision.pdf) assumed a canvass starting 26 Oct 2026. When Elections BC publishes a new due date, this row scores on the day after that date, by a dated amendment; until then 26 Jan 2027 stands as a placeholder. A withdrawal, or a pause in favour of a government repeal bill, is recorded as a dated note and scored FAILED under the existing test, not dropped silently. Threshold: 10 per cent of registered voters in each of the 93 electoral districts; district figures TBD.
