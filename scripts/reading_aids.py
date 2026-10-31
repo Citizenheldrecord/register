@@ -12,13 +12,19 @@ E = html.escape
 def load_links(path=LINKS):
     if not os.path.exists(path):
         return {}
-    return {r["id"]: r for r in csv.DictReader(open(path, encoding="utf-8"))}
+    # 31 Oct 2026 (Barry go t2593u): a row may be claimed by more than one essay; keep every link, in file order (oldest first).
+    out = {}
+    for r in csv.DictReader(open(path, encoding="utf-8")):
+        lst = out.setdefault(r["id"], [])
+        if all(x["essay_url"] != r["essay_url"] for x in lst):
+            lst.append(r)
+    return out
 
 
 def check_links(rows, links):
     ids = {r["id"] for r in rows}
     errs = ["essay-links.csv: id %s is not an entry" % i for i in links if i not in ids]
-    errs += ["essay-links.csv: %s url is not a barryesharp.substack.com essay" % i for i, l in links.items() if not l["essay_url"].startswith("https://barryesharp.substack.com/p/")]
+    errs += ["essay-links.csv: %s url is not a barryesharp.substack.com essay" % i for i, ls in links.items() for l in ls if not l["essay_url"].startswith("https://barryesharp.substack.com/p/")]
     return errs
 
 
@@ -59,7 +65,7 @@ def status_summary(rows, iso):
 
 def how_to_read(rows, links):
     ex = next(r for r in rows if r["id"] == "HR5334")
-    lk = links.get("HR5334")
+    lk = (links.get("HR5334") or [None])[-1]
     essay = '<a href="%s">%s</a>' % (E(lk["essay_url"]), E(lk["essay_title"])) if lk else "OPEN"
     return ('<!-- HOW-TO-READ --><div class="panel"><b>How to read this page</b>'
             '<p>Each row is one public promise turned into a test. It says what counts as a pass, the one date it is scored, and who answers for it. Nothing on the page argues. The essays argue; this page keeps the score.</p>'
@@ -80,8 +86,7 @@ def how_to_read(rows, links):
 def essays_index(rows, links):
     by = {}
     for r in rows:
-        l = links.get(r["id"])
-        if l:
+        for l in links.get(r["id"], []):
             by.setdefault((l["essay_url"], l["essay_title"], l["essay_live_date"]), []).append(r["id"])
     items = sorted(by.items(), key=lambda kv: (rc.parse_short(kv[0][2]) if hasattr(rc, "parse_short") else kv[0][2]), reverse=True)
     lis = "".join('<li><a href="%s">%s</a> (%s): %s</li>' % (E(u), E(t), E(d), ", ".join('<a href="#row-%s">%s</a>' % (E(i), E(i)) for i in ids)) for (u, t, d), ids in items)
@@ -90,7 +95,7 @@ def essays_index(rows, links):
 
 
 def links_json(links):
-    return json.dumps({i: {"t": l["essay_title"], "u": l["essay_url"], "d": l["essay_live_date"]} for i, l in links.items()}, ensure_ascii=False).replace("</", "<\\/")
+    return json.dumps({i: [{"t": l["essay_title"], "u": l["essay_url"], "d": l["essay_live_date"]} for l in ls] for i, ls in links.items()}, ensure_ascii=False).replace("</", "<\\/")
 
 
 # --- Display-only hiding of internal desk references (rule R-2026-10-22-A; correction 22 Oct 2026).

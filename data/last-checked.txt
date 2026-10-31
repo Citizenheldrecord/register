@@ -2,3 +2,4 @@ Last checked: 30 Oct 2026, 21:20 CST
 Rows: 329. Sourced 115; secondary-sourced 0; promise sourced, outcome pending 37; promise sourced, outcome scored 0; partly sourced 90; unsourced 87; missing record 0.
 Over-claims 0; secondary fails 0; failed entries 16 (incomplete 0); scoring date passed, not scored 0.
 Allow-list: 177 rows, all expire 26 Nov 2026.
+Last checked: 2026-10-31, 08:07 CST. Rows 332: sourced 118; promise sourced, outcome pending 36; partly sourced 91; unsourced 87; failed entries 19; over-claims 1 (CFR-GAZ-30OCT, scoring date 31 Oct reached, not scored yet); scoring date passed, not scored 1. Allow-list 177 rows, all expire 26 Nov 2026.

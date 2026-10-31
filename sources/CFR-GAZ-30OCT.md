@@ -22,3 +22,6 @@ Claim tested (row wording): Proposed Clean Fuel Regulations amendments to be pub
 
 ## Desk action
 - 27 Oct 2026: row approved by Barry go 27 Oct 2026, 6:21 PM CST (msg pt2200u). Queued for the build after 26g with DSRB-SIGN-2026, OE-Q1561 and FIR4.
+
+## Result line 2026-10-31
+- Result: FAILED, scored 31 Oct 2026 in entry CFR-GAZ-30OCT-SCORED-20261031. The amendments appear in Canada Gazette, Part I, Vol. 160, No. 44, dated 31 Oct 2026 (https://gazette.gc.ca/rp-pr/p1/2026/2026-10-31/html/reg1-eng.html ; issue https://gazette.gc.ca/rp-pr/p1/2026/2026-10-31/html/index-eng.html), not in an issue dated 30 Oct 2026 (that issue URL returns 404). Row rule: "Strict: an issue dated 31 Oct 2026 or later is FAILED". Read by desk 31 Oct 2026 ~8:45 AM CST.

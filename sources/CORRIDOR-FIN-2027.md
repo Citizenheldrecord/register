@@ -20,3 +20,12 @@ Test definition: drafts/POLAND-TUSK-CARNEY-EU-BRIEF-2026-10-30.md section 5; Bar
 - Para 19 (same page, read same time): "Canada and the European Investment Bank have concluded negotiations of an agreement that will facilitate European investment in critical Canadian resources, in particular, critical raw materials." No project is named.
 ## Desk action
 - Scored once on its scoring date (SCORE-CORRIDOR-FIN-2027, to book with the upload). Outcome evidence cannot exist before then.
+
+## Correction 2026-10-31
+- Corrected on: 31 Oct 2026 (append only; the lines above, the row's test and its date are unchanged)
+- Corrects: Source 1 "Claim tested" reads "the EIB agreement is negotiated, not signed". That is wrong. Canada and the EU signed a treaty framework with the EIB on 30 Oct 2026.
+- Primary URL: https://www.pm.gc.ca/en/news/backgrounders/2026/10/30/canada-and-european-union-announce-new-alliance-future-create-greater
+- Exact supporting line (verbatim, straight quotes): "Canada and the EU have signed a treaty framework to allow the EIB to operate in Canada and potentially finance eligible projects across the critical minerals value chain, including exploration, mining, processing, and recycling."
+- Also: news release of the same day, https://www.pm.gc.ca/en/news/news-releases/2026/10/30/canada-and-european-union-announce-new-alliance-future-create-greater : "Canada signed a new treaty framework with the European Investment Bank (EIB) to allow the EIB to invest in Canadian critical minerals projects"
+- Effect: none on the test. The framework names no project and no second financier on a corridor, so CORRIDOR-FIN-2027 stays OPEN until its scoring date.
+- Read date: 2026-10-31 (~1:50 AM CST, HTTP 200). Barry go t2596u.
