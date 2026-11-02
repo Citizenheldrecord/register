@@ -24,7 +24,11 @@ def load_links(path=LINKS):
 def check_links(rows, links):
     ids = {r["id"] for r in rows}
     errs = ["essay-links.csv: id %s is not an entry" % i for i in links if i not in ids]
-    errs += ["essay-links.csv: %s url is not a barryesharp.substack.com essay" % i for i, ls in links.items() for l in ls if not l["essay_url"].startswith("https://barryesharp.substack.com/p/")]
+    # 2 Nov 2026 (Barry go t2758u, "Then use and link the 18 strong matches"): also accept Barry's own X posts,
+    # https://x.com/BarryESharp/status/<digits> only (no other account, no other domain); the title must start "X post".
+    xre = re.compile(r"^https://x\.com/BarryESharp/status/\d+$")
+    errs += ["essay-links.csv: %s url is not a barryesharp.substack.com essay or a BarryESharp X post" % i for i, ls in links.items() for l in ls if not (l["essay_url"].startswith("https://barryesharp.substack.com/p/") or xre.match(l["essay_url"]))]
+    errs += ["essay-links.csv: %s X post link title must start 'X post'" % i for i, ls in links.items() for l in ls if xre.match(l["essay_url"]) and not l["essay_title"].startswith("X post")]
     return errs
 
 
@@ -122,10 +126,11 @@ BASIS = {"desk": "[Date basis: benchmark set by the register]",
 
 
 def date_basis(r):
-    d = (r.get("date_source") or "").strip()
-    if d.upper().startswith("DESK-SET"):
+    # 1 Nov 2026 (T-258, Barry go t2711u): count "DESK DATE" and "desk-fixed date" as desk-set, like the DESK origin tag.
+    up = (r.get("date_source") or "").strip().upper()
+    if up.startswith(("DESK-SET", "DESK DATE", "DESK-FIXED")):
         return "desk"
-    return "mixed" if "DESK-SET" in d.upper() else "outside"
+    return "mixed" if "DESK-SET" in up else "outside"
 
 
 def display_fixes(rows):

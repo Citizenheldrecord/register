@@ -313,3 +313,11 @@ POL-BASE,also_watched,"test and date set by the register, not printed in a gover
 ECA-DEF,also_watched,"test and date set by the register, not printed in a government document"
 CETA-RAT,also_watched,"test and date set by the register, not printed in a government document"
 EXCL-TABLE,also_watched,"test and date set by the register, not printed in a government document"
+SPT-CLINIC,also_watched,"test and date set by the register, not printed in a government document; see also CF-GAP and HCAP-LVL"
+EV-W2-DEC15,also_watched,test and date set by the register
+COW-STAY-DEC,also_watched,"test and date set by the register, not printed in a government document"
+CUMMINGS-TX,also_watched,owner is not a government
+RT-STATUS,recorded,"recorded as fact, no pass line"
+STBL-CRED-ONBOARD,recorded,"recorded as fact, no pass line"
+EU-ASSOC-JUNE27,government_promise,"passes entry test (owner, primary source link, date source)"
+EU-COLLEGE-MAR27,government_promise,"passes entry test (owner, primary source link, date source)"
