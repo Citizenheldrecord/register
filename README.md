@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 2 November 2026 from data/entries.csv, which holds 351 entries.
+Counted on 3 November 2026 from data/entries.csv, which holds 355 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 351 = 312 promises + 39 scoring entries.
+- **Entries:** 355 = 316 promises + 39 scoring entries.
 - **Scored PASS:** 14 (AB1, AB1-OFFICIAL, AI1, BoC, C39-CTTE, CUMMINGS-TX, DLV-C15, DLV-CTR, DLV-DEN, MTL-LABEL, Q10-NEXT, REG-PROV1, S338-SCOPE, TR-FTA-ROUND).
 - **Scored FAILED:** 23 (AB1-PL, AI2, BC-PARCELS, BC1, CFR-GAZ-30OCT, COAL-EXPORT-2030, DGR1, DLV-ONLTC, DSRB-CAP, FA3b, GX1b, MIL-QUESTURA-C20261022, MRNA-ESMO-FULL, MTL-CLOSE, PAUSE-RECIP, RBT2-FAA-OCT, S2, S7, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
 - **Recorded as fact, with no pass or fail line:** 3 (CL-BASE, HR5334, RU1).
-- **Open:** 263.
-- **Due:** 2 (N4, 2 days past its date; scoring pending, noted 31 October 2026: Recorded, not scored. No province or Parks Canada weather adjusted comparison of structure loss in treated versus untreated areas for the 2026 fire season was found (searched 31 Oct 2026: Public Safety Canada October 2026 wildfire update, Parks Canada fire pages, BC fuel treatment efficacy pages). The row is read again on 30 Nov 2026 and the record is entered then; LANE-1, 1 day past its date).
+- **Open:** 264.
+- **Due:** 5 (N4, 3 days past its date; scoring pending, noted 31 October 2026: Recorded, not scored. No province or Parks Canada weather adjusted comparison of structure loss in treated versus untreated areas for the 2026 fire season was found (searched 31 Oct 2026: Public Safety Canada October 2026 wildfire update, Parks Canada fire pages, BC fuel treatment efficacy pages). The row is read again on 30 Nov 2026 and the record is entered then; LANE-1, 2 days past its date; scoring pending, noted 3 November 2026: Scored PASS in the desk's weekly contrary-lane file dated 1 Nov 2026. The register entry is entered after the owner's review; the row is read again on 6 Nov 2026; FA3-MVH-DEC, 1 day past its date; LEVELS-1NOV, 1 day past its date; LEVELS2729, 1 day past its date).
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 312 promises = 14 PASS + 23 FAILED + 3 recorded + 263 open + 2 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 316 promises = 14 PASS + 23 FAILED + 3 recorded + 264 open + 5 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 351 entries):
+By section of the data file (every entry counted once; the four sections add up to all 355 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 220 | 28 | 192 | 9 | 19 | 0 | 164 | 0 | 0 | 0 | 0 |
+| Canadian files | 222 | 28 | 194 | 9 | 19 | 0 | 165 | 1 | 0 | 0 | 0 |
 | This desk's own commitments | 15 | 2 | 13 | 2 | 0 | 0 | 10 | 1 | 0 | 0 | 0 |
-| Outside files we watch | 84 | 5 | 79 | 1 | 4 | 0 | 68 | 0 | 4 | 2 | 0 |
-| Recorded facts and checkpoints | 32 | 4 | 28 | 2 | 0 | 3 | 21 | 1 | 0 | 0 | 1 |
-| Total | 351 | 39 | 312 | 14 | 23 | 3 | 263 | 2 | 4 | 2 | 1 |
+| Outside files we watch | 86 | 5 | 81 | 1 | 4 | 0 | 70 | 0 | 4 | 2 | 0 |
+| Recorded facts and checkpoints | 32 | 4 | 28 | 2 | 0 | 3 | 19 | 3 | 0 | 0 | 1 |
+| Total | 355 | 39 | 316 | 14 | 23 | 3 | 264 | 5 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -80,7 +80,7 @@ These rows are linked because they test related things. Each is scored on its ow
 
 The Register
 
-Entries as at 2 November 2026. Last change: 2 November 2026.
+Entries as at 3 November 2026. Last change: 3 November 2026.
 
 This page is a citizen-held register of Canadian public commitments. Each line is a test: what counts as a pass, the date it is scored and who answers for it. The main table holds files owned by Canadian governments, legislatures, courts, regulators, Crown bodies and companies, and foreign decisions a Canadian file depends on. My own commitments, and outside files I watch, sit in short sections of their own under the same rules.
 
@@ -128,7 +128,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-11-02b.csv (all 351 rows) is 79a6f7b0f0df008d803eae087ada327b7419cf1b8660f1c7d0498c9debe7345f
+Checksum for this update: SHA-256 of public-live-rows-2026-11-03.csv (all 355 rows) is 70c0437d71b98e85229f2e080998d81aa6d35c112fe779b37628ac074d6a1f7c
 
 Rule entries
 
@@ -578,7 +578,7 @@ Outside files we watch | ATIP-CIRNAC-149 | CIRNAC ATIP A-2026-00149 (EA2026_0195
 
 Outside files we watch | TSTS-SUBCOMP-2031 | PASS: Public Services and Procurement Canada or the operating department (National Research Council of Canada or Transportation Safety Board of Canada) publicly records substantial completion of the Transportation Safety and Technology Science (TSTS) facility on the NRC Montreal Road campus in Ottawa on or before 31 Dec 2031. FAILED: no such public record by 31 Dec 2031, or a published revised completion date after 2031. A contract option exercised is a stage, not delivery. Hype exhibit: Public Services and Procurement Canada, 30 Oct 2026, construction management services option with Bird Construction Group Ltd. "valued at approximately $404.9 million"; quick fact: "Substantial completion is expected in 2031." https://www.canada.ca/en/public-services-procurement/news/2026/10/government-of-canada-advances-major-infrastructure-project-to-strengthen-transportation-safety-science-and-security.html | Public Services and Procurement Canada (Minister of Government Transformation, Public Works and Procurement) | 31 Dec 2031 | [Date basis: set by an outside source] HOLDER DATE: "Substantial completion is expected in 2031." (PSPC news release, 30 Oct 2026; Barry go 30 Oct 2026 7:25 AM CST, t2449u). Primary: https://www.canada.ca/en/public-services-procurement/news/2026/10/government-of-canada-advances-major-infrastructure-project-to-strengthen-transportation-safety-science-and-security.html , read 30 Oct 2026 | LIVE | https://www.canada.ca/en/public-services-procurement/news/2026/10/government-of-canada-advances-major-infrastructure-project-to-strengthen-transportation-safety-science-and-security.html | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2031 | OPEN | OPEN | OPEN
 
-Also watched (156)
+Also watched (160)
 
 Rows the register watches that are not government promises: the owner is not a government, or the row lacks a primary source link. Same rules apply.
 
@@ -738,6 +738,10 @@ Canadian files | ECA-DEF | PASS: a published Canada-EU text defines ever closer 
 
 Canadian files | CETA-RAT | PASS: all 27 EU member states have completed CETA ratification by 31 Dec 2027, so the investment court provisions can enter into force; the outstanding count is recorded (nine at 29 Oct 2026). FAILED: any state outstanding | GAC (Canada); Council of the EU and the member states yet to ratify | 31 Dec 2027 | [Date basis: benchmark set by the register] desk-fixed date (Barry go 29 Oct 2026); no holder date | LIVE | https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/canada/eu-canada-agreements_en | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2027 | OPEN | OPEN | OPEN
 
+Canadian files | INDACT-BILL (follows INDACT-PATH) | PASS: by 31 Dec 2027 the Government of Canada tables, at first reading in either House (LEGISinfo), a bill that replaces the Indian Act's reserve-land provisions (not a registration-only bill such as S-2) and that (a) defines parcels and (b) provides interests registrable in a land title system that can be mortgaged to an arm's-length lender without ministerial consent. FAILED: no such bill by 31 Dec 2027; announcements, workplans or frameworks without bill text do not count, nor do unrelated First Nations Land Management Act land-code additions | Government of Canada (Crown-Indigenous Relations and Northern Affairs Canada; Indigenous Services Canada; Privy Council Office) | 31 Dec 2027 | [Date basis: benchmark set by the register] DESK-SET: six months after INDACT-PATH (30 Jun 2027). Baseline: PMO release 26 Oct 2026, Carney 'is directing ministers to work in partnership with First Nations to develop that path' https://www.pm.gc.ca/en/news/news-releases/2026/10/26/prime-minister-carney-convenes-first-nations-leadership-and-first | LIVE | https://www.pm.gc.ca/en/news/news-releases/2026/10/26/prime-minister-carney-convenes-first-nations-leadership-and-first | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2027 | OPEN | OPEN | OPEN
+
+Canadian files | ARCTIC-JOINT-1 | PASS: a Canada-EU signed instrument (agreement, MoU, or joint summit text with a project annex), published on an official site, names at least one joint Arctic project (ocean monitoring, critical raw materials or connectivity for remote communities) with a funding amount and a start or delivery date. FAILED: nothing by 31 Dec 2027, or only 'seeking opportunities' language without money and a date | GAC, DFO and NRCan (Canada); European Commission (DG MARE, DG GROW) and EEAS | 31 Dec 2027 | [Date basis: benchmark set by the register] DESK-SET: 31 Dec 2027 aligns with ECA-DEF and the 2027 EU-Canada Summit. Baseline: Canada-EU joint statement, Montreal, 30 Oct 2026: 'Canada and the EU will deepen their collaboration in the Arctic, including through engagement with Indigenous Peoples, and identify mutually beneficial areas of cooperation.' No project, money or date named https://www.pm.gc.ca/en/news/statements/2026/10/30/joint-statement-canada-and-european-union-building-together-alliance | LIVE | https://www.pm.gc.ca/en/news/statements/2026/10/30/joint-statement-canada-and-european-union-building-together-alliance | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2027 | OPEN | OPEN | OPEN
+
 Canadian files | GDPPC-POP | PASS: in BOTH calendar years 2026 and 2027 (two consecutive years = "sustained", desk definition), annual growth of real GDP per person (annual average of quarterly chained 2017 dollar GDP divided by annual average population) exceeds annual population growth. FAILED: either year not. Baseline 2025: real GDP per person +0.54 per cent vs population +1.31 per cent (not met). Interim record-only reading 2027-03-31 for 2026 (no score). Score on the first StatCan release with Q4 2027 GDP; hard stop 31 Mar 2028; no extension | Minister of Finance (owner named by the register, unverified) | 31 Mar 2028 | [Date basis: benchmark set by the register] DESK-SET: hard stop 31 Mar 2028, the first Statistics Canada release with Q4 2027 GDP; two consecutive years read as sustained (register definition) | LIVE | Statistics Canada tables 36-10-0104-01 and 17-10-0009-01 (no link given) | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2028 | OPEN | OPEN | OPEN
 
 Canadian files | N3 | PASS: the industrial carbon price is confined in statute. FAILED: not | ECCC / Parliament | 30 Jun 2028 | [Date basis: benchmark set by the register] DESK-SET: date set in the net zero essay of 4 Sep 2026: "By June 2028"; end of June used | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2028 | OPEN | OPEN | OPEN
@@ -855,6 +859,10 @@ Outside files we watch | BM1 | PASS: the UK government has one public register o
 Outside files we watch | QC-BIO-REG | PASS: by 31 Mar 2027 a draft or final regulation on biometric data in Quebec's national digital identity is published in the Gazette officielle du Quebec, stating permitted uses of facial data. FAILED: nothing published by that date | Quebec Minister of Cybersecurity and Digital Technology | 31 Mar 2027 | [Date basis: benchmark set by the register] DESK-SET: about one year after the consultation closed on 19 Apr 2026 | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
 
 Outside files we watch | POL-BASE | PASS: by 31 Mar 2027 the US Department of War/Defense or the White House publishes a signed or announced agreement naming the location of a permanent US base in Poland. FAILED: none by 31 Mar 2027 | US DoD and Polish MON | 31 Mar 2027 | [Date basis: benchmark set by the register] DESK-SET: 31 Mar 2027 set by the desk 30 Oct 2026 (Barry go t2585u); no holder date | LIVE | defense.gov or whitehouse.gov, and gov.pl/web/obrona-narodowa https://www.gov.pl/web/obrona-narodowa/przygotowania-do-wzmocnienia-obecnosci-wojsk-usa-w-polsce | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
+
+Outside files we watch | MOFCOM-48-FINAL | PASS: by 31 Mar 2027 MOFCOM and MOST publish a revised Catalogue of Technologies Prohibited or Restricted from Export, in force, that includes large-model and agent items. FAILED: still draft only, or withdrawn, on 31 Mar 2027 | MOFCOM / MOST | 31 Mar 2027 | [Date basis: benchmark set by the register] DESK-SET: MOFCOM-MOST Announcement No. 48 of 2026 (16 Oct 2026) proposes adding 23 AI technologies, including large models and agents, with comments open 16 Oct to 15 Nov 2026 https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_0a31a3c9ac404f7a9b0e917ce3412997.html | LIVE | https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_0a31a3c9ac404f7a9b0e917ce3412997.html | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
+
+Outside files we watch | COINS-FINAL | PASS: by 31 Mar 2027 a final rule implementing the COINS Act outbound investment program is published in the Federal Register with the prohibition on super intelligence (SI) systems. FAILED: not final on 31 Mar 2027, or the prohibition is dropped | U.S. Department of the Treasury (Office of Investment Security) | 31 Mar 2027 | [Date basis: benchmark set by the register] DESK-SET: Treasury proposed rule, 91 FR 67396, 26 Oct 2026, comments due 7 Dec 2026: 'the Proposed Rule lists the development of SI systems within the definition of prohibited technology' https://www.federalregister.gov/documents/2026/10/26/2026-21786/outbound-investment-security-program-regulations | LIVE | https://www.federalregister.gov/documents/2026/10/26/2026-21786/outbound-investment-security-program-regulations | OPEN | OPEN | OPEN | OPEN until scoring date 31 Mar 2027 | OPEN | OPEN | OPEN
 
 Outside files we watch | BND-TAR-90 | PASS (for the boundary condition): within 90 days after the US tariff line scored by TAR1 takes effect on 1 Jan 2027, at least one of C1-C20261025, C39-ASSENT (or a dated successor), or an FA3 successor row records PASS on the register, with URL. FAILED: none does; the 'cost becomes legible' boundary is not supported on this case. NO SCORE if TAR1 records that the tariff line did not take effect | Desk (Barry Sharp) | 1 Apr 2027 | [Date basis: benchmark set by the register] DESK-SET: 90 days after 1 Jan 2027 (TAR1 date) | LIVE | Cites: essay of 14 Oct 2026 'what we do to ourselves' (boundary condition); TAR1; C1-C20261025; C39-ASSENT | OPEN | OPEN | OPEN | OPEN until scoring date 1 Apr 2027 | OPEN | OPEN | OPEN
 
@@ -984,19 +992,19 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 <!-- AUDIT -->
 
-Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 131 rows are sourced, 0 secondary-sourced, 41 have their promise sourced with the outcome pending, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
+Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 131 rows are sourced, 0 secondary-sourced, 45 have their promise sourced with the outcome pending, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
 
 ## How to check this update
 
-Build stamp: update 2026-11-02b, counted as at 2 November 2026, from data/entries.csv, 351 rows, SHA-256 005155b2a78ac49831d4a2cdbaa2ebbd31f69475f518bb4fbe0c0ae990d5673e. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-11-03, counted as at 3 November 2026, from data/entries.csv, 355 rows, SHA-256 97f97df9fe847c1608438e9ddbdb5b7f437a06cb7de3de18e48d8f7c478eed09. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-02b.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-02b.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-03.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-03.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
 Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.
 
-How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-02b, of 351 entries, 199 (about 57 per cent) carry a benchmark date set by the register, 2 an outside date with a scoring window set by the register, and 150 (about 43 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
+How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-03, of 355 entries, 203 (about 57 per cent) carry a benchmark date set by the register, 2 an outside date with a scoring window set by the register, and 150 (about 42 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
 
 How the register scores treaties (dated 30 October 2026). A treaty Canada signs is not Canadian law. Canadian courts enforce treaty rights only where the treaty has been implemented by legislation (Francis v. The Queen, [1956] SCR 618), and a treaty has no domestic, internal consequences unless they arise from implementing legislation (Capital Cities Communications v. CRTC, [1978] 2 SCR 141). Where a treaty touches provincial subjects, the provinces must legislate: as the Privy Council put it in 1937, "as a treaty deals with a particular class of subjects so will the legislative power of performing it be ascertained."
 
@@ -1067,7 +1075,7 @@ PAUSE-RECIP | 31 Oct 2026 | 31 Oct 2026 | PASS: a reciprocal Russia Ukraine ener
 AI2 | 31 Oct 2026 | 31 Oct 2026 | PASS: OpenAI publishes a written access charter. FAILED: not | political choice. Actor: OpenAI. Evidence: https://openai.com/index/priorities-principles-third-party-assessments/ | n/a: not a spending test. Entry AI2-SCORED-20261031 | a general principles page only (22 Sep 2026), naming no assessor.
 MIL-QUESTURA-C20261022 | 31 Oct 2026 | 31 Oct 2026 | Questura di Milano breakdown of the about 50 people detained (fermati) on 17 Oct (Italia in Piazza). PASS: by 31 Oct 2026 the Questura di Milano or the Ministero dell'Interno publishes a breakdown of those detained on 17 Oct by age (minor/adult) AND citizenship (Italian/foreign), with arrest vs denuncia status. Unattributed press counts do not count. FAILED: dated entry within 30 days; no extension | political choice. Actor: Questura di Milano; Ministero dell'Interno. Evidence: https://questure.poliziadistato.it/it/Milano | n/a: not a spending test. Entry MIL-QUESTURA-C20261022-SCORED-20261031 | none published; press weekend figures only.
 
-Entries as at 2 November 2026: 22.
+Entries as at 3 November 2026: 22.
 
 <!-- /FAILLOG -->
 

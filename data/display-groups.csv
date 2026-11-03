@@ -321,3 +321,7 @@ RT-STATUS,recorded,"recorded as fact, no pass line"
 STBL-CRED-ONBOARD,recorded,"recorded as fact, no pass line"
 EU-ASSOC-JUNE27,government_promise,"passes entry test (owner, primary source link, date source)"
 EU-COLLEGE-MAR27,government_promise,"passes entry test (owner, primary source link, date source)"
+INDACT-BILL,also_watched,"test and date set by the register, not printed in a government document; follows INDACT-PATH"
+ARCTIC-JOINT-1,also_watched,"test and date set by the register, not printed in a government document; baseline Canada-EU joint statement 30 Oct 2026"
+MOFCOM-48-FINAL,also_watched,prediction set by the register; owner is not a Canadian government
+COINS-FINAL,also_watched,prediction set by the register; owner is not a Canadian government
