@@ -327,3 +327,5 @@ MOFCOM-48-FINAL,also_watched,prediction set by the register; owner is not a Cana
 COINS-FINAL,also_watched,prediction set by the register; owner is not a Canadian government
 COHERE-JOBS-2030,also_watched,"test and date set by the register, not printed in a government document; baseline PMO release 29 Oct 2026 (Cohere investment)"
 EUROHPC-CA-TERMS,also_watched,"test and date set by the register, not printed in a government document; baseline EuroHPC JU statement 30 Oct 2026"
+NSS-DEF-5PCT-2035,government_promise,passes entry test
+NSS-UPDATE-4Y,government_promise,passes entry test
