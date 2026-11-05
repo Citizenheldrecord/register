@@ -43,6 +43,11 @@ step "approved items shipped (/workspace/sovereign-realism/tools/check_approved_
 ACS=${APPROVED_CHECK:-/workspace/sovereign-realism/tools/check_approved_shipped.py}
 if [ -f "$ACS" ]; then python3 "$ACS" --build-dir "$ACSDIR" || { echo "APPROVED-NOT-SHIPPED CHECK FAILED: an approved register item is still OPEN"; nogo=1; }
 else echo "APPROVED-NOT-SHIPPED CHECK MISSING: $ACS not found; push blocked until it exists"; nogo=1; fi
+step "prevention gate BLOCKING (Barry go t2909u, 4 Nov 2026; default PREVENTION_BLOCK=1; new/changed ids block, existing failures listed KNOWN and counted nightly by tools/integrity_check.py s15)"
+export PREVENTION_BLOCK=${PREVENTION_BLOCK:-1}
+python3 scripts/prevention/run_all.py > /tmp/pf-prevention.out 2>&1 || { echo "PREVENTION SELFTEST FAILED: see /tmp/pf-prevention.out"; nogo=1; }
+grep -E "SELFTEST FAIL" /tmp/pf-prevention.out && nogo=1
+python3 scripts/prevention/gate.py --preflight || { echo "PREVENTION GATE FAILED: fix the data (never the check)"; nogo=1; }
 step "upload list (compared with $BASE, the files last recorded as live)"
 declare -A live; while read -r h f; do live[$f]=$h; done < $BASE
 add=(); rep=(); while read -r f; do h=$(sha256sum "$f" | cut -d' ' -f1)

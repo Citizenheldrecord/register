@@ -48,6 +48,12 @@ def append(header, rows, new, path, dry):
     errs = rc.validate(header, rows + [new])
     if errs:
         die("\n".join(errs))
+    # Prevention gate, blocking by default (Barry go t2909u, 4 Nov 2026). Runs before any write.
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from prevention.gate import gate_new_row
+    pf = gate_new_row(new)
+    if pf:
+        die("prevention gate (t2909u): fix the data first, never the check:\n" + "\n".join(pf))
     if dry:
         print(he.canonical(new)); print("fingerprint", he.fingerprint(new)); return
     text = open(path, encoding="utf-8", newline="").read()

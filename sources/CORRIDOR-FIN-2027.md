@@ -16,7 +16,7 @@ Test definition: drafts/POLAND-TUSK-CARNEY-EU-BRIEF-2026-10-30.md section 5; Bar
 - Supports: full
 - Read date: 2026-10-30
 - Read by: desk (executor), ~7:55 PM CST
-- Wayback snapshot URL: not checked
+- Wayback snapshot URL: https://web.archive.org/web/20261104222109/https://www.pm.gc.ca/en/news/statements/2026/10/30/joint-statement-canada-and-european-union-building-together-alliance (WAS: not checked; saved 4 Nov 2026 16:46 CST; filled in place 4 Nov 2026 CST, Barry go t2909u; desk audit)
 - Para 19 (same page, read same time): "Canada and the European Investment Bank have concluded negotiations of an agreement that will facilitate European investment in critical Canadian resources, in particular, critical raw materials." No project is named.
 ## Desk action
 - Scored once on its scoring date (SCORE-CORRIDOR-FIN-2027, to book with the upload). Outcome evidence cannot exist before then.

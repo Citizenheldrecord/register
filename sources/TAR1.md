@@ -27,7 +27,7 @@ Claim tested (row wording): Trump said on 24 Aug 2026 tariffs rise to 50 per cen
 - Supports: full for $27.6B
 - Read date: 2026-10-27
 - Read by: desk (executor)
-- Wayback snapshot URL: not checked
+- Wayback snapshot URL: https://web.archive.org/web/20261105003629/https://www.canada.ca/en/department-finance/news/2026/08/canada-announces-targeted-countermeasures-and-substantive-support-for-workers-and-businesses-in-response-to-us-tariffs.html (WAS: not checked; saved 4 Nov 2026 18:36 CST; filled in place 4 Nov 2026 CST, Barry go t2909u; desk audit)
 - Notes: 
 
 ## Leads (not sources)

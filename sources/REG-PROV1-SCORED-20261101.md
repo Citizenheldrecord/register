@@ -15,7 +15,7 @@ Claim tested (row wording, verbatim): PASS: by 1 Nov 2026 the register README an
 - Supports: full
 - Read date: 2026-11-01
 - Read by: desk, 1 Nov 2026 21:16 CST (dispatcher 21:05 run)
-- Wayback snapshot URL: not checked
+- Wayback snapshot URL: https://web.archive.org/web/20261104225450/https://github.com/citizenheldrecord/register/blob/main/README.md (WAS: not checked; saved 4 Nov 2026 16:55 CST; filled in place 4 Nov 2026 CST, Barry go t2909u; desk audit)
 - Notes: Same rule in RULES-2026-10-26c.md line 3 ("R-2026-10-26-A. Provenance: posts and press are leads only"). Leg 2 (six rows re-based or flagged) per the live CORRECTIONS file read 1 Nov 2026 21:12 CST, as cited in the row's measure cell.
 
 ## Leads (not sources)

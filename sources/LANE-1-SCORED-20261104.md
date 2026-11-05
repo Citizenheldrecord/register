@@ -15,7 +15,8 @@ Claim tested (row wording, verbatim): PASS: the desk's contrary lane runs weekly
 - Supports: full
 - Read date: 2026-11-04 (15:24 CST)
 - Read by: desk (executor)
-- Wayback snapshot URL: none possible at entry (the desk file is not on the public web); save this record's public URL to web.archive.org after the next register upload
+- Wayback snapshot URL: https://web.archive.org/web/20261105002502/https://github.com/citizenheldrecord/register/blob/main/sources/LANE-1-SCORED-20261104.md
+- WAS: none possible at entry (the desk file is not on the public web); save this record's public URL to web.archive.org after the next register upload
 - Notes: the test counts "proposed" as a disposition, and the file does too. Scored on Barry go t2877u.
 
 ## Leads (not sources)
@@ -27,3 +28,7 @@ Wayback save of this record's public URL after upload.
 ## Correction (audit 4 Nov 2026, Barry go pt2909u; append only)
 - Public copy https://github.com/citizenheldrecord/register/blob/main/sources/LANE-1-SCORED-20261104.md returned HTTP 404 on 4 Nov 2026. The desk file LANE-2026-11-01.md (desk repo) carries the quoted line: "Self-score against the LANE-1 test as written: PASS (no missed week, no hit left without disposition after 7 days)."
 - Publish with the early upload under Barry t2910u (was booked as REGISTER-UPLOAD-2026-11-05-PL1-README); then save to Wayback with tools/archive_source.sh and append the snapshot URL (job WAYBACK-LANE-1-SOURCES-2026-11-06, or same-run if live). Until then the PASS rests on a desk file not yet public. No status change.
+
+## Wayback (early upload 2026-11-04a, Barry t2910u; WAYBACK-LANE-1-SOURCES-2026-11-06 closed early)
+- Snapshot saved 2026-11-04 18:28 CST: https://web.archive.org/web/20261105002502/https://github.com/citizenheldrecord/register/blob/main/sources/LANE-1-SCORED-20261104.md
+- Public copy HTTP 200 with PASS line; gate for WAYBACK-LANE-1 met same run.
