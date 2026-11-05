@@ -26,3 +26,5 @@ Find and read a primary.
 - Covers the row's measure: annual LFS employment, Canada, by industry, with "Manufacturing" and total employment members (the table the row's 2025 baseline cites). The 8.78 per cent share is desk arithmetic from it.
 - Effect: none on the test. Outcome (2027 annual average) pending; scored on 31 Jan 2028.
 - Read date: 2026-10-31 (HTTP 200 from the box). From REGISTER-EVIDENCE-GAP-AUDIT-2026-10-31 (B).
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225900/https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410002301 (saved 16:59 CST for https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410002301)

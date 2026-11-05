@@ -23,3 +23,10 @@ Claim tested (row wording, verbatim): PASS: a DND primary shows Regular Force st
 
 ## Desk action
 Re-score on due date.
+
+## Source correction (audit 4 Nov 2026, Barry go pt2906u; append only)
+- The cited URL returned 404 on 4 Nov 2026 and has no Wayback copy: DND moved the State of the CAF page under military-personnel-command/.
+- New primary URL (same text): https://www.canada.ca/en/department-national-defence/corporate/organizational-structure/military-personnel-command/state-of-the-canadian-armed-forces.html
+- Read 4 Nov 2026 ~16:51 CST through the public reader (S338-SCOPE read directly 17:07 CST). The supporting line is present verbatim: "rebuilding the military to an authorized strength of 71,500 Regular Force and 30,000 Primary Reserve Force members prior to March 31, 2032." (the live page puts a footnote marker after "30,000")
+- Wayback snapshot URL: https://web.archive.org/web/20261104225417/https://www.canada.ca/en/department-national-defence/corporate/organizational-structure/military-personnel-command/state-of-the-canadian-armed-forces.html
+- The earlier Source lines above are kept as history.

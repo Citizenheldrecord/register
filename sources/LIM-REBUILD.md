@@ -22,3 +22,9 @@ Claim tested (row wording): Limoges Hôtel de Ville reconstruction plan with dat
 
 ## Desk action
 Keep OPEN; re-score on 17 Apr 2027.
+
+## Source correction (audit 4 Nov 2026, Barry go pt2909u; append only)
+- Live primary https://www.limoges.fr/actualites/reconstruction-de-lhotel-de-ville-letat-sengage-fortement-pour-le-territoire-limougeaud returned HTTP 403 on 4 Nov 2026 ~18:09 CST.
+- archive.today / archive.ph / archive.is submit and newest probes this run: TLS error on archive.today, HTTP 429 on archive.ph, HTTP 404 on archive.is/newest. No confirmed archive.today snapshot URL was obtained; none invented.
+- Wayback save returned only an unconfirmed /web/2/ location header (not treated as a confirmed snapshot).
+- Earlier Source lines above are kept as history. Re-try archive.today at the next desk pass; do not score from an unreadable primary.

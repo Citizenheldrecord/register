@@ -37,3 +37,5 @@ Claim tested (row wording, verbatim): PASS: a primary federal document published
 
 ## Desk action
 Re-score on due date.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225532/https://www.pm.gc.ca/en/news/speeches/2026/10/26/prime-minister-carney-delivers-opening-remarks-joint-first-ministers (saved 16:55 CST for https://www.pm.gc.ca/en/news/speeches/2026/10/26/prime-minister-carney-delivers-opening-remarks-joint-first-ministers)

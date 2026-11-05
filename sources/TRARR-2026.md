@@ -16,3 +16,12 @@ Reason class (batch 4, 2026-10-27): no primary exists yet
 
 ## Desk action
 Find the holder primary; re-score on due date.
+
+## Source correction (audit 4 Nov 2026, Barry go pt2909u; append only)
+- Status was UNSOURCED. Primary found on the same IRCC Levels Plan supplementary page as PR380-2026.
+- Primary URL: https://www.canada.ca/en/immigration-refugees-citizenship/corporate/immigration-system/levels/supplementary-immigration-levels-2026-2028.html
+- Exact supporting line (verbatim, straight quotes): "Targets for new temporary resident arrivals are set at 385,000 in 2026". Table prints "385,000 (375,000 - 395,000)".
+- Two figures both shown: the test passes "at or below 385,000"; the plan prints a range of 375,000 to 395,000. The register does not choose between them.
+- Read 4 Nov 2026 ~16:50 CST (audit).
+- Wayback snapshot URL: https://web.archive.org/web/20261104225036/https://www.canada.ca/en/immigration-refugees-citizenship/corporate/immigration-system/levels/supplementary-immigration-levels-2026-2028.html (saved 16:50 CST).
+- The earlier "none found" lines above are kept as history.

@@ -16,3 +16,5 @@ Reason class (batch 4, 2026-10-27): no primary exists yet
 
 ## Desk action
 Find the holder primary; re-score on due date.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225824/https://gazette.gc.ca/rp-pr/p2/2026/index-eng.html (saved 16:58 CST for https://gazette.gc.ca/rp-pr/p2/2026/index-eng.html)

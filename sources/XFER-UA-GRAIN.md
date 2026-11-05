@@ -22,3 +22,5 @@ Claim tested (row wording): GAC IATI record CA-3-P011836001, planned end 30 Sep 
 
 ## Desk action
 None. Carried from reports/PRIMARY-FILL-2026-10-27.md; every URL re-opened and the line found on 2026-10-27.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225728/https://d-portal.org/dquery?sql=select%20aid,status_code,title%20from%20act%20where%20aid=%27CA-3-P011836001%27 (saved 16:57 CST for https://d-portal.org/dquery?sql=select%20aid,status_code,title%20from%20act%20where%20aid='CA-3-P011836001')

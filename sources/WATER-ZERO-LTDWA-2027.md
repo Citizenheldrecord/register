@@ -25,3 +25,5 @@ Test definition: desk publication https://github.com/citizenheldrecord/register/
 
 ## Desk action
 Batch 4 (2026-10-27): premise read against the holder primary; outcome pending. Re-score on due date.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225508/https://isc.gc.ca/eng/1614387410146/1614387435325 (saved 16:55 CST for https://isc.gc.ca/eng/1614387410146/1614387435325)

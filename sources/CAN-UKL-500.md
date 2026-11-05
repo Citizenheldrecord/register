@@ -33,3 +33,12 @@ Test definition: SCORING_CALENDAR.md, Barry go 30 Oct 2026 1:15 PM CST (t2492u, 
 ## Desk action
 - Scored once on 31 Mar 2027 (SCORE-CAN-UKL-500).
 - 30 Oct 2026 ~7:10 PM CST, desk: Source 1 relabelled "full (secondary)" with Outlet Reuters (Devdiscourse syndication is not a primary); Primary search line added per RULE A; row hype exhibit labelled "as reported by Reuters". Promise level rests on the RULE A secondary block; upgrade to a primary when Finance or GAC publishes. Claim unchanged.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104224716/https://www.devdiscourse.com/article/international/3999761-canada-to-provide-500-million-to-eus-ukraine-support-loan (saved 16:53 CST for https://www.devdiscourse.com/article/international/3999761-canada-to-provide-500-million-to-eus-ukraine-support-loan)
+
+## Correction 2026-11-04 (audit, Barry go pt2909u; append only)
+- Side by side, read 4 Nov 2026 16:46 CST, HTTP 200:
+  - Devdiscourse (Reuters relay): https://www.devdiscourse.com/article/international/3999761-canada-to-provide-500-million-to-eus-ukraine-support-loan (Wayback https://web.archive.org/web/20261104224716/https://www.devdiscourse.com/article/international/3999761-canada-to-provide-500-million-to-eus-ukraine-support-loan): "Canada will provide EUR 500 million to the European Union's Ukraine support loan..." Figure: EUR 500 million (Canada's share).
+  - Joint statement, pm.gc.ca, 30 Oct 2026: "We welcome Canada's intention to join the Ukraine Support Loan." Figure: none.
+  - Backgrounder, pm.gc.ca, 30 Oct 2026: https://www.pm.gc.ca/en/news/backgrounders/2026/10/30/canada-and-european-union-announce-new-alliance-future-create-greater (Wayback https://web.archive.org/web/20261104222052/https://www.pm.gc.ca/en/news/backgrounders/2026/10/30/canada-and-european-union-announce-new-alliance-future-create-greater): "Canada intends to participate in the EU's EUR 90 billion Ukraine Support Loan..." Figure: EUR 90 billion (whole EU loan, not Canada's share).
+- Under t2642u press is a lead only. A Government of Canada intention to join is printed; an amount is not. Display group moves to also_watched. Test unchanged (still requires a Government of Canada publication stating the amount).

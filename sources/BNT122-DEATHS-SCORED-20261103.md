@@ -23,3 +23,5 @@ Claim tested (row wording, verbatim): PASS: BioNTech's third-quarter 2026 report
 
 ## Desk action
 None. Scored FAILED on Barry's go 3 Nov 2026 10:40 CST (t2826u).
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225545/https://www.biontech.com/us/en/home/mediaroom/news/press-releases/2026/11/BioNTech-Announces-Third-Quarter-2026-Financial-Results-and-Corporate-Update.html (saved 16:56 CST for https://www.biontech.com/us/en/home/mediaroom/news/press-releases/2026/11/BioNTech-Announces-Third-Quarter-2026-Financial-Results-and-Corporate-Update.html)

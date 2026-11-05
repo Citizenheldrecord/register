@@ -19,3 +19,13 @@ Reason class (batch 4, 2026-10-27): not found
 
 ## Desk action
 Find and read a primary.
+
+## Source correction (audit 4 Nov 2026, Barry go pt2909u; append only)
+- Status was UNSOURCED. Premise primary found for the Op UNIFIER end date.
+- Primary URL: https://www.canada.ca/en/department-national-defence/services/operations/military-operations/current-operations/operation-unifier.html
+- Exact supporting line (verbatim, straight quotes): "Op UNIFIER has been extended by the Government of Canada through 2029."
+- Also DND release 24 Feb 2026: https://www.canada.ca/en/department-national-defence/news/2026/02/government-of-canada-reaffirms-unwavering-support-for-ukraine-four-years-into-russias-full-scale-invasion.html : "announced the renewal of Operation UNIFIER for an additional three years to 2029".
+- Note: the PASS condition (one page stating outcome, date, owner and falsifier) is the register's own bar; no government promised such a page. Display group moves to also_watched with the UNIFIER date as premise.
+- Read 4 Nov 2026 ~16:50 CST (audit).
+- Wayback snapshot URL: https://web.archive.org/web/20261104225205/https://www.canada.ca/en/department-national-defence/services/operations/military-operations/current-operations/operation-unifier.html (saved 16:52 CST).
+- The earlier "none found" lines above are kept as history.

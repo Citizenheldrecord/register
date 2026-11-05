@@ -25,3 +25,5 @@ Test definition: desk publication https://github.com/citizenheldrecord/register/
 
 ## Desk action
 re-score on due date.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225245/https://www.scc-csc.ca/cases-dossiers/search-recherche/42261/ (saved 16:53 CST for https://www.scc-csc.ca/case-dossier/info/dock-regi-eng.aspx?cas=42261)

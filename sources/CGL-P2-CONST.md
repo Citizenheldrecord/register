@@ -23,3 +23,5 @@ Claim tested (row wording, verbatim): PASS: by 31 Mar 2027 TC Energy, Coastal Ga
 
 ## Desk action
 Re-score on due date.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225312/https://www.tcenergy.com/announcements/2026/2026-09-29-coastal-gaslink-phase-2-to-proceed-following-lng-canada-final-investment-decision/ (saved 16:53 CST for https://www.tcenergy.com/announcements/2026/2026-09-29-coastal-gaslink-phase-2-to-proceed-following-lng-canada-final-investment-decision/)

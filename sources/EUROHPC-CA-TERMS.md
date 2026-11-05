@@ -23,3 +23,5 @@ Claim tested (row wording, verbatim): PASS: Canada's EuroHPC JU participation ag
 
 ## Desk action
 Score on the scoring date.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225514/https://www.eurohpc-ju.europa.eu/canada-becomes-39th-participating-state-eurohpc-joint-undertaking-2026-10-30_en (saved 16:55 CST for https://www.eurohpc-ju.europa.eu/canada-becomes-39th-participating-state-eurohpc-joint-undertaking-2026-10-30_en)

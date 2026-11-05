@@ -23,3 +23,5 @@ Claim tested (row wording, verbatim): PASS: on 27 Jun 2030 the consolidated Buil
 
 ## Desk action
 Re-score on due date.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225631/https://laws-lois.justice.gc.ca/eng/acts/B-9.89/page-1.html (saved 16:56 CST for https://laws-lois.justice.gc.ca/eng/acts/B-9.89/page-1.html)

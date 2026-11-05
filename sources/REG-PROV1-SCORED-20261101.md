@@ -23,3 +23,9 @@ Claim tested (row wording, verbatim): PASS: by 1 Nov 2026 the register README an
 
 ## Desk action
 None.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225450/https://github.com/citizenheldrecord/register/blob/main/README.md (saved 16:55 CST for https://github.com/citizenheldrecord/register/blob/main/README.md)
+
+## Correction 2026-11-04 (audit, Barry go pt2909u; append only)
+- Confirmation: this is a desk self-test whose holder is the desk, so the desk README is the holder's own primary, not a secondary. Read again 4 Nov 2026 16:48 CST, HTTP 200: "Provenance (rule R-2026-10-26-A, 26 October 2026). Posts and press reports are leads only. No row is scored on them alone". MATCH.
+- Wayback snapshot URL already appended under pt2906u: https://web.archive.org/web/20261104225450/https://github.com/citizenheldrecord/register/blob/main/README.md

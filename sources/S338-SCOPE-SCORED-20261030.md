@@ -35,3 +35,5 @@ Claim tested (row wording, verbatim): PASS (recorded as fact): the 23 Oct 2026 S
 
 ## Desk action
 None.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104230605/https://content.govdelivery.com/accounts/USDHSCBP/bulletins/430e931 (saved 17:06 CST for https://content.govdelivery.com/accounts/USDHSCBP/bulletins/430e931)

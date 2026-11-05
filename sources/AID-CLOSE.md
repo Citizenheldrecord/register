@@ -32,3 +32,5 @@ Reason class (batch 4, 2026-10-27): not found Batch 5b (2026-10-27): partial pri
 
 ## Desk action
 Find and read a primary.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225920/https://laws-lois.justice.gc.ca/eng/acts/O-2.8/FullText.html (saved 16:59 CST for https://laws-lois.justice.gc.ca/eng/acts/O-2.8/FullText.html)

@@ -26,3 +26,10 @@ Re-score on due date.
 
 ## Result line 2026-10-31
 Scored PASS (recorded as fact) in S338-SCOPE-SCORED-20261030. Primaries: https://content.govdelivery.com/accounts/USDHSCBP/bulletins/430e931 ; https://www.federalregister.gov/documents/2026/10/30/2026-22292/further-modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset
+
+## Source correction (audit 4 Nov 2026, Barry go pt2906u; append only)
+- The cited URL returned 404 on 4 Nov 2026 and has no Wayback copy: the White House page moved (new title "Further Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed to Offset Canadian Discrimination ..."); the Federal Register text (Proclamation, FR Doc 2026-22292) is used because federalregister.gov refuses the archive.
+- New primary URL (same text): https://www.govinfo.gov/content/pkg/FR-2026-10-30/html/2026-22292.htm
+- Read 4 Nov 2026 ~16:51 CST through the public reader (S338-SCOPE read directly 17:07 CST). The supporting line is present verbatim: "on or after 12:01 a.m. eastern time on October 30, 2026"
+- Wayback snapshot URL: https://web.archive.org/web/20261104230732/https://www.govinfo.gov/content/pkg/FR-2026-10-30/html/2026-22292.htm
+- The earlier Source lines above are kept as history.

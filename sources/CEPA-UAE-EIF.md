@@ -22,3 +22,5 @@ Claim tested (row wording): Canada-UAE CEPA signed 27 Oct 2026, expected to ente
 
 ## Desk action
 - 27 Oct 2026: row approved by Barry go 27 Oct 2026, 6:21 PM CST (msg pt2200u). Queued for the build after 26g with DSRB-SIGN-2026, OE-Q1561 and FIR4.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104155307/https://www.pm.gc.ca/en/news/news-releases/2026/10/27/prime-minister-carney-launches-new-strategic-partnership-uae (saved 16:57 CST for https://www.pm.gc.ca/en/news/news-releases/2026/10/27/prime-minister-carney-launches-new-strategic-partnership-uae)

@@ -22,3 +22,5 @@ Claim tested (row wording): Supreme Court Act s.58, 60 days from 2026 FCA 174 (1
 
 ## Desk action
 None. Carried from reports/PRIMARY-FILL-2026-10-27.md; every URL re-opened and the line found on 2026-10-27.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225602/https://laws-lois.justice.gc.ca/eng/acts/s-26/section-58.html (saved 16:56 CST for https://laws-lois.justice.gc.ca/eng/acts/s-26/section-58.html)

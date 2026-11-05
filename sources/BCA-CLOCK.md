@@ -20,3 +20,5 @@ Test definition: SCORING_CALENDAR.md, Barry go 29 Oct 2026 5:10 AM CST (card 3),
 
 ## Desk action
 - Scored once on 1 Jan 2027 (SCORE-BCA-CLOCK).
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225543/https://www.pm.gc.ca/en/news/news-releases/2026/10/01/prime-minister-carney-lists-west-coast-oil-pipeline-now-known-pacific (saved 16:55 CST for https://www.pm.gc.ca/en/news/news-releases/2026/10/01/prime-minister-carney-lists-west-coast-oil-pipeline-now-known-pacific)

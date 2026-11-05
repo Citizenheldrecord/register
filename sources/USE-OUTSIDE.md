@@ -23,3 +23,5 @@ Claim tested (row wording, verbatim): PASS: by 30 Jun 2027, at least one named b
 
 ## Desk action
 Re-score on due date.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225726/https://github.com/citizenheldrecord/register/blob/main/public-live-rows-2026-10-28b.csv (saved 16:57 CST for https://github.com/citizenheldrecord/register/blob/main/public-live-rows-2026-10-28b.csv)

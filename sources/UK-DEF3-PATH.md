@@ -35,3 +35,5 @@ Claim tested (row wording): by 31 Dec 2027 HM Treasury publishes a year-by-year 
 
 ## Desk action
 - 28 Oct 2026: row approved by Barry go 28 Oct 2026 1:08 PM CST (t2284u). Outcome filled once at 31 Dec 2027.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225830/https://assets.publishing.service.gov.uk/media/6ae20b9039d29f3f9b9b3f55/E03668986_HMT_Budget_2026_TEXT_PRINT__1_.pdf (saved 16:58 CST for https://assets.publishing.service.gov.uk/media/6ae20b9039d29f3f9b9b3f55/E03668986_HMT_Budget_2026_TEXT_PRINT__1_.pdf)

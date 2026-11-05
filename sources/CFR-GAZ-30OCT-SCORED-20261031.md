@@ -35,3 +35,5 @@ Claim tested (row wording, verbatim): PASS: the proposed Clean Fuel Regulations 
 
 ## Desk action
 None.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225331/https://gazette.gc.ca/rp-pr/p1/2026/2026-10-31/html/reg1-eng.html (saved 16:53 CST for https://gazette.gc.ca/rp-pr/p1/2026/2026-10-31/html/reg1-eng.html)

@@ -51,3 +51,5 @@ Claim tested (row wording, verbatim): PASS: by Merck's third-quarter 2026 earnin
 
 ## Desk action
 None. Scored FAILED on Barry's go 29 Oct 2026 ~10:07 AM CST (card t2362s12245).
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225234/https://www.merck.com/news/merck-co-inc-rahway-n-j-usa-announces-third-quarter-2026-financial-results-highlights-multiple-milestones-advancing-broad-diverse-pipeline/ (saved 16:52 CST for https://www.merck.com/news/merck-co-inc-rahway-n-j-usa-announces-third-quarter-2026-financial-results-highlights-multiple-milestones-advancing-broad-diverse-pipeline/)

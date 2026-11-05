@@ -22,3 +22,5 @@ Claim tested (row wording): UK manufacturing share 7.68 per cent baseline (date 
 
 ## Desk action
 None. Carried from reports/PRIMARY-FILL-2026-10-27.md; every URL re-opened and the line found on 2026-10-27.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225434/https://api.worldbank.org/v2/country/GBR/indicator/NV.IND.MANF.ZS?format=json (saved 16:54 CST for https://api.worldbank.org/v2/country/GBR/indicator/NV.IND.MANF.ZS?format=json)

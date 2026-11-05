@@ -20,3 +20,5 @@ Test definition: SCORING_CALENDAR.md, Barry go 28 Oct 2026 7:47 PM CST (card t23
 
 ## Desk action
 - Scored once on 30 Jun 2027 (SCORE-UK-UKR-AUDIT).
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225949/https://www.gov.uk/government/publications/increase-of-uk-export-finance-cover-limit-for-ukraine (saved 17:07 CST for https://www.gov.uk/government/publications/increase-of-uk-export-finance-cover-limit-for-ukraine)

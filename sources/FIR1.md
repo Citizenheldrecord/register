@@ -22,3 +22,5 @@ Claim tested (row wording): 3 Oct registration deadline, more than 30 deadline s
 
 ## Desk action
 None. Carried from reports/PRIMARY-FILL-2026-10-27.md; every URL re-opened and the line found on 2026-10-27.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225713/https://www.noscommunes.ca/Content/Committee/451/PROC/Evidence/EV14257205/PROCEV40-E.PDF (saved 16:57 CST for https://www.noscommunes.ca/Content/Committee/451/PROC/Evidence/EV14257205/PROCEV40-E.PDF)

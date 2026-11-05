@@ -23,3 +23,5 @@ Claim tested (row wording, verbatim): PASS: the SCC 42200 docket shows factums f
 
 ## Desk action
 Re-score on due date.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225508/https://www.scc-csc.ca/cases-dossiers/search-recherche/42200/ (saved 16:55 CST for https://www.scc-csc.ca/case-dossier/info/dock-regi-eng.aspx?cas=42200)

@@ -23,3 +23,5 @@ Claim tested (row wording, verbatim): PASS: the desk's contrary lane runs weekly
 
 ## Desk action
 Re-score on due date.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225548/https://github.com/citizenheldrecord/register/blob/main/public-live-rows-2026-10-26g.csv (saved 16:55 CST for https://github.com/citizenheldrecord/register/blob/main/public-live-rows-2026-10-26g.csv)

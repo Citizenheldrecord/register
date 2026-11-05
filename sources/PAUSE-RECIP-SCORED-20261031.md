@@ -24,3 +24,5 @@ Claim tested (row wording, verbatim): PASS: a reciprocal Russia Ukraine energy s
 
 ## Desk action
 None.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104230458/https://www.dtek-dnem.com.ua/ua/news/masovani-ataki-na-energoob-yekti-dnipropetrovshchini-v-oblasti-diyut-ekstreni-vidklyuchennya (saved 17:05 CST for https://www.dtek-dnem.com.ua/ua/news/masovani-ataki-na-energoob-yekti-dnipropetrovshchini-v-oblasti-diyut-ekstreni-vidklyuchennya)

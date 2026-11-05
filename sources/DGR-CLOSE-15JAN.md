@@ -19,3 +19,5 @@ Test definition: SCORING_CALENDAR.md, Barry go 30 Oct 2026 6:05 PM CST (t2553u, 
 
 ## Desk action
 - Scored once on 15 Apr 2027 (SCORE-DGR-CLOSE-15JAN).
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225254/https://gazette.gc.ca/rp-pr/p1/2026/2026-10-31/html/notice-avis-eng.html (saved 16:53 CST for https://gazette.gc.ca/rp-pr/p1/2026/2026-10-31/html/notice-avis-eng.html)

@@ -22,3 +22,5 @@ Claim tested (row wording): last December sitting day of the House, 2026
 
 ## Desk action
 None.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225722/https://www.ourcommons.ca/en/sitting-calendar?year=2026 (saved 16:57 CST for https://www.ourcommons.ca/en/sitting-calendar?year=2026)

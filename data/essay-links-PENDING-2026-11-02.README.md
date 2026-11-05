@@ -1,0 +1,2 @@
+PENDING essay-link rows (Barry go t2764u, 2 Nov 2026 06:15 CST). 15 rows: 8 DLV (Delivery Has a Look), 7 GX/NUCH (The Docket Is the Clock).
+Before the 21:00 CST upload: replace {SUBSTACK_URL_DELIVERY} and {SUBSTACK_URL_DOCKET} with the live Substack URLs, append the rows to data/essay-links.csv, delete nothing, run the non-draft build_register.py and preflight. If either essay is not live by then, append only the live one's rows.

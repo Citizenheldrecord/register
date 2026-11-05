@@ -19,3 +19,12 @@ Reason class (batch 4, 2026-10-27): not found
 
 ## Desk action
 Find and read a primary.
+
+## Source correction (audit 4 Nov 2026, Barry go pt2909u; append only)
+- Status was UNSOURCED. Already scored PASS as MTL-LABEL-SCORED-20261030 on the joint statement (calendar). Primary appended here.
+- Primary URL: https://www.pm.gc.ca/en/news/statements/2026/10/30/joint-statement-canada-and-european-union-building-together-alliance
+- Publisher: Prime Minister of Canada (Joint Statement, Canada-EU Summit, 30 Oct 2026)
+- Supports: the scored PASS (label check read 30 Oct ~8:15 PM CST; not re-verified this run).
+- Wayback snapshot URL: https://web.archive.org/web/20261104222109/https://www.pm.gc.ca/en/news/statements/2026/10/30/joint-statement-canada-and-european-union-building-together-alliance
+- Date-source leads (Rapporteur, POLITICO) stay leads, not sources.
+- The earlier "none found" lines above are kept as history.

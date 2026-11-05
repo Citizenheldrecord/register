@@ -24,3 +24,5 @@ Test definition: /workspace/sovereign-realism/drafts/PROPOSED-REGISTER-ROWS-eu-a
 
 ## Desk action
 Score once on the scoring date. Outcome evidence cannot exist before then.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225353/https://www.pm.gc.ca/en/news/speeches/2026/10/30/prime-minister-carney-delivers-remarks-conclude-canada-european-union (saved 16:54 CST for https://www.pm.gc.ca/en/news/speeches/2026/10/30/prime-minister-carney-delivers-remarks-conclude-canada-european-union)

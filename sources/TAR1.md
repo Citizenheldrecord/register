@@ -35,3 +35,10 @@ Claim tested (row wording): Trump said on 24 Aug 2026 tariffs rise to 50 per cen
 
 ## Desk action
 Correct wording to say the 1 Jan pledge was a social-media post reported by Reuters, or re-score on 1 Jan 2027 against the Federal Register.
+
+## Source correction (audit 4 Nov 2026, Barry go pt2909u; append only)
+- federalregister.gov often refuses Wayback. Cite the govinfo copy of FR Doc 2026-17294 (Federal Register Vol 91 No 162, Mon 24 Aug 2026, Presidential Documents) as the archive-friendly primary.
+- Primary URL (govinfo): https://www.govinfo.gov/content/pkg/FR-2026-08-24/html/2026-17294.htm
+- Exact supporting line present (read 4 Nov 2026 ~18:06 CST, HTTP 200): "12:01 a.m. eastern time on August 22, 2026"
+- Wayback snapshot URL: https://web.archive.org/web/20261105000701/https://www.govinfo.gov/content/pkg/FR-2026-08-24/html/2026-17294.htm
+- The earlier Source lines above are kept as history.

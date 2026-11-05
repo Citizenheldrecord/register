@@ -24,3 +24,5 @@ Find the holder primary; re-score on due date.
 - Exact supporting line (verbatim): "notice is hereby given that the Governor in Council may amend Schedule 1 of the Act to list the Mackenzie Valley Highway as a project of national interest"
 - Covers the row's premise only: notice given (same wording for Roberts Bank Terminal 2), views due by October 1, 2026. No listing decision yet. Effect: none on the test.
 - Read date: 2026-10-31 (HTTP 200 from the box). From SOURCE-TRACE-2026-10-31 (Barry t2640u).
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225824/https://gazette.gc.ca/rp-pr/p2/2026/index-eng.html (saved 16:58 CST for https://gazette.gc.ca/rp-pr/p2/2026/index-eng.html)

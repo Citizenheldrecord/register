@@ -22,3 +22,5 @@ Claim tested (row wording): fixed election date, third Monday of October 2029 (d
 
 ## Desk action
 None. Carried from reports/PRIMARY-FILL-2026-10-27.md; every URL re-opened and the line found on 2026-10-27.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225621/https://laws-lois.justice.gc.ca/eng/acts/e-2.01/page-6.html (saved 16:56 CST for https://laws-lois.justice.gc.ca/eng/acts/e-2.01/page-6.html)

@@ -22,3 +22,5 @@ Claim tested (row wording): 16-day DRIPA trial from 22 Nov 2027
 
 ## Desk action
 Add court file number when found.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104230627/https://phara.ca/phara-constitutional-challenge-to-dripa-takes-a-major-step-forward/ (saved 17:06 CST for https://phara.ca/phara-constitutional-challenge-to-dripa-takes-a-major-step-forward/)

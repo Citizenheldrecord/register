@@ -20,3 +20,5 @@ Test definition: SCORING_CALENDAR.md, Barry go 28 Oct 2026 7:47 PM CST (card t23
 
 ## Desk action
 - Scored once on 31 Mar 2027 (SCORE-UK-FISCAL-PATH).
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225830/https://assets.publishing.service.gov.uk/media/6ae20b9039d29f3f9b9b3f55/E03668986_HMT_Budget_2026_TEXT_PRINT__1_.pdf (saved 16:58 CST for https://assets.publishing.service.gov.uk/media/6ae20b9039d29f3f9b9b3f55/E03668986_HMT_Budget_2026_TEXT_PRINT__1_.pdf)

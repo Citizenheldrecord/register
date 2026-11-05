@@ -23,3 +23,5 @@ Claim tested (row wording, verbatim): PASS: by 2 Jan 2027 at least one journalis
 
 ## Desk action
 Re-score on due date.
+
+- Wayback snapshot (audit 4 Nov 2026, pt2906u; append only): https://web.archive.org/web/20261104225238/https://github.com/citizenheldrecord/register/blob/main/public-live-rows-2026-10-23c.csv (saved 16:52 CST for https://github.com/citizenheldrecord/register/blob/main/public-live-rows-2026-10-23c.csv)
