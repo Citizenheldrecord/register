@@ -21,6 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from prevention.common import ROOT, load_display_groups, load_entries, parse_sources_record, sources_path
 from prevention import check_date_provenance as cdp, check_source_type as cst
 from prevention import check_status_derived as csd, check_archive_sources as cas
+from prevention import check_quote_on_page as cqp
 
 ARCHIVE_MARKERS = ("2026-11-04", "t2871u", "t2909u")
 
@@ -73,6 +74,20 @@ def failures_for(ids=None, extra_rows=None):
     return out
 
 
+def quote_failures(ids):
+    """QUOTE ON PAGE (Barry go t2909u; wired as blocking t2947u, RULEBOOK.md R1.6 and R2.3).
+    Added 5 Nov 2026. Runs only for ids that are new or changed (--ids, --preflight touched ids,
+    gate_new_row); --sweep and every existing check are unchanged. A fetch error with no match
+    counts as a failure (never a pass)."""
+    out = []
+    for rid in sorted(set(ids or [])):
+        p = sources_path(rid)
+        if p.exists():
+            for f in cqp.check_record(p):
+                out.append(("QUOTE", rid, f))
+    return out
+
+
 def _git_show(rev, path):
     p = subprocess.run(["git", "show", "%s:%s" % (rev, path)], cwd=str(ROOT), capture_output=True)
     return p.stdout.decode("utf-8", "replace") if p.returncode == 0 else None
@@ -120,7 +135,7 @@ def main(argv=None):
         print("PREVENTION SWEEP: %d failures" % len(allf))
         return 0
     if a.ids:
-        f = failures_for(a.ids)
+        f = failures_for(a.ids) + quote_failures(a.ids)
         for sec, rid, msg in f:
             print("PREVENTION BLOCK [%s] %s" % (sec, msg))
         print("PREVENTION GATE (ids %s): %d failures" % (" ".join(a.ids), len(f)))
@@ -131,6 +146,7 @@ def main(argv=None):
         return 1 if block else 0
     allf = failures_for(None)
     hit = [x for x in allf if x[1] in ids or x[1] == "-"]
+    hit += quote_failures(ids)
     known = [x for x in allf if x not in hit]
     print("PREVENTION GATE: %d ids new/changed since upload baseline %s" % (len(ids), base))
     for sec, rid, msg in hit:
@@ -146,7 +162,8 @@ def gate_new_row(row):
     if os.environ.get("PREVENTION_BLOCK", "1") == "0":
         print("PREVENTION GATE: BLOCKING TURNED OFF BY PREVENTION_BLOCK=0 (report this to Barry)", file=sys.stderr)
         return []
-    return ["[%s] %s" % (s, m) for s, _, m in failures_for([row["id"]], extra_rows=[row])]
+    fl = failures_for([row["id"]], extra_rows=[row]) + quote_failures([row["id"]])
+    return ["[%s] %s" % (s, m) for s, _, m in fl]
 
 
 if __name__ == "__main__":

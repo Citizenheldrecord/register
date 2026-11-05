@@ -4,7 +4,7 @@
 
 ## Where the register stands
 
-Counted on 4 November 2026 from data/entries.csv, which holds 374 entries.
+Counted on 5 November 2026 from data/entries.csv, which holds 374 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
@@ -13,7 +13,7 @@ Definitions used for every count on this page. A promise is an entry that sets a
 - **Scored FAILED:** 25 (AB1-PL, AI2, BC-PARCELS, BC1, BNT122-DEATHS, CFR-GAZ-30OCT, COAL-EXPORT-2030, DGR1, DLV-ONLTC, DSRB-CAP, FA3-MVH-DEC, FA3b, GX1b, MIL-QUESTURA-C20261022, MRNA-ESMO-FULL, MTL-CLOSE, PAUSE-RECIP, RBT2-FAA-OCT, S2, S7, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
 - **Recorded as fact, with no pass or fail line:** 6 (CL-BASE, HR5334, IR1, LEVELS-1NOV, N4, RU1).
 - **Open:** 271.
-- **Due:** 1 (LEVELS2729, 2 days past its date; scoring pending, noted 4 November 2026: Not tabled as of Journals No. 161, 3 Nov; IRPA s.94 window runs to 29 Jan 2027; Barry go t2862u. The row is read again on 6 Nov 2026 and re-dated at each check until tabled).
+- **Due:** 1 (LEVELS2729, 3 days past its date; scoring pending, noted 4 November 2026: Not tabled as of Journals No. 161, 3 Nov; IRPA s.94 window runs to 29 Jan 2027; Barry go t2862u. The row is read again on 6 Nov 2026 and re-dated at each check until tabled).
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
@@ -94,7 +94,7 @@ These rows are linked because they test related things. Each is scored on its ow
 
 The Register
 
-Entries as at 4 November 2026. Last change: 4 November 2026.
+Entries as at 5 November 2026. Last change: 5 November 2026.
 
 This page is a citizen-held register of Canadian public commitments. Each line is a test: what counts as a pass, the date it is scored and who answers for it. The main table holds files owned by Canadian governments, legislatures, courts, regulators, Crown bodies and companies, and foreign decisions a Canadian file depends on. My own commitments, and outside files I watch, sit in short sections of their own under the same rules.
 
@@ -144,7 +144,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-11-04g.csv (all 374 rows) is 9fbadbee39750d46504a95ec3afecc6e7c55c71f80cf5c532aff0e31ac55afef
+Checksum for this update: SHA-256 of public-live-rows-2026-11-05.csv (all 374 rows) is 9fbadbee39750d46504a95ec3afecc6e7c55c71f80cf5c532aff0e31ac55afef
 
 Rule entries
 
@@ -1050,15 +1050,15 @@ Note, 27 Oct 2026: This register's rule is that every row rests on a primary sou
 
 ## How to check this update
 
-Build stamp: update 2026-11-04g, counted as at 4 November 2026, from data/entries.csv, 374 rows, SHA-256 33e8a26191f18949936f0ade99056aaa8e889aa51f10dc171261d7b597e40440. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-11-05, counted as at 5 November 2026, from data/entries.csv, 374 rows, SHA-256 33e8a26191f18949936f0ade99056aaa8e889aa51f10dc171261d7b597e40440. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-04g.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-04g.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-05.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-05.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
 Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.
 
-How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-04g, of 374 entries, 210 (about 56 per cent) carry a benchmark date set by the register, 3 an outside date with a scoring window set by the register, and 161 (about 43 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
+How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-05, of 374 entries, 210 (about 56 per cent) carry a benchmark date set by the register, 3 an outside date with a scoring window set by the register, and 161 (about 43 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
 
 How the register scores treaties (dated 30 October 2026). A treaty Canada signs is not Canadian law. Canadian courts enforce treaty rights only where the treaty has been implemented by legislation (Francis v. The Queen, [1956] SCR 618), and a treaty has no domestic, internal consequences unless they arise from implementing legislation (Capital Cities Communications v. CRTC, [1978] 2 SCR 141). Where a treaty touches provincial subjects, the provinces must legislate: as the Privy Council put it in 1937, "as a treaty deals with a particular class of subjects so will the legislative power of performing it be ascertained."
 
@@ -1129,7 +1129,7 @@ PAUSE-RECIP | 31 Oct 2026 | 31 Oct 2026 | PASS: a reciprocal Russia Ukraine ener
 AI2 | 31 Oct 2026 | 31 Oct 2026 | PASS: OpenAI publishes a written access charter. FAILED: not | political choice. Actor: OpenAI. Evidence: https://openai.com/index/priorities-principles-third-party-assessments/ | n/a: not a spending test. Entry AI2-SCORED-20261031 | a general principles page only (22 Sep 2026), naming no assessor.
 MIL-QUESTURA-C20261022 | 31 Oct 2026 | 31 Oct 2026 | Questura di Milano breakdown of the about 50 people detained (fermati) on 17 Oct (Italia in Piazza). PASS: by 31 Oct 2026 the Questura di Milano or the Ministero dell'Interno publishes a breakdown of those detained on 17 Oct by age (minor/adult) AND citizenship (Italian/foreign), with arrest vs denuncia status. Unattributed press counts do not count. FAILED: dated entry within 30 days; no extension | political choice. Actor: Questura di Milano; Ministero dell'Interno. Evidence: https://questure.poliziadistato.it/it/Milano | n/a: not a spending test. Entry MIL-QUESTURA-C20261022-SCORED-20261031 | none published; press weekend figures only.
 
-Entries as at 4 November 2026: 22.
+Entries as at 5 November 2026: 22.
 
 <!-- /FAILLOG -->
 

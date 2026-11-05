@@ -8,9 +8,9 @@ ROOT=$(cd "$(dirname "$0")/.." && pwd); cd "$ROOT"
 BASE=local/LIVE_FILES.sha256
 # Upload exclude list (Barry go 28 Oct 2026 11:43 AM CST, AS-022): desk-only files never go live.
 # From simple-view/ only index.html and simple-rows.csv; no __pycache__, no *.bak*, no source templates.
-UPLOAD_EXCLUDE='(^|/)__pycache__/|\.bak|^sources/_(FAILED_)?TEMPLATE\.md$|^simple-view/'
+UPLOAD_EXCLUDE='(^|/)__pycache__/|\.bak|^sources/_(FAILED_)?TEMPLATE\.md$|^simple-view/|(^|/)\.guard/'
 UPLOAD_KEEP='^simple-view/(index\.html|simple-rows\.csv)$'
-repo_files(){ find . -type f -not -path './local/*' -not -path '*/__pycache__/*' -not -path './.git/*' | sed 's|^\./||' | awk -v ex="$UPLOAD_EXCLUDE" -v keep="$UPLOAD_KEEP" '$0 ~ keep || $0 !~ ex' | sort; }
+repo_files(){ find . -type f -not -path './local/*' -not -path '*/__pycache__/*' -not -path './.git/*' -not -path './.guard/*' | sed 's|^\./||' | awk -v ex="$UPLOAD_EXCLUDE" -v keep="$UPLOAD_KEEP" '$0 ~ keep || $0 !~ ex' | sort; }
 if [ "${1:-}" = "--mark-pushed" ]; then repo_files | xargs sha256sum > $BASE; echo "baseline updated: $(wc -l < $BASE) files recorded as live"
   python3 scripts/check_published_unchanged.py --refresh >/dev/null && echo "published-files list refreshed from GitHub: local/published-files.txt" || echo "WARNING: could not refresh local/published-files.txt from GitHub"; exit 0; fi
 # 27 Oct 2026 (Barry go 04:19): --draft builds into local/draft-build-<date>/ and leaves the upload root untouched.

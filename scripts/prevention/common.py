@@ -74,8 +74,16 @@ def classify_host(host: str, owner: str = "", url: str = "") -> str:
 
 def norm_quote(s: str) -> str:
     s = s or ""
-    s = s.replace("\u201c", '"').replace("\u201d", '"').replace("\u2018", "'").replace("\u2019", "'")
-    s = s.replace("\u2013", "-").replace("\u2014", "-").replace("\u00a0", " ")
+    s = re.sub(r"(?is)<script[^>]*>.*?</script>", " ", s)
+    s = re.sub(r"(?is)<style[^>]*>.*?</style>", " ", s)
+    s = re.sub(r"(?s)<[^>]+>", " ", s)
+    for a, b in (("&nbsp;", " "), ("&amp;", "&"), ("&quot;", '"'), ("&#39;", "'"),
+                 ("&rsquo;", "'"), ("&lsquo;", "'"), ("&rdquo;", '"'), ("&ldquo;", '"')):
+        s = s.replace(a, b)
+    s = re.sub(r"&\w+;", " ", s)
+    s = re.sub(r"[\u200b\u200c\u200d\u2060\ufeff\u00ad]", "", s)
+    s = s.replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
+    s = s.replace("–", "-").replace("—", "-").replace(" ", " ")
     s = re.sub(r"\s+", " ", s).strip().lower()
     return s
 
