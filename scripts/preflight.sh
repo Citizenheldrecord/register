@@ -11,7 +11,11 @@ BASE=local/LIVE_FILES.sha256
 UPLOAD_EXCLUDE='(^|/)__pycache__/|\.bak|^sources/_(FAILED_)?TEMPLATE\.md$|^simple-view/|(^|/)\.guard/'
 UPLOAD_KEEP='^simple-view/(index\.html|simple-rows\.csv)$'
 repo_files(){ find . -type f -not -path './local/*' -not -path '*/__pycache__/*' -not -path './.git/*' -not -path './.guard/*' | sed 's|^\./||' | awk -v ex="$UPLOAD_EXCLUDE" -v keep="$UPLOAD_KEEP" '$0 ~ keep || $0 !~ ex' | sort; }
-if [ "${1:-}" = "--mark-pushed" ]; then repo_files | xargs sha256sum > $BASE; echo "baseline updated: $(wc -l < $BASE) files recorded as live"
+if [ "${1:-}" = "--mark-pushed" ]; then
+  GATE=${DESK_SHIPPING_GATE:-/workspace/sovereign-realism/tools/integrity_check.py}
+  if [ ! -f "$GATE" ]; then echo "STOP CHECK MISSING: $GATE"; exit 1; fi
+  python3 "$GATE" --shipping-gate --stop-only || { echo "STOP: not recording a live baseline"; exit 1; }
+  repo_files | xargs sha256sum > $BASE; echo "baseline updated: $(wc -l < $BASE) files recorded as live"
   python3 scripts/check_published_unchanged.py --refresh >/dev/null && echo "published-files list refreshed from GitHub: local/published-files.txt" || echo "WARNING: could not refresh local/published-files.txt from GitHub"; exit 0; fi
 # 27 Oct 2026 (Barry go 04:19): --draft builds into local/draft-build-<date>/ and leaves the upload root untouched.
 # Scoring and staging jobs always run: scripts/preflight.sh --draft YYYY-MM-DD. Only the upload step, on Barry's go, runs without --draft.
@@ -57,5 +61,22 @@ echo "ADD (new):"; printf '  %s\n' "${add[@]:-(none)}"
 echo "REPLACE (changed):"; printf '  %s\n' "${rep[@]:-(none)}"
 if [ ${#gone[@]} -gt 0 ]; then echo "MISSING locally but live (append only, never delete):"; printf '  %s\n' "${gone[@]}"; nogo=1; fi
 echo; if [ -n "$DRAFT" ]; then echo "(draft mode: the upload list above is the root as it stands; the draft build is in local/draft-build-$D/ and is not uploaded)"; fi
+# Real upload only. Draft stays a check. This step writes neither PAUSE.md nor an approval. Desk script, other repo.
+if [ -z "$DRAFT" ]; then
+  step "shipping gate (STOP/RUNNING and change approval)"
+  MAN=$(mktemp)
+  : > "$MAN"
+  for f in "${add[@]:-}" "${rep[@]:-}"; do
+    [ -n "$f" ] || continue
+    printf '%s\t%s\n' "$f" "$(sha256sum "$f" | awk '{print $1}')" >> "$MAN"
+  done
+  LC_ALL=C sort -o "$MAN" "$MAN"
+  GATE=${DESK_SHIPPING_GATE:-/workspace/sovereign-realism/tools/integrity_check.py}
+  APPR=${UPLOAD_APPROVAL:-local/upload-approval.txt}
+  if [ ! -f "$GATE" ]; then echo "SHIPPING GATE MISSING: $GATE"; nogo=1
+  else python3 "$GATE" --shipping-gate --manifest-file "$MAN" --approval-file "$APPR" || { echo "SHIPPING GATE NO-GO: nothing should be pushed"; nogo=1; }
+  fi
+  rm -f "$MAN"
+fi
 if [ $nogo -eq 0 ]; then echo "GO: all checks passed. Upload the files above, then Wayback snapshots of the page, CSV and manifest, then scripts/preflight.sh --mark-pushed"; else echo "NO-GO: fix the failures above. Nothing should be pushed."; fi
 exit $nogo

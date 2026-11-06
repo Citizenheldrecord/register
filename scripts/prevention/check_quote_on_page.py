@@ -10,10 +10,30 @@ from prevention.common import ROOT, norm_quote, parse_sources_record, sources_pa
 UA = {"User-Agent": "register-check_quote_on_page/1.0"}
 
 
-def fetch(url: str, timeout=40) -> str:
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read().decode("utf-8", "replace")
+_BODY_CACHE: dict[str, str] = {}
+
+
+# t3062u: page text saved at read time (local/quote-page-cache/<sha256(url)>.txt) is used first; no per-record 40 s live waits.
+_DISK = ROOT / "local/quote-page-cache"
+
+
+def fetch(url: str, timeout=15) -> str:
+    import hashlib
+    if url in _BODY_CACHE:
+        return _BODY_CACHE[url]
+    cf = _DISK / (hashlib.sha256(url.encode()).hexdigest() + ".txt")
+    if cf.exists():
+        _BODY_CACHE[url] = cf.read_text(encoding="utf-8", errors="replace")
+        return _BODY_CACHE[url]
+    # t3071u: never fetch during the gate. Map file local/quote-page-map.tsv (url<TAB>saved file) or fail now.
+    mp = ROOT / "local/quote-page-map.tsv"
+    if mp.exists():
+        for line in mp.read_text(encoding="utf-8").splitlines():
+            parts = line.split("\t")
+            if len(parts) == 2 and parts[0] == url and Path(parts[1]).exists():
+                _BODY_CACHE[url] = Path(parts[1]).read_text(encoding="utf-8", errors="replace")
+                return _BODY_CACHE[url]
+    raise RuntimeError("no saved page text (no live fetch, t3071u)")
 
 
 def quote_in_text(quote: str, body: str) -> bool:
@@ -35,7 +55,8 @@ def check_record(path: Path, body_by_url: dict[str, str] | None = None) -> list[
             continue
         urls = [b["url"]]
         wb = b.get("wayback") or ""
-        if wb.startswith("http"):
+        # t3058u/t3062u: do not fetch Wayback during the gate. Tests may still supply a Wayback body.
+        if wb.startswith("http") and body_by_url and wb in body_by_url:
             urls.append(wb)
         found = False
         errors = []
