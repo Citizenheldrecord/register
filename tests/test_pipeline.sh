@@ -7,7 +7,7 @@ _TP=$(mktemp -d); export TMPDIR="$_TP"; trap 'cd /; rm -rf "$_TP"' EXIT
 fresh(){ W=$(mktemp -d); cp -r "$ROOT"/. "$W"/; rm -rf "$W/local"; mkdir -p "$W/local"; cp "$ROOT/local/published-files.txt" "$W/local/" 2>/dev/null; cd "$W"; }   # 27 Oct 2026: keep the published-files list (guardrail 1)
 ok(){ echo "  PASS $1"; }; bad(){ echo "  FAIL $1"; fails=$((fails+1)); }
 expect_fail(){ local name=$1; shift; if "$@" >/tmp/pl.out 2>&1; then bad "$name (build should have failed)"; else grep -q "$PATTERN" /tmp/pl.out && ok "$name: $(grep -m1 "$PATTERN" /tmp/pl.out | cut -c1-110)" || { bad "$name (wrong reason)"; cat /tmp/pl.out; }; fi; }
-build(){ python3 scripts/build_register.py --date ${1:-$D}; }
+build(){ python3 scripts/build_row_method.py >/dev/null; python3 scripts/build_register.py --date ${1:-$D}; }  # METHOD-ROWFILE: keep row-method.csv in cover after synthetic appends (t2731u/t2886u)
 # Scratch update id for builds in tests: must sort after every real update, so the latest real manifest is the one checked.
 # 25 Oct 2026: the letter z on the latest update date, so the overdue guard counts as at a real date.
 SCRATCH=${D:0:10}z

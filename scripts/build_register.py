@@ -254,6 +254,42 @@ def sources_note(iso):
 
 
 
+
+def row_method_check():
+    """METHOD-ROWFILE: require data/row-method.csv when present to cover every entries.csv id.
+    Does not rewrite published HTML (public wording needs Barry go G10.2 / R4.1).
+    Writes local/row-method-summary.txt for desk read-back."""
+    rm = os.path.join(rc.ROOT, "data", "row-method.csv")
+    if not os.path.exists(rm):
+        print("ROW-METHOD: data/row-method.csv absent (ok until METHOD-ROWFILE ships)", file=sys.stderr)
+        return
+    with open(rc.SOURCE, encoding="utf-8", newline="") as fh:
+        ids = {r["id"] for r in csv.DictReader(fh) if r.get("id")}
+    with open(rm, encoding="utf-8", newline="") as fh:
+        mrows = list(csv.DictReader(fh))
+    mids = {r["id"] for r in mrows if r.get("id")}
+    missing = sorted(ids - mids)
+    extra = sorted(mids - ids)
+    from collections import Counter
+    basis = Counter((r.get("date_basis") or "") for r in mrows)
+    local_dir = os.path.join(rc.ROOT, "local")
+    os.makedirs(local_dir, exist_ok=True)
+    out = os.path.join(local_dir, "row-method-summary.txt")
+    lines = [
+        "row-method.csv rows=%d entries=%d" % (len(mrows), len(ids)),
+        "date_basis counts: " + ", ".join("%s=%d" % kv for kv in sorted(basis.items())),
+        "missing_ids=%d extra_ids=%d" % (len(missing), len(extra)),
+    ]
+    if missing:
+        lines.append("MISSING: " + ",".join(missing[:20]))
+    if extra:
+        lines.append("EXTRA: " + ",".join(extra[:20]))
+    open(out, "w", encoding="utf-8").write("\n".join(lines) + "\n")
+    print("ROW-METHOD: wrote", out, "; ".join(lines[:2]), file=sys.stderr)
+    if missing:
+        raise SystemExit("row-method.csv missing %d entry ids" % len(missing))
+
+
 def date_share(uid):
     # T-082 (28 Oct 2026): the share is recounted from data/entries.csv at each build, with the same
     # date_basis classifier as the index status summary, so README and index agree.
@@ -771,6 +807,7 @@ def main():
             if out_dir != os.path.abspath(ROOT):
                 raise rc.Fail("--draft and --out-dir are exclusive")
             out_dir = os.path.join(ROOT, "local", "draft-build-%s" % a.date)
+        row_method_check()
         rows, csv_sha, prevs, new_ids, written = build(a.date, out_dir, a.source, a.allow_overwrite)
         if a.draft:
             print("DRAFT build in %s (upload root untouched)" % os.path.relpath(out_dir, ROOT))

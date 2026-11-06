@@ -45,14 +45,14 @@ p,li{font-size:16px}
 <p>The scoring date is chosen in this order:</p>
 <ol><li>The government&#x27;s own date, if it gave one.</li><li>Otherwise, a date set in statute.</li><li>Otherwise, 12 months from the announcement.</li></ol>
 <p>Any exception to that order is justified in writing on the row.</p>
-<p>Where the dates come from now. Of the 349 rows in the register file on 1 Nov 2026, 198 (56.7 per cent) carry a date the desk set, 58 (16.6 per cent) a date the government set, and 17 (4.9 per cent) a date set in statute or another legal deadline. A further 71 (20.3 per cent) carry a date set by another outside source (a court docket, a scheduled release or event, or a company's own timetable), and 5 (1.4 per cent) carry a label that does not fall into these groups. These counts come from each row's date source label. The register does not yet record whether a desk-set date followed the 12-month default or was an exception; that split is not yet recorded and will be from the first rows entered under this rule.</p>
+<p>Where the dates come from now. Of the 397 rows in the method side-file on 6 Nov 2026, 212 (53.4 per cent) carry a desk-default date, 120 (30.2 per cent) a government date, 30 (7.6 per cent) a statutory date, and 35 (8.8 per cent) a date basis that is not recorded. These counts come from each row&#x27;s date_basis label in data/row-method.csv, which is built mechanically from the date source on the row. None of the 212 desk dates in this file are marked as an exception to the 12-month default.</p>
 <h2>(d) Precedents</h2>
 <p>When a case falls between the rules, the desk makes a ruling. Each ruling is logged once, in a public precedents log, with its date and the rows it was first applied to, and is applied the same way every time after.</p>
 <p>A change to a ruling goes in as a new dated entry. It is never applied quietly to old rows: rows already scored keep the score they were given under the ruling in force at the time, and any later view is added as a dated note.</p>
 <h2>(e) Ledger versus essays</h2>
 <p>The register records the scores. The essays argue the desk's reading of them.</p>
 <p>The scores stand without the essays. A reader who disagrees with every essay the desk has written can still check each row against its own test, its own date and its own primary source.</p>
-<p>Method adopted 1 Nov 2026. Counts on this page were computed on 1 Nov 2026 from data/entries.csv (349 rows).</p>
+<p>Method adopted 1 Nov 2026. Counts on this page were computed on 6 Nov 2026 from data/row-method.csv (397 rows).</p>
 </div>
 </body>
 </html>
