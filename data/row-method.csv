@@ -401,3 +401,7 @@ FA3-MVH-ORDER-DEC,2026-11-06,not recorded (existing row; method side-file bootst
 SEB-B-TABLE-20261106,2026-11-06,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
 SEB-B-TABLE-20261106-SCORED-20261106,2026-11-06,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
 SEB-SUPPLY-20261210,2026-11-06,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+MTL-DIGID,2026-11-07,not recorded,desk-default,,scripts/build_row_method.py classify_date_basis from data/entries.csv date_source
+DIGID-FED,2026-11-07,not recorded,desk-default,,scripts/build_row_method.py classify_date_basis from data/entries.csv date_source
+QC-DIGID,2026-11-07,not recorded,desk-default,,scripts/build_row_method.py classify_date_basis from data/entries.csv date_source
+FOR1,2026-11-07,not recorded,desk-default,,scripts/build_row_method.py classify_date_basis from data/entries.csv date_source

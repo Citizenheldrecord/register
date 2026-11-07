@@ -18,7 +18,7 @@ from __future__ import annotations
 import argparse, csv, io, os, re, subprocess, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from prevention.common import ROOT, load_display_groups, load_entries, parse_sources_record, sources_path
+from prevention.common import ROOT, load_display_groups, load_entries, parse_sources_record, quote_check_signature, sources_path
 from prevention import check_date_provenance as cdp, check_source_type as cst
 from prevention import check_status_derived as csd, check_archive_sources as cas
 from prevention import check_quote_on_page as cqp
@@ -74,18 +74,38 @@ def failures_for(ids=None, extra_rows=None):
     return out
 
 
-def quote_failures(ids):
+def quotes_and_urls_unchanged(rid, base_rev):
+    """True when the shipped source file's quoted lines and primary URLs match the working copy.
+    A Wayback note or other annotation alone does not re-trigger the quote test (Barry t3161u)."""
+    path = sources_path(rid)
+    if not path.exists() or not base_rev:
+        return False
+    old_text = _git_show(base_rev, "sources/%s.md" % rid)
+    if old_text is None:
+        return False
+    new = parse_sources_record(path.read_text(encoding="utf-8"))
+    old = parse_sources_record(old_text)
+    return quote_check_signature(new) == quote_check_signature(old)
+
+
+def quote_failures(ids, base_rev=None):
     """QUOTE ON PAGE (Barry go t2909u; wired as blocking t2947u, RULEBOOK.md R1.6 and R2.3).
     Added 5 Nov 2026. Runs only for ids that are new or changed (--ids, --preflight touched ids,
     gate_new_row); --sweep and every existing check are unchanged. A fetch error with no match
-    counts as a failure (never a pass)."""
+    counts as a failure (never a pass).
+    On --preflight (base_rev set), skip ids whose quoted lines and primary URLs are unchanged
+    from the last shipped source file (Barry t3161u). Explicit --ids still checks every listed id."""
     out = []
+    skipped = []
     for rid in sorted(set(ids or [])):
-        p = sources_path(rid)
-        if p.exists():
-            for f in cqp.check_record(p):
+        if base_rev and quotes_and_urls_unchanged(rid, base_rev):
+            skipped.append(rid)
+            continue
+        path = sources_path(rid)
+        if path.exists():
+            for f in cqp.check_record(path):
                 out.append(("QUOTE", rid, f))
-    return out
+    return out, skipped
 
 
 def _git_show(rev, path):
@@ -115,7 +135,7 @@ def touched_ids():
         m = re.match(r"sources/([^/]+)\.md$", f)
         if m:
             ids.add(m.group(1))
-    return ids, base[:7]
+    return ids, base
 
 
 def main(argv=None):
@@ -135,7 +155,7 @@ def main(argv=None):
         print("PREVENTION SWEEP: %d failures" % len(allf))
         return 0
     if a.ids:
-        f = failures_for(a.ids) + quote_failures(a.ids)
+        f = failures_for(a.ids) + quote_failures(a.ids)[0]
         for sec, rid, msg in f:
             print("PREVENTION BLOCK [%s] %s" % (sec, msg))
         print("PREVENTION GATE (ids %s): %d failures" % (" ".join(a.ids), len(f)))
@@ -146,9 +166,12 @@ def main(argv=None):
         return 1 if block else 0
     allf = failures_for(None)
     hit = [x for x in allf if x[1] in ids or x[1] == "-"]
-    hit += quote_failures(ids)
+    qf, skipped = quote_failures(ids, base)
+    hit += qf
     known = [x for x in allf if x not in hit]
-    print("PREVENTION GATE: %d ids new/changed since upload baseline %s" % (len(ids), base))
+    print("PREVENTION GATE: %d ids new/changed since upload baseline %s" % (len(ids), base[:7]))
+    if skipped:
+        print("PREVENTION GATE: quote check skipped for %d id(s) whose quoted lines and primary URLs are unchanged (%s)" % (len(skipped), ", ".join(skipped)))
     for sec, rid, msg in hit:
         print("PREVENTION BLOCK [%s] %s" % (sec, msg))
     for sec, rid, msg in known:
@@ -162,7 +185,7 @@ def gate_new_row(row):
     if os.environ.get("PREVENTION_BLOCK", "1") == "0":
         print("PREVENTION GATE: BLOCKING TURNED OFF BY PREVENTION_BLOCK=0 (report this to Barry)", file=sys.stderr)
         return []
-    fl = failures_for([row["id"]], extra_rows=[row]) + quote_failures([row["id"]])
+    fl = failures_for([row["id"]], extra_rows=[row]) + quote_failures([row["id"]])[0]
     return ["[%s] %s" % (s, m) for s, _, m in fl]
 
 

@@ -456,3 +456,7 @@ FA3-MVH-ORDER-DEC,also_watched,"test and date set by the register, not printed i
 SEB-SUPPLY-20261210,government_promise,"date printed in the TBS backgrounder, 6 Nov 2026"
 SEB-B-TABLE-20261106,recorded,"recorded tabling publication, not a delivery promise"
 SEB-B-TABLE-20261106-SCORED-20261106,recorded,RECORDED publication companion
+MTL-DIGID,also_watched,Desk-set review date; file section CANADA; Barry t3172u. Same date-provenance treatment as PRIVACY-JOIN and QC-BIO-REG.
+DIGID-FED,also_watched,Desk-set review date; file section CANADA; Barry t3172u. Same date-provenance treatment as PRIVACY-JOIN and QC-BIO-REG.
+QC-DIGID,also_watched,Desk-set review date; file section WATCH; Barry t3172u. Same date-provenance treatment as PRIVACY-JOIN and QC-BIO-REG.
+FOR1,also_watched,Desk-set review date; file section WATCH; Barry t3172u. Same date-provenance treatment as PRIVACY-JOIN and QC-BIO-REG.

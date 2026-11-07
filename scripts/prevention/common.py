@@ -88,6 +88,32 @@ def norm_quote(s: str) -> str:
     return s
 
 
+def extract_exact_line(field: str) -> str:
+    """Return only the verbatim quoted text from an Exact supporting line field.
+    Desk commentary after the closing quotes is not part of the quote test (Barry t3161u)."""
+    field = (field or "").strip()
+    if not field:
+        return ""
+    m = re.search(r'"([^"]+)"', field)
+    if m:
+        return m.group(1).strip()
+    m = re.search(r"'([^']+)'", field)
+    if m:
+        return m.group(1).strip()
+    return field.strip().strip('"').strip("'")
+
+
+def quote_check_signature(rec: dict) -> list[tuple[str, str]]:
+    """Quoted exact lines paired with primary URLs that the quote test uses (full support only)."""
+    out = []
+    for b in rec.get("blocks") or []:
+        q = (b.get("exact_line") or "").strip()
+        u = (b.get("url") or "").strip()
+        if q and u and "full" in (b.get("supports") or "").lower():
+            out.append((q, u))
+    return out
+
+
 def parse_sources_record(text: str) -> dict:
     status_m = re.search(r"^Status:\s*(.+)$", text, re.M)
     status = status_m.group(1).strip() if status_m else ""
@@ -96,12 +122,12 @@ def parse_sources_record(text: str) -> dict:
     for part in parts[1:]:
         url_m = re.search(r"Primary URL:\s*(\S+)", part)
         sup_m = re.search(r"Supports:\s*(.+)$", part, re.M)
-        line_m = re.search(r"Exact supporting line[^:]*:\s*[\"']?(.*?)[\"']?\s*$", part, re.M)
+        line_m = re.search(r"Exact supporting line[^:]*:\s*(.*)$", part, re.M)
         wb_m = re.search(r"Wayback snapshot URL:\s*(.+)$", part, re.M)
         blocks.append({
             "url": (url_m.group(1).strip() if url_m else ""),
             "supports": (sup_m.group(1).strip() if sup_m else ""),
-            "exact_line": (line_m.group(1).strip().strip('"').strip("'") if line_m else ""),
+            "exact_line": extract_exact_line(line_m.group(1) if line_m else ""),
             "wayback": (wb_m.group(1).strip() if wb_m else ""),
         })
     return {"status": status, "blocks": blocks, "text": text}
