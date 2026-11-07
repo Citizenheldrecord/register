@@ -398,3 +398,6 @@ TR-PR-200K-2027,2026-11-06,not recorded (existing row; method side-file bootstra
 MPF-2031-SCORED-20261106,2026-11-06,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
 RBT2-CONSOL-20NOV,2026-11-06,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
 FA3-MVH-ORDER-DEC,2026-11-06,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+SEB-B-TABLE-20261106,2026-11-06,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+SEB-B-TABLE-20261106-SCORED-20261106,2026-11-06,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+SEB-SUPPLY-20261210,2026-11-06,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source

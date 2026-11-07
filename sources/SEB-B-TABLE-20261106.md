@@ -1,0 +1,49 @@
+# SOURCES RECORD: SEB-B-TABLE-20261106
+
+Status: SOURCED
+Claim coverage: full
+Claim tested (row wording, verbatim): Recorded, not scored PASS or FAILED: a TBS primary dated 6 Nov 2026 shows Supplementary Estimates (B), 2026-27 tabled, seeking $22.1 billion in new voted spending for 71 organizations. Record the tabling and those printed figures only.
+Test definition: Publication record only; not delivery or expenditure.
+
+## Source 1
+- Row ID: SEB-B-TABLE-20261106
+- Claim tested: Recorded, not scored PASS or FAILED: a TBS primary dated 6 Nov 2026 shows Supplementary Estimates (B), 2026-27 tabled, seeking $22.1 billion in new voted spending for 71 organizations. Record the tabling and those printed figures only.
+- Primary URL: https://www.canada.ca/en/treasury-board-secretariat/news/2026/11/government-of-canada-outlines-additional-investments-in-defence-and-priority-services-through-supplementary-estimates-b-202627.html
+- Publisher: Treasury Board of Canada Secretariat
+- Source type: government news release
+- Document date: 2026-11-06
+- Exact supporting line (verbatim, straight quotes): "Today, the Honourable Shafqat Ali, President of the Treasury Board tabled the Supplementary Estimates (B), 2026–27 in the House of Commons."
+- Supports: full
+- Read date: 2026-11-06 (21:42 CST)
+- Read by: desk; saved page text /workspace/sovereign-realism/_primary/SEB-B-2026-11-06/tbs-release.txt; screenshots /workspace/sovereign-realism/_primary/SEB-B-2026-11-06/tbs-release.png and /workspace/sovereign-realism/_primary/SEB-B-2026-11-06/tbs-release-2.png
+- Wayback snapshot URL: https://web.archive.org/web/20261107034708/https://www.canada.ca/en/treasury-board-secretariat/news/2026/11/government-of-canada-outlines-additional-investments-in-defence-and-priority-services-through-supplementary-estimates-b-202627.html
+- Notes: Saved-page exact-words check only (t3062u). Estimates are up-to authorities, not actual expenditure. Barry go t3142s15180.
+
+## Source 2
+- Row ID: SEB-B-TABLE-20261106
+- Claim tested: Recorded, not scored PASS or FAILED: a TBS primary dated 6 Nov 2026 shows Supplementary Estimates (B), 2026-27 tabled, seeking $22.1 billion in new voted spending for 71 organizations. Record the tabling and those printed figures only.
+- Primary URL: https://www.canada.ca/en/treasury-board-secretariat/news/2026/11/government-of-canada-outlines-additional-investments-in-defence-and-priority-services-through-supplementary-estimates-b-202627.html
+- Publisher: Treasury Board of Canada Secretariat
+- Source type: government news release
+- Document date: 2026-11-06
+- Exact supporting line (verbatim, straight quotes): "In total, the government is seeking parliamentary approval of $22.1 billion in new voted spending through Supplementary Estimates (B)."
+- Supports: full
+- Read date: 2026-11-06 (21:42 CST)
+- Read by: desk; saved page text /workspace/sovereign-realism/_primary/SEB-B-2026-11-06/tbs-release.txt; screenshots /workspace/sovereign-realism/_primary/SEB-B-2026-11-06/tbs-release.png and /workspace/sovereign-realism/_primary/SEB-B-2026-11-06/tbs-release-2.png
+- Wayback snapshot URL: https://web.archive.org/web/20261107034708/https://www.canada.ca/en/treasury-board-secretariat/news/2026/11/government-of-canada-outlines-additional-investments-in-defence-and-priority-services-through-supplementary-estimates-b-202627.html
+- Notes: Saved-page exact-words check only (t3062u). Estimates are up-to authorities, not actual expenditure. Barry go t3142s15180.
+
+## Source 3
+- Row ID: SEB-B-TABLE-20261106
+- Claim tested: Recorded, not scored PASS or FAILED: a TBS primary dated 6 Nov 2026 shows Supplementary Estimates (B), 2026-27 tabled, seeking $22.1 billion in new voted spending for 71 organizations. Record the tabling and those printed figures only.
+- Primary URL: https://www.canada.ca/en/treasury-board-secretariat/news/2026/11/supplementary-estimates-b-2026-27.html
+- Publisher: Treasury Board of Canada Secretariat
+- Source type: government backgrounder
+- Document date: 2026-11-06
+- Exact supporting line (verbatim, straight quotes): "The Supplementary Estimates (B), 2026–27 present proposed spending for 71 organizations seeking $22.1 billion in voted authorities."
+- Supports: full
+- Read date: 2026-11-06 (21:42 CST)
+- Read by: desk; saved page text /workspace/sovereign-realism/_primary/SEB-B-2026-11-06/tbs-backgrounder.txt; screenshots /workspace/sovereign-realism/_primary/SEB-B-2026-11-06/tbs-backgrounder.png and /workspace/sovereign-realism/_primary/SEB-B-2026-11-06/tbs-backgrounder-2.png
+- Wayback snapshot URL: https://web.archive.org/web/20261107034727/https://www.canada.ca/en/treasury-board-secretariat/news/2026/11/supplementary-estimates-b-2026-27.html
+- Notes: Saved-page exact-words check only (t3062u). Estimates are up-to authorities, not actual expenditure. Barry go t3142s15180.
+

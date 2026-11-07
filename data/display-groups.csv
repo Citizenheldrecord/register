@@ -453,3 +453,6 @@ FRANCO-12PCT-2029,government_promise,passes entry test
 TR-PR-200K-2027,government_promise,passes entry test
 RBT2-CONSOL-20NOV,also_watched,"test and date set by the register, not printed in a government document"
 FA3-MVH-ORDER-DEC,also_watched,"test and date set by the register, not printed in a government document"
+SEB-SUPPLY-20261210,government_promise,"date printed in the TBS backgrounder, 6 Nov 2026"
+SEB-B-TABLE-20261106,recorded,"recorded tabling publication, not a delivery promise"
+SEB-B-TABLE-20261106-SCORED-20261106,recorded,RECORDED publication companion
