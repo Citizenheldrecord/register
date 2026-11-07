@@ -11,11 +11,13 @@ Claim tested (row wording, verbatim): RECORDED, not PASS/FAILED: TABLED (date an
 - Publisher: House of Commons of Canada
 - Source type: legislature journal
 - Document date: 2026-11-03
-- Exact supporting line (verbatim, straight quotes): "Pursuant to Standing Order 32(1), papers deposited with the Clerk of the House were laid before the House as follows:" (the papers that follow are a Charter Statement on Bill C-40, two Service Fees Reports and a Centennial Flame Research Award Act report; no Immigration Levels Plan or IRPA s.94 report)
+- Exact supporting line (verbatim, straight quotes): "Pursuant to Standing Order 32(1), papers deposited with the Clerk of the House were laid before the House as follows:"
+- Notes: The papers that follow are a Charter Statement on Bill C-40, two Service Fees Reports and a Centennial Flame Research Award Act report; no Immigration Levels Plan or IRPA s.94 report.
 - Supports: full
 - Read date: 2026-11-04 (15:22 CST)
 - Read by: desk (executor)
 - Wayback snapshot URL: https://web.archive.org/web/20261104212502/https://www.ourcommons.ca/documentviewer/en/45-1/house/sitting-161/journals
+- Wayback note (2026-11-07 06:41 CST, Barry t3157u): that Wayback URL returns 404; no snapshot existed on or before the 4 November 2026 entry date. Official page recaptured: screenshot and saved page text at _primary/LEVELS-1NOV-SCORED-20261104/journals-sitting-161-2026-11-07.png, journals-sitting-161-papers-2026-11-07.png and journals-sitting-161-2026-11-07.txt (read 2026-11-07 06:41 CST). The 4 November score is not changed.
 
 ## Source 2
 - Row ID: LEVELS-1NOV-SCORED-20261104
