@@ -22,3 +22,17 @@ Claim tested (row wording): by 31 Oct 2026 DFO issues or refuses the SARA-compli
 
 ## Desk action
 - 28 Oct 2026: row approved by Barry go 28 Oct 2026 1:21 PM CST (t2285s11805). Scored once on Sun 1 Nov 2026 from a dated DFO decision or port authority statement; a FAILED score needs its five-field entry in sources/failed/.
+
+## Source 2
+- Row ID: RBT2-FAA-OCT
+- Claim tested: second source for the outcome only: no Fisheries and Oceans Canada decision on the authorization as of 30 Oct 2026, the day before the 31 Oct 2026 test date. It does not state the "no later than October 2026" decision date; that promise rests on Source 1 (Vancouver Fraser Port Authority, applicant). Both are shown (t2788u).
+- Primary URL: https://orders-in-council.canada.ca/attachment.php?attach=49227&lang=en&pc-number=2026-1047
+- Publisher: Privy Council Office (Order in Council P.C. 2026-1047, explanatory note)
+- Source type: Order in Council explanatory note (federal primary)
+- Document date: 2026-10-30
+- Exact supporting line (verbatim, straight quotes): "In June 2025, Fisheries and Oceans Canada determined that the application was complete. A decision on the authorization has not yet been made."
+- Supports: full (no decision as of 30 Oct 2026; not the October 2026 date)
+- Read date: 2026-11-09 (04:13 CST)
+- Read by: desk (executor), headless Chrome screenshot with page text saved at read time (R5.22)
+- Wayback snapshot URL: https://web.archive.org/web/20261106202543/https://orders-in-council.canada.ca/attachment.php?attach=49227&lang=en&pc-number=2026-1047
+- Notes: appended 9 Nov 2026, Barry go answering t3203s15538, upload go t3204u. Source 1 is not edited and stays the source of the October 2026 promise (port page re-read 9 Nov 2026 04:16 CST, quoted text still present). The row, its display group and RBT2-FAA-OCT-SCORED-20261101 (FAILED, 1 Nov 2026) are not changed. Same order as display note NOTE-RBT2-FAA-OCT-OIC-20261104.
