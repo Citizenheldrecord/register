@@ -405,3 +405,4 @@ MTL-DIGID,2026-11-07,not recorded,desk-default,,scripts/build_row_method.py clas
 DIGID-FED,2026-11-07,not recorded,desk-default,,scripts/build_row_method.py classify_date_basis from data/entries.csv date_source
 QC-DIGID,2026-11-07,not recorded,desk-default,,scripts/build_row_method.py classify_date_basis from data/entries.csv date_source
 FOR1,2026-11-07,not recorded,desk-default,,scripts/build_row_method.py classify_date_basis from data/entries.csv date_source
+RU-SEMA-3824-20261109,2026-11-09,not recorded,desk-default,,scripts/build_row_method.py classify_date_basis from data/entries.csv date_source
