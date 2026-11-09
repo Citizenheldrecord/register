@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 9 November 2026 from data/entries.csv, which holds 407 entries.
+Counted on 9 November 2026 from data/entries.csv, which holds 408 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 407 = 347 promises + 60 scoring entries.
+- **Entries:** 408 = 348 promises + 60 scoring entries.
 - **Scored PASS:** 20 (AB1, AB1-OFFICIAL, AI1, BUDGET26-TABLE, BoC, C39-CTTE, CUMMINGS-TX, DLV-C15, DLV-CTR, DLV-DEN, FA3c, HCAP-LVL, LANE-1, MTL-LABEL, POL-1, Q10-NEXT, REG-PROV1, S338-SCOPE, TR-FTA-ROUND, TRADE-SHARE-SEP).
 - **Scored FAILED:** 31 (AB1-PL, AI2, BC-PARCELS, BC1, BNT122-DEATHS, CF-GAP, CFR-GAZ-30OCT, COAL-EXPORT-2030, CROWN-LOAN-TABLE, DGR1, DLV-ONLTC, DNG-CAP, DSRB-CAP, EM-1, FA3-MVH-DEC, FA3b, GX1b, MIL-QUESTURA-C20261022, MRNA-ESMO-FULL, MTL-CLOSE, PAUSE-RECIP, PL-DEVFUND-B26, RBT2-FAA-OCT, S2, S7, SPT-CLINIC, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
 - **Recorded as fact, with no pass or fail line:** 10 (CL-BASE, HR5334, IR1, LEVELS-1NOV, LEVELS2729, MPF-2031, MVH-FULLFUND-B26, N4, RU1, SEB-B-TABLE-20261106).
-- **Open:** 279.
+- **Open:** 280.
 - **Due:** 0.
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 347 promises = 20 PASS + 31 FAILED + 10 recorded + 279 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 348 promises = 20 PASS + 31 FAILED + 10 recorded + 280 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 407 entries):
+By section of the data file (every entry counted once; the four sections add up to all 408 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 258 | 38 | 220 | 12 | 26 | 0 | 182 | 0 | 0 | 0 | 0 |
+| Canadian files | 259 | 38 | 221 | 12 | 26 | 0 | 183 | 0 | 0 | 0 | 0 |
 | This desk's own commitments | 16 | 3 | 13 | 3 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
 | Outside files we watch | 90 | 7 | 83 | 2 | 5 | 0 | 70 | 0 | 4 | 2 | 0 |
 | Recorded facts and checkpoints | 43 | 12 | 31 | 3 | 0 | 10 | 17 | 0 | 0 | 0 | 1 |
-| Total | 407 | 60 | 347 | 20 | 31 | 10 | 279 | 0 | 4 | 2 | 1 |
+| Total | 408 | 60 | 348 | 20 | 31 | 10 | 280 | 0 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -153,7 +153,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-11-09c.csv (all 407 rows) is e5c0e1141b0788a1538d8688a7133db6a73e92cbcf7b62403c38b5e6d6f7d280
+Checksum for this update: SHA-256 of public-live-rows-2026-11-09d.csv (all 408 rows) is 13b2d7e5e83e91576b44e1d04ccc2cc6174801ba04f2254c0280a1076efe061f
 
 Rule entries
 
@@ -491,7 +491,7 @@ Outside files we watch | UK-DEF3-PATH | PASS: by 31 Dec 2027 HM Treasury publish
 
 Outside files we watch | TSTS-SUBCOMP-2031 | PASS: Public Services and Procurement Canada or the operating department (National Research Council of Canada or Transportation Safety Board of Canada) publicly records substantial completion of the Transportation Safety and Technology Science (TSTS) facility on the NRC Montreal Road campus in Ottawa on or before 31 Dec 2031. FAILED: no such public record by 31 Dec 2031, or a published revised completion date after 2031. A contract option exercised is a stage, not delivery. Hype exhibit: Public Services and Procurement Canada, 30 Oct 2026, construction management services option with Bird Construction Group Ltd. "valued at approximately $404.9 million"; quick fact: "Substantial completion is expected in 2031." https://www.canada.ca/en/public-services-procurement/news/2026/10/government-of-canada-advances-major-infrastructure-project-to-strengthen-transportation-safety-science-and-security.html | Public Services and Procurement Canada (Minister of Government Transformation, Public Works and Procurement) | 31 Dec 2031 | [Date basis: set by an outside source] HOLDER DATE: "Substantial completion is expected in 2031." (PSPC news release, 30 Oct 2026; Barry go 30 Oct 2026 7:25 AM CST, t2449u). Primary: https://www.canada.ca/en/public-services-procurement/news/2026/10/government-of-canada-advances-major-infrastructure-project-to-strengthen-transportation-safety-science-and-security.html , read 30 Oct 2026 | LIVE | https://www.canada.ca/en/public-services-procurement/news/2026/10/government-of-canada-advances-major-infrastructure-project-to-strengthen-transportation-safety-science-and-security.html | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2031 | OPEN | OPEN | OPEN
 
-Also watched (257)
+Also watched (258)
 
 Rows the register watches that are not government promises: the owner is not a government, or the row lacks a primary source link. Same rules apply.
 
@@ -796,6 +796,8 @@ Canadian files | A3 | PASS: interprovincial mutual recognition for goods with a 
 Canadian files | HP-PERF | PASS: by 30 Jun 2028 NRCan, ECCC or an independent evaluator publishes measured seasonal heat pump performance (COP) and bill savings for National Heat Pump Rebate installs, by climate zone or province, with independent monitoring. FAILED: only the announced average ($1,400) or modelled figures by that date | Minister of Energy and Natural Resources / ECCC | 30 Jun 2028 | [Date basis: benchmark set by the register] DESK-SET: one full heating season after the early-2027 launch (PMO and ECCC, 8 Oct 2026) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 30 Jun 2028 | OPEN | OPEN | OPEN
 
 Canadian files | PL-FULLCON | PASS: dated release or regulator record of full construction start by 30 Sep 2028; FAILED: none; no extension | Pacific Link proponents | 30 Sep 2028 | [Date basis: set by an outside source] COMPANY TIMETABLE: proponent timeline, "September 2028: Authorization is granted and full construction begins" | LIVE | https://www.pacificlinkpipeline.ca/timeline | OPEN | OPEN | OPEN | OPEN until scoring date 30 Sep 2028 | OPEN | OPEN | OPEN
+
+Canadian files | RCIP-5500-2027 | PASS: an IRCC primary (annual report to Parliament or IRCC open data) shows 2027 permanent resident admissions in the Rural Community Immigration Program line (as defined in plan footnote 9, which includes remaining pilot cases) of at least 5,500. FAILED: below 5,500. Range 4,000 to 6,500 shown beside the result. | Minister of Immigration, Refugees and Citizenship (IRCC) | 1 Nov 2028 | [Date basis: benchmark set by the register] DESK-SET: 1 Nov 2028, desk arithmetic on the first IRCC annual report to Parliament covering calendar 2027 (earlier if IRCC open data for December 2027 posts first); not a date printed in the IRCC 9 Nov 2026 release or the levels supplementary table (Barry answering t3235s15692). Primaries: https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/11/canada-creates-a-permanent-immigration-pathway-to-help-rural-communities-attract-and-retain-talent0.html and https://www.canada.ca/en/immigration-refugees-citizenship/corporate/immigration-system/levels/supplementary-immigration-levels-2027-2029.html , read 2026-11-09 10:49:42 CST | LIVE | https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/11/canada-creates-a-permanent-immigration-pathway-to-help-rural-communities-attract-and-retain-talent0.html | OPEN | OPEN | OPEN | OPEN until scoring date 1 Nov 2028 | OPEN | OPEN | OPEN
 
 Canadian files | CEDAR-ISD | PASS: by 31 Dec 2028 Cedar LNG, Pembina or the Haisla Nation publishes a dated release, or a regulator record shows, that Cedar LNG is in service with its first LNG cargo loaded. FAILED: no first cargo recorded by 31 Dec 2028; a dated miss is recorded. Next real step on a financed project (FID 25 Jun 2024) | Cedar LNG Partners LP (Haisla Nation / Pembina Pipeline Corporation) | 31 Dec 2028 | [Date basis: set by an outside source] COMPANY TIMETABLE: Cedar LNG FID release of 25 Jun 2024, https://www.cedarlng.com/2024/06/25/cedar-lng-announces-positive-final-investment-decision/ : 'The Project is anticipated to be in service in late 2028.' Repeated by Pembina release of 5 Nov 2025, https://www.sec.gov/Archives/edgar/data/1546066/000154606625000096/november52025pressrelease.htm : 'expected in-service date in late 2028'. Year end set by the register (read 26 Oct 2026). Independent: The Globe and Mail 15 Jul 2026, https://www.theglobeandmail.com/business/article-cedar-lng-receives-bc-regulators-approval-to-increase-future/ | LIVE | https://www.cedarlng.com/news/ | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2028 | OPEN | OPEN | OPEN
 
@@ -1121,19 +1123,19 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 <!-- AUDIT -->
 
-Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 171 rows are sourced, 0 secondary-sourced, 55 have their promise sourced with the outcome pending, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
+Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 171 rows are sourced, 0 secondary-sourced, 56 have their promise sourced with the outcome pending, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
 
 ## How to check this update
 
-Build stamp: update 2026-11-09c, counted as at 9 November 2026, from data/entries.csv, 407 rows, SHA-256 7665c8798242ed486a6c290c55fa9032a26055be45418d5bfff97e52da63fa5d. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-11-09d, counted as at 9 November 2026, from data/entries.csv, 408 rows, SHA-256 f5bebe4c95ae13dc5a06911128e1dfd2bef099e0feaa69be86845d59ae42854b. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-09c.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-09c.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-09d.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-09d.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
 Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.
 
-How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-09c, of 407 entries, 221 (about 54 per cent) carry a benchmark date set by the register, 3 an outside date with a scoring window set by the register, and 183 (about 45 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
+How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-09d, of 408 entries, 222 (about 54 per cent) carry a benchmark date set by the register, 3 an outside date with a scoring window set by the register, and 183 (about 45 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
 
 How the register scores treaties (dated 30 October 2026). A treaty Canada signs is not Canadian law. Canadian courts enforce treaty rights only where the treaty has been implemented by legislation (Francis v. The Queen, [1956] SCR 618), and a treaty has no domestic, internal consequences unless they arise from implementing legislation (Capital Cities Communications v. CRTC, [1978] 2 SCR 141). Where a treaty touches provincial subjects, the provinces must legislate: as the Privy Council put it in 1937, "as a treaty deals with a particular class of subjects so will the legislative power of performing it be ascertained."
 
