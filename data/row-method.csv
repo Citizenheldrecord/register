@@ -407,3 +407,4 @@ QC-DIGID,2026-11-09,not recorded (existing row; method side-file bootstrapped me
 FOR1,2026-11-09,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
 RU-SEMA-3824-20261109,2026-11-09,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
 RCIP-5500-2027,2026-11-09,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CSF-NOTES-2027,2026-11-09,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
