@@ -411,3 +411,4 @@ CSF-NOTES-2027,2026-11-10,not recorded (existing row; method side-file bootstrap
 AI4-SCORED-20261109,2026-11-10,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
 IR-SEMA-11-20261110,2026-11-10,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
 CN-EFSD-MOU-20261109,2026-11-10,recorded from official Finance Canada release of 9 Nov 2026 (Barry t3254s15804),government,Finance Canada news release 9 Nov 2026,desk append after add_entry.py
+US-REMIT-HZ-2027,2026-11-10,entered from Schedule 7 of the Consolidated List of Remission on U.S. Surtaxes Version 1 and the 9 Nov Finance release (Barry answering t3270s15876),statutory,"Schedule 7 prints February 1, 2027",desk append after add_entry.py
