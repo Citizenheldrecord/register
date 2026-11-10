@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 9 November 2026 from data/entries.csv, which holds 409 entries.
+Counted on 10 November 2026 from data/entries.csv, which holds 410 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 409 = 349 promises + 60 scoring entries.
+- **Entries:** 410 = 349 promises + 61 scoring entries.
 - **Scored PASS:** 20 (AB1, AB1-OFFICIAL, AI1, BUDGET26-TABLE, BoC, C39-CTTE, CUMMINGS-TX, DLV-C15, DLV-CTR, DLV-DEN, FA3c, HCAP-LVL, LANE-1, MTL-LABEL, POL-1, Q10-NEXT, REG-PROV1, S338-SCOPE, TR-FTA-ROUND, TRADE-SHARE-SEP).
-- **Scored FAILED:** 31 (AB1-PL, AI2, BC-PARCELS, BC1, BNT122-DEATHS, CF-GAP, CFR-GAZ-30OCT, COAL-EXPORT-2030, CROWN-LOAN-TABLE, DGR1, DLV-ONLTC, DNG-CAP, DSRB-CAP, EM-1, FA3-MVH-DEC, FA3b, GX1b, MIL-QUESTURA-C20261022, MRNA-ESMO-FULL, MTL-CLOSE, PAUSE-RECIP, PL-DEVFUND-B26, RBT2-FAA-OCT, S2, S7, SPT-CLINIC, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
+- **Scored FAILED:** 32 (AB1-PL, AI2, AI4, BC-PARCELS, BC1, BNT122-DEATHS, CF-GAP, CFR-GAZ-30OCT, COAL-EXPORT-2030, CROWN-LOAN-TABLE, DGR1, DLV-ONLTC, DNG-CAP, DSRB-CAP, EM-1, FA3-MVH-DEC, FA3b, GX1b, MIL-QUESTURA-C20261022, MRNA-ESMO-FULL, MTL-CLOSE, PAUSE-RECIP, PL-DEVFUND-B26, RBT2-FAA-OCT, S2, S7, SPT-CLINIC, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
 - **Recorded as fact, with no pass or fail line:** 10 (CL-BASE, HR5334, IR1, LEVELS-1NOV, LEVELS2729, MPF-2031, MVH-FULLFUND-B26, N4, RU1, SEB-B-TABLE-20261106).
-- **Open:** 281.
+- **Open:** 280.
 - **Due:** 0.
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 349 promises = 20 PASS + 31 FAILED + 10 recorded + 281 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 349 promises = 20 PASS + 32 FAILED + 10 recorded + 280 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 409 entries):
+By section of the data file (every entry counted once; the four sections add up to all 410 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Canadian files | 260 | 38 | 222 | 12 | 26 | 0 | 184 | 0 | 0 | 0 | 0 |
 | This desk's own commitments | 16 | 3 | 13 | 3 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
-| Outside files we watch | 90 | 7 | 83 | 2 | 5 | 0 | 70 | 0 | 4 | 2 | 0 |
+| Outside files we watch | 91 | 8 | 83 | 2 | 6 | 0 | 69 | 0 | 4 | 2 | 0 |
 | Recorded facts and checkpoints | 43 | 12 | 31 | 3 | 0 | 10 | 17 | 0 | 0 | 0 | 1 |
-| Total | 409 | 60 | 349 | 20 | 31 | 10 | 281 | 0 | 4 | 2 | 1 |
+| Total | 410 | 61 | 349 | 20 | 32 | 10 | 280 | 0 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -101,7 +101,7 @@ These rows are linked because they test related things. Each is scored on its ow
 
 The Register
 
-Entries as at 9 November 2026. Last change: 9 November 2026.
+Entries as at 10 November 2026. Last change: 10 November 2026.
 
 Start here. Why this register exists: The Country That Finishes: One Law, One Ledger (https://barryesharp.substack.com/p/the-country-that-finishes-one-law), then The Reforms Were Eaten: Why the Thermometer Must Be Citizen-Held (https://barryesharp.substack.com/p/the-reforms-were-eaten-why-the-thermometer).
 
@@ -153,7 +153,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-11-09e.csv (all 409 rows) is f0ef7f7e23e62e8b23eb5000c447f3d08865acdd47f34547ba44db41feb548a7
+Checksum for this update: SHA-256 of public-live-rows-2026-11-10.csv (all 410 rows) is 4e4a2b81377e053cf3f89fea38662bcd2e2403ebf27bda4436c0a6d821a2b295
 
 Rule entries
 
@@ -491,7 +491,7 @@ Outside files we watch | UK-DEF3-PATH | PASS: by 31 Dec 2027 HM Treasury publish
 
 Outside files we watch | TSTS-SUBCOMP-2031 | PASS: Public Services and Procurement Canada or the operating department (National Research Council of Canada or Transportation Safety Board of Canada) publicly records substantial completion of the Transportation Safety and Technology Science (TSTS) facility on the NRC Montreal Road campus in Ottawa on or before 31 Dec 2031. FAILED: no such public record by 31 Dec 2031, or a published revised completion date after 2031. A contract option exercised is a stage, not delivery. Hype exhibit: Public Services and Procurement Canada, 30 Oct 2026, construction management services option with Bird Construction Group Ltd. "valued at approximately $404.9 million"; quick fact: "Substantial completion is expected in 2031." https://www.canada.ca/en/public-services-procurement/news/2026/10/government-of-canada-advances-major-infrastructure-project-to-strengthen-transportation-safety-science-and-security.html | Public Services and Procurement Canada (Minister of Government Transformation, Public Works and Procurement) | 31 Dec 2031 | [Date basis: set by an outside source] HOLDER DATE: "Substantial completion is expected in 2031." (PSPC news release, 30 Oct 2026; Barry go 30 Oct 2026 7:25 AM CST, t2449u). Primary: https://www.canada.ca/en/public-services-procurement/news/2026/10/government-of-canada-advances-major-infrastructure-project-to-strengthen-transportation-safety-science-and-security.html , read 30 Oct 2026 | LIVE | https://www.canada.ca/en/public-services-procurement/news/2026/10/government-of-canada-advances-major-infrastructure-project-to-strengthen-transportation-safety-science-and-security.html | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2031 | OPEN | OPEN | OPEN
 
-Also watched (259)
+Also watched (260)
 
 Rows the register watches that are not government promises: the owner is not a government, or the row lacks a primary source link. Same rules apply.
 
@@ -885,7 +885,9 @@ Outside files we watch | TRADE-SHARE-SEP | PASS: Statistics Canada's 'Canadian i
 
 Outside files we watch | TRADE-SHARE-SEP-SCORED-20261104 | PASS: Statistics Canada's 'Canadian international merchandise trade, September 2026' release (4 Nov 2026) shows the United States' share of Canada's goods exports for September at or above 70.0 per cent. FAILED: below 70.0 per cent | Statistics Canada | 4 Nov 2026 | [Date basis: outside date, scoring window set by the register] SCHEDULED RELEASE: StatCan 'Canadian international merchandise trade, September 2026', 4 Nov 2026 8:30 ET; the 70 per cent line is DESK-SET | SCORED 4 Nov 2026: PASS | https://www150.statcan.gc.ca/n1/daily-quotidien/261104/dq261104a-eng.htm PASS: Statistics Canada's September 2026 trade release (read 4 Nov 2026 14:41 CST) says the share of Canadian exports destined to countries other than the United States "decreased from 30.1% in August to 29.8% in September." The US share of 70.2 per cent is desk arithmetic (100 minus the printed 29.8 per cent); StatCan does not print the US share directly. Two August figures, both shown: 30.1 per cent non-US in the 4 Nov release; 30.2 per cent in the October release (https://www150.statcan.gc.ca/n1/daily-quotidien/261006/dq261006a-eng.htm, "stood at 30.2% in August", read 14:45 CST), which gave the 69.8 per cent baseline. | OPEN | OPEN | OPEN | n/a: not a spending test (statistical release) | OPEN | OPEN | OPEN
 
-Outside files we watch | AI4 | PASS: METR publishes its cyber incident review (report URL) by 9 Nov. FAILED: no report; any dated mutual extension is recorded in the entry | METR / Anthropic | 9 Nov 2026 | [Date basis: benchmark set by the register] DESK-SET: about eight weeks after Anthropic's 9 Sep 2026 post announcing the review (Wait Report AI4) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 9 Nov 2026 | OPEN | OPEN | OPEN
+Outside files we watch | AI4 | PASS: METR publishes its cyber incident review (report URL) by 9 Nov. FAILED: no report; any dated mutual extension is recorded in the entry | METR / Anthropic | 9 Nov 2026 | [Date basis: benchmark set by the register] DESK-SET: about eight weeks after Anthropic's 9 Sep 2026 post announcing the review (Wait Report AI4) | CLOSED: scored in AI4-SCORED-20261109 | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 9 Nov 2026 | OPEN | OPEN | OPEN
+
+Outside files we watch | AI4-SCORED-20261109 | PASS: METR publishes its cyber incident review (report URL) by 9 Nov. FAILED: no report; any dated mutual extension is recorded in the entry | METR / Anthropic | 9 Nov 2026 | [Date basis: benchmark set by the register] DESK-SET: about eight weeks after Anthropic's 9 Sep 2026 post announcing the review (Wait Report AI4) | SCORED 9 Nov 2026: FAILED (blocking layer: private agreement (METR publication; extension terms held by Anthropic)) | https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents FAILED: by 9 Nov 2026 no METR report on Anthropic's cybersecurity incidents was published and no dated mutual extension was recorded. Read 2026-11-09 21:15 CST: the METR feed (https://metr.org/feed.xml), blog (https://metr.org/blog/), research page (https://metr.org/research) and home page list no such review (newest feed items 5 Nov 2026 concern Anthropic risk-report reviews, not the cyber incidents); the Anthropic page says "Our initial agreement runs for eight weeks, with the option to extend by mutual agreement." and shows no extension notice. | OPEN | OPEN | OPEN | FAILED: no public figure; held by METR and Anthropic | OPEN | OPEN | OPEN
 
 Outside files we watch | DSL1 | PASS: no Ukrainian or Russian official report of a strike on energy infrastructure for 30 consecutive days from 11 Oct, the ceasefire President Trump announced. FAILED: any such report | President Trump (announcer); Moscow and Kyiv | 10 Nov 2026 | [Date basis: benchmark set by the register] DESK-SET: 30 days from the 11 Oct 2026 announcement (row) | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 10 Nov 2026 | OPEN | OPEN | OPEN
 
@@ -1125,19 +1127,19 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 <!-- AUDIT -->
 
-Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 171 rows are sourced, 0 secondary-sourced, 57 have their promise sourced with the outcome pending, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
+Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 172 rows are sourced, 0 secondary-sourced, 57 have their promise sourced with the outcome pending, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
 
 ## How to check this update
 
-Build stamp: update 2026-11-09e, counted as at 9 November 2026, from data/entries.csv, 409 rows, SHA-256 39c908632c41941d5c858a03c434c3724e598e660ca6d6b1adf1d3b6e976a4da. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-11-10, counted as at 10 November 2026, from data/entries.csv, 410 rows, SHA-256 8d73bbf5c50f144eb491a297343722fc8e4ca268f9482b114fea3e3dd4f961bb. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-09e.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-09e.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-10.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-10.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
 Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.
 
-How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-09e, of 409 entries, 223 (about 55 per cent) carry a benchmark date set by the register, 3 an outside date with a scoring window set by the register, and 183 (about 45 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
+How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-10, of 410 entries, 224 (about 55 per cent) carry a benchmark date set by the register, 3 an outside date with a scoring window set by the register, and 183 (about 45 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
 
 How the register scores treaties (dated 30 October 2026). A treaty Canada signs is not Canadian law. Canadian courts enforce treaty rights only where the treaty has been implemented by legislation (Francis v. The Queen, [1956] SCR 618), and a treaty has no domestic, internal consequences unless they arise from implementing legislation (Capital Cities Communications v. CRTC, [1978] 2 SCR 141). Where a treaty touches provincial subjects, the provinces must legislate: as the Privy Council put it in 1937, "as a treaty deals with a particular class of subjects so will the legislative power of performing it be ascertained."
 
@@ -1208,7 +1210,7 @@ PAUSE-RECIP | 31 Oct 2026 | 31 Oct 2026 | PASS: a reciprocal Russia Ukraine ener
 AI2 | 31 Oct 2026 | 31 Oct 2026 | PASS: OpenAI publishes a written access charter. FAILED: not | political choice. Actor: OpenAI. Evidence: https://openai.com/index/priorities-principles-third-party-assessments/ | n/a: not a spending test. Entry AI2-SCORED-20261031 | a general principles page only (22 Sep 2026), naming no assessor.
 MIL-QUESTURA-C20261022 | 31 Oct 2026 | 31 Oct 2026 | Questura di Milano breakdown of the about 50 people detained (fermati) on 17 Oct (Italia in Piazza). PASS: by 31 Oct 2026 the Questura di Milano or the Ministero dell'Interno publishes a breakdown of those detained on 17 Oct by age (minor/adult) AND citizenship (Italian/foreign), with arrest vs denuncia status. Unattributed press counts do not count. FAILED: dated entry within 30 days; no extension | political choice. Actor: Questura di Milano; Ministero dell'Interno. Evidence: https://questure.poliziadistato.it/it/Milano | n/a: not a spending test. Entry MIL-QUESTURA-C20261022-SCORED-20261031 | none published; press weekend figures only.
 
-Entries as at 9 November 2026: 22.
+Entries as at 10 November 2026: 22.
 
 <!-- /FAILLOG -->
 
