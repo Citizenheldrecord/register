@@ -192,4 +192,13 @@ grep -q 'href="#row-EA-REFORM">EA-REFORM</a>' index.html && grep -q 'href="#row-
 grep -o '<section class="overlaps">.*</section><!-- /OVERLAPS -->' index.html | grep -q 'SA-EA-CHARTER\|Related rows\|CHARTER-LIMIT-REG' && bad "see_also leaked into overlaps" || ok "overlaps section has no see_also note"
 grep -q '^## Related rows' README.md && ok "README shows Related rows" || bad "README Related rows"
 
+echo "19. closed overlap pairs render under Overlaps reviewed (closed); open heading omitted when none remain (Barry t3335u)"
+fresh; build $SCRATCH >/tmp/pl.out 2>&1 || { bad "build"; cat /tmp/pl.out; }
+grep -q '<h2>Overlaps reviewed (closed)</h2>' index.html && ok "closed heading in index" || bad "closed heading missing in index"
+grep -q '<h2>Possible overlaps under review</h2>' index.html && bad "open heading still in index" || ok "open heading omitted in index"
+grep -q 'Review of OV-LEVELS (22 Oct 2026) closed 4 Nov 2026' index.html && grep -q 'Both record the tabling of the 2027 to 2029 Immigration Levels Plan' index.html && ok "both LEVELS notes kept verbatim in index" || bad "LEVELS notes missing in index"
+grep -q 'Review of OV-FA3 (22 Oct 2026) closed 4 Nov 2026' index.html && grep -q 'Both test a Schedule 1 listing or a dated refusal for MVH' index.html && ok "both FA3 notes kept verbatim in index" || bad "FA3 notes missing in index"
+grep -q '<h2>Overlaps reviewed (closed)</h2>' plain-english.html && ok "closed heading in plain-english" || bad "closed heading missing in plain-english"
+grep -q '<h2>Possible overlaps under review</h2>' plain-english.html && bad "open heading still in plain-english" || ok "open heading omitted in plain-english"
+
 echo; [ $fails -eq 0 ] && echo "PIPELINE TESTS: ALL PASSED" || echo "PIPELINE TESTS: $fails FAILED"; exit $fails

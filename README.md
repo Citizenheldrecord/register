@@ -35,13 +35,13 @@ By section of the data file (every entry counted once; the four sections add up 
 
 <!-- OVERLAPS -->
 
-## Possible overlaps under review
+## Overlaps reviewed (closed)
 
-These pairs of entries may test the same thing. Both entries in each pair are kept and stay live while the overlap is under review. Nothing has been removed or changed in either entry.
+Both entries in each pair are kept and stay live, the review is closed, and nothing was removed or changed.
 
 - **LEVELS-1NOV and LEVELS2729** (noted 22 Oct 2026): Both record the tabling of the 2027 to 2029 Immigration Levels Plan under IRPA s.94 with a first check on 2 Nov 2026. LEVELS-1NOV records TABLED (date and URL) or NOT TABLED with the 30 sitting day window; LEVELS2729 records the tabling date and whether the permanent resident target rises above 380,000. LEVELS-1NOV's own text says it is not a substitute for LEVELS2729. Both kept, under review, nothing removed.
-- **FA3-MVH-DEC and FA3** (noted 22 Oct 2026): Both test a Schedule 1 listing or a dated refusal for MVH. FA3-MVH-DEC tests a listing Order (P.C. number and date) or a dated public refusal on or before 2 Nov 2026; FA3 tests MVH and RBT2 listed or refused in Schedule 1 by 31 Dec 2026. FA3-MVH-DEC's own text says it does not move the FA3 31 Dec row. Both kept, under review, nothing removed.
 - **LEVELS-1NOV and LEVELS2729** (noted 4 Nov 2026): Review of OV-LEVELS (22 Oct 2026) closed 4 Nov 2026. LEVELS-1NOV is a narrower near-term test inside LEVELS2729: it records only whether the plan was tabled on or before 1 Nov 2026. It was recorded NOT TABLED on 4 Nov 2026 (House of Commons Journals No. 161, 3 Nov 2026, see LEVELS-1NOV-SCORED-20261104). LEVELS2729 stays open: it records the tabling date and whether the permanent resident target rises above 380,000. Both kept, nothing removed.
+- **FA3-MVH-DEC and FA3** (noted 22 Oct 2026): Both test a Schedule 1 listing or a dated refusal for MVH. FA3-MVH-DEC tests a listing Order (P.C. number and date) or a dated public refusal on or before 2 Nov 2026; FA3 tests MVH and RBT2 listed or refused in Schedule 1 by 31 Dec 2026. FA3-MVH-DEC's own text says it does not move the FA3 31 Dec row. Both kept, under review, nothing removed.
 - **FA3-MVH-DEC and FA3** (noted 4 Nov 2026): Review of OV-FA3 (22 Oct 2026) closed 4 Nov 2026. FA3-MVH-DEC is a narrower near-term test inside FA3: it tests only the Mackenzie Valley Highway, by the 2 Nov 2026 date in the Government of Canada and GNWT letter of 18 Sep 2026. FA3 tests both MVH and RBT2 by 31 Dec 2026. The FA3-MVH-DEC result (see FA3-MVH-DEC-SCORED-20261104) does not score FA3. Both kept, nothing removed.
 
 <!-- /OVERLAPS -->
@@ -154,7 +154,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-11-11d.csv (all 419 rows) is ac4f188fef6047025ac62358a105c1c28e2d88364cc80b45b6b0b33450ef9d47
+Checksum for this update: SHA-256 of public-live-rows-2026-11-11e.csv (all 419 rows) is ac4f188fef6047025ac62358a105c1c28e2d88364cc80b45b6b0b33450ef9d47
 
 Rule entries
 
@@ -1150,15 +1150,15 @@ Note, 27 Oct 2026: This register's rule is that every row rests on a primary sou
 
 ## How to check this update
 
-Build stamp: update 2026-11-11d, counted as at 11 November 2026, from data/entries.csv, 419 rows, SHA-256 679ced18f1ee77106931f855c6a877a42159e1fe4b5b3db1a1f814cebf2fa266. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-11-11e, counted as at 11 November 2026, from data/entries.csv, 419 rows, SHA-256 679ced18f1ee77106931f855c6a877a42159e1fe4b5b3db1a1f814cebf2fa266. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-11d.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-11d.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-11e.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-11e.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
 Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.
 
-How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-11d, of 419 entries, 229 (about 55 per cent) carry a benchmark date set by the register, 3 an outside date with a scoring window set by the register, and 187 (about 45 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
+How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-11e, of 419 entries, 229 (about 55 per cent) carry a benchmark date set by the register, 3 an outside date with a scoring window set by the register, and 187 (about 45 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
 
 How the register scores treaties (dated 30 October 2026). A treaty Canada signs is not Canadian law. Canadian courts enforce treaty rights only where the treaty has been implemented by legislation (Francis v. The Queen, [1956] SCR 618), and a treaty has no domestic, internal consequences unless they arise from implementing legislation (Capital Cities Communications v. CRTC, [1978] 2 SCR 141). Where a treaty touches provincial subjects, the provinces must legislate: as the Privy Council put it in 1937, "as a treaty deals with a particular class of subjects so will the legislative power of performing it be ascertained."
 

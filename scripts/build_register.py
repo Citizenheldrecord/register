@@ -85,8 +85,35 @@ def load_groups(rows):
 NOTES = os.path.join(rc.ROOT, "data", "display-notes.csv")
 
 
+def overlap_pair_key(ids):
+    """Stable pair id from a display-notes ids cell (semicolon-separated)."""
+    return tuple(sorted(i.strip() for i in (ids or "").split(";") if i.strip()))
+
+
+def is_closing_overlap_note(note):
+    """A later possible_overlap note that closes a review, detected from its text (append-only; no closed field)."""
+    return bool(re.search(r"\bclosed\b", note.get("text") or "", re.I))
+
+
+def parse_overlap_noted(s):
+    """Parse a display-notes 'noted' cell such as '22 Oct 2026' or '4 Nov 2026'."""
+    import datetime as _dt
+    s = (s or "").strip()
+    for fmt in ("%d %b %Y", "%d %B %Y"):
+        try:
+            return _dt.datetime.strptime(s, fmt).date()
+        except ValueError:
+            continue
+    return None
+
+
 def overlaps_md(rows):
-    """Display only: 'Possible overlaps under review' from data/display-notes.csv. Nothing in an entry changes."""
+    """Display only: overlaps box from data/display-notes.csv, grouped by whether a later note closed the review.
+
+    A pair with a closing note goes under 'Overlaps reviewed (closed)'. A pair with no closing note
+    goes under 'Possible overlaps under review'. A group heading is omitted when it has no pairs.
+    Every possible_overlap note is kept verbatim. Nothing in an entry changes.
+    """
     import csv as _c
     if not os.path.exists(NOTES):
         return None
@@ -97,9 +124,35 @@ def overlaps_md(rows):
         raise rc.Fail("data/display-notes.csv names ids not in data/entries.csv: %s" % bad)
     if not notes:
         return None
-    out = ["## Possible overlaps under review", "",
-           "These pairs of entries may test the same thing. Both entries in each pair are kept and stay live while the overlap is under review. Nothing has been removed or changed in either entry.", ""]
-    out += ["- **%s** (noted %s): %s" % (" and ".join(n["ids"].split(";")), n["noted"], n["text"]) for n in notes]
+    closed_pairs = {overlap_pair_key(n["ids"]) for n in notes if is_closing_overlap_note(n)}
+    def bullet(n):
+        return "- **%s** (noted %s): %s" % (" and ".join(n["ids"].split(";")), n["noted"], n["text"])
+    def group_notes(pred):
+        # Keep CSV order, but list a pair's notes together (opening then later closing notes).
+        chosen = [n for n in notes if pred(overlap_pair_key(n["ids"]))]
+        seen, out = [], []
+        for n in chosen:
+            k = overlap_pair_key(n["ids"])
+            if k in seen:
+                continue
+            seen.append(k)
+            out.extend(m for m in chosen if overlap_pair_key(m["ids"]) == k)
+        return out
+    open_notes = group_notes(lambda k: k not in closed_pairs)
+    closed_notes = group_notes(lambda k: k in closed_pairs)
+    out = []
+    if open_notes:
+        out += ["## Possible overlaps under review", "",
+                "These pairs of entries may test the same thing. Both entries in each pair are kept and stay live while the overlap is under review. Nothing has been removed or changed in either entry.", ""]
+        out += [bullet(n) for n in open_notes]
+    if closed_notes:
+        if out:
+            out.append("")
+        out += ["## Overlaps reviewed (closed)", "",
+                "Both entries in each pair are kept and stay live, the review is closed, and nothing was removed or changed.", ""]
+        out += [bullet(n) for n in closed_notes]
+    if not out:
+        return None
     return "\n".join(out)
 
 
@@ -731,6 +784,25 @@ def build(uid, out_dir, source, allow_overwrite=False):
     index = render_index(open(os.path.join(ROOT, "index.html"), encoding="utf-8").read(), rows, csv_text, csv_name, json_name, csv_sha, iso)
     pe_path = os.path.join(ROOT, "plain-english.html")
     plain = apply_footer(open(pe_path, encoding="utf-8").read(), "plain-english.html") if os.path.exists(pe_path) else None
+    if plain is not None:
+        ov = overlaps_md(rows)
+        if ov:
+            ob = '<!-- OVERLAPS --><section class="overlaps">%s</section><!-- /OVERLAPS -->\n' % md_to_html(ov)
+            if "<!-- OVERLAPS -->" in plain:
+                plain = one(r"<!-- OVERLAPS -->.*?<!-- /OVERLAPS -->\n", lambda m, b=ob: b, plain, "plain-english.html", re.S)
+            elif "<h2>Possible overlaps under review</h2>" in plain:
+                plain, nsub = re.subn(
+                    r"<h2>Possible overlaps under review</h2>\s*<p>.*?</p>\s*",
+                    ob, plain, count=1, flags=re.S)
+                if nsub != 1:
+                    raise rc.Fail("plain-english.html: overlaps heading found but the following paragraph could not be replaced")
+            else:
+                anchor = '<p class="small"><a href="index.html">Back to the full register</a></p>'
+                if anchor not in plain:
+                    raise rc.Fail("plain-english.html: anchor for overlaps box not found")
+                plain = plain.replace(anchor, ob + anchor, 1)
+        elif "<!-- OVERLAPS -->" in plain:
+            plain = one(r"<!-- OVERLAPS -->.*?<!-- /OVERLAPS -->\n", lambda m: "", plain, "plain-english.html", re.S)
     json_text = json.dumps(rows, ensure_ascii=False, indent=1)
     for name, text in (("README.md", readme), ("index.html", index), (csv_name, csv_text), (json_name, json_text)) + ((("plain-english.html", plain),) if plain else ()):
         errs += rc.grammar_check_text(name, text)
