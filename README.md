@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 10 November 2026 from data/entries.csv, which holds 415 entries.
+Counted on 11 November 2026 from data/entries.csv, which holds 416 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 415 = 354 promises + 61 scoring entries.
+- **Entries:** 416 = 354 promises + 62 scoring entries.
 - **Scored PASS:** 20 (AB1, AB1-OFFICIAL, AI1, BUDGET26-TABLE, BoC, C39-CTTE, CUMMINGS-TX, DLV-C15, DLV-CTR, DLV-DEN, FA3c, HCAP-LVL, LANE-1, MTL-LABEL, POL-1, Q10-NEXT, REG-PROV1, S338-SCOPE, TR-FTA-ROUND, TRADE-SHARE-SEP).
 - **Scored FAILED:** 32 (AB1-PL, AI2, AI4, BC-PARCELS, BC1, BNT122-DEATHS, CF-GAP, CFR-GAZ-30OCT, COAL-EXPORT-2030, CROWN-LOAN-TABLE, DGR1, DLV-ONLTC, DNG-CAP, DSRB-CAP, EM-1, FA3-MVH-DEC, FA3b, GX1b, MIL-QUESTURA-C20261022, MRNA-ESMO-FULL, MTL-CLOSE, PAUSE-RECIP, PL-DEVFUND-B26, RBT2-FAA-OCT, S2, S7, SPT-CLINIC, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
-- **Recorded as fact, with no pass or fail line:** 10 (CL-BASE, HR5334, IR1, LEVELS-1NOV, LEVELS2729, MPF-2031, MVH-FULLFUND-B26, N4, RU1, SEB-B-TABLE-20261106).
-- **Open:** 284.
-- **Due:** 1 (CN-EFSD-MOU-20261109, 1 day past its date).
+- **Recorded as fact, with no pass or fail line:** 11 (CL-BASE, CN-EFSD-MOU-20261109, HR5334, IR1, LEVELS-1NOV, LEVELS2729, MPF-2031, MVH-FULLFUND-B26, N4, RU1, SEB-B-TABLE-20261106).
+- **Open:** 282.
+- **Due:** 2 (BC-GOV-FORM, 1 day past its date; DSL1, 1 day past its date).
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 354 promises = 20 PASS + 32 FAILED + 10 recorded + 284 open + 1 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 354 promises = 20 PASS + 32 FAILED + 11 recorded + 282 open + 2 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 415 entries):
+By section of the data file (every entry counted once; the four sections add up to all 416 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 264 | 38 | 226 | 12 | 26 | 0 | 188 | 0 | 0 | 0 | 0 |
+| Canadian files | 264 | 38 | 226 | 12 | 26 | 0 | 187 | 1 | 0 | 0 | 0 |
 | This desk's own commitments | 16 | 3 | 13 | 3 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
-| Outside files we watch | 91 | 8 | 83 | 2 | 6 | 0 | 69 | 0 | 4 | 2 | 0 |
-| Recorded facts and checkpoints | 44 | 12 | 32 | 3 | 0 | 10 | 17 | 1 | 0 | 0 | 1 |
-| Total | 415 | 61 | 354 | 20 | 32 | 10 | 284 | 1 | 4 | 2 | 1 |
+| Outside files we watch | 91 | 8 | 83 | 2 | 6 | 0 | 68 | 1 | 4 | 2 | 0 |
+| Recorded facts and checkpoints | 45 | 13 | 32 | 3 | 0 | 11 | 17 | 0 | 0 | 0 | 1 |
+| Total | 416 | 62 | 354 | 20 | 32 | 11 | 282 | 2 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -96,12 +96,13 @@ These rows are linked because they test related things. Each is scored on its ow
 - **QC-DIGID and QC-BIO-REG** (noted 7 Nov 2026): Read together. QC-DIGID tests the non-mandatory rule in section 10.3. QC-BIO-REG is unchanged.
 - **FOR1 and KAMLOOPS-EXCAV** (noted 7 Nov 2026): PAIR, NOT DUPLICATE (Barry 21 Oct 2026). FOR1 is the early check on 27 May 2027. KAMLOOPS-EXCAV stays PROPOSED and unchanged. FOR1 owner is desk-assigned and unverified; CIRNAC is funding context only.
 - **FA3-MVH-DEC-SCORED-20261104** (noted 9 Nov 2026): Link fix 9 Nov 2026 (desk, Barry go answering t3196s15478): the Wayback copy recorded at entry for the Canada Gazette Part II index of 4 November 2026 (https://web.archive.org/web/20261105010709/https://gazette.gc.ca/rp-pr/p2/2026/2026-11-04/html/index-eng.html) returns 404, and Wayback holds no snapshot of that page. The official page still loads: https://gazette.gc.ca/rp-pr/p2/2026/2026-11-04/html/index-eng.html (Canada Gazette, Part II, Volume 160, Number 22: Index, November 4, 2026), read 9 November 2026 04:14 CST. It lists SOR/2026-209 to SOR/2026-228 and SI/2026-59 to SI/2026-61, with no Building Canada Act listing. Screenshot and page text saved at read time. The 4 November score is not changed (FAILED).
+- **MPF-2031-SCORED-20261106** (noted 11 Nov 2026): Link note, 11 Nov 2026: the archive link in this row (web.archive.org capture 20261106163915) does not open. The Wayback Machine says it has not archived that page (HTTP 404, read 05:10 CST, 11 Nov 2026) and holds no other capture of it. The record rests on the screenshot taken at entry (6 Nov 2026, about 11:19 CST) and the saved page text (read 11:12 CST, 6 Nov 2026), both of which show "The agreement will run for another five-year period, ending December 31, 2031." The row itself is unchanged.
 
 <!-- /RELATED -->
 
 The Register
 
-Entries as at 10 November 2026. Last change: 10 November 2026.
+Entries as at 11 November 2026. Last change: 11 November 2026.
 
 Start here. Why this register exists: The Country That Finishes: One Law, One Ledger (https://barryesharp.substack.com/p/the-country-that-finishes-one-law), then The Reforms Were Eaten: Why the Thermometer Must Be Citizen-Held (https://barryesharp.substack.com/p/the-reforms-were-eaten-why-the-thermometer).
 
@@ -153,7 +154,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-11-10g.csv (all 415 rows) is ad1e38d36f0a6c85808c385bb116326a35311a1b001517dfce75fcd47f79666d
+Checksum for this update: SHA-256 of public-live-rows-2026-11-11.csv (all 416 rows) is 7845c66672227b39d613df2297132b27c7851d2087d3a7c45745914ea55f12b0
 
 Rule entries
 
@@ -1025,7 +1026,7 @@ Outside files we watch | QC-SEATMATH-L20261024 | PASS (for the thesis): the plat
 
 Outside files we watch | US-TOMAHAWK-2029 | PASS: Tomahawk deliveries at or above 1,000 a year under the seven-year Navy contract, shown in a Navy budget justification or an official delivery figure. FAILED: an official figure shows fewer than 1,000 a year by the scoring date; no official figure is OPEN. HYPE exhibit: RTX, 17 Aug 2026, 'annual production ramp to more than 1,000 Tomahawk missiles' https://www.rtx.com/news/news-center/2026/08/17/rtxs-raytheon-awarded-seven-year-contract-for-tomahawk-cruise-missiles | US Navy / RTX (Raytheon) | 31 Dec 2029 | [Date basis: benchmark set by the register] DESK-SET: scoring date set by the register (entered 25 Oct 2026), within the seven-year contract of 17 Aug 2026 | LIVE | https://www.rtx.com/news/news-center/2026/08/17/rtxs-raytheon-awarded-seven-year-contract-for-tomahawk-cruise-missiles | OPEN | OPEN | OPEN | OPEN until scoring date 31 Dec 2029 | OPEN | OPEN | OPEN
 
-Recorded (52)
+Recorded (53)
 
 Facts, results and checkpoints, recorded and kept. They are not counted as open promises.
 
@@ -1097,7 +1098,9 @@ Recorded facts and checkpoints | SEB-B-TABLE-20261106 | Recorded, not scored PAS
 
 Recorded facts and checkpoints | SEB-B-TABLE-20261106-SCORED-20261106 | Recorded, not scored PASS or FAILED: a TBS primary dated 6 Nov 2026 shows Supplementary Estimates (B), 2026-27 tabled, seeking $22.1 billion in new voted spending for 71 organizations. Record the tabling and those printed figures only. | President of the Treasury Board (Shafqat Ali) / Treasury Board of Canada Secretariat | 6 Nov 2026 | [Date basis: set by an outside source] GOVERNMENT PROMISE / publication record: TBS release 6 Nov 2026 prints "Today, the Honourable Shafqat Ali, President of the Treasury Board tabled the Supplementary Estimates (B), 2026-27 in the House of Commons." Read 6 Nov 2026 21:42 CST. https://www.canada.ca/en/treasury-board-secretariat/news/2026/11/government-of-canada-outlines-additional-investments-in-defence-and-priority-services-through-supplementary-estimates-b-202627.html | SCORED 6 Nov 2026: RECORDED, tabled (TBS release 6 Nov 2026); $22.1 billion in new voted spending for 71 organizations | https://www.canada.ca/en/treasury-board-secretariat/news/2026/11/government-of-canada-outlines-additional-investments-in-defence-and-priority-services-through-supplementary-estimates-b-202627.html https://www.canada.ca/en/treasury-board-secretariat/news/2026/11/supplementary-estimates-b-2026-27.html Saved screenshots and page text: /workspace/sovereign-realism/_primary/SEB-B-2026-11-06/; read 6 Nov 2026 21:42 CST. | OPEN | OPEN | OPEN | n/a: not a spending test (publication record) | OPEN | OPEN | OPEN
 
-Recorded facts and checkpoints | CN-EFSD-MOU-20261109 | On the margins of the meetings, officials from Finance Canada and the Ministry of Finance of the People's Republic of China signed a Memorandum of Understanding on Cooperation between Finance Ministries to deepen dialogue and cooperation on economic issues. The Office of the Superintendent of Financial Institutions (OSFI) and China's National Financial Regulatory Administration (NFRA) signed a Cooperation Agreement in which they express their willingness to cooperate and agreed to formalize their engagement through the establishment of the Financial Regulatory and Supervisory Dialogue (FRSD). Recorded, not scored PASS or FAILED: the signed memorandum and cooperation agreement are recorded as fact from the Finance Canada release of 9 November 2026. | Finance Canada and the Office of the Superintendent of Financial Institutions (OSFI) | 9 Nov 2026 | [Date basis: set by an outside source] GOVERNMENT RECORD: Finance Canada news release, 9 November 2026, Vancouver, "Date modified: 2026-11-09" | LIVE | https://www.canada.ca/en/department-finance/news/2026/11/ministers-champagne-and-sidhu-deepen-canada-china-economic-ties-and-cooperation-with-vice-premier-he-lifeng.html | OPEN | OPEN | OPEN | OPEN until scoring date 9 Nov 2026 | OPEN | OPEN | OPEN
+Recorded facts and checkpoints | CN-EFSD-MOU-20261109 | On the margins of the meetings, officials from Finance Canada and the Ministry of Finance of the People's Republic of China signed a Memorandum of Understanding on Cooperation between Finance Ministries to deepen dialogue and cooperation on economic issues. The Office of the Superintendent of Financial Institutions (OSFI) and China's National Financial Regulatory Administration (NFRA) signed a Cooperation Agreement in which they express their willingness to cooperate and agreed to formalize their engagement through the establishment of the Financial Regulatory and Supervisory Dialogue (FRSD). Recorded, not scored PASS or FAILED: the signed memorandum and cooperation agreement are recorded as fact from the Finance Canada release of 9 November 2026. | Finance Canada and the Office of the Superintendent of Financial Institutions (OSFI) | 9 Nov 2026 | [Date basis: set by an outside source] GOVERNMENT RECORD: Finance Canada news release, 9 November 2026, Vancouver, "Date modified: 2026-11-09" | CLOSED: scored in CN-EFSD-MOU-20261109-SCORED-20261111 | https://www.canada.ca/en/department-finance/news/2026/11/ministers-champagne-and-sidhu-deepen-canada-china-economic-ties-and-cooperation-with-vice-premier-he-lifeng.html | OPEN | OPEN | OPEN | OPEN until scoring date 9 Nov 2026 | OPEN | OPEN | OPEN
+
+Recorded facts and checkpoints | CN-EFSD-MOU-20261109-SCORED-20261111 | On the margins of the meetings, officials from Finance Canada and the Ministry of Finance of the People's Republic of China signed a Memorandum of Understanding on Cooperation between Finance Ministries to deepen dialogue and cooperation on economic issues. The Office of the Superintendent of Financial Institutions (OSFI) and China's National Financial Regulatory Administration (NFRA) signed a Cooperation Agreement in which they express their willingness to cooperate and agreed to formalize their engagement through the establishment of the Financial Regulatory and Supervisory Dialogue (FRSD). Recorded, not scored PASS or FAILED: the signed memorandum and cooperation agreement are recorded as fact from the Finance Canada release of 9 November 2026. | Finance Canada and the Office of the Superintendent of Financial Institutions (OSFI) | 9 Nov 2026 | [Date basis: set by an outside source] GOVERNMENT RECORD: Finance Canada news release, 9 November 2026, Vancouver, "Date modified: 2026-11-09" | SCORED 11 Nov 2026: RECORDED, published in the Finance Canada release of 9 Nov 2026; publication record only | https://www.canada.ca/en/department-finance/news/2026/11/ministers-champagne-and-sidhu-deepen-canada-china-economic-ties-and-cooperation-with-vice-premier-he-lifeng.html Recorded as fact: the Finance Canada release of 9 Nov 2026 (read 10 Nov 2026 08:14 CST; archived https://web.archive.org/web/20261110141726/https://www.canada.ca/en/department-finance/news/2026/11/ministers-champagne-and-sidhu-deepen-canada-china-economic-ties-and-cooperation-with-vice-premier-he-lifeng.html) prints "officials from Finance Canada and the Ministry of Finance of the People's Republic of China signed a Memorandum of Understanding on Cooperation between Finance Ministries to deepen dialogue and cooperation on economic issues." Recorded on Barry go t3306u. | OPEN | OPEN | OPEN | n/a: not a spending test (publication record) | OPEN | OPEN | OPEN
 
 Recorded facts and checkpoints | CN-GRAPH | Outside file. MOFCOM's suspension of its stricter end use review of graphite exports to the US: a written extension or replacement, or a dated lapse. A US destination measure, not a Canadian one. Recorded, not scored PASS or FAILED: extension and lapse are both recorded. | MOFCOM | 27 Nov 2026 | [Date basis: set by an outside source] GOVERNMENT PROMISE: MOFCOM Announcement 72/2025, 9 Nov 2025, suspension expires 27 Nov 2026 | LIVE | Xinhua report (secondary) https://english.news.cn/20251109/5edd761a05be48a0b369f12cdea0e78c/c.html | OPEN | OPEN | OPEN | OPEN until scoring date 27 Nov 2026 | OPEN | OPEN | OPEN
 
@@ -1137,19 +1140,19 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 <!-- AUDIT -->
 
-Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 173 rows are sourced, 0 secondary-sourced, 61 have their promise sourced with the outcome pending, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
+Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 174 rows are sourced, 0 secondary-sourced, 61 have their promise sourced with the outcome pending, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
 
 ## How to check this update
 
-Build stamp: update 2026-11-10g, counted as at 10 November 2026, from data/entries.csv, 415 rows, SHA-256 8126fb5b7724fdfc0fe10c576bc9fd7866c96b4a2551252d5ea01d6058ca2cc8. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-11-11, counted as at 11 November 2026, from data/entries.csv, 416 rows, SHA-256 79a623a28df3b3e5d5ce271db32e1ab17d4ed377a0ff2c87f3b1f89939e96e27. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-10g.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-10g.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-11.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-11.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
 Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.
 
-How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-10g, of 415 entries, 227 (about 55 per cent) carry a benchmark date set by the register, 3 an outside date with a scoring window set by the register, and 185 (about 45 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
+How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-11, of 416 entries, 227 (about 55 per cent) carry a benchmark date set by the register, 3 an outside date with a scoring window set by the register, and 186 (about 45 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
 
 How the register scores treaties (dated 30 October 2026). A treaty Canada signs is not Canadian law. Canadian courts enforce treaty rights only where the treaty has been implemented by legislation (Francis v. The Queen, [1956] SCR 618), and a treaty has no domestic, internal consequences unless they arise from implementing legislation (Capital Cities Communications v. CRTC, [1978] 2 SCR 141). Where a treaty touches provincial subjects, the provinces must legislate: as the Privy Council put it in 1937, "as a treaty deals with a particular class of subjects so will the legislative power of performing it be ascertained."
 
@@ -1220,7 +1223,7 @@ PAUSE-RECIP | 31 Oct 2026 | 31 Oct 2026 | PASS: a reciprocal Russia Ukraine ener
 AI2 | 31 Oct 2026 | 31 Oct 2026 | PASS: OpenAI publishes a written access charter. FAILED: not | political choice. Actor: OpenAI. Evidence: https://openai.com/index/priorities-principles-third-party-assessments/ | n/a: not a spending test. Entry AI2-SCORED-20261031 | a general principles page only (22 Sep 2026), naming no assessor.
 MIL-QUESTURA-C20261022 | 31 Oct 2026 | 31 Oct 2026 | Questura di Milano breakdown of the about 50 people detained (fermati) on 17 Oct (Italia in Piazza). PASS: by 31 Oct 2026 the Questura di Milano or the Ministero dell'Interno publishes a breakdown of those detained on 17 Oct by age (minor/adult) AND citizenship (Italian/foreign), with arrest vs denuncia status. Unattributed press counts do not count. FAILED: dated entry within 30 days; no extension | political choice. Actor: Questura di Milano; Ministero dell'Interno. Evidence: https://questure.poliziadistato.it/it/Milano | n/a: not a spending test. Entry MIL-QUESTURA-C20261022-SCORED-20261031 | none published; press weekend figures only.
 
-Entries as at 10 November 2026: 22.
+Entries as at 11 November 2026: 22.
 
 <!-- /FAILLOG -->
 
