@@ -287,7 +287,7 @@ SOURCES_NOTE = ("Note, 27 Oct 2026: This register's rule is that every row rests
     "On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters "
     "rather than against the body that made the decision, and that in a few rows the wording went further than the source. "
     "Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. "
-    "A row shows as sourced only when that record backs its whole claim. As of this build: {S} rows are sourced, {X} secondary-sourced, {O} have their promise sourced with the outcome pending, "
+    "A row shows as sourced only when that record backs its whole claim. As of this build: {S} rows are sourced, {X} secondary-sourced, {O} have their promise sourced with the outcome pending, {Q} have their promise sourced with the outcome scored, "
     "{P} partly sourced and {U} unsourced, and {M} do not yet have a record. These counts will be updated with each build until every row is done. "
     "Corrections from the audit are entered as new dated lines, and no score has been changed.")
 
@@ -303,7 +303,20 @@ def sources_note(iso):
         print("SOURCES NOTE LEFT OUT: data/sources-check-counts.csv is not dated %s; run tools/check_sources.py --counts-out" % iso, file=sys.stderr)
         return None
     c = r[0]
-    return SOURCES_NOTE.format(S=int(c["sourced"]), X=int(c.get("secondary_sourced") or 0), O=int(c.get("promise_outcome_pending") or 0), P=int(c["partly_sourced"]), U=int(c["unsourced"]), M=int(c["missing_record"]))
+    k = dict(S=int(c["sourced"]), X=int(c.get("secondary_sourced") or 0), O=int(c.get("promise_outcome_pending") or 0),
+             Q=int(c.get("promise_outcome_scored") or 0), P=int(c["partly_sourced"]), U=int(c["unsourced"]), M=int(c["missing_record"]))
+    sources_sum_check(k, int(c["rows"]), STAMP.get("n"))
+    return SOURCES_NOTE.format(**k)
+
+
+def sources_sum_check(k, counted_rows, entries_rows):
+    """Fix at source (Barry go t3446u, 13 Nov 2026): every sourcing category on the page note must add up to the
+    rows the sources check counted and to the data/entries.csv row count of this build, or the build stops."""
+    total = sum(k.values())
+    if total != counted_rows or (entries_rows is not None and total != entries_rows):
+        raise rc.Fail("SOURCES NOTE SUM MISMATCH: categories %s sum to %d; sources check rows %d; entries.csv rows %s"
+                      % (", ".join("%s=%d" % kv for kv in sorted(k.items())), total, counted_rows, entries_rows))
+    return total
 
 
 
