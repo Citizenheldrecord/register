@@ -15,3 +15,6 @@ Last checked: 2026-11-10, 08:07 CST. rows 411; nothing changed since IR-SEMA-11-
 Last checked: 2026-11-10, 11:18 CST. rows 413; US-REMIT-HZ-2027 entered (Barry answering t3270s15876).
 Last checked: 2026-11-10, 13:26 CST. rows 415; CULTURE-4B-RECON-20270331 and AV-600-FLOW-20270331 entered (Barry answering t3283s15956).
 Last checked: 2026-11-11, 08:11 CST. rows 418; nothing changed since DSL1-SCORED-20261111 and BC-GOV-FORM-SCORED-20261111.
+Last checked: 2026-11-13, 08:21 CST. rows 424; sourced 178; promise pending 65; scored 4; partly 90; unsourced 87; failed entries 34; passed-not-scored 0
+Last checked: 2026-11-14, 08:16 CST. rows 427; sourced 179; promise pending 66; scored 5; partly 90; unsourced 87; failed entries 34; passed-not-scored 0
+Last checked: 2026-11-14, 12:50 CST. rows 429; FAILED 33 (as counted on the page; a recorded baseline is not FAILED)
