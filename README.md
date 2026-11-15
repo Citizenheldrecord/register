@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 15 November 2026 from data/entries.csv, which holds 436 entries.
+Counted on 15 November 2026 from data/entries.csv, which holds 437 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 436 = 370 promises + 66 scoring entries.
+- **Entries:** 437 = 371 promises + 66 scoring entries.
 - **Scored PASS:** 23 (AB1, AB1-OFFICIAL, AI1, BC-GOV-FORM, BUDGET26-TABLE, BoC, C39-CTTE, CUMMINGS-TX, DLV-C15, DLV-CTR, DLV-DEN, FA3c, HCAP-LVL, LANE-1, MTL-LABEL, PH-FTA-1119, POL-1, Q10-NEXT, RBT2-SCHED1-GAZ, REG-PROV1, S338-SCOPE, TR-FTA-ROUND, TRADE-SHARE-SEP).
 - **Scored FAILED:** 33 (AB1-PL, AI2, AI4, BC-PARCELS, BC1, BNT122-DEATHS, CF-GAP, CFR-GAZ-30OCT, COAL-EXPORT-2030, CROWN-LOAN-TABLE, DGR1, DLV-ONLTC, DNG-CAP, DSL1, DSRB-CAP, EM-1, FA3-MVH-DEC, FA3b, GX1b, MIL-QUESTURA-C20261022, MRNA-ESMO-FULL, MTL-CLOSE, PAUSE-RECIP, PL-DEVFUND-B26, RBT2-FAA-OCT, S2, S7, SPT-CLINIC, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
 - **Recorded as fact, with no pass or fail line:** 11 (CL-BASE, CN-EFSD-MOU-20261109, HR5334, IR1, LEVELS-1NOV, LEVELS2729, MPF-2031, MVH-FULLFUND-B26, N4, RU1, SEB-B-TABLE-20261106).
-- **Open:** 296.
+- **Open:** 297.
 - **Due:** 0.
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 370 promises = 23 PASS + 33 FAILED + 11 recorded + 296 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 371 promises = 23 PASS + 33 FAILED + 11 recorded + 297 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 436 entries):
+By section of the data file (every entry counted once; the four sections add up to all 437 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 282 | 41 | 241 | 15 | 26 | 0 | 200 | 0 | 0 | 0 | 0 |
+| Canadian files | 283 | 41 | 242 | 15 | 26 | 0 | 201 | 0 | 0 | 0 | 0 |
 | This desk's own commitments | 16 | 3 | 13 | 3 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
 | Outside files we watch | 92 | 9 | 83 | 2 | 7 | 0 | 68 | 0 | 4 | 2 | 0 |
 | Recorded facts and checkpoints | 46 | 13 | 33 | 3 | 0 | 11 | 18 | 0 | 0 | 0 | 1 |
-| Total | 436 | 66 | 370 | 23 | 33 | 11 | 296 | 0 | 4 | 2 | 1 |
+| Total | 437 | 66 | 371 | 23 | 33 | 11 | 297 | 0 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -154,7 +154,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-11-15a.csv (all 436 rows) is c8396711b01f87f3bf52ceddd6c70333d844deda6fcc6a6995434ceacdaa1af8
+Checksum for this update: SHA-256 of public-live-rows-2026-11-15b.csv (all 437 rows) is 73a7ef51455a4f9ad2e64bc4ce4fdb87a8e0bf946818b140474cc1b36c67bc60
 
 Rule entries
 
@@ -288,7 +288,7 @@ How the record keeps itself honest
 
 The rule book is written to stop the register's own keeper from cheating. Fingerprints (SHA-256), a published manifest, Wayback snapshots and an append-only rule make silent edits noisy. A new date is a new entry citing the old fingerprint. Cost stays OPEN until the scoring date; on that day it is a public figure with a URL and date, or it is FAILED.
 
-Government promises (102)
+Government promises (103)
 
 Promises with a government owner, a primary source and a scoring date. Each row also names its file section.
 
@@ -427,6 +427,8 @@ Canadian files | NUCH-SCC | PASS: the SCC 42379 docket (BC v. Nuchatlaht) shows 
 Canadian files | IND2-INCOME | PASS: CIS 2025 median after tax income (StatCan table 11-10-0190-01) is higher than $75,500 in constant 2024 dollars. FAILED: not higher | Government of Canada | 31 May 2027 | [Date basis: set by an outside source] SCHEDULED RELEASE: StatCan Canadian Income Survey, table 11-10-0190-01 (2024 data released 29 Apr 2026) | LIVE | OPEN | OPEN | OPEN | [publishes 3 Nov 2026] | OPEN until scoring date 31 May 2027 | OPEN | OPEN | OPEN
 
 Canadian files | AB-CI-SPRING2027 | PASS: the Compassionate Intervention Act assessment-order process is in force (proclaimed or otherwise in effect) on or before 20 Jun 2027. FAILED: it is not in force by that date. | Alberta Minister of Mental Health and Addiction | 21 Jun 2027 | [Date basis: set by an outside source] GOVERNMENT PROMISE: Alberta announcement 4 Nov 2026 prints "once implemented in spring 2027"; 20 Jun 2027 is desk arithmetic for the end of spring; score the next day 21 Jun 2027. https://www.alberta.ca/announcements.cfm?xID=980719068ED20-FEB9-1014-A4FA77CAB6DECBAD (read 4 Nov 2026 18:53 CST) | LIVE | https://www.alberta.ca/announcements.cfm?xID=980719068ED20-FEB9-1014-A4FA77CAB6DECBAD | OPEN | OPEN | OPEN | OPEN until scoring date 21 Jun 2027 | OPEN | OPEN | OPEN
+
+Canadian files | AB-OGP-SPRING2027 | PASS: on or before 20 Jun 2027, an Alberta government primary (alberta.ca program page or release, or a regulation or order from Alberta King's Printer) shows the Oil Sands Growth Program launched: open to applications, or its royalty rates in effect. FAILED: no such primary by that date. | Government of Alberta, Energy and Minerals | 21 Jun 2027 | [Date basis: set by an outside source] GOVERNMENT PROMISE: Alberta release 13 Nov 2026 prints "The program is targeted to launch in spring of 2027"; 20 Jun 2027 is desk arithmetic for the end of spring; score the next day 21 Jun 2027. https://www.alberta.ca/release.cfm?xID=981275DC1AC17-BD32-E06C-F81BC3AE18865A02 (read 15 Nov 2026 10:44 CST). Archive https://web.archive.org/web/20261115164610/https://www.alberta.ca/release.cfm?xID=981275DC1AC17-BD32-E06C-F81BC3AE18865A02 | LIVE | https://www.alberta.ca/release.cfm?xID=981275DC1AC17-BD32-E06C-F81BC3AE18865A02 | OPEN | OPEN | OPEN | OPEN until scoring date 21 Jun 2027 | OPEN | OPEN | OPEN
 
 Canadian files | IND1-DEBT | PASS: net debt per person aged 15 to 64 at 31 Mar 2027 (Fiscal Monitor or Public Accounts; StatCan 17-10-0005-01) is lower than $54,007. FAILED: not lower | Minister of Finance | 30 Jun 2027 | [Date basis: set by an outside source] SCHEDULED RELEASE: March 2027 Fiscal Monitor or Public Accounts, net debt at 31 Mar 2027 | LIVE | Fiscal Monitor (March 2026 edition; March 2027 scores) https://www.canada.ca/en/department-finance/services/publications/fiscal-monitor/2026/03.html | OPEN | OPEN | [publishes 3 Nov 2026] | OPEN until scoring date 30 Jun 2027 | OPEN | OPEN | OPEN
 
@@ -1180,19 +1182,19 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 <!-- AUDIT -->
 
-Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 180 rows are sourced, 0 secondary-sourced, 74 have their promise sourced with the outcome pending, 5 have their promise sourced with the outcome scored, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
+Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 180 rows are sourced, 0 secondary-sourced, 75 have their promise sourced with the outcome pending, 5 have their promise sourced with the outcome scored, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
 
 ## How to check this update
 
-Build stamp: update 2026-11-15a, counted as at 15 November 2026, from data/entries.csv, 436 rows, SHA-256 41dbb4916d5a9853629ce2166a434202b0a10e0b29023b778c7662a6c098e257. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-11-15b, counted as at 15 November 2026, from data/entries.csv, 437 rows, SHA-256 54c1facd1f17279a5e055290830b8c2612e30e9a2327530fb45fad6b3513cf30. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-15a.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-15a.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-15b.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-15b.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
 Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.
 
-How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-15a, of 436 entries, 241 (about 55 per cent) carry a benchmark date set by the register, 3 an outside date with a scoring window set by the register, and 192 (about 44 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
+How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-15b, of 437 entries, 241 (about 55 per cent) carry a benchmark date set by the register, 3 an outside date with a scoring window set by the register, and 193 (about 44 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
 
 How the register scores treaties (dated 30 October 2026). A treaty Canada signs is not Canadian law. Canadian courts enforce treaty rights only where the treaty has been implemented by legislation (Francis v. The Queen, [1956] SCR 618), and a treaty has no domestic, internal consequences unless they arise from implementing legislation (Capital Cities Communications v. CRTC, [1978] 2 SCR 141). Where a treaty touches provincial subjects, the provinces must legislate: as the Privy Council put it in 1937, "as a treaty deals with a particular class of subjects so will the legislative power of performing it be ascertained."
 
