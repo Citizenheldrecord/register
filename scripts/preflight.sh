@@ -29,16 +29,18 @@ step "ten to watch (each listed id is in the register, not scored, not replaced,
 python3 scripts/check_ten_to_watch.py "${D:0:10}" || nogo=1
 step "verify printed checksums and grammar"; python3 scripts/build_register.py --verify || nogo=1
 step "fingerprint tests"; bash tests/test_hash_entries.sh > /tmp/pf-hash.out 2>&1 && tail -1 /tmp/pf-hash.out || { cat /tmp/pf-hash.out; nogo=1; }
+# 28 Oct 2026 (Barry go 11:16 AM CST): simple view rebuilt at build time and rides the upload; loop check and approved-not-shipped check block the push.
+# 14 Nov 2026 (Barry go t3516u): runs before the pipeline tests. inject_index.py writes the FRONT-DOOR tally into index.html and the build
+# keeps the old block, so test 15 read last upload's tally whenever the row count changed (15:12 CST NO-GO, 429 vs 430).
+IDX=index.html; [ -n "$DRAFT" ] && IDX=local/draft-build-$D/index.html
+step "simple view (rebuild simple-view/, link and Suggest a row box on $IDX)"
+python3 simple-view/build_simple.py || nogo=1
+python3 simple-view/inject_index.py "$IDX" || nogo=1
 step "pipeline tests"; bash tests/test_pipeline.sh > /tmp/pf-pipe.out 2>&1 && tail -1 /tmp/pf-pipe.out || { grep -E "FAIL|PIPELINE" /tmp/pf-pipe.out; nogo=1; }
 step "published files unchanged (guardrail 3: every local file already on GitHub is byte-identical; README.md and index.html exempt)"
 python3 scripts/check_published_unchanged.py || nogo=1
 step "sources gate (Barry approval 27 Oct 2026 15:17 CST: no unsourced row off the allow-list, no expired allow-list entry, no row without a record, no over-claim, no secondary fail, no incomplete FAILED entry)"
 python3 scripts/check_sources.py --staging "$ROOT" --allowlist data/sources-gate-allowlist.csv --audit-date "${D:0:10}" | grep -E "^(rows|gate|GATE|OVER|FAIL|FAILED)" || nogo=1
-# 28 Oct 2026 (Barry go 11:16 AM CST): simple view rebuilt at build time and rides the upload; loop check and approved-not-shipped check block the push.
-IDX=index.html; [ -n "$DRAFT" ] && IDX=local/draft-build-$D/index.html
-step "simple view (rebuild simple-view/, link and Suggest a row box on $IDX)"
-python3 simple-view/build_simple.py || nogo=1
-python3 simple-view/inject_index.py "$IDX" || nogo=1
 # draft mode: root index.html is left alone (the byte-identical rebuild test compares it); the approved-items check reads an overlay of the root with the draft page
 ACSDIR="$ROOT"; if [ -n "$DRAFT" ]; then ACSDIR=$(mktemp -d); for f in "$ROOT"/*; do ln -s "$f" "$ACSDIR/"; done; rm "$ACSDIR/index.html"; cp "$IDX" "$ACSDIR/index.html"; fi
 step "loop check (stops on 404, broken chain link, hash or fingerprint mismatch, scored row with no dated log entry; 403, timeouts, missing dates and OPEN costs are report only)"
