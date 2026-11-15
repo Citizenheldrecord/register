@@ -68,11 +68,16 @@ if [ -z "$DRAFT" ]; then
   step "shipping gate (STOP/RUNNING and change approval)"
   MAN=$(mktemp)
   : > "$MAN"
+  CHANGED=()
   for f in "${add[@]:-}" "${rep[@]:-}"; do
     [ -n "$f" ] || continue
-    printf '%s\t%s\n' "$f" "$(sha256sum "$f" | awk '{print $1}')" >> "$MAN"
+    CHANGED+=("$f")
   done
-  LC_ALL=C sort -o "$MAN" "$MAN"
+  AM=${APPROVAL_MANIFEST:-/workspace/sovereign-realism/tools/approval_manifest.py}
+  if [ ! -f "$AM" ]; then echo "APPROVAL MANIFEST TOOL MISSING: $AM"; nogo=1
+  elif ! python3 "$AM" --staging "$ROOT" --output "$MAN" -- "${CHANGED[@]}"; then
+    echo "APPROVAL MANIFEST FAILED: stamp files ship.py requires must be present"; nogo=1
+  fi
   GATE=${DESK_SHIPPING_GATE:-/workspace/sovereign-realism/tools/integrity_check.py}
   APPR=${UPLOAD_APPROVAL:-local/upload-approval.txt}
   if [ ! -f "$GATE" ]; then echo "SHIPPING GATE MISSING: $GATE"; nogo=1
