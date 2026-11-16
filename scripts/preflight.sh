@@ -54,6 +54,37 @@ export PREVENTION_BLOCK=${PREVENTION_BLOCK:-1}
 python3 scripts/prevention/run_all.py > /tmp/pf-prevention.out 2>&1 || { echo "PREVENTION SELFTEST FAILED: see /tmp/pf-prevention.out"; nogo=1; }
 grep -E "SELFTEST FAIL" /tmp/pf-prevention.out && nogo=1
 python3 scripts/prevention/gate.py --preflight || { echo "PREVENTION GATE FAILED: fix the data (never the check)"; nogo=1; }
+step "recommendation check (Barry go t3556u, t3557u: a CORRECTIONS note or any added or changed entries.csv id cannot ship without RULE, PRIOR and LIVE)"
+# RECOMMENDATION_CHECK may point at a test double only when RECOMMENDATION_CHECK_TEST=1.
+# A real preflight always uses the desk tool (Barry go t3557u).
+REC=/workspace/sovereign-realism/tools/check_recommendation.py
+if [ -n "${RECOMMENDATION_CHECK:-}" ]; then
+  if [ "${RECOMMENDATION_CHECK_TEST:-}" = "1" ]; then
+    REC="$RECOMMENDATION_CHECK"
+  elif [ "$RECOMMENDATION_CHECK" != "$REC" ]; then
+    echo "RECOMMENDATION CHECK OVERRIDE REFUSED: RECOMMENDATION_CHECK is test-only (set RECOMMENDATION_CHECK_TEST=1)"
+    nogo=1
+  fi
+fi
+rec_files=()
+if [ -f "$BASE" ]; then
+  while IFS= read -r f; do
+    [ -f "$f" ] || continue
+    case "$f" in CORRECTIONS/*.md) ;; *) continue ;; esac
+    old=$(awk -v fn="$f" '$2==fn {print $1}' "$BASE")
+    new=$(sha256sum "$f" | cut -d' ' -f1)
+    if [ -z "$old" ] || [ "$old" != "$new" ]; then rec_files+=("$f"); fi
+  done < <(find CORRECTIONS -name '*.md' -type f 2>/dev/null | sed 's|^\./||' | sort)
+fi
+if [ ! -f "$REC" ]; then echo "RECOMMENDATION CHECK MISSING: $REC"; nogo=1
+else
+  if [ ${#rec_files[@]} -gt 0 ]; then
+    for f in "${rec_files[@]}"; do
+      python3 "$REC" "$ROOT/$f" --staging "$ROOT" || { echo "RECOMMENDATION CHECK FAILED: $f"; nogo=1; }
+    done
+  fi
+  python3 "$REC" --check-entries --staging "$ROOT" || { echo "RECOMMENDATION CHECK FAILED: data/entries.csv"; nogo=1; }
+fi
 step "upload list (compared with $BASE, the files last recorded as live)"
 declare -A live; while read -r h f; do live[$f]=$h; done < $BASE
 add=(); rep=(); while read -r f; do h=$(sha256sum "$f" | cut -d' ' -f1)
