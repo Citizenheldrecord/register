@@ -514,6 +514,8 @@ def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
     bl = backlog_block(iso)
     if bl:
         blocks = blocks + (("BACKLOG", "<!-- BACKLOG --><section class=\"backlog\">%s</section><!-- /BACKLOG -->\n" % md_to_html(bl), "<h1>The Register</h1>\n", True),)
+    if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "what.html")):
+        blocks = blocks + (("START-FRONT", '<!-- START-FRONT --><p><a href="what.html">New here? Start with what this register is</a></p><!-- /START-FRONT -->\n', "<h1>The Register</h1>\n", True),)
     if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "method.html")):
         blocks = blocks + (("METHOD-LINK", '<!-- METHOD-LINK --><p><a href="method.html">How the register works</a></p><!-- /METHOD-LINK -->\n', "<h1>The Register</h1>\n", True),)
     if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "plain-english.html")):
