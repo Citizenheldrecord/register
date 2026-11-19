@@ -503,3 +503,6 @@ EU-SANC22-20261127,government_promise,"Government-set scoring date (27 Nov 2026 
 CN-RU-US-DECL-20261119,recorded,"recorded as fact, no pass line"
 CN-RU-US-NUCDIAL-20270519,also_watched,"Desk-set scoring date (19 May 2027, six months to the day after the 19 Nov 2026 declaration; no date in the source); file section WATCH; Barry go t3755s18248 / t3755u."
 CN-RU-US-REFINED-20270930,also_watched,"Desk-set scoring date (30 Sep 2027, after EIA Petroleum Supply Monthly for June 2027, the latest of the three sources; no date in the source); file section WATCH; Barry go t3755s18248 / t3755u."
+GEB-TOPUP-JAN2027,government_promise,"Government-set scoring month (31 Jan 2027 is desk arithmetic for the last day of ""January 2027"", the month specified in Bill C-42 first reading text, 18 Nov 2026); file section CANADA; Barry go t3775s18403."
+AB-RACAS-20270401,government_promise,"Government-set scoring date (1 Apr 2027, printed in the Alberta 18 Nov 2026 release as ""new wells drilled after April 1, 2027"", hedged ""If passed"" and ""expected to apply""); file section CANADA; Barry go t3775s18403."
+GC-CDR-10M-2030,government_promise,"Government-set horizon (31 Dec 2030 is desk arithmetic for ""between now and 2030"" in the TBS 9 Oct 2024 release, restated ""by 2030"" on 19 Nov 2026); file section CANADA; Barry go t3775s18403."
