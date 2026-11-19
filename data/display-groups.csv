@@ -495,3 +495,8 @@ AB-CAREFIRST-20270101,government_promise,"Government-set scoring date (1 Jan 202
 CPP-BASE-475-2027,government_promise,"Government-set scoring date (1 Jan 2027, printed in the SI/2026-62 explanatory note as effective January 1, 2027); file section CANADA; Barry go t3740s18131."
 BIZPAL-PT-FALL2028,government_promise,"Government-set scoring date (21 Dec 2028 is desk arithmetic for the end of ""fall 2028"" printed in the TBS 17 Nov 2026 statement Quick Facts; the release prints only ""fall 2028""); file section CANADA; Barry go t3740s18131."
 IRV1-SCORED-20261118,recorded,result entry for IRV1 (FAILED 18 Nov 2026); not a promise
+EU-ICSU-EUCO-20261127,also_watched,"Desk-set test (agreement at the Special European Council, 26-27 November 2026; the printed promise is to present the proposal); file section WATCH; Barry go t3747s18197 / t3747u."
+EU-ICSU-OJ-20261231,also_watched,Desk-set scoring date (31 Dec 2026; no adoption date printed); file section WATCH; Barry go t3747s18197 / t3747u.
+EU-ICSU-MFF-20261231,also_watched,Desk-set scoring date (31 Dec 2026; no adoption date printed); file section WATCH; Barry go t3747s18197 / t3747u.
+EU-UA-INTEREST-MFF-20271231,also_watched,"Desk-set scoring date (31 Dec 2027, the day before the 2028 costs start per the Commission); file section WATCH; Barry go t3747s18197 / t3747u."
+EU-SANC22-20261127,government_promise,"Government-set scoring date (27 Nov 2026 is desk arithmetic for the Friday of ""next week"" printed in the 18 Nov 2026 Commission press point); file section WATCH; Barry go t3747s18197 / t3747u."
