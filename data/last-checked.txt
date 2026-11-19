@@ -56,3 +56,4 @@ Last checked: 2026-11-18, 07:17 CST. rows 444; FAILED 33 (as counted on the page
 Last checked: 2026-11-18, 08:16 CST. rows 444; sourced 181; promise pending 81; scored 5; partly 90; unsourced 87; failed entries 34 (page FAILED 33; a recorded baseline is not FAILED); over-claims 0; scoring date passed not scored 0
 Last checked: 2026-11-18, 08:38 CST. rows 444; FAILED 33 (as counted on the page; a recorded baseline is not FAILED)
 Last checked: 2026-11-18, 11:19 CST. rows 448; FAILED 33 (as counted on the page; a recorded baseline is not FAILED)
+Last checked: 2026-11-18, 21:31 CST. rows 449; FAILED 34 (as counted on the page; a recorded baseline is not FAILED)
