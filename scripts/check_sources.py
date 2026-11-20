@@ -58,10 +58,11 @@ PROMISE SOURCED, OUTCOME PENDING (Barry go 27 Oct 2026 15:50 CST). A forward tes
 evidence before its scoring date. A record headed "Claim coverage: promise full, outcome pending" derives
 PROMISE SOURCED, OUTCOME PENDING only when (1) the promise or premise is backed by a full primary block, or by a
 secondary block that passes RULE A (Primary search line and the row label); (2) the row's scoring date in
-data/entries.csv (first "D Mon YYYY" date) is after --audit-date; (3) the row's test states both PASS and FAILED;
+data/entries.csv (first "D Mon YYYY" date) is on or after --audit-date; (3) the row's test states both PASS and FAILED;
 (4) the row is not yet scored. Otherwise it derives from its blocks as usual (a record whose Status claims the level
-then over-claims). The level expires at the scoring date: from that date a row still not scored is a fail
-(SCORING DATE PASSED, NOT SCORED) that blocks and is never allow-listed; a scored row derives
+then over-claims). The level expires the day after the scoring date (Barry go t3827s18670, 20 Nov 2026, replacing
+the 27 Oct 2026 expiry at the scoring date): on the scoring date the row is still PROMISE SOURCED, OUTCOME PENDING
+so it can be scored that day; from the day after, a row still not scored is a fail (SCORING DATE PASSED, NOT SCORED) that blocks and is never allow-listed; a scored row derives
 PROMISE SOURCED, OUTCOME SCORED, and a FAILED score needs its five-field entry as above. Both levels pass the gate,
 so new forward rows pass. --selftest runs the forward-row fixtures (the build runs it on every build).
 """
@@ -218,7 +219,7 @@ def main(argv=None):
             if backed and sd and re.search(r"\bPASS\b", test) and re.search(r"\bFAIL", test):
                 if scored:
                     derived = PROMISE_SCORED
-                elif sd > today:
+                elif sd >= today:  # Barry go t3827s18670: expiry from the day AFTER the scoring date
                     derived = PROMISE
                 else:
                     reason = (reason + "; " if reason else "") + "SCORING DATE PASSED, NOT SCORED (%s; promise-sourced level expired)" % sd.isoformat()
@@ -391,7 +392,8 @@ def selftest(staging):
     cases = [  # id, scoring date, status, Supports, record Status, audit date, expect exit, expect in output
         ("FX-FWD-OK", "4 Dec 2026", "LIVE", "full", PROMISE, "2026-10-27", 0, "promise sourced outcome pending 1"),
         ("FX-FWD-PAST", "4 Dec 2026", "LIVE", "full", PROMISE, "2026-12-05", 1, "FORWARD EXPIRED FX-FWD-PAST"),
-        ("FX-FWD-ONDATE", "4 Dec 2026", "LIVE", "full", PROMISE, "2026-12-04", 1, "FORWARD EXPIRED FX-FWD-ONDATE"),
+        ("FX-FWD-ONDATE", "4 Dec 2026", "LIVE", "full", PROMISE, "2026-12-04", 0, "promise sourced outcome pending 1"),  # t3827s18670
+        ("FX-FWD-DAYAFTER", "4 Dec 2026", "LIVE", "full", PROMISE, "2026-12-05", 1, "FORWARD EXPIRED FX-FWD-DAYAFTER"),  # t3827s18670: yesterday-dated unscored still fails
         ("FX-FWD-PARTIAL", "4 Dec 2026", "LIVE", "partial", PROMISE, "2026-10-27", 1, "GATE BLOCK FX-FWD-PARTIAL PARTLY SOURCED"),
         ("FX-FWD-SCORED", "4 Dec 2026", "SCORED 4 Dec 2026: PASS", "full", PROMISE_SCORED, "2026-12-05", 0, "promise sourced outcome scored 1"),
     ]

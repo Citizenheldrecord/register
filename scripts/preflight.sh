@@ -15,7 +15,16 @@ if [ "${1:-}" = "--mark-pushed" ]; then
   GATE=${DESK_SHIPPING_GATE:-/workspace/sovereign-realism/tools/integrity_check.py}
   if [ ! -f "$GATE" ]; then echo "STOP CHECK MISSING: $GATE"; exit 1; fi
   python3 "$GATE" --shipping-gate --stop-only || { echo "STOP: not recording a live baseline"; exit 1; }
-  repo_files | xargs sha256sum > $BASE; echo "baseline updated: $(wc -l < $BASE) files recorded as live"
+  # Record what is live, not the staging working tree (fault found 20 Nov 2026: hashing staging recorded the unshipped
+  # R3.11 regcore.py and test_pipeline.sh as live from 13 Nov, so no upload listed them; Barry go t3824u, t3827u).
+  # The baseline is read from the GitHub push clone, only if its HEAD is GitHub main (ls-remote) and its tracked files
+  # are unmodified; tracked files only, same exclude rules as repo_files. Otherwise the baseline is left unchanged.
+  LIVE_TREE=${LIVE_TREE:-/workspace/tmp-register-push}
+  lhead=$(git -C "$LIVE_TREE" rev-parse HEAD 2>/dev/null); rmain=$(git -C "$LIVE_TREE" ls-remote origin refs/heads/main 2>/dev/null | cut -f1)
+  if [ -z "$lhead" ] || [ "$lhead" != "$rmain" ]; then echo "NOT RECORDING A LIVE BASELINE: $LIVE_TREE HEAD ${lhead:-none} is not GitHub main ${rmain:-unreadable}"; exit 1; fi
+  if ! git -C "$LIVE_TREE" diff --quiet HEAD --; then echo "NOT RECORDING A LIVE BASELINE: $LIVE_TREE has modified tracked files"; exit 1; fi
+  ( cd "$LIVE_TREE" && git ls-files | grep -v -E '^(local/|\.git/|\.guard/)|(^|/)__pycache__/' | awk -v ex="$UPLOAD_EXCLUDE" -v keep="$UPLOAD_KEEP" '$0 ~ keep || $0 !~ ex' | sort | xargs -d '\n' sha256sum ) > "$BASE.tmp" && [ -s "$BASE.tmp" ] || { rm -f "$BASE.tmp"; echo "NOT RECORDING A LIVE BASELINE: could not hash $LIVE_TREE"; exit 1; }
+  mv "$BASE.tmp" "$BASE"; echo "baseline updated: $(wc -l < $BASE) files recorded as live (GitHub main $lhead, read from $LIVE_TREE)"
   python3 scripts/check_published_unchanged.py --refresh >/dev/null && echo "published-files list refreshed from GitHub: local/published-files.txt" || echo "WARNING: could not refresh local/published-files.txt from GitHub"; exit 0; fi
 # 27 Oct 2026 (Barry go 04:19): --draft builds into local/draft-build-<date>/ and leaves the upload root untouched.
 # Scoring and staging jobs always run: scripts/preflight.sh --draft YYYY-MM-DD. Only the upload step, on Barry's go, runs without --draft.

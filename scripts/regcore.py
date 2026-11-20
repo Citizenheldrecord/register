@@ -11,6 +11,15 @@ FOLLOWS_COL = "follows_id"  # optional link to the entry this one follows (Barry
 REQUIRED = ["id", "section", "sort_date", "scoring_date", "test", "owner", "date_source", "status", "cost_to_date"] + SUBSCORE_COLS
 SUBSCORE_VALUES = {"MATCHED", "MIXED", "FAILED", "OPEN"}
 RULE_START = "2026-10-18"   # rules A and B apply to entries scored after this date
+# DELIVERED LATE (RULEBOOK R3.11, Barry t3408u, t3409u, go 13 Nov 2026): a later row, never a rewrite of a FAILED score.
+# It links to the original promise by follows_id only (never supersedes_id), and is counted as a scoring entry,
+# so it neither raises Recorded nor the promise count, and the FAILED count does not move.
+LATE_STATUS = re.compile(r"^SCORED \d{1,2} [A-Z][a-z]{2} \d{4}: DELIVERED LATE \(\d+ days? late\)$")
+FAILED_SCORE = re.compile(r"^SCORED \d{1,2} [A-Z][a-z]{2} \d{4}: FAILED\b")
+
+
+def is_late_row(r):
+    return bool(LATE_STATUS.match((r.get("status") or "").strip()))
 BAD_CHARS = re.compile("[\u2013\u2014\u2015\u2212\u2018\u2019\u201a\u201b\u201c\u201d\u201e\u201f]")
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
           "September", "October", "November", "December"]
@@ -102,7 +111,15 @@ def validate(header, rows):
             cd = r.get("cost_to_date", "")
             if not cd or cd.upper().startswith("OPEN"):
                 errs.append(where + ": resolved entry needs cost to date (amount with source, or FAILED naming the holder)")
-            if not sid:
+            if is_late_row(r):
+                # Named exception (R3.11): no supersedes_id; follows_id must name an original promise with a FAILED score.
+                if sid:
+                    errs.append(where + ": a DELIVERED LATE row never uses supersedes_id; link the original promise by follows_id")
+                elif not fid:
+                    errs.append(where + ": a DELIVERED LATE row needs follows_id naming the original promise")
+                elif not any(x.get("supersedes_id") == fid and FAILED_SCORE.match((x.get("status") or "").strip()) for x in rows):
+                    errs.append(where + ": DELIVERED LATE follows %s, which has no FAILED score" % fid)
+            elif not sid:
                 errs.append(where + ": a scoring entry must cite the scored entry (supersedes_id and supersedes_hash)")
     return errs
 
@@ -251,6 +268,8 @@ def count_states(rows, iso):
         if sup:
             (scorers if r["status"].upper().startswith("SCORED") else redated)[sup] = r
     scoring_ids = {r["id"] for r in scorers.values()}
+    # R3.11: a DELIVERED LATE row (follows_id, no supersedes_id) is a scoring entry, not a promise.
+    scoring_ids |= {r["id"] for r in rows if is_late_row(r) and not r.get("supersedes_id", "").strip()}
     state, due_days = {}, {}
     for r in rows:
         rid, st = r["id"], r["status"].strip().upper()

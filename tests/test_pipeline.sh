@@ -201,4 +201,38 @@ grep -q 'Review of OV-FA3 (22 Oct 2026) closed 4 Nov 2026' index.html && grep -q
 grep -q '<h2>Overlaps reviewed (closed)</h2>' plain-english.html && ok "closed heading in plain-english" || bad "closed heading missing in plain-english"
 grep -q '<h2>Possible overlaps under review</h2>' plain-english.html && bad "open heading still in plain-english" || ok "open heading omitted in plain-english"
 
+echo "20. DELIVERED LATE (R3.11, Barry t3408u, t3409u, go 13 Nov 2026): a late row follows the original promise; FAILED, Recorded and promise counts do not move; no overdue trip; known-bad late rows refused"
+late_fixture(){ python3 - "$@" <<'PY3'
+import sys; sys.path.insert(0, 'scripts'); import regcore as rc, hash_entries as he
+mode = sys.argv[1]; h, rows = rc.read_source(rc.SOURCE); byid = {r['id']: r for r in rows}
+o = byid['AI4' if mode != 'nofail' else 'FIR1']; new = dict(o)
+new.update({'id': 'AI4-LATE-20270509', 'status': 'SCORED 9 May 2027: DELIVERED LATE (181 days late)', 'measure': 'https://example.org/late (read 14:05 CST 9 May 2027)',
+            'cost_to_date': 'FAILED: fixture; no public figure', 'sort_date': '2027-05-09', 'supersedes_id': '', 'supersedes_hash': '', rc.FOLLOWS_COL: o['id']})
+if mode == 'nofollows': new[rc.FOLLOWS_COL] = ''
+if mode == 'supersedes': new['supersedes_id'] = 'AI4'; new['supersedes_hash'] = he.fingerprint(o)
+errs = rc.validate(h, rows + [new])
+if errs: print('\n'.join(errs)); sys.exit(1)
+before = rc.count_states(rows, '2027-05-10'); after = rc.count_states(rows + [new], '2027-05-10')
+st = lambda c, s: sum(1 for v in c['state'].values() if v == s)
+assert after['promises'] == before['promises'] and after['scoring_entries'] == before['scoring_entries'] + 1, 'promise count moved'
+assert all(st(after, s) == st(before, s) for s in ('PASS', 'FAILED', 'Recorded', 'Due', 'Open')), 'a state count moved'
+assert after['state']['AI4'] == 'FAILED' and 'AI4-LATE-20270509' not in after['due_days'], 'original not FAILED or late row due'
+open(rc.SOURCE, 'a', encoding='utf-8', newline='').write(rc.write_csv_text(h, [new]).split('\r\n', 1)[1])
+print('late row appended')
+PY3
+}
+fresh; late_fixture good >/tmp/pl.out 2>&1 && ok "late row validates; FAILED, Recorded, Open, Due and promise counts unchanged; AI4 still FAILED" || { bad "late row counts"; cat /tmp/pl.out; }
+fixture_record AI4-LATE-20270509; printf 'AI4-LATE-20270509,also_watched,"fixture: DELIVERED LATE follows AI4"\n' >> data/display-groups.csv
+REGISTER_OVERDUE=strict build $SCRATCH >/tmp/pl.out 2>&1 && ! grep -q "OVERDUE AI4-LATE\|SCORING DATE PASSED, NOT SCORED.*AI4-LATE" /tmp/pl.out && ok "build passes with the late row; no overdue or not-scored trip" || { bad "build with late row"; cat /tmp/pl.out; }
+grep -Eq "AI4-LATE-20270509" README.md && grep -Eq "^([A-Za-z ]+ \| )?AI4 \| .* \| CLOSED: scored in AI4-SCORED-20261109 \| " README.md && ok "README keeps AI4 closed by its FAILED score and shows the late row" || bad "README late display"
+fresh; PATTERN="needs follows_id" expect_fail "late row without follows_id refused" late_fixture nofollows
+fresh; PATTERN="never uses supersedes_id" expect_fail "late row with supersedes_id refused" late_fixture supersedes
+fresh; PATTERN="has no FAILED score" expect_fail "late row on a promise with no FAILED score refused" late_fixture nofail
+fresh; PATTERN="a scoring entry must cite the scored entry" expect_fail "ordinary SCORED row without supersedes_id still refused" python3 - <<'PY4'
+import sys; sys.path.insert(0, 'scripts'); import regcore as rc
+h, rows = rc.read_source(rc.SOURCE); new = dict({r['id']: r for r in rows}['AI4'])
+new.update({'id': 'AI4-X', 'status': 'SCORED 9 May 2027: PASS', 'cost_to_date': 'FAILED: fixture', 'sort_date': '2027-05-09', 'supersedes_id': '', 'supersedes_hash': ''})
+errs = rc.validate(h, rows + [new]); print('\n'.join(errs)); sys.exit(1 if errs else 0)
+PY4
+
 echo; [ $fails -eq 0 ] && echo "PIPELINE TESTS: ALL PASSED" || echo "PIPELINE TESTS: $fails FAILED"; exit $fails
