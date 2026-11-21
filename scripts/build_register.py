@@ -93,6 +93,15 @@ def render_fetch_index(tpl, rows, csv_name, json_name, csv_sha, iso):
     t, _ = re.subn(r'(<span id="row-total">)\d+', r"\g<1>" + str(len(rows)), t, count=1)
     stamp = build_stamp(STAMP["uid"], iso, entries_sha, len(rows))
     t = upsert_mark(t, "BUILD-STAMP", "<!-- BUILD-STAMP --><p class=\"small\" id=\"build-stamp\">%s</p><!-- /BUILD-STAMP -->" % stamp)
+    audit_blk = ("<!-- AUDIT --><section class=\"panel\" id=\"audit\">%s</section><!-- /AUDIT -->"
+                 % audit_body_html(STAMP["uid"], iso, entries_sha, len(rows)))
+    if "<!-- AUDIT -->" in t:
+        t = upsert_mark(t, "AUDIT", audit_blk)
+    else:
+        new, nsub = re.subn(r'<section class="panel" id="audit">.*?</section>', audit_blk, t, count=1, flags=re.S)
+        if nsub != 1:
+            raise rc.Fail("index.html: audit section (#audit) not found")
+        t = new
     blk = backlog_block(iso)
     t = upsert_mark(t, "BACKLOG", "<!-- BACKLOG -->%s<!-- /BACKLOG -->" % md_to_html(blk))
     t = upsert_mark(t, "STATUS-SUMMARY", ra.status_summary(rows, iso))
@@ -474,6 +483,18 @@ def audit_md(uid, iso, src_sha, n):
     ])
 
 
+def audit_body_html(uid, iso, src_sha, n):
+    """HTML body of the How to check / How promises section, with the nav ids the live index uses."""
+    md = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r"\1 (\2)", audit_md(uid, iso, src_sha, n))
+    body = md_to_html(md).replace(
+        "open an issue at https://github.com/citizenheldrecord/register/issues ",
+        'open an issue at <a href="https://github.com/citizenheldrecord/register/issues">https://github.com/citizenheldrecord/register/issues</a> ',
+    )
+    body = body.replace("<h2>How to check this update</h2>", '<h2 id="how-to-check">How to check this update</h2>')
+    body = body.replace("<h2>How promises are chosen</h2>", '<h2 id="how-promises">How promises are chosen</h2>')
+    return body
+
+
 def render_readme(tpl, rows, csv_name, csv_sha, iso):
     ld = rc.long_date(iso)
     t = one(r"Entries as at \d+ \w+ \d{4}\. Last change: \d+ \w+ \d{4}\.", "Entries as at %s. Last change: %s." % (ld, ld), tpl, "README")
@@ -697,6 +718,21 @@ def stamp_checks(readme, index, source):
         errs.append(str(e))
     if rc.long_date(iso) != ld:
         errs.append("build stamp date %s does not match update %s" % (ld, uid))
+    # Current-update stamps must all use this uid. Historical "First use, update 2026-10-24a"
+    # and "commit labels of update 2026-10-19e" lines are left alone.
+    for label, text_ in (("README", readme), ("index.html", index)):
+        for m in re.finditer(r"Build stamp: update ([^,\s]+),", text_):
+            if m.group(1) != uid:
+                errs.append("%s has leftover Build stamp update %s (expected %s)" % (label, m.group(1), uid))
+        for m in re.finditer(r"Dates: as at update ([^,\s]+),", text_):
+            if m.group(1) != uid:
+                errs.append("%s has leftover date-basis stamp update %s (expected %s)" % (label, m.group(1), uid))
+        for m in re.finditer(r"Entry fingerprints for this update:.*?entry-hashes-v2-([^.\s]+)\.csv", text_, re.S):
+            if m.group(1) != uid:
+                errs.append("%s fingerprint file is entry-hashes-v2-%s.csv (expected %s)" % (label, m.group(1), uid))
+        for m in re.finditer(r"refreshes it to update ([^,\s]+) after each push", text_):
+            if m.group(1) != uid:
+                errs.append("%s copies line names update %s (expected %s)" % (label, m.group(1), uid))
     return errs
 
 
