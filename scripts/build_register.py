@@ -43,6 +43,61 @@ def one(pattern, repl, text, name, flags=0):
     return new
 
 
+def is_fetch_index(t):
+    """The live index fetches data/entries.csv in the browser; it does not embed the CSV."""
+    return 'id="csvdata"' not in t
+
+
+def upsert_mark(t, mark, block, name="index.html"):
+    if "<!-- %s -->" % mark not in t:
+        raise rc.Fail("%s: marker %s not found" % (name, mark))
+    if not block.endswith("\n"):
+        block = block + "\n"
+    return one(r"<!-- %s -->.*?<!-- /%s -->\n?" % (mark, mark), lambda m: block, t, name, re.S)
+
+
+def fill_printed(t, digest):
+    new, n = re.subn(r'(<span id="printed">)(?:[0-9a-f]{64})?', r"\g<1>" + digest, t, count=1)
+    if n != 1:
+        raise rc.Fail("index.html: printed checksum span not found")
+    return new
+
+
+def render_fetch_index(tpl, rows, csv_name, json_name, csv_sha, iso):
+    """Fill stamps and static sections on the fetch-based index. Does not embed the CSV."""
+    ld = rc.long_date(iso)
+    t = tpl
+    entries_sha = STAMP.get("sha") or sha(open(os.path.join(ROOT, "data", "entries.csv"), "rb").read())
+    t = fill_printed(t, entries_sha)
+    t, n = re.subn(r'(<span id="page-count">)\d+', r"\g<1>" + str(len(rows)), t, count=1)
+    if n != 1:
+        raise rc.Fail("index.html: page-count span not found")
+    t, _ = re.subn(r'(<span id="row-total">)\d+', r"\g<1>" + str(len(rows)), t, count=1)
+    stamp = build_stamp(STAMP["uid"], iso, entries_sha, len(rows))
+    t = upsert_mark(t, "BUILD-STAMP", "<!-- BUILD-STAMP --><p class=\"small\" id=\"build-stamp\">%s</p><!-- /BUILD-STAMP -->" % stamp)
+    blk = backlog_block(iso)
+    t = upsert_mark(t, "BACKLOG", "<!-- BACKLOG -->%s<!-- /BACKLOG -->" % md_to_html(blk))
+    t = upsert_mark(t, "STATUS-SUMMARY", ra.status_summary(rows, iso))
+    t = upsert_mark(t, "NEXT-ON-CLOCK", next_on_clock(rows, iso))
+    uid = csv_name[len("public-live-rows-"):-4] if csv_name.startswith("public-live-rows-") else STAMP["uid"]
+    t = upsert_mark(t, "COPIES", copies_line(uid))
+    ov = overlaps_md(rows)
+    if ov:
+        t = upsert_mark(t, "OVERLAPS", "<!-- OVERLAPS --><section class=\"overlaps\"><span id=\"overlaps\"></span>%s</section><!-- /OVERLAPS -->" % md_to_html(ov))
+    else:
+        t = upsert_mark(t, "OVERLAPS", "<!-- OVERLAPS --><section class=\"overlaps\"><span id=\"overlaps\"></span></section><!-- /OVERLAPS -->")
+    rh = related_html(rows)
+    if rh:
+        t = upsert_mark(t, "RELATED", "<!-- RELATED --><section class=\"related\"><span id=\"related\"></span>%s</section><!-- /RELATED -->" % rh)
+    t = upsert_mark(t, "FAILLOG", "<!-- FAILLOG --><section id=\"faillog\"><h2>Failure log</h2><p>Each failure, with where it got stuck and what was chosen instead, from <a href=\"data/failure-log.csv\">data/failure-log.csv</a>.</p>%s</section><!-- /FAILLOG -->" % failure_html(ld))
+    if re.search(r"Entries as at \d+ \w+ \d{4}\. Last change: \d+ \w+ \d{4}\.", t):
+        t = one(r"Entries as at \d+ \w+ \d{4}\. Last change: \d+ \w+ \d{4}\.", "Entries as at %s. Last change: %s." % (ld, ld), t, "index.html")
+    if re.search(r"Last updated \d+ \w+ \d{4} \(update \d{4}-\d\d-\d\d[a-z]?\)\.", t):
+        t = one(r"Last updated \d+ \w+ \d{4} \(update \d{4}-\d\d-\d\d[a-z]?\)\.", "Last updated %s (update %s)." % (ld, STAMP["uid"]), t, "index.html")
+    t = apply_footer(t, "index.html")
+    return t
+
+
 TABLE_COLS = "ID | Test | Owner | Scoring date | Date source | Status | Measure | Money | Funding | Argument | Cost to date | Hype | Means | Cost"
 TABLE_KEYS = ["id", "test", "owner", "scoring_date", "date_source", "status", "measure", "money", "funding", "argument", "cost_to_date", "hype_score", "means_score", "cost_score"]
 SECTION_HEADS = {
@@ -491,6 +546,12 @@ def apply_footer(t, name):
 
 def render_index(tpl, rows, csv_text, csv_name, json_name, csv_sha, iso):
     ld = rc.long_date(iso)
+    links = ra.load_links()
+    errs = ra.check_links(rows, links)
+    if errs:
+        raise rc.Fail("\n".join(errs))
+    if is_fetch_index(tpl):
+        return render_fetch_index(tpl, rows, csv_name, json_name, csv_sha, iso)
     t = one(r'(id="csvdata"[^>]*>).*?(</script>)', lambda m: m.group(1) + json.dumps(csv_text, ensure_ascii=False).replace("</", "<\\/") + m.group(2), tpl, "index.html", re.S)
     t = one(r'(<span id="printed">)[0-9a-f]{64}', r"\g<1>" + csv_sha, t, "index.html")
     t = one(r"SHA-256 of public-live-rows-\d{4}-\d\d-\d\d[a-z]?\.csv \(all \d+ rows\)", "SHA-256 of %s (all %d rows)" % (csv_name, len(rows)), t, "index.html")
@@ -640,12 +701,23 @@ def printed_checks(folder, iso=None, source=None):
     if side != real:
         errs.append("%s.sha256 says %s, file hashes to %s" % (name, side, real))
     mi = re.search(r'<span id="printed">([0-9a-f]{64})', index)
-    if not mi or mi.group(1) != real:
-        errs.append("index.html printed %s, CSV hashes to %s" % (mi.group(1) if mi else None, real))
-    me = re.search(r'id="csvdata"[^>]*>(.*?)</script>', index, re.S)
-    emb = json.loads(me.group(1)) if me else None
-    if emb is None or sha(emb.encode("utf-8")) != real:
-        errs.append("index.html embedded CSV does not match %s" % name)
+    if is_fetch_index(index):
+        src = source or os.path.join(folder, "data", "entries.csv")
+        if not os.path.exists(src):
+            errs.append("data/entries.csv not found for the printed checksum")
+        else:
+            entries_sha = sha(open(src, "rb").read())
+            if not mi or mi.group(1) != entries_sha:
+                errs.append("index.html printed %s, data/entries.csv hashes to %s" % (mi.group(1) if mi else None, entries_sha))
+        if "data/entries.csv" not in index:
+            errs.append("index.html does not name data/entries.csv as the file it fetches")
+    else:
+        if not mi or mi.group(1) != real:
+            errs.append("index.html printed %s, CSV hashes to %s" % (mi.group(1) if mi else None, real))
+        me = re.search(r'id="csvdata"[^>]*>(.*?)</script>', index, re.S)
+        emb = json.loads(me.group(1)) if me else None
+        if emb is None or sha(emb.encode("utf-8")) != real:
+            errs.append("index.html embedded CSV does not match %s" % name)
     jn = path[:-4] + ".json"
     import csv as _c, io as _io
     rows = list(_c.DictReader(_io.StringIO(raw.decode("utf-8"), newline="")))

@@ -69,7 +69,7 @@ fixture_record AI3-SCORED-20261031; score_due 2026-10-31
 [ "$before" = "$(python3 scripts/hash_entries.py data/entries.csv --show AI3 | sha256sum)" ] && ok "AI3 row unchanged in the data" || bad "AI3 changed"
 build $SCRATCH >/tmp/pl.out 2>&1 && ok "build after scoring: $(grep -m1 'new since' /tmp/pl.out)" || { bad "build after scoring"; cat /tmp/pl.out; }
 grep -Eq "^([A-Za-z ]+ \| )?AI3 \| .* \| CLOSED: scored in AI3-SCORED-20261031 \| " README.md && ok "README shows AI3 as CLOSED: scored in AI3-SCORED-20261031" || bad "README closed display"
-grep -q 'CLOSED\[r.id\]' index.html && ok "page links closed rows to the scoring entry" || bad "page closed display"
+grep -q 'CLOSED\[r.id\]' assets/register.js && ok "page links closed rows to the scoring entry" || bad "page closed display"
 python3 scripts/hash_entries.py public-live-rows-$SCRATCH.csv --check manifest/entry-hashes-v2-2026-10-18b.csv | tail -1 | grep -q ", 0 problems" && ok "all 118 prior v2 fingerprints unchanged" || bad "prior changed"
 PATTERN="already has a scoring entry" expect_fail "double scoring refused" python3 scripts/add_entry.py score --supersedes AI3 --result FAILED --layer courts --scored-on 2026-11-01 --evidence https://example.org/y --cost-to-date "FAILED: held by Anthropic" --hype OPEN --means OPEN --cost FAILED
 
@@ -94,20 +94,25 @@ echo "9. redate appends a new entry citing the old fingerprint"
 fresh; python3 scripts/add_entry.py redate --supersedes FIR1 --id FIR1-R1 --scoring-date "15 Jan 2027" --date-source "DESK-SET: test redate" >/tmp/pl.out && fixture_record FIR1-R1 && build $SCRATCH >/tmp/pl2.out 2>&1 && grep -q "1 new since the latest manifest \['FIR1-R1'\]" /tmp/pl2.out && ok "redate built; old FIR1 kept" || { bad "redate"; cat /tmp/pl.out /tmp/pl2.out; }
 
 
-echo "10. page logic: a synthetic scored row marks its original CLOSED with a link (node, temp copy)"
+echo "10. page logic: a synthetic scored row marks its original CLOSED with a link (node, assets/lib.js)"
 fresh; node -e '
-const fs=require("fs");const h=fs.readFileSync("index.html","utf8");
-const line=h.split("\n").find(l=>l.startsWith("const CLOSED="));
-const tpl=h.match(/<td>\$\{CLOSED\[r\.id\][^\n]*?esc\(r\.status\)\}<\/td>/)[0];
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+const fs=require("fs");
+const vm=require("vm");
+const ctx={window:{}, console};
+ctx.window=ctx;
+vm.runInNewContext(fs.readFileSync("assets/lib.js","utf8"), ctx, {filename:"lib.js"});
+const C=ctx.window.CHR;
 const ROWS=[{id:"AI1",status:"LIVE"},{id:"AI1-SCORED-20261031",status:"SCORED 31 Oct 2026: PASS",supersedes_id:"AI1"},{id:"AI2",status:"LIVE"}];
-eval(line.replace("const CLOSED","var CLOSED"));
-const cell=r=>eval("`"+tpl+"`");
-const a=cell(ROWS[0]),b=cell(ROWS[1]),c=cell(ROWS[2]);
-if(!a.includes("CLOSED: scored in AI1-SCORED-20261031")||!a.includes("href=\"#row-AI1-SCORED-20261031\""))throw "original not closed: "+a;
-if(!b.includes("SCORED 31 Oct 2026: PASS")||c.includes("CLOSED"))throw "wrong rows closed";
-console.log(a);' >/tmp/pl.out 2>&1 && ok "original shows $(sed 's/<[^>]*>//g' /tmp/pl.out); scoring row and unscored row unchanged" || { bad "page closed logic"; cat /tmp/pl.out; }
-grep -q "<th>Hype</th><th>Means</th><th>Cost</th>" index.html && grep -q "r.hype_score" index.html && ok "page table shows hype, means and cost" || bad "sub-score columns on page"
+const maps=C.closersOf(ROWS);
+const a=C.displayStatus(ROWS[0], maps.closed, maps.replaced);
+const b=C.displayStatus(ROWS[1], maps.closed, maps.replaced);
+const c=C.displayStatus(ROWS[2], maps.closed, maps.replaced);
+const js=fs.readFileSync("assets/register.js","utf8");
+if(!js.includes("href=\"#row-") || !js.includes("CLOSED[r.id]")) throw "register.js missing closed-row permalink";
+if(a!=="CLOSED: scored in AI1-SCORED-20261031") throw "original not closed: "+a;
+if(b!=="SCORED 31 Oct 2026: PASS" || c.includes("CLOSED")) throw "wrong rows closed: "+b+" / "+c;
+console.log(a);' >/tmp/pl.out 2>&1 && ok "original shows $(cat /tmp/pl.out); scoring row and unscored row unchanged" || { bad "page closed logic"; cat /tmp/pl.out; }
+grep -q "hype_score" assets/lib.js && grep -q "hype_score" assets/register.js && ok "page table shows hype, means and cost" || bad "sub-score columns on page"
 grep -q "| Cost to date | Hype | Means | Cost$" README.md && ok "README tables show hype, means and cost" || bad "README sub-score columns"
 
 echo "12. transfer cap: a sixth open transfer entry is refused (R-2026-10-19-H)"
@@ -187,7 +192,7 @@ fresh; PATTERN="OVERDUE CHECK FAILED" expect_fail "check_overdue fails when a re
 
 echo "18. see_also notes render under Related rows with row links; overlaps section unchanged"
 fresh; build $SCRATCH >/tmp/pl.out 2>&1 || { bad "build"; cat /tmp/pl.out; }
-grep -q '<section class="related"><h2>Related rows</h2>' index.html && ok "Related rows section present" || bad "Related rows section missing"
+grep -q '<section class="related">' index.html && grep -q '<h2>Related rows</h2>' index.html && ok "Related rows section present" || bad "Related rows section missing"
 grep -q 'href="#row-EA-REFORM">EA-REFORM</a>' index.html && grep -q 'href="#row-CHARTER-LIMIT-REG">CHARTER-LIMIT-REG</a>' index.html && ok "row ids linked to row anchors" || bad "row links"
 grep -o '<section class="overlaps">.*</section><!-- /OVERLAPS -->' index.html | grep -q 'SA-EA-CHARTER\|Related rows\|CHARTER-LIMIT-REG' && bad "see_also leaked into overlaps" || ok "overlaps section has no see_also note"
 grep -q '^## Related rows' README.md && ok "README shows Related rows" || bad "README Related rows"

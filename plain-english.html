@@ -3,35 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Register in plain English</title>
-<style>
-body{font-family:Georgia,"Times New Roman",serif;margin:0;color:#1a1a1a;background:#fafaf7;line-height:1.45}
-.wrap{max-width:1800px;margin:0 auto;padding:16px 24px 48px}
-.proto{background:#fff3cd;border:1px solid #e0c870;padding:8px 12px;font:13px/1.4 Arial,sans-serif;margin-bottom:14px}
-h1{font-size:30px;margin:6px 0 4px}h2{font-size:21px;margin:26px 0 8px;border-bottom:1px solid #ccc;padding-bottom:4px}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:26px}
-.cols p,.panel p{font-size:15px;margin:6px 0}
-details summary{cursor:pointer;font-weight:bold;font-size:17px;margin-top:10px}
-.panel{background:#fff;border:1px solid #bbb;padding:10px 16px;margin-top:14px}
-.panel ul{margin:6px 0 8px 18px;padding:0}.panel li{margin:5px 0;font-size:15px}
-.tools{position:sticky;top:0;background:#fafaf7;padding:10px 0;border-bottom:1px solid #ccc;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font:14px Arial,sans-serif;z-index:2}
-.tools select,.tools input{font:14px Arial,sans-serif;padding:4px}.tools input[type=search]{width:240px}
-.tools select#owner{max-width:260px}
-button{font:14px Arial,sans-serif;padding:5px 10px;cursor:pointer}
-#count{margin-left:auto;font-weight:bold}
-.sha{font:12px/1.4 monospace;word-break:break-all;background:#fff;border:1px solid #ccc;padding:6px 8px;margin:8px 0}
-table{border-collapse:collapse;width:100%;font:13px/1.35 Arial,sans-serif;background:#fff}
-th,td{border:1px solid #ccc;padding:5px 6px;vertical-align:top;text-align:left}
-th{background:#eee}
-td.id{font-weight:bold;white-space:nowrap}td.test{min-width:340px}td.small{font-size:12px;min-width:150px;max-width:240px;overflow-wrap:anywhere}
-.badge{font:11px Arial,sans-serif;padding:1px 5px;border-radius:3px;background:#e8e8e8;white-space:nowrap}
-.OPEN{background:#eee;color:#555}.CASELOAD-COUPLED{background:#f6d5d5}.FIXED-OUTCOME{background:#d5ecd8}.TIME-LIMITED{background:#f3e7c4}
-a.anchor{color:inherit;text-decoration:none}a.anchor:hover{text-decoration:underline}.summary{border-color:#888}.small{font-size:12px}
-.empty{font-style:italic;color:#555;padding:8px}
-@media(max-width:900px){.cols{grid-template-columns:1fr}}
-</style>
+<title>Plain English | Citizen Held Record</title>
+<link rel="stylesheet" href="assets/chr.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>
+(function(){try{var m=localStorage.getItem("chr-theme")||"auto";
+var d=m==="dark"||(m!=="light"&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches);
+document.documentElement.setAttribute("data-theme", d?"dark":"light");}catch(e){}})();
+</script>
+
 </head>
-<body><div class="wrap">
+<body class="page-shell" data-page="static">
+<div class="top-stack">
+<div class="maple-bar" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html">
+      <span class="brand-kicker">Citizen Held Record</span>
+      <span class="brand-name">The Register</span>
+    </a>
+    <nav class="pages" aria-label="Pages">
+      <ol>
+        <li><a href="what.html">What this is</a></li><li><a href="how.html">How it works</a></li><li><a href="coming-up.html">What's coming up</a></li><li><a href="scored.html">What's been scored</a></li><li><a href="index.html">The register</a></li><li><a href="method.html">Method</a></li><li><a href="plain-english.html" aria-current="page">Plain English</a></li>
+      </ol>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary suggest-nav" href="index.html#suggest-row">Suggest a row</a>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch colour theme">Theme: auto</button>
+    </div>
+  </div>
+</header>
+</div>
+<div class="wrap">
 <div class="proto">A plain-English reading of the register. For the current counts, dates and results, see <a href="index.html">the main register page</a>. If this page and the main register ever differ, the main register governs.</div>
 <h1>The Public Register: promises, dates and owners</h1>
 <h2>Where the register stands</h2>
@@ -78,6 +81,11 @@ a.anchor{color:inherit;text-decoration:none}a.anchor:hover{text-decoration:under
 <p>Every entry, with its test, owner, scoring date and current status, is on <a href="index.html">the main register page</a>, where it can be searched and filtered.</p>
 <!-- OVERLAPS --><section class="overlaps"><h2>Overlaps reviewed (closed)</h2><p>Both entries in each pair are kept and stay live, the review is closed, and nothing was removed or changed.</p><ul><li><strong>LEVELS-1NOV and LEVELS2729</strong> (noted 22 Oct 2026): Both record the tabling of the 2027 to 2029 Immigration Levels Plan under IRPA s.94 with a first check on 2 Nov 2026. LEVELS-1NOV records TABLED (date and URL) or NOT TABLED with the 30 sitting day window; LEVELS2729 records the tabling date and whether the permanent resident target rises above 380,000. LEVELS-1NOV's own text says it is not a substitute for LEVELS2729. Both kept, under review, nothing removed.</li><li><strong>LEVELS-1NOV and LEVELS2729</strong> (noted 4 Nov 2026): Review of OV-LEVELS (22 Oct 2026) closed 4 Nov 2026. LEVELS-1NOV is a narrower near-term test inside LEVELS2729: it records only whether the plan was tabled on or before 1 Nov 2026. It was recorded NOT TABLED on 4 Nov 2026 (House of Commons Journals No. 161, 3 Nov 2026, see LEVELS-1NOV-SCORED-20261104). LEVELS2729 stays open: it records the tabling date and whether the permanent resident target rises above 380,000. Both kept, nothing removed.</li><li><strong>FA3-MVH-DEC and FA3</strong> (noted 22 Oct 2026): Both test a Schedule 1 listing or a dated refusal for MVH. FA3-MVH-DEC tests a listing Order (P.C. number and date) or a dated public refusal on or before 2 Nov 2026; FA3 tests MVH and RBT2 listed or refused in Schedule 1 by 31 Dec 2026. FA3-MVH-DEC's own text says it does not move the FA3 31 Dec row. Both kept, under review, nothing removed.</li><li><strong>FA3-MVH-DEC and FA3</strong> (noted 4 Nov 2026): Review of OV-FA3 (22 Oct 2026) closed 4 Nov 2026. FA3-MVH-DEC is a narrower near-term test inside FA3: it tests only the Mackenzie Valley Highway, by the 2 Nov 2026 date in the Government of Canada and GNWT letter of 18 Sep 2026. FA3 tests both MVH and RBT2 by 31 Dec 2026. The FA3-MVH-DEC result (see FA3-MVH-DEC-SCORED-20261104) does not score FA3. Both kept, nothing removed.</li></ul></section><!-- /OVERLAPS -->
 <p class="small"><a href="index.html">Back to the full register</a></p>
-</div><!-- COPYRIGHT --><footer class="copyright"><p class="small">&copy; 2026 Barry Sharp. Sovereign Realism register. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>: share and adapt with credit. Full licence text: <a href="LICENSE">LICENSE</a>.</p><p class="small">First published by Barry Sharp in 2026. Every entry is dated, archived and kept in public history on <a href="https://github.com/Citizenheldrecord/register">GitHub</a> and <a href="https://codeberg.org/citizen-held-record/register">Codeberg</a>, so the record shows who built it and when.</p></footer><!-- /COPYRIGHT -->
+</div>
+
+<!-- COPYRIGHT --><footer class="copyright"><p class="small">&copy; 2026 Barry Sharp. Sovereign Realism register. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>: share and adapt with credit. Full licence text: <a href="LICENSE">LICENSE</a>.</p><p class="small">First published by Barry Sharp in 2026. Every entry is dated, archived and kept in public history on <a href="https://github.com/Citizenheldrecord/register">GitHub</a> and <a href="https://codeberg.org/citizen-held-record/register">Codeberg</a>, so the record shows who built it and when.</p></footer><!-- /COPYRIGHT -->
+
+<script src="assets/lib.js"></script>
+<script src="assets/pages.js"></script>
 </body>
 </html>
