@@ -1,0 +1,8 @@
+# FAILED entry fields: RBT2-CONSOL-20NOV-SCORED-20261120
+
+## Line 2026-11-20
+- 1. Required / record on scoring date: The test required the Justice Laws consolidation of the Building Canada Act (B-9.89) Schedule 1 to name Roberts Bank Terminal 2 by 20 Nov 2026, shown at https://laws-lois.justice.gc.ca/eng/acts/B-9.89/FullText.html. The consolidation, read 2026-11-20 19:47 CST, says "Act current to 2026-10-29 and last amended on 2026-10-01." Schedule 1 lists one item only, item 1, "West Coast Oil Pipeline". The words "Roberts Bank Terminal 2" do not appear. Page footer "Date modified: 2026-11-16". Archive https://web.archive.org/web/20261117235222/https://laws-lois.justice.gc.ca/eng/acts/B-9.89/FullText.html (opened 2026-11-20 19:48 CST) shows the same banner and the same one Schedule 1 item. Order P.C. 2026-1047 (Canada Gazette Part I No. 46) is the Gazette stage, not the consolidation test.
+- 2. Why still live: The Act-layer order P.C. 2026-1047 of 30 Oct 2026 listed Roberts Bank Terminal 2, and the Gazette printed that order, but the Justice Laws consolidation remains current to 29 Oct 2026 and has not yet added the project to Schedule 1.
+- 3. Accountable: Justice Canada (Legislative Services Branch)
+- 4. Closing document or promise: none on the consolidation as of 2026-11-20 (searched: https://laws-lois.justice.gc.ca/eng/acts/B-9.89/FullText.html). A later consolidation that names Roberts Bank Terminal 2 in Schedule 1 would be a new fact, not a rewrite of this score.
+- 5. Next check: 2027-11-20 quarterly recheck (no dated next step found; late watch until 2027-11-20; LATE-WATCH.csv, R3.12)
