@@ -379,12 +379,16 @@ function renderNotes() {
     return "<li><strong>" + ids.map(id => '<a href="#row-' + C.esc(encodeURIComponent(id)) + '">' + C.esc(id) + "</a>").join(" and ") +
       "</strong> (noted " + C.esc(n.noted) + (n.status ? "; " + C.esc(n.status) : "") + "): " + C.esc(n.text) + "</li>";
   }).join("") + "</ul>" : '<p class="empty">None recorded in data/display-notes.csv.</p>';
-  $("overlaps-body").innerHTML = block(overlaps);
-  $("related-body").innerHTML = block(related);
+  const ovb = $("overlaps-body");
+  if (ovb) ovb.innerHTML = block(overlaps);
+  const relb = $("related-body");
+  if (relb) relb.innerHTML = block(related);
 }
 
 function renderFailLog() {
-  if (!DATA.failures.length) { $("faillog-body").innerHTML = '<p class="empty">No rows in data/failure-log.csv.</p>'; return; }
+  const flb = $("faillog-body");
+  if (!flb) return;
+  if (!DATA.failures.length) { flb.innerHTML = '<p class="empty">No rows in data/failure-log.csv.</p>'; return; }
   const cols = Object.keys(DATA.failures[0]);
   const labels = {id:"ID", original_deadline:"Original deadline", date_failed:"Date failed", test:"Test", layer:"Layer", cost:"Cost", chosen_instead:"Chosen instead"};
   let html = '<div class="audit-table"><table class="plain"><thead><tr>' + cols.map(c => "<th>" + C.esc(labels[c] || c) + "</th>").join("") + "</tr></thead><tbody>";
@@ -394,7 +398,7 @@ function renderFailLog() {
     return "<td>" + C.linkify(v) + "</td>";
   }).join("") + "</tr>").join("");
   html += "</tbody></table></div>";
-  $("faillog-body").innerHTML = html;
+  flb.innerHTML = html;
 }
 
 function renderMeta() {
@@ -402,7 +406,8 @@ function renderMeta() {
   $("printed").textContent = DATA.hash;
   $("last-checked-line").textContent = DATA.lastChecked || "Last checked: not found in data/last-checked.txt.";
   $("verify").textContent = "Checked in this browser: the SHA-256 of the loaded data/entries.csv is shown above.";
-  $("copies-line").innerHTML = 'Copies of this record: the live site on <a href="https://github.com/Citizenheldrecord/register">GitHub</a> and the Codeberg mirror, <a href="https://codeberg.org/citizen-held-record/register">https://codeberg.org/citizen-held-record/register</a> (manual copy; the desk refreshes it after each push and checks the checksum). This page is a live register and is not those sites.';
+  const copies = $("copies-line");
+  if (copies) copies.innerHTML = 'Copies of this record: the live site on <a href="https://github.com/Citizenheldrecord/register">GitHub</a> and the Codeberg mirror, <a href="https://codeberg.org/citizen-held-record/register">https://codeberg.org/citizen-held-record/register</a> (manual copy; the desk refreshes it after each push and checks the checksum). This page is a live register and is not those sites.';
   const hist = document.getElementById("checked-history");
   if (hist) hist.textContent = (DATA.lastCheckedAll || "").trim();
 }

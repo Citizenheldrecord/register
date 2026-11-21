@@ -63,6 +63,24 @@ def fill_printed(t, digest):
     return new
 
 
+
+def wrap_ul_body(html, body_id):
+    """Wrap the first <ul>...</ul> in a div the live page JS can fill."""
+    m = re.search(r"<ul>.*</ul>", html, re.S)
+    if not m:
+        return html + '<div id="%s"></div>' % body_id
+    return html[:m.start()] + '<div id="%s">%s</div>' % (body_id, m.group(0)) + html[m.end():]
+
+
+def faillog_body(ld):
+    """Valid table fallback plus #faillog-body so register.js can replace it."""
+    rows = failure_html(ld)
+    return ('<div id="faillog-body"><div class="audit-table"><table class="plain">'
+            "<thead><tr><th>ID</th><th>Original deadline</th><th>Date failed</th>"
+            "<th>Test</th><th>Layer</th><th>Cost</th><th>Chosen instead</th></tr></thead>"
+            "<tbody>%s</tbody></table></div></div>" % rows)
+
+
 def render_fetch_index(tpl, rows, csv_name, json_name, csv_sha, iso):
     """Fill stamps and static sections on the fetch-based index. Does not embed the CSV."""
     ld = rc.long_date(iso)
@@ -83,13 +101,15 @@ def render_fetch_index(tpl, rows, csv_name, json_name, csv_sha, iso):
     t = upsert_mark(t, "COPIES", copies_line(uid))
     ov = overlaps_md(rows)
     if ov:
-        t = upsert_mark(t, "OVERLAPS", "<!-- OVERLAPS --><section class=\"overlaps\"><span id=\"overlaps\"></span>%s</section><!-- /OVERLAPS -->" % md_to_html(ov))
+        t = upsert_mark(t, "OVERLAPS", "<!-- OVERLAPS --><section class=\"overlaps\"><span id=\"overlaps\"></span>%s</section><!-- /OVERLAPS -->" % wrap_ul_body(md_to_html(ov), "overlaps-body"))
     else:
-        t = upsert_mark(t, "OVERLAPS", "<!-- OVERLAPS --><section class=\"overlaps\"><span id=\"overlaps\"></span></section><!-- /OVERLAPS -->")
+        t = upsert_mark(t, "OVERLAPS", "<!-- OVERLAPS --><section class=\"overlaps\"><span id=\"overlaps\"></span><div id=\"overlaps-body\"></div></section><!-- /OVERLAPS -->")
     rh = related_html(rows)
     if rh:
-        t = upsert_mark(t, "RELATED", "<!-- RELATED --><section class=\"related\"><span id=\"related\"></span>%s</section><!-- /RELATED -->" % rh)
-    t = upsert_mark(t, "FAILLOG", "<!-- FAILLOG --><section id=\"faillog\"><h2>Failure log</h2><p>Each failure, with where it got stuck and what was chosen instead, from <a href=\"data/failure-log.csv\">data/failure-log.csv</a>.</p>%s</section><!-- /FAILLOG -->" % failure_html(ld))
+        t = upsert_mark(t, "RELATED", "<!-- RELATED --><section class=\"related\"><span id=\"related\"></span>%s</section><!-- /RELATED -->" % wrap_ul_body(rh, "related-body"))
+    elif "<!-- RELATED -->" in t:
+        t = upsert_mark(t, "RELATED", "<!-- RELATED --><section class=\"related\"><span id=\"related\"></span><h2>Related rows</h2><div id=\"related-body\"></div></section><!-- /RELATED -->")
+    t = upsert_mark(t, "FAILLOG", "<!-- FAILLOG --><section id=\"faillog\"><h2>Failure log</h2><p>Each failure, with where it got stuck and what was chosen instead, from <a href=\"data/failure-log.csv\">data/failure-log.csv</a>.</p>%s</section><!-- /FAILLOG -->" % faillog_body(ld))
     if re.search(r"Entries as at \d+ \w+ \d{4}\. Last change: \d+ \w+ \d{4}\.", t):
         t = one(r"Entries as at \d+ \w+ \d{4}\. Last change: \d+ \w+ \d{4}\.", "Entries as at %s. Last change: %s." % (ld, ld), t, "index.html")
     if re.search(r"Last updated \d+ \w+ \d{4} \(update \d{4}-\d\d-\d\d[a-z]?\)\.", t):
@@ -523,7 +543,7 @@ CODEBERG = "https://codeberg.org/citizen-held-record/register"
 
 def copies_line(uid):
     """Display only (rule entry R-2026-10-19-J): names the copies and the update the Codeberg copy is refreshed to."""
-    return ('<!-- COPIES --><p class="copies">Copies of this record: GitHub (this site) and Codeberg, <a href="%s">%s</a> '
+    return ('<!-- COPIES --><p class="copies" id="copies-line">Copies of this record: GitHub (this site) and Codeberg, <a href="%s">%s</a> '
             '(manual copy; the desk refreshes it to update %s after each push and checks the checksum below).</p><!-- /COPIES -->'
             % (CODEBERG, CODEBERG, html.escape(uid)))
 
