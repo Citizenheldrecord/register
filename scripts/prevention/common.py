@@ -38,8 +38,51 @@ def host_of(url: str) -> str:
     return h.lower().removeprefix("www.")
 
 
-def classify_host(host: str, owner: str = "", url: str = "") -> str:
-    """Return primary | court | company | lead | unknown. Match on host, not substring."""
+_STOP_TOKENS = ("the", "and", "for", "minister", "ministry", "department")
+_OWN_ANN_YES = re.compile(r"^(yes|true|y)\b", re.I)
+_COMPANY_FIELD = re.compile(r"^[-*]?\s*Company the source belongs to:\s*(.+)$", re.M)
+_OWN_ANN_FIELD = re.compile(r"^[-*]?\s*Company'?s own announcement:\s*(.+)$", re.M)
+
+
+def tokens_match_host(name: str, host: str) -> bool:
+    """True when a 3+ character name token (not a stop word) appears in the host, flattened."""
+    if not name or not host:
+        return False
+    hflat = re.sub(r"[^a-z0-9]", "", host.lower())
+    tokens = [t for t in re.findall(r"[a-z0-9]{3,}", name.lower()) if t not in _STOP_TOKENS]
+    return any(tok in hflat for tok in tokens)
+
+
+def parse_company_announcement(text: str) -> tuple[str, bool]:
+    """Return (company the source belongs to, claim is that company's own announcement).
+
+    Both facts must be recorded in the sources record (Barry go t3972s19484). own_announcement
+    is True only for an explicit yes/true/y on "Company's own announcement".
+    """
+    cm = _COMPANY_FIELD.search(text or "")
+    om = _OWN_ANN_FIELD.search(text or "")
+    company = cm.group(1).strip() if cm else ""
+    own = bool(om and _OWN_ANN_YES.search(om.group(1).strip()))
+    return company, own
+
+
+def is_press_or_lead_host(host: str) -> bool:
+    """x.com, other lead hosts, and press hosts stay leads (Barry go t3972s19484)."""
+    if not host:
+        return False
+    h = host.lower().removeprefix("www.")
+    return h in LEAD_HOSTS or h in PRESS_HOSTS or h.endswith(".substack.com")
+
+
+def classify_host(host: str, owner: str = "", url: str = "", company: str = "",
+                  own_announcement: bool = False) -> str:
+    """Return primary | court | company | lead | unknown. Match on host, not substring.
+
+    A company's own release on its own domain is company even when the row owner is
+    someone else, such as a minister, but only when own_announcement is True and the
+    company name tokens match the host (Barry go t3972s19484). x.com and press hosts
+    stay leads.
+    """
     if not host:
         return "unknown"
     own_l = (owner or "").lower()
@@ -51,7 +94,7 @@ def classify_host(host: str, owner: str = "", url: str = "") -> str:
         or host in ("github.com", "codeberg.org")
     ):
         return "company"
-    if host in LEAD_HOSTS or host.endswith(".substack.com"):
+    if is_press_or_lead_host(host):
         # Substack is lead unless it is the row owner's own publication and owner is desk
         if host.endswith("substack.com") and ("desk" in own_l or "barry sharp" in own_l) and "barryesharp" in host:
             return "company"
@@ -60,13 +103,13 @@ def classify_host(host: str, owner: str = "", url: str = "") -> str:
         return "court"
     if any(host.endswith(s) for s in PRIMARY_SUFFIXES) or host.endswith(".gc.ca") or host.endswith(".canada.ca"):
         return "primary"
-    # company: holder primary only when host relates to owner (token match, not x-in-rtx)
-    own = re.sub(r"[^a-z0-9]", "", own_l)
-    hflat = re.sub(r"[^a-z0-9]", "", host)
-    tokens = [t for t in re.findall(r"[a-z0-9]{3,}", own_l) if t not in ("the", "and", "for", "minister", "ministry", "department")]
-    if any(tok in hflat for tok in tokens):
+    # company's own release on its own domain, even if the row owner is someone else
+    if own_announcement and tokens_match_host(company, host):
         return "company"
-    # bare company domains without owner match stay lead for sole-support purposes
+    # company: holder primary only when host relates to owner (token match, not x-in-rtx)
+    if tokens_match_host(owner, host):
+        return "company"
+    # bare company domains without owner or own-announcement match stay lead for sole-support purposes
     if any(host.endswith(s) for s in (".com", ".io", ".ai", ".net", ".org")):
         return "lead"
     return "unknown"
@@ -124,11 +167,14 @@ def parse_sources_record(text: str) -> dict:
         sup_m = re.search(r"Supports:\s*(.+)$", part, re.M)
         line_m = re.search(r"Exact supporting line[^:]*:\s*(.*)$", part, re.M)
         wb_m = re.search(r"Wayback snapshot URL:\s*(.+)$", part, re.M)
+        company, own_ann = parse_company_announcement(part)
         blocks.append({
             "url": (url_m.group(1).strip() if url_m else ""),
             "supports": (sup_m.group(1).strip() if sup_m else ""),
             "exact_line": extract_exact_line(line_m.group(1) if line_m else ""),
             "wayback": (wb_m.group(1).strip() if wb_m else ""),
+            "company": company,
+            "own_announcement": own_ann,
         })
     return {"status": status, "blocks": blocks, "text": text}
 

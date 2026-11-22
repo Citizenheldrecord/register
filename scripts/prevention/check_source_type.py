@@ -30,7 +30,11 @@ def check_id(rid, owner, group):
     classes = []
     for b in fulls:
         h = host_of(b["url"])
-        classes.append(classify_host(h, owner, b.get("url") or ""))
+        classes.append(classify_host(
+            h, owner, b.get("url") or "",
+            company=b.get("company") or "",
+            own_announcement=bool(b.get("own_announcement")),
+        ))
     # sole support: every full block is lead
     if classes and all(c == "lead" for c in classes):
         if group in ("government_promise", "") or "SCORED" in rid or "PROMISE" in (rec.get("status") or "").upper() or "SOURCED" in (rec.get("status") or "").upper():
@@ -46,7 +50,16 @@ def selftest() -> int:
     # rtx must not match x.com substring rule
     assert classify_host("rtx.com") in ("lead", "company", "unknown")
     assert "x.com" not in "rtx.com" or classify_host("rtx.com") != classify_host("x.com") or True
-    print("SELFTEST source_type: host classes PASS (devdiscourse lead, pm.gc.ca primary, rtx owner-match company)")
+    # company's own release on its own domain (Barry go t3972s19484)
+    assert classify_host("isaraerospace.com", owner="Minister of National Defence",
+                         company="Isar Aerospace", own_announcement=True) == "company"
+    assert classify_host("reuters.com", owner="Minister of National Defence",
+                         company="Isar Aerospace", own_announcement=True) == "lead"
+    assert classify_host("x.com", owner="Minister of National Defence",
+                         company="Isar Aerospace", own_announcement=True) == "lead"
+    assert classify_host("isaraerospace.com", owner="Minister of National Defence",
+                         company="Irving Oil", own_announcement=True) == "lead"
+    print("SELFTEST source_type: host classes PASS (devdiscourse lead, pm.gc.ca primary, rtx owner-match company, own-announcement company domain)")
     return 0
 
 
