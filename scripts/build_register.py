@@ -1034,6 +1034,17 @@ def main():
         print("%d new since the latest manifest %s" % (len(new_ids), new_ids if new_ids else ""))
         for s, rel in written:
             print("  %-9s %s" % (s, rel))
+        # Doorway pages ride every upload (Barry go t3972s19490, GO-0704). A draft
+        # build leaves the upload root's doorway files untouched.
+        if not a.draft:
+            import subprocess
+            r = subprocess.run(
+                [sys.executable, os.path.join(ROOT, "scripts", "stamp_doorway_pages.py"),
+                 "--root", ROOT, "--today", a.date[:10], "--update-id", a.date],
+                cwd=ROOT,
+            )
+            if r.returncode != 0:
+                raise rc.Fail("doorway page stamp failed (scripts/stamp_doorway_pages.py)")
         return 0
     except rc.Fail as e:
         print("BUILD FAILED\n" + str(e), file=sys.stderr)

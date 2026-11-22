@@ -45,6 +45,10 @@ IDX=index.html; [ -n "$DRAFT" ] && IDX=local/draft-build-$D/index.html
 step "simple view (rebuild simple-view/, link and Suggest a row box on $IDX)"
 python3 simple-view/build_simple.py || nogo=1
 python3 simple-view/inject_index.py "$IDX" || nogo=1
+step "doorway page stamps (Barry go t3972s19490: the six doorway pages ride every upload; restamp if check_public_page_counts finds a gap)"
+python3 scripts/stamp_doorway_pages.py --today "${D:0:10}" --update-id "$D" || nogo=1
+step "public page counts (Barry go t3972s19490 / GO-0704: the ship fails when check_public_page_counts finds a gap)"
+python3 /workspace/sovereign-realism/tools/check_public_page_counts.py --root "$ROOT" --today "${D:0:10}" || { echo "PUBLIC PAGE COUNTS FAILED"; nogo=1; }
 step "pipeline tests"; bash tests/test_pipeline.sh > /tmp/pf-pipe.out 2>&1 && tail -1 /tmp/pf-pipe.out || { grep -E "FAIL|PIPELINE" /tmp/pf-pipe.out; nogo=1; }
 step "published files unchanged (guardrail 3: every local file already on GitHub is byte-identical; README.md and index.html exempt)"
 python3 scripts/check_published_unchanged.py || nogo=1
