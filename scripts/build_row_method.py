@@ -5,10 +5,19 @@ METHOD-ROWFILE (Barry go t2731u / FIREAT retimed t2886u). Append-only side file.
 Never edits entries.csv. Never guesses a date_basis: if the label does not show it,
 write "not recorded". entry_reason for pre-existing rows is "not recorded" unless a
 later dated line supplies one. Written by this script only, never by hand.
+
+Usage: build_row_method.py [YYYY-MM-DD]
+
+A missing date uses today in CST (TZ=Etc/GMT+6). --help prints usage and exits
+without writing. An unknown flag, or a value that is not a valid YYYY-MM-DD date,
+exits nonzero without writing (Barry go t4033u).
 """
 from __future__ import annotations
 
+import argparse
 import csv
+import datetime
+import subprocess
 import sys
 from pathlib import Path
 
@@ -64,17 +73,36 @@ def classify_date_basis(date_source: str) -> tuple[str, str]:
     return "not recorded", ""
 
 
-def main() -> int:
-    note_date = None
-    if len(sys.argv) > 1:
-        note_date = sys.argv[1]
-    else:
-        import subprocess
+def parse_note_date(value: str) -> str:
+    try:
+        datetime.date.fromisoformat(value)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError(
+            "note_date must be a valid date in YYYY-MM-DD form, not %r" % (value,)
+        ) from exc
+    return value
 
-        note_date = subprocess.check_output(
-            ["bash", "-lc", "TZ=Etc/GMT+6 date +%Y-%m-%d"], text=True
-        ).strip()
 
+def today_cst() -> str:
+    return subprocess.check_output(
+        ["bash", "-lc", "TZ=Etc/GMT+6 date +%Y-%m-%d"], text=True
+    ).strip()
+
+
+def build_parser() -> argparse.ArgumentParser:
+    ap = argparse.ArgumentParser(
+        description="Build data/row-method.csv from data/entries.csv date_source labels."
+    )
+    ap.add_argument(
+        "note_date",
+        nargs="?",
+        type=parse_note_date,
+        help="Note date as YYYY-MM-DD. Default: today's date in CST (TZ=Etc/GMT+6).",
+    )
+    return ap
+
+
+def write_rows(note_date: str) -> int:
     rows = list(csv.DictReader(ENTRIES.open(encoding="utf-8")))
     out_rows = []
     for r in rows:
@@ -103,6 +131,12 @@ def main() -> int:
 
     print("date_basis", dict(Counter(r["date_basis"] for r in out_rows)))
     return 0
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    note_date = args.note_date if args.note_date is not None else today_cst()
+    return write_rows(note_date)
 
 
 if __name__ == "__main__":
