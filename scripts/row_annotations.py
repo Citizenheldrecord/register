@@ -104,7 +104,7 @@ def write_csv(out):
 
 TERMS = [
     ("PASS", "PASS", "the test was met by its scoring date, read against a primary source."),
-    ("FAILED", "FAILED", "the test was not met by its scoring date. A failed entry is published within 30 days and names the layer that blocked it."),
+    ("FAILED", "FAILED", "the test was not met by its scoring date. A failed entry is published within 7 days and names the layer that blocked it."),
     ("LIVE", "LIVE", "the test is set and waiting for its date."),
     ("Open", "Open", "live, not scored, scoring date on or after the count date."),
     ("Due", "Due", "live, not scored, scoring date before the count date."),
