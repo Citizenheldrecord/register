@@ -224,8 +224,49 @@ function rowCard(r) {
     '<div class="foot">' + C.esc(ownerOf(r)) + " · " + C.esc(r.scoring_date) + "</div></article>";
 }
 
+function essayHay(e) {
+  return ((e.title || "") + " " + (e.date || "") + " " + (e.url || "") + " " + (e.words || e.text || "")).toLowerCase();
+}
+
+function matchingEssays() {
+  const q = FILTER.q;
+  const list = DATA.essaysIndex || [];
+  if (!q) return [];
+  const hits = list.filter(e => essayHay(e).includes(q));
+  hits.sort((a, b) => (b.iso || "").localeCompare(a.iso || "") || (a.title || "").localeCompare(b.title || ""));
+  return hits;
+}
+
+function renderEssayResults() {
+  const box = $("essay-results");
+  if (!box) return;
+  const q = FILTER.q;
+  if (!q) {
+    box.hidden = true;
+    return;
+  }
+  const hits = matchingEssays();
+  box.hidden = false;
+  const count = $("essay-results-count");
+  const list = $("essay-results-list");
+  if (count) {
+    count.textContent = hits.length
+      ? (hits.length === 1 ? "1 published essay matches." : hits.length + " published essays match.")
+      : "No published essays match.";
+  }
+  if (list) {
+    list.innerHTML = hits.map(e => {
+      const title = C.esc(e.title || e.url || "Untitled");
+      const href = C.esc(e.url || "");
+      const date = e.date ? ' <span class="essay-date">(' + C.esc(e.date) + ")</span>" : "";
+      return '<li><a href="' + href + '" target="_blank" rel="noopener">' + title + "</a>" + date + "</li>";
+    }).join("");
+  }
+}
+
 function renderList() {
   const shown = shownRows();
+  renderEssayResults();
   $("count").textContent = "Showing " + shown.length + " of " + DATA.rows.length;
   $("rows").innerHTML = shown.length ? shown.map(rowTR).join("") : '<tr><td colspan="6" class="empty">No entries match.</td></tr>';
   $("cards-list").innerHTML = shown.length ? shown.map(rowCard).join("") : '<p class="empty">No entries match.</p>';

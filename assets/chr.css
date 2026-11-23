@@ -348,6 +348,42 @@ table.tally th, table.plain th { background: var(--paper-2); font-weight: 650; }
   letter-spacing: 0;
   padding-bottom: 8px;
 }
+#essay-results {
+  margin: 0 0 1rem;
+  padding: 0.7rem 0.2rem 0.85rem;
+  border-bottom: 1px solid var(--line);
+}
+#essay-results h2 {
+  margin: 0 0 0.35rem;
+  font: 700 1.05rem/1.3 var(--sans);
+  color: var(--navy);
+}
+#essay-results .essay-count {
+  margin: 0 0 0.45rem;
+  font: 14px/1.4 var(--sans);
+  color: var(--muted);
+}
+#essay-results ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+#essay-results li {
+  margin: 0.35rem 0;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+#essay-results .essay-date {
+  color: var(--muted);
+  font-weight: 400;
+}
+@media (max-width: 800px) {
+  #essay-results {
+    margin: 0 0 0.85rem;
+    padding: 0.65rem 0 0.8rem;
+  }
+  #essay-results li { padding: 0.1rem 0; }
+}
+
 .results-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow-sm); }
 table.results { width: 100%; border-collapse: collapse; font-size: 14px; }
 table.results th, table.results td {

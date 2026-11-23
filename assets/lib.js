@@ -270,7 +270,7 @@ function cycleTheme(current) {
 }
 
 async function loadRegisterData() {
-  const [entriesText, essaysText, annText, groupsText, notesText, failText, checkedText, methodText] = await Promise.all([
+  const [entriesText, essaysText, annText, groupsText, notesText, failText, checkedText, methodText, essaysIndexText] = await Promise.all([
     fetchText("data/entries.csv"),
     fetchText("data/essay-links.csv"),
     fetchText("data/row-annotations.csv"),
@@ -278,7 +278,8 @@ async function loadRegisterData() {
     fetchText("data/display-notes.csv"),
     fetchText("data/failure-log.csv"),
     fetchText("data/last-checked.txt"),
-    fetchText("data/row-method.csv").catch(() => "")
+    fetchText("data/row-method.csv").catch(() => ""),
+    fetchText("data/essays-index.json").catch(() => "")
   ]);
   const rows = rowsFromCSV(entriesText);
   const essays = {};
@@ -294,6 +295,15 @@ async function loadRegisterData() {
   if (methodText) {
     for (const m of rowsFromCSV(methodText)) methods[m.id] = m;
   }
+  let essaysIndex = [];
+  if (essaysIndexText) {
+    try {
+      const parsed = JSON.parse(essaysIndexText);
+      essaysIndex = parsed.essays || [];
+    } catch (e) {
+      essaysIndex = [];
+    }
+  }
   return {
     entriesText, rows, essays, annotations, groups,
     notes: rowsFromCSV(notesText),
@@ -301,6 +311,7 @@ async function loadRegisterData() {
     lastChecked: latestChecked(checkedText),
     lastCheckedAll: checkedText,
     methods,
+    essaysIndex,
     hash: await sha256Hex(entriesText)
   };
 }
