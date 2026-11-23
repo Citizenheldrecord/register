@@ -23,3 +23,17 @@ Claim tested (row wording, verbatim): PASS: GAC or CBSA publishes, or confirms o
 
 ## Desk action
 Re-score on due date.
+
+## Source 2 (current official print, not a score; Barry go t4012u)
+- Row ID: C4-FILL
+- Claim tested: the current official year-one utilization figure on the EICS report. This block does not score the row and does not change any entry cell.
+- Primary URL: https://www.eics-scei.gc.ca/report-rapport/Imports_of_electric_vehicles_from_China.htm
+- Publisher: Global Affairs Canada, Trade Controls (EICS)
+- Source type: official quota utilization report
+- Document date: 2026-11-20 (the page prints "Report updated on 2026-11-20 15:00:00 ET")
+- Exact supporting line (verbatim, straight quotes): "Report updated on 2026-11-20 15:00:00 ET"
+- Supports: partial (current official print only; the 28 Feb 2027 / 31 Mar 2027 outcome is still pending)
+- Read date: 2026-11-22 18:27 CST
+- Read by: desk; saved with the EV-W2-DEC15 Source 2 read; Wayback copy opened at 18:32 CST.
+- Wayback snapshot URL: https://web.archive.org/web/20261123003051/https://www.eics-scei.gc.ca/report-rapport/Imports_of_electric_vehicles_from_China.htm
+- Notes: Same print as EV-W2-DEC15 Source 2: Utilized Quota 16,291, Remaining Quota 32,709, of a Maximum Quota 49,000. ARCHIVE LINK OPENED at 2026-11-22 18:32 CST (HTTP 200). Entry cells are unchanged. Barry go t4012u.
