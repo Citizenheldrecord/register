@@ -82,3 +82,18 @@ Test definition: Forward publication test accepted by Barry answering t3270s1587
 
 ## Desk action
 Check the 8716.39 lines on 1 Dec 2026. Score on 1 Feb 2027 from Schedule 7 and from the order as gazetted (Canada Gazette Part II or Justice Laws). Watch the 18 Nov 2026 Gazette Part II issue for the amending order.
+
+## Source 6 (Canada Gazette Part II, appended 23 Nov 2026, Barry go t4058s19997 / GO-0749; dated note CORRECTIONS/2026-11-23-us-remit-hz-gazette-sor-2026-235.md)
+- Row ID: US-REMIT-HZ-2027
+- Claim tested: The 18 Nov 2026 Canada Gazette Part II issue prints an order amending the United States Surtax Remission Order (2025) that sets remission, for goods under sections 1 and 2, on import into Canada before July 1, 2028, and defines the Remission List as version 1.0 dated November 3, 2026.
+- Primary URL: https://gazette.gc.ca/rp-pr/p2/2026/2026-11-18/html/sor-dors235-eng.html
+- Publisher: Government of Canada, Canada Gazette, Part II
+- Source type: regulation, Order Amending the United States Surtax Remission Order (2025), SOR/2026-235, P.C. 2026-1073
+- Document date: Canada Gazette, Part II, Volume 160, Number 23, 18 November 2026; registered 5 November 2026
+- Exact supporting line (verbatim, straight quotes, non-breaking spaces written as normal spaces): "0.1 In this Order, Remission List means the Consolidated List of Remission on U.S. Surtaxes, version 1.0 dated November 3, 2026 published by the Department of Finance."
+- Exact supporting line (verbatim, straight quotes, non-breaking spaces written as normal spaces): "in the case of a good in respect of which remission is granted under section 1 or 2, it is imported into Canada before July 1, 2028"
+- Supports: full (for those two gazetted facts only). Schedule 7 expiry dates are not taken from this source.
+- Read date: 2026-11-23 09:24 CST (HTTP 200; official page text saved 09:24 CST)
+- Read by: desk; saved official page text /workspace/sovereign-realism/_primary/gazette-sor-2026-235-20261123/sor-dors235-eng.txt; HTML /workspace/sovereign-realism/_primary/gazette-sor-2026-235-20261123/sor-dors235-eng.html.
+- Wayback snapshot URL: https://web.archive.org/web/20261123152648/https://gazette.gc.ca/rp-pr/p2/2026/2026-11-18/html/sor-dors235-eng.html
+- Notes: ARCHIVE LINK OPENED by tools/check_archive_link.py at 09:27 CST 23 Nov 2026 (HTTP 200, capture 09:26:48 CST 23 Nov (Mon, 23 Nov 2026 15:26:48 GMT) [source-time] of the original). Snapshot taken this run (timestamp 20261123152648); not invented. Justice Laws and Schedule 7 were not re-read for this source. Nothing is scored by this addition. Barry go t4058s19997 / GO-0749.
