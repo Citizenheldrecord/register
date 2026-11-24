@@ -4,32 +4,32 @@
 
 ## Where the register stands
 
-Counted on 24 November 2026 from data/entries.csv, which holds 495 entries.
+Counted on 24 November 2026 from data/entries.csv, which holds 496 entries.
 
 Definitions used for every count on this page. A promise is an entry that sets a test. A scoring entry records a result against an earlier promise. Open: live, not scored, scoring date on or after the count date. Due: live, not scored, scoring date before the count date.
 
-- **Entries:** 495 = 415 promises + 80 scoring entries.
+- **Entries:** 496 = 416 promises + 80 scoring entries.
 - **Scored PASS:** 28 (AB1, AB1-OFFICIAL, AI1, BC-GOV-FORM, BUDGET26-TABLE, BoC, C39-CTTE, CUMMINGS-TX, DLV-C15, DLV-CTR, DLV-DEN, EA-LEAVE, FA3c, GX2, HCAP-LVL, IR-SEMA-11-20261110, LANE-1, MTL-LABEL, NUCH-NOA, PH-FTA-1119, POL-1, Q10-NEXT, RBT2-SCHED1-GAZ, REG-PROV1, RU-SEMA-3824-20261109, S338-SCOPE, TR-FTA-ROUND, TRADE-SHARE-SEP).
 - **Scored FAILED:** 41 (AB1-PL, AI2, AI4, ASEAN-FTA-1119, BC-PARCELS, BC1, BNT122-DEATHS, C39-REPORT, CF-GAP, CFR-GAZ-30OCT, CN-XI-TEXT-20261120, CN-XI-UA-READOUT-20261120, COAL-EXPORT-2030, CROWN-LOAN-TABLE, DGR1, DLV-ONLTC, DNG-CAP, DSL1, DSRB-CAP, EM-1, EU-WASTE-LIST-1121, FA3-MVH-DEC, FA3b, GX-AGINT, GX1b, IRV1, MIL-QUESTURA-C20261022, MRNA-ESMO-FULL, MTL-CLOSE, PAUSE-RECIP, PL-DEVFUND-B26, RBT2-CONSOL-20NOV, RBT2-FAA-OCT, S2, S7, SPT-CLINIC, TR-CANDU, TR-DEF, TR-OFFTAKE, TR-UA-PAGE, TR1).
 - **Recorded as fact, with no pass or fail line:** 12 (CL-BASE, CN-EFSD-MOU-20261109, CN-RU-US-DECL-20261119, HR5334, IR1, LEVELS-1NOV, LEVELS2729, MPF-2031, MVH-FULLFUND-B26, N4, RU1, SEB-B-TABLE-20261106).
-- **Open:** 327.
+- **Open:** 328.
 - **Due:** 0.
 - **More than 14 days past due:** 0. New promises can be added.
 - **Replaced by a later entry (a new date or a correction):** 4 (LIM-ORIGIN, LIM-REBUILD, MIL-QUESTURA, UK-M6-RESP). The old entry stays in the record; its newer entry is counted above.
 - **Proposed, not yet live:** 2 (KAMLOOPS-EXCAV, QC-SEATMATH).
 - **Repeating, with no single scoring day:** 1 (G1/G2).
 
-Check: 415 promises = 28 PASS + 41 FAILED + 12 recorded + 327 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
+Check: 416 promises = 28 PASS + 41 FAILED + 12 recorded + 328 open + 0 due + 4 replaced + 2 proposed + 1 repeating.
 
-By section of the data file (every entry counted once; the four sections add up to all 495 entries):
+By section of the data file (every entry counted once; the four sections add up to all 496 entries):
 
 | Section | Entries | Scoring entries | Promises | PASS | FAILED | Recorded | Open | Due | Replaced | Proposed | Repeating |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Canadian files | 322 | 53 | 269 | 20 | 33 | 0 | 216 | 0 | 0 | 0 | 0 |
+| Canadian files | 323 | 53 | 270 | 20 | 33 | 0 | 217 | 0 | 0 | 0 | 0 |
 | This desk's own commitments | 16 | 3 | 13 | 3 | 0 | 0 | 10 | 0 | 0 | 0 | 0 |
 | Outside files we watch | 109 | 10 | 99 | 2 | 8 | 0 | 83 | 0 | 4 | 2 | 0 |
 | Recorded facts and checkpoints | 48 | 14 | 34 | 3 | 0 | 12 | 18 | 0 | 0 | 0 | 1 |
-| Total | 495 | 80 | 415 | 28 | 41 | 12 | 327 | 0 | 4 | 2 | 1 |
+| Total | 496 | 80 | 416 | 28 | 41 | 12 | 328 | 0 | 4 | 2 | 1 |
 
 <!-- /BACKLOG -->
 
@@ -159,7 +159,7 @@ Using this page
 
 The table can be filtered by section, status and owner, and searched by any word. The same search also lists published Sovereign Realism essays whose text contains the word, each linked to its Substack page. The whole table downloads as CSV or JSON, with nothing hidden by the filters.
 
-Checksum for this update: SHA-256 of public-live-rows-2026-11-24a.csv (all 495 rows) is ecb73ccd5f4a96dad157895e2b00832b80441186180fd06fe08436e0ece0d3f2
+Checksum for this update: SHA-256 of public-live-rows-2026-11-24b.csv (all 496 rows) is 77e5af68db44574900e7c0c61e5efeb513fac915a3dd780456ff1aa997e017c7
 
 Rule entries
 
@@ -293,7 +293,7 @@ How the record keeps itself honest
 
 The rule book is written to stop the register's own keeper from cheating. Fingerprints (SHA-256), a published manifest, Wayback snapshots and an append-only rule make silent edits noisy. A new date is a new entry citing the old fingerprint. Cost stays OPEN until the scoring date; on that day it is a public figure with a URL and date, or it is FAILED.
 
-Government promises (122)
+Government promises (123)
 
 Promises with a government owner, a primary source and a scoring date. Each row also names its file section.
 
@@ -394,6 +394,8 @@ Canadian files | GX2-SCORED-20261120 (follows GX1b) | PASS: a hearing date for S
 Canadian files | GX-PRINT-20261127 (follows GX-AGINT) | PASS: for each of the five Attorney General factums present on the 22 Nov 2026 docket read (Canada, Quebec, Saskatchewan, Alberta, and the Northwest Territories), the SCC 42200 docket shows the factum marked completed or with a printed version filed by 27 Nov 2026. FAILED: any of those five is still marked Incomplete with no printed version filed. | Supreme Court of Canada Registrar | 27 Nov 2026 | [Date basis: set by an outside source] DOCKET: SCC 42200 docket prints "Printed version due on 2026-11-27" on the intervener factums dated 20 Nov 2026 of the Attorney General of Canada, the Attorney General of Quebec, the Attorney General of Saskatchewan, the Attorney General of Alberta, and the Attorney General of the Northwest Territories. Scoring date 27 Nov 2026 is that printed due date. Primary https://www.scc-csc.ca/cases-dossiers/search-recherche/42200/ (read 2026-11-23 10:49 CST). ARCHIVE LINK OPENED: https://web.archive.org/web/20261123003109/https://www.scc-csc.ca/cases-dossiers/search-recherche/42200/ | LIVE | https://www.scc-csc.ca/cases-dossiers/search-recherche/42200/ read 2026-11-23 10:49 CST (OPEN until scoring date 27 Nov 2026; archive https://web.archive.org/web/20261123003109/https://www.scc-csc.ca/cases-dossiers/search-recherche/42200/) | OPEN | OPEN | OPEN | OPEN until scoring date 27 Nov 2026 | OPEN | OPEN | OPEN
 
 Canadian files | RBT2-REGISTRY-30D | PASS: RBT2 project information is posted on the Building Canada Act Project Registry by 29 Nov 2026 (30 days after the 30 Oct listing), shown by URL with read date. FAILED: not posted by 29 Nov 2026. Hype exhibit: Transport Canada, 30 Oct 2026: "Once listed under the Act, project information will be posted within 30 days." https://www.canada.ca/en/transport-canada/news/2026/10/roberts-bank-terminal-2-listed-as-a-project-of-national-interest-to-strengthen-canadas-trade-sovereignty.html | Major Projects Office / Privy Council Office | 30 Nov 2026 | [Date basis: set by an outside source] GOVERNMENT PROMISE: "Once listed under the Act, project information will be posted within 30 days." (Transport Canada news release, 30 Oct 2026; Barry go 30 Oct 2026 6:05 PM CST, t2553u, all as recommended). Primary: https://www.canada.ca/en/transport-canada/news/2026/10/roberts-bank-terminal-2-listed-as-a-project-of-national-interest-to-strengthen-canadas-trade-sovereignty.html , read 30 Oct 2026 | LIVE | https://www.canada.ca/en/transport-canada/news/2026/10/roberts-bank-terminal-2-listed-as-a-project-of-national-interest-to-strengthen-canadas-trade-sovereignty.html | OPEN | OPEN | OPEN | OPEN until scoring date 30 Nov 2026 | OPEN | OPEN | OPEN
+
+Canadian files | QC-OATH-OPEN-20261201 | PASS: by 1 December 2026 the Quebec National Assembly has opened its session and the members who sit have taken and subscribed the oath of allegiance required by section 128 of the Constitution Act, 1867, as shown on a National Assembly, Quebec government, or court primary. FAILED: the session is postponed past 1 December 2026 while the 23 November 2026 stay remains in force, or the Assembly opens with members sitting who have not taken that oath. | Government of Quebec / President of the National Assembly | 1 Dec 2026 | [Date basis: set by an outside source] Official National Assembly library guide lists "Date d'ouverture de la session 1er décembre 2026" (page also records the 5 October 2026 poll and 127 electoral divisions): https://www.bibliotheque.assnat.qc.ca/guides/fr/elections-au-quebec-depuis-1867/19849-election-generale-de-2026 (opened 2026-11-24 07:01 CST; saved /workspace/sovereign-realism/_primary/itchy-20261124-quebec-oath/election-2026-biblio.html). ARCHIVE LINK OPENED: https://web.archive.org/web/20261124131259/https://www.bibliotheque.assnat.qc.ca/guides/fr/elections-au-quebec-depuis-1867/19849-election-generale-de-2026 (saved 2026-11-24 07:12 CST). The legal condition is the 23 November 2026 stay of Bill 4 (L.Q. 2022, c. 30), with execution despite appeal, and décret 1437-2026 as cited in Demers J. footnote 71; judgment saved at /workspace/sovereign-realism/_primary/itchy-20261124-quebec-oath/[internal desk reference hidden in display, 22 Oct 2026] (opened 2026-11-24 07:00 CST). Barry go, card answer 24 Nov 2026 07:09 CST, GO-0764 / AS-288. | LIVE | https://www.bibliotheque.assnat.qc.ca/guides/fr/elections-au-quebec-depuis-1867/19849-election-generale-de-2026 (opened 2026-11-24 07:01 CST; archive https://web.archive.org/web/20261124131259/https://www.bibliotheque.assnat.qc.ca/guides/fr/elections-au-quebec-depuis-1867/19849-election-generale-de-2026). Score also against the National Assembly official record of the sitting and of any s.128 oaths, the 23 November 2026 judgment, or a later court order. | OPEN | OPEN | OPEN | OPEN until scoring date 1 Dec 2026 | OPEN | OPEN | OPEN
 
 Canadian files | OE-Q1561 | PASS: by 2 Dec 2026 the Government tables a response to Q-1561 in the House that states the Ocean Envoy's mandate and key performance indicators (part c) and the envoy's 2026-27 and 2027-28 budget/expenditures (part b), including if nil. FAILED: no response tabled by 2 Dec 2026, or the tabled response omits part (b) or (c) | Minister of Fisheries (Joanne Thompson) / Fisheries and Oceans Canada | 3 Dec 2026 | [Date basis: set by an outside source] DATE ANCHOR: House written-question 45-day deadline shown on the Q-1561 page (response due 2 Dec 2026) https://www.noscommunes.ca/written-questions/45-1/q-1561 . Scoring date 3 Dec 2026 set by the register | LIVE | OPEN | OPEN | OPEN | OPEN | OPEN until scoring date 3 Dec 2026 | OPEN | OPEN | OPEN
 
@@ -1303,19 +1305,19 @@ Recorded facts and checkpoints | G1/G2 | Outside file. Petroline flows, and Bren
 
 <!-- AUDIT -->
 
-Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 194 rows are sourced, 0 secondary-sourced, 112 have their promise sourced with the outcome pending, 12 have their promise sourced with the outcome scored, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
+Note, 27 Oct 2026: This register's rule is that every row rests on a primary source, read against that row. On 27 Oct the desk began a row-by-row audit of that rule. It found that many rows were checked against wire reports such as Reuters rather than against the body that made the decision, and that in a few rows the wording went further than the source. Each row now gets its own sources record, listing the primary, the exact line it supports and the date it was read. A row shows as sourced only when that record backs its whole claim. As of this build: 194 rows are sourced, 0 secondary-sourced, 113 have their promise sourced with the outcome pending, 12 have their promise sourced with the outcome scored, 90 partly sourced and 87 unsourced, and 0 do not yet have a record. These counts will be updated with each build until every row is done. Corrections from the audit are entered as new dated lines, and no score has been changed.
 
 ## How to check this update
 
-Build stamp: update 2026-11-24a, counted as at 24 November 2026, from data/entries.csv, 495 rows, SHA-256 1f55a3fd8e6b2516a54af4481c3ed0e073e107d2b64b619879807241175f4042. The build stops if this file, its row count or any count on this page does not match.
+Build stamp: update 2026-11-24b, counted as at 24 November 2026, from data/entries.csv, 496 rows, SHA-256 8d97a30d6f1c48831e73fd757d0d5e0a346d749461392fdf793447d9ccbb207d. The build stops if this file, its row count or any count on this page does not match.
 
-Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-24a.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-24a.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
+Entry fingerprints for this update: [manifest/entry-hashes-v2-2026-11-24b.csv](https://github.com/citizenheldrecord/register/blob/main/manifest/entry-hashes-v2-2026-11-24b.csv). Housekeeping log: [data/housekeeping-log.csv](https://github.com/citizenheldrecord/register/blob/main/data/housekeeping-log.csv), SHA-256 172d6cee7f5cb986b66f2b79a113ca4b6b645da6a3dcd231408247d1cc20fc4b, 14 lines.
 
 How to check a housekeeping change. 1. Find the row in data/housekeeping-log.csv and note its layout and the two fingerprints. 2. Download the last dated CSV published before the change (for the changes of 24 October 2026, public-live-rows-2026-10-23c.csv) and run python3 scripts/hash_entries.py public-live-rows-2026-10-23c.csv --show ID to see the row's canonical text; the SHA-256 of that text is the before fingerprint. 3. Do the same on the current CSV for the after fingerprint. 4. Compare the two texts: only the logged field may differ, and only by deleted text or by OPEN.
 
 Append only, stated exactly: entries are append only for substance. Tests, owners, dates, results and sources are never edited or deleted; a new date, a correction or a result is a new dated entry. The exceptions are rule entries R-2026-10-24-A and R-2026-10-25-A: internal working notes may be removed (from a test, internal approval notes only), each removal logged with the row's fingerprint before and after, and earlier dated files stay as published.
 
-How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-24a, of 495 entries, 271 (about 55 per cent) carry a benchmark date set by the register, 4 an outside date with a scoring window set by the register, and 220 (about 44 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
+How entries get in (dated 25 October 2026). This register is a record of the tests this desk has published, not a census of government promises. An entry exists where an essay, report or desk note, or a Gazette or official-source sweep, set or found a dated, two-outcome test on a named owner; it then goes LIVE on Barry Sharp's go and is never removed. Government promises the desk has not written about are not here, and absence from the register means nothing about a promise. Entries in "Government promises" have a government owner; entries with a desk-set test or a non-government owner sit in "Also watched"; baselines sit in "Recorded". Dates: as at update 2026-11-24b, of 496 entries, 271 (about 55 per cent) carry a benchmark date set by the register, 4 an outside date with a scoring window set by the register, and 221 (about 45 per cent) a date set by an outside source (statute, court, scheduled release, government or company timetable). Every entry's date source is labelled. A desk-set date is a benchmark, not a legal deadline: a FAILED against it means the owner did not deliver by the date we chose and published in advance, nothing more. The share is recounted at each update.
 
 How the register scores treaties (dated 30 October 2026). A treaty Canada signs is not Canadian law. Canadian courts enforce treaty rights only where the treaty has been implemented by legislation (Francis v. The Queen, [1956] SCR 618), and a treaty has no domestic, internal consequences unless they arise from implementing legislation (Capital Cities Communications v. CRTC, [1978] 2 SCR 141). Where a treaty touches provincial subjects, the provinces must legislate: as the Privy Council put it in 1937, "as a treaty deals with a particular class of subjects so will the legislative power of performing it be ascertained."
 
