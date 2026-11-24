@@ -31,7 +31,12 @@ if [ "${1:-}" = "--mark-pushed" ]; then
 DRAFT=""; if [ "${1:-}" = "--draft" ]; then DRAFT="--draft"; shift; fi
 D=${1:?usage: scripts/preflight.sh [--draft] YYYY-MM-DD}
 nogo=0; step(){ echo; echo "== $1"; }
+if [ "${SHIP_SKIP_REWRITES:-}" = "1" ]; then
+  echo "PREFLIGHT REWRITES SKIPPED: tools/ship.py already applied the file rewrites (README.md, index.html, simple view, doorway pages) so the approval digest is taken from the post-rewrite tree (Barry go t4085s20182 / GO-0757)."
+  IDX=index.html
+else
 step "build $D${DRAFT:+ (draft: local/draft-build-$D/, upload root untouched)}"; python3 scripts/build_register.py --date "$D" $DRAFT || nogo=1
+fi
 step "overdue guard (every promise past its date is scored or has a dated scoring-pending reason)"
 python3 scripts/check_overdue.py "${D:0:10}" ${REGISTER_CALENDAR:+--calendar "$REGISTER_CALENDAR"} || nogo=1
 step "ten to watch (each listed id is in the register, not scored, not replaced, not past its date)"
@@ -42,11 +47,15 @@ step "fingerprint tests"; bash tests/test_hash_entries.sh > /tmp/pf-hash.out 2>&
 # 14 Nov 2026 (Barry go t3516u): runs before the pipeline tests. inject_index.py writes the FRONT-DOOR tally into index.html and the build
 # keeps the old block, so test 15 read last upload's tally whenever the row count changed (15:12 CST NO-GO, 429 vs 430).
 IDX=index.html; [ -n "$DRAFT" ] && IDX=local/draft-build-$D/index.html
+if [ "${SHIP_SKIP_REWRITES:-}" = "1" ]; then
+  echo "PREFLIGHT REWRITES SKIPPED: simple view and doorway stamps already applied by tools/ship.py (Barry go t4085s20182)."
+else
 step "simple view (rebuild simple-view/, link and Suggest a row box on $IDX)"
 python3 simple-view/build_simple.py || nogo=1
 python3 simple-view/inject_index.py "$IDX" || nogo=1
 step "doorway page stamps (Barry go t3972s19490: the six doorway pages ride every upload; restamp if check_public_page_counts finds a gap)"
 python3 scripts/stamp_doorway_pages.py --today "${D:0:10}" --update-id "$D" || nogo=1
+fi
 step "public page counts (Barry go t3972s19490 / GO-0704: the ship fails when check_public_page_counts finds a gap)"
 python3 /workspace/sovereign-realism/tools/check_public_page_counts.py --root "$ROOT" --today "${D:0:10}" || { echo "PUBLIC PAGE COUNTS FAILED"; nogo=1; }
 step "pipeline tests"; bash tests/test_pipeline.sh > /tmp/pf-pipe.out 2>&1 && tail -1 /tmp/pf-pipe.out || { grep -E "FAIL|PIPELINE" /tmp/pf-pipe.out; nogo=1; }
