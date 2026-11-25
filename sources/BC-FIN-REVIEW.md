@@ -38,3 +38,19 @@ Test definition: entered from drafts PROPOSED-bc-finance-review-row-2026-10-27.m
 
 ## Desk action
 - Scored once on its scoring date, 28 Feb 2027, by job SCORE-BC-FIN-REVIEW (companion DRAFT-SCORE-BC-FIN-REVIEW).
+
+## Source (append, 2026-11-25 07:50 CST, Barry go t4161u)
+- Row ID: BC-FIN-REVIEW
+- Claim tested: the 24 Nov 2026 mandate letter restates the independent panel; it does not name a reviewer or set terms of reference (evidence note only; test unchanged)
+- Exact supporting line (verbatim, straight quotes): "Immediately appoint an independent panel to review the Province's true fiscal position and report its findings publicly."
+- Supports: full (for the restatement of the panel; not for a named reviewer or terms of reference, which are absent)
+- Primary URL: https://www2.gov.bc.ca/assets/gov/government/ministries-organizations/premier-cabinet-mlas/minister-letter/mandate_letter_peter_milobar.pdf
+- Publisher: Office of the Premier of British Columbia
+- Source type: government mandate letter (Premier to the Minister of Finance)
+- Document date: 2026-11-24
+- Read date: 2026-11-25 07:50 CST
+- Read by: desk (executor, Barry go t4161u / GO-0780), HTTP 200, 204754 bytes, sha256 d0ca6736fb034cf627ede6f63e45c9d63c02c52c2ad8d00a0efbae1353df5ff8; Last-Modified 18:32 CST 24 Nov (Wed, 25 Nov 2026 00:32:48 GMT) [source-time]
+- Saved capture: /workspace/sovereign-realism/_primary/t4161u/mandate_letter_peter_milobar.pdf
+- Saved page text: /workspace/sovereign-realism/_primary/t4161u/mandate_letter_peter_milobar.txt
+- Wayback snapshot URL: https://web.archive.org/web/20261125135144/https://www2.gov.bc.ca/assets/gov/government/ministries-organizations/premier-cabinet-mlas/minister-letter/mandate_letter_peter_milobar.pdf
+- Notes: The letter restates the independent panel. No reviewer is named and no terms of reference appear in the letter. BC-FIN-REVIEW test and scoring date 28 Feb 2027 are unchanged. No score. Dated display note NOTE-BC-FIN-REVIEW-MANDATE-20261125.
