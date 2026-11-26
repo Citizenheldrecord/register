@@ -54,6 +54,12 @@ Removal from the allow-list is append-only: an id listed in any data/sources-gat
 (columns id,removed,reason) is treated as not on the allow-list from its "removed" date and can never return.
 The seed is never edited.
 
+GATE SCOPE (Barry go t4186u, 26 Nov 2026, "I accept your recommendations"): the HARD GATE above blocks UNSOURCED and
+PARTLY SOURCED rows only when the row's display group is Government promises (last line for the id in
+data/display-groups.csv; a scored row with no line of its own takes the group of the row it supersedes; a row with no group
+stays gated). Also watched and Recorded rows are not blocked; their level still shows in the counts. MISSING RECORD, over-claims,
+LABEL MISSING, NO PRIMARY SEARCH, FAILED ENTRY INCOMPLETE and SCORING DATE PASSED still block in every group.
+
 PROMISE SOURCED, OUTCOME PENDING (Barry go 27 Oct 2026 15:50 CST). A forward test cannot have outcome
 evidence before its scoring date. A record headed "Claim coverage: promise full, outcome pending" derives
 PROMISE SOURCED, OUTCOME PENDING only when (1) the promise or premise is backed by a full primary block, or by a
@@ -296,10 +302,32 @@ def main(argv=None):
             if r["id"] not in seed:
                 return "not in the frozen 27 Oct 2026 seed; new rows are never allow-listed"
             return ""
+        # Barry go t4186u (26 Nov 2026, "I accept your recommendations"): the unsourced / partly sourced block applies only
+        # to rows whose display group is Government promises. Also watched and Recorded rows are not blocked (their
+        # level still counts in the sources counts and on the page). The group is the LAST line for the id in
+        # data/display-groups.csv (append-only); a scored row with no line of its own takes the group of the row it
+        # supersedes; a row with no group at all stays gated (a new row must be grouped before the build anyway).
+        # A row with no record (MISSING RECORD) blocks in every group (record-before-entry).
+        groups = {}
+        gp = os.path.join(a.staging, "data", "display-groups.csv")
+        if os.path.exists(gp):
+            with open(gp, newline="", encoding="utf-8") as f:
+                for r in csv.DictReader(f):
+                    groups[(r.get("id") or "").strip()] = (r.get("display_group") or "").strip()
+        def group_of(rid):
+            seen = set()
+            while rid and rid not in seen:
+                if rid in groups:
+                    return groups[rid]
+                seen.add(rid)
+                rid = (meta.get(rid, {}).get("supersedes_id") or "").strip()
+            return ""
         for rid, _, derived, *_ in rows:
             if derived == "MISSING RECORD":
                 gate.append((rid, "NO RECORD (record-before-entry; never allow-listed)"))
             elif derived in ("UNSOURCED", "PARTLY SOURCED"):
+                if group_of(rid) in ("also_watched", "recorded"):
+                    continue   # t4186u: gate scoped to Government promises
                 if rid not in allow:
                     gate.append((rid, "%s, not on the allow-list" % derived))
                 else:
@@ -438,6 +466,28 @@ def selftest(staging):
         if not ok: print(out.getvalue())
     finally:
         shutil.rmtree(d)
+    # 26 Nov 2026 (Barry go t4186u): the gate blocks partly sourced rows only in Government promises.
+    for cid, grp, want, needle in (("FX-GRP-AW", "also_watched", 0, "gate: 0 blocked"), ("FX-GRP-REC", "recorded", 0, "gate: 0 blocked"),
+                                   ("FX-GRP-GP", "government_promise", 1, "GATE BLOCK FX-GRP-GP PARTLY SOURCED")):
+        d = tempfile.mkdtemp(prefix="sources-selftest-")
+        try:
+            os.makedirs(os.path.join(d, "data")); os.makedirs(os.path.join(d, "sources", "failed"))
+            shutil.copy(seed_src, os.path.join(d, "data"))
+            open(os.path.join(d, "data", "sources-gate-allowlist.csv"), "w").write("id,level,reason_class,primary_search_date,expires,renewals,listed\n")
+            open(os.path.join(d, "data", "display-groups.csv"), "w").write("id,display_group,reason\n%s,%s,selftest\n" % (cid, grp))
+            with open(os.path.join(d, "data", "entries.csv"), "w", newline="") as ef:
+                w = csv.writer(ef, lineterminator="\n")
+                w.writerow(FIXTURE_HEAD.strip().split(",")); w.writerow(["FIX", "", "4 Dec 2026", cid, "PASS: x. FAILED: y", "o", "s", "LIVE"])
+            open(os.path.join(d, "sources", cid + ".md"), "w").write(FIXTURE_REC.format(id=cid, sup="partial", status="PARTLY SOURCED"))
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                got = main(["--staging", d, "--allowlist", os.path.join(d, "data", "sources-gate-allowlist.csv"), "--audit-date", "2026-11-27"])
+            ok = got == want and needle in out.getvalue()
+            bad += not ok; cases.append(None)
+            print("SELFTEST %s %s: exit %d (want %d)" % ("ok" if ok else "FAIL", cid, got, want))
+            if not ok: print(out.getvalue())
+        finally:
+            shutil.rmtree(d)
     print("selftest: %d fixtures, %d failed" % (len(cases), bad))
     return 1 if bad else 0
 
