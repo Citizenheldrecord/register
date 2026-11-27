@@ -1,515 +1,517 @@
 id,note_date,entry_reason,date_basis,date_basis_reason,source
-GX1b,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-AB1-PL,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FA3b,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-C39-CTTE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TR1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-BC1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BC-PARCELS,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-DGR1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-S2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-S7,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-MTL-CLOSE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-IRV1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-GX2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-C39-366,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-DSL2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FIR1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FIR2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-GX4,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-BEC1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-C2/S3,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-P4,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-MD1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-C4,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-C3/O2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FB9,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FA3,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-C39-D1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-SINGLE-TAB,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-DUALUSE-PAGE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CGL-EQ2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-EA-LEAVE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CAN2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-C1/O1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-S8,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-TAR1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-C5/FA8/TM1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-IND5-CORRIDOR,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-USMCA-JR1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-P2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FIR3,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EIB-S12,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-SINGLE-TAB-FY,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-NUCH-SCC,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-IND2-INCOME,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-FOREST-ACT-COMP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BC-DRIPA-NEXT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-A1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-S4,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-N1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FA5,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FA6,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FA7,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-C39,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-C39-D2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-O3,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-IND1-DEBT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-IND3-TFD,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-IND4-INVEST,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-PL1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-PHARA-TRIAL,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-A2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-N2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TITLE-MAP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BOOMBUST-SUNSET,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BOOMBUST-CORRIDOR,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-HOUSING-STARTS,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-N3,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-A3,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-PS-330,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-DT1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-MEGA-TEST,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-A4,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CPL-FREEZE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-SOTF,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-READING-ANNUAL,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CPL-OWNER,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CPL-CODE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CPL-RESULT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-RWE-READ,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AI1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AI2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-PAUSE-RECIP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AI4,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-DSL1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-SA1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TIGER-DU,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-AI3,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-MAN1-CHK,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BM1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-NS1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TIGER-UKCN,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TIGER-UKMFG,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-SA2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-HR5334,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-AB1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-BoC,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-RU1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-N4,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-LEVELS2729,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-IR1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-HCAP-LVL,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-CN-GRAPH,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-AB-REMAIN-CLOSE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AB-PROCEED-TT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-NOV1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-KEB-LEAVE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-NS1-CHK,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FA1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-SIX-mid,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AB-NINE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-USMCA-AUTO27,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-NPR5,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CPL-RESPONSE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-SIX-final,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-G1/G2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-LIM-ORIGIN,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-LIM-REBUILD,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-ATIP-FIN-377,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-MIL-QUESTURA,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-HCAP-LVL-28,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-XFER-UA-GRAIN,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-PS-330-HOLD,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-SUNSET-BCA-5,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-REVIEW-BCA-24,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-GUAR-DARL-PA,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-CAP-RATIO-27,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CL-BASE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CL-FINAL,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CL-REGISTER,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CL-ICA,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CL-FEESIMPLE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TR-CANDU,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TR-OFFTAKE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-DSRB-CAP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TR-FTA-ROUND,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TR-UA-PAGE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TR-DEF,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-UK-M6-RESP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-AB1-SCORED-20261020,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-UK-M6-RESP-2,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-ATIP-CIRNAC-149,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BUDGET26-TABLE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CDRC-CIF,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-WDG-VET,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-REG-PROV1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-KAMLOOPS-EXCAV,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-QC-SEATMATH,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-GDPPC-POP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-MFG-EMP-CA,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-EU-RETURN,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EU-STOCK,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-QC-STANDARD,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TAX-HC3,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-AID-CLOSE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-UKR-REPAY,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CLIM-13B,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-FA3-MVH-DEC,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-LEVELS-1NOV,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-DNG-CAP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-PR380-2026,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TRARR-2026,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-PR1PCT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-PL-EARLYWORK,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-PL-FID,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-PL-FULLCON,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-PL-INSVC,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-AB-Q-LEG,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AB-Q7-BIND,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AB-Q9-BIND,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CTF-PL-OPEN,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TCT-TRILAT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TCT-GUAR,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EV-GHG-TEXT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TR-ACTION-PLAN,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EA-REFORM,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AB1-PL-SCORED-20261022,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-MIL-QUESTURA-C20261022,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-LIM-ORIGIN-C20261022,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-LIM-REBUILD-C20261022,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-KSM-SSD-DEC,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CPLOAN-SCHED,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CROWN-LOAN-TABLE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CAN-SEED-RATE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-C4-FILL,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-COVID-RESIDUE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-C39-CTTE-SCORED-20261023,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FA3b-SCORED-20261023,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TR-ATA-USE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TR-FTA-R1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-TR-FTA-R1-SCHED,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-COVID-RESIDUE-C20261024,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TRADE-SHARE-SEP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-QC-SEATMATH-L20261024,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-APF-INDEMNITY-FY27,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-LASER-G1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-C39-REPORT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-C39-ASSENT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-C39-DELIVERY,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AB1-OFFICIAL,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-Q10-NEXT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-GRAHAM-RPT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BC-GOV-FORM,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-S338-SCOPE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-HP-PERF,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-ETH-SCREEN-HP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-REG-CITE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-OTMA-S6-STRATH,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-STRATH-TERM,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-NUCH-NOA,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-NUCH-FACTUM,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-GX-AGINT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-KOMOKS-S15,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-PA-NOTE28-27,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-QC-BIO-REG,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-PRIVACY-JOIN,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-STBL-REGISTRY,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-STBL-VOLUME,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TR-CANDU-DEC,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-HEM-VZCU,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-HEM-VZPROD,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-HEM-ZULIA,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-HEM-BEJUCAL,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-HEM-IRAN,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-RWC-SHERRITT-SHIP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-MRNA-ESMO-FULL,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-MRNA-REG-FILE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-MRNA-OS,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-BNT122-DEATHS,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-RWC-SHERRITT-2LIC,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-BC1-SCORED-20261024,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CL-BASE-SCORED-20261024,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CL-REG-NEWGOV,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-BC-TITLE-MAP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-BC-DRIPA-SPRING,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-BC-81-DIRECTIVES,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-C1-C20261025,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TR-FTA-ROUND-SCORED-20261024,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CHARTER-LIMIT-REG,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-GX1b-SCORED-20261025,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TR1-SCORED-20261025,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TR-CANDU-SCORED-20261025,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TR-OFFTAKE-SCORED-20261025,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-DSRB-CAP-SCORED-20261025,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TR-UA-PAGE-SCORED-20261025,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TR-DEF-SCORED-20261025,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-FA3c,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BND-TAR-90,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BND-PRICED,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-RU-LNG-EU-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-US-EUR-POSTURE-2026,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-MADURO-TRIAL-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CRINK-PROD-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-DSRB-CHARTER-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-US-TOMAHAWK-2029,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CAF-STRENGTH-2032,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-DSRB-LEGAL-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BC-PARCELS-SCORED-20261025,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BC-PARCELS-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-UA-CN-ONE-PAGE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BC-DRIPA-PET,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-CGL-P2-CONST,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CEDAR-ISD,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-KOMOKS-FED,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FA6-FID-2026,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-EA-HEARING,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-WATER-ZERO-LTDWA-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-C37-CHAIN-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EM-1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-POL-1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-LANE-1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-DLV-C15,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-DLV-C15-SCORED-20261026,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-DLV-CTR,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-DLV-CTR-SCORED-20261026,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-DLV-DEN,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-DLV-DEN-SCORED-20261026,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-DLV-ONLTC,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-DLV-ONLTC-SCORED-20261026,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-DGR1-SCORED-20261026,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-PL-DEVFUND-B26,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-PL-DEVFUND,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CLFNS-JR,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-DSRB-SIGN-2026,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-OE-Q1561,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-INDACT-PATH,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-ONRES-EMP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-MTL-LABEL,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CFR-GAZ-30OCT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-CEPA-UAE-EIF,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-MPA-3PCT-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-FIR4,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-IRCC-REG-1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-USE-OUTSIDE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-UK-UKR-AD-WINTER,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-UK-DEF3-PATH,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-RBT2-FAA-OCT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-ETH-LIST,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-PBO-DEBT-BASE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-UK-FISCAL-PATH,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-UK-UKR-AUDIT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BoC-SCORED-20261028,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-MRNA-ESMO-FULL-SCORED-20261029,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-MRNA-NEJM-PUB,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-SOV-COMPUTE-1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AB1-OFFICIAL-SCORED-20261029,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CF-GAP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-CN-GRAPH-EXT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-B26-BIA-1R,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BCA-CLOCK,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-NSS-LEGIS-1Y,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-FUEL-EXC-SUNSET,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-TSTS-SUBCOMP-2031,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-RBT2-REGISTRY-30D,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-RBT2-SCHED1-GAZ,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-RBT2-FID-MID27,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-DGR-CLOSE-15JAN,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-COAL-EXPORT-2030,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-COAL-EXPORT-2030-SCORED-20261029,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-COAL-RATIONALE-PUB,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-ECA-DEF,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-CETA-RAT,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EMIS-2030-TRAJ,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CAN-UKL-500,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CORRIDOR-FIN-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EU-ASSOC-DEF,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CA-EU-DTA,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CA-SAFE-AWARD,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-POL-BASE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-MTL-LABEL-SCORED-20261030,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-MTL-CLOSE-SCORED-20261030,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-S2-SCORED-20261030,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-S7-SCORED-20261030,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CFR-GAZ-30OCT-SCORED-20261031,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-PAUSE-RECIP-SCORED-20261031,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-S338-SCOPE-SCORED-20261030,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-AI1-SCORED-20261031,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AI2-SCORED-20261031,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-MIL-QUESTURA-C20261022-SCORED-20261031,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-RU1-SCORED-20261031B,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-EXCL-TABLE,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-RBT2-FAA-OCT-SCORED-20261101,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-STBL-CRED-ONBOARD,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-SPT-CLINIC,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-CUMMINGS-TX,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-COW-STAY-DEC,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-EV-W2-DEC15,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-REG-PROV1-SCORED-20261101,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EU-ASSOC-JUNE27,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-EU-COLLEGE-MAR27,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CUMMINGS-TX-SCORED-20261102,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-Q10-NEXT-SCORED-20261102,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-INDACT-BILL,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-MOFCOM-48-FINAL,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-COINS-FINAL,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-ARCTIC-JOINT-1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-COHERE-JOBS-2030,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EUROHPC-CA-TERMS,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-NSS-DEF-5PCT-2035,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-NSS-UPDATE-4Y,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-BNT122-DEATHS-SCORED-20261103,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CN-EXP50-2030,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TRADE-SHARE-SEP-SCORED-20261104,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-FA3c-SCORED-20261104,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-LANE-1-SCORED-20261104,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-N4-SCORED-20261104,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-LEVELS-1NOV-SCORED-20261104,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-MAID-MI-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-CA-CN-REMISSION-2028,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-PH-FTA-1119,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-ASEAN-FTA-1119,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-AB-CI-SPRING2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-FA3-MVH-DEC-SCORED-20261104,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-NONUS-2X-2035,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-IR1-SCORED-20261104,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BUDGET26-TABLE-SCORED-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CROWN-LOAN-TABLE-SCORED-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-PL-DEVFUND-B26-SCORED-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-LEVELS2729-SCORED-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-EM-1-SCORED-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-POL-1-SCORED-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-DNG-CAP-SCORED-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CF-GAP-SCORED-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-SPT-CLINIC-SCORED-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-HCAP-LVL-SCORED-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-PROG-GDP,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-PUB-REGISTER,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-MVH-FULLFUND-B26,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-DEF-4PCT-2030,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-OP-REASSURE-2031,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-FCA-OPS-FALL27,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-OP-BAL-2728,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-MVH-FULLFUND-B26-SCORED-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-MI-MISSING-MIDDLE-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-MPF-2031,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-FRANCO-12PCT-2029,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TR-PR-200K-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-MPF-2031-SCORED-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-RBT2-CONSOL-20NOV,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FA3-MVH-ORDER-DEC,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-SEB-B-TABLE-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-SEB-B-TABLE-20261106-SCORED-20261106,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-SEB-SUPPLY-20261210,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-MTL-DIGID,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-DIGID-FED,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-QC-DIGID,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-FOR1,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-RU-SEMA-3824-20261109,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-RCIP-5500-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CSF-NOTES-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AI4-SCORED-20261109,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-IR-SEMA-11-20261110,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CN-EFSD-MOU-20261109,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-US-REMIT-HZ-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-CULTURE-4B-RECON-20270331,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AV-600-FLOW-20270331,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CN-EFSD-MOU-20261109-SCORED-20261111,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-DSL1-SCORED-20261111,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BC-GOV-FORM-SCORED-20261111,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-HK-UFRP-ALL-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-RT-STATUS,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-BRAMP-FT-20270630,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CN-XI-TEXT-20261120,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CEPA-INDIA-CONCL-2026,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-STELL-RECOVER-20270630,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-C39-THIRD-20261204,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-SEB-ASSENT-20261211,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-RBT2-SCHED1-GAZ-SCORED-20261113,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-PH-FTA-1119-SCORED-20261114,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-PH-FTA-SIGN-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CN-XI-UA-READOUT-20261120,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-TSAT-GEO-REFI-20261206,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-LIGHTSPEED-PATHFINDER-20270930,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-LIGHTSPEED-HILAT-20280331,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-LIGHTSPEED-GLOBAL-20280630,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-LIGHTSPEED-NONSPX-20281231,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-ETH-SCREEN-TSAT-20261231,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-AB-OGP-SPRING2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-FBBAN-EXT-20270101,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
-CA-CN-AQUATIC-20261231,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CN-SEAFOOD-PORK-RELIEF-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-NUCH-NOA-SCORED-20261117,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-AB-BILL40-BOUNDARIES-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-EU-CN-GOODS-2026,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EU-SIMPL-375,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-ISC-PIRUTS-20270401,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-AB-CAREFIRST-20270101,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CPP-BASE-475-2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-BIZPAL-PT-FALL2028,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-IRV1-SCORED-20261118,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-EU-ICSU-EUCO-20261127,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EU-ICSU-OJ-20261231,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EU-ICSU-MFF-20261231,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EU-UA-INTEREST-MFF-20271231,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EU-SANC22-20261127,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CN-RU-US-DECL-20261119,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-CN-RU-US-NUCDIAL-20270519,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CN-RU-US-REFINED-20270930,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CN-RU-US-DECL-20261119-SCORED-20261119,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-GEB-TOPUP-JAN2027,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-AB-RACAS-20270401,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-GC-CDR-10M-2030,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-GX-REPLY-1218,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-EU-WASTE-LIST-1121,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
-C10-CMTI-APPT-20270630,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-GX2-SCORED-20261120,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-TC-SSM-PORT-35MT-2031,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-EU-UK-TUITION-20270520,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-RU-SEMA-3824-20261109-SCORED-20261120,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-IR-SEMA-11-20261110-SCORED-20261120,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-DSRB-TABLED-20261216,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-GX-HEARD-20270120,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-RBT2-CONSOL-20NOV-SCORED-20261120,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-C39-REPORT-SCORED-20261120,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-ASEAN-FTA-1119-SCORED-20261120,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CN-XI-TEXT-20261120-SCORED-20261120,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CN-XI-UA-READOUT-20261120-SCORED-20261120,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-CPSP-CONTRACT-20271231,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
-CPSP-FIRST4-2034,2026-11-21,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
-UK-EXCL-PAGE-20270520,2026-11-21,"Staged from itchy t3900u bank, Barry go t3905u / GO-0679, to test whether the UK publishes one exclusions page covering SPS, ETS and YES before the six-month tuition clock.",desk-default,"Scoring date 20 May 2027 is DESK-SET from the six-month tuition clock in the 20 Nov 2026 joint statement, not a holder date for an exclusions page.",itchy/JOIN-dynamic-alignment-rule-taking-2026-11-21.md; itchy/STAGED-entries-dynamic-alignment-rule-taking-2026-11-21.csv
-UK-YES-TERMS-20271231,2026-11-21,"Staged from itchy t3900u bank, Barry go t3905u / GO-0679, to test the government promise that YES labour-market terms and restrictions will be published before the agreement is signed.",desk-default,"Scoring date 31 Dec 2027 is DESK-SET; the YES explainer gives no calendar date, only ""before the agreement is signed"".",YES explainer; itchy/STAGED-entries-dynamic-alignment-rule-taking-2026-11-21.csv
-UK-SPS-EXPORTS-20290331,2026-11-21,"Staged from itchy t3900u bank, Barry go t3905u / GO-0679, as an interim score of the SPS agrifood-export recovery against ONS series SHEP (dataset MRET). Series ID confirmed 21 Nov 2026 from https://www.ons.gov.uk/economy/nationalaccounts/balanceofpayments/timeseries/shep/mret (release 12 November 2026).",desk-default,"Scoring date 31 Mar 2029 is DESK-SET, after the first full calendar year following the 1 March 2028 application aim and after the ONS UK trade release covering December 2028. The 2040 modelled figure cannot be scored by a near date.",ONS SHEP / MRET; SPS explainer; itchy/STAGED-entries-dynamic-alignment-rule-taking-2026-11-21.csv
-ACAFTA-SIGN-2027,2026-11-21,"Entered from reports/CANDIDATES.md line 159 on Barry go t3926u / GO-0686, as the follow-on of ASEAN-FTA-1119 after that row scored FAILED.",desk-default,Scoring date 31 Dec 2027 is DESK-SET from the year printed in the PMO 14 Nov 2026 release as signing the agreement in 2027.,reports/CANDIDATES.md; reports/INTAKE-2026-11-21.md
-BC-FIN-REVIEW,2026-11-21,"Entered from drafts PROPOSED-bc-finance-review-row-2026-10-27.md, per T-061, on Barry go t3926u / GO-0686, after the 20 Nov 2026 swearing-in.",desk-default,"Scoring date 28 Feb 2027 is DESK-SET, swearing-in 20 Nov 2026 plus 100 days; the platform pledge is immediately.",PROPOSED-bc-finance-review-row-2026-10-27.md; reports/INTAKE-2026-11-21.md
-BDN-FID-2027,2026-11-21,"Entered from reports/INTAKE-2026-11-21.md item 1 on Barry go t3926u / GO-0686, on the FA6-FID-2026 company-timetable pattern.",government,,reports/INTAKE-2026-11-21.md; reports/CANDIDATES.md
-SNS-SPECTRUM-ORBIT-20281231,2026-11-21,"Entered from itchy/JOIN-pad-transferred-2026-11-21.md on Barry go t3971u / GO-0702, after the source-gate change on t3972s19484 / GO-0703, on the company-timetable pattern.",government,"Scoring date 31 Dec 2028 is COMPANY TIMETABLE, desk arithmetic on the year printed in the 21 Nov 2026 Isar Aerospace and Maritime Launch Services joint release as first orbital launches targeted for 2028.",itchy/JOIN-pad-transferred-2026-11-21.md
-EU-WASTE-LIST-1121-SCORED-20261121,2026-11-21,"score companion of EU-WASTE-LIST-1121 (Barry go t3917s19137, GO-0683, AS-260)",not recorded,copied from promise row EU-WASTE-LIST-1121; date_source is COMMISSION,desk append 2026-11-21 after SCORE-EU-WASTE-LIST-1121; base is live 21k row-method.csv (sha256 9baa2662c579708d1d5243864accc1b8a1778c415606031d60720f767143010e)
-HOMELESS-10Y-20361231,2026-11-22,"Entered from itchy/JOIN-homelessness-ten-year-2026-11-22.md as drafted, on Barry go t3999u (reply to card t3998s19631) / GO-0714.",government,"Scoring date 31 Dec 2036 is desk arithmetic on the ten-year horizon printed in Budget 2026 chapter 3 (over the next decade) and the 6 Nov 2026 Prime Minister's Office release (within 10 years): the 5 Nov 2036 anniversary of tabling plus the Housing, Infrastructure and Communities Canada publication lag of about 11 to 12 months. No day is printed.",itchy/JOIN-homelessness-ten-year-2026-11-22.md
-PATHWAYS-DA-20261124,2026-11-22,"Entered on Barry go t4012u (22 Nov 2026) as a dated, owned, checkable confirmation of the official 15 Nov 2026 Pathways Definitive Agreements signing target. Not a back-dated 15 Nov miss score.",desk-default,"Scoring date 24 Nov 2026 is a desk confirmation date after the official MoU target of 15 Nov 2026. The 2 July 2026 MoU prints ""with target signings on or before November 15, 2026.""",reports/DESK-READ-META-MUSE-2026-11-22-evening.md; official MoU https://www.canada.ca/en/privy-council/major-projects-office/projects/other/referred/pathways-plus/memorandum-understanding.html read 2026-11-22 18:27 CST
-GX-ON-FACTUM-20270119,2026-11-23,"Entered on Barry go t4017u / GO-0720 (23 Nov 2026) as a follow-on to GX-AGINT, testing whether the Attorney General of Ontario files an intervener's factum or other filing in SCC 42200 before the appeal hearing.",desk-default,"Scoring date 19 Jan 2027 is hearing day 1 as printed on the SCC 42200 docket (""Appeal hearing scheduled, 2027-01-19, DAY 1""). The docket prints the hearing date; the desk set the confirmation date on that day.","_primary/gx-agint-scc42200-20261123-0311/; official docket https://www.scc-csc.ca/cases-dossiers/search-recherche/42200/ read 2026-11-23 03:14 CST; Barry go t4017u, GO-0720"
-GX-AGINT-SCORED-20261120,2026-11-23,"score companion of GX-AGINT (Barry go t4014u / GO-0721, t4015u / GO-0719, t4017u / GO-0720, AS-275)",government,copied from promise row GX-AGINT; date_source is the SCC 42200 order of 14 Oct 2026,desk append 2026-11-23 after GX-AGINT FAILED score; official docket https://www.scc-csc.ca/cases-dossiers/search-recherche/42200/ read 2026-11-23 03:14 CST
-TEAM-RS-100K-2031,2026-11-23,"Entered on Barry go t4030u / GO-0739 (23 Nov 2026 03:55 CST, ""Go"", answering t4029s19815) as drafted in drafts/PROPOSED-REGISTER-ROWS-budget2026-2026-11-05.md section 7.",government,"The NRCan Powering Canada Strong page prints ""by 2030-2031""; 31 Mar 2031 is the end of fiscal year 2030-31 (the page prints no day).","/workspace/sovereign-realism/sources/nrcan-team-canada-strong-20261123/; official page https://natural-resources.canada.ca/energy-sources/electricity-infrastructure/powering-canada-strong-strategy-action read 2026-11-23 03:58 CST; Barry go t4030u, GO-0739, AS-276"
-UK-CH-NEARZERO-20271231,2026-11-23,"Entered on Barry go t4036u / GO-0744 (23 Nov 2026 05:49 CST, ""Go as above and also enter UK-CH-NEARZERO scored 31 Dec 2027"" and ""Keep the Iranian sentence with F6"") as drafted in itchy/JOIN-channel-ledger-2026-11-23.md, scoring date named 31 Dec 2027.",desk-default,,"/workspace/sovereign-realism/sources/uk-ch-nearzero-20261123/; official page https://www.gov.uk/government/publications/migrants-detected-crossing-the-english-channel-in-small-boats read 2026-11-23 05:59 CST; Barry go t4036u, GO-0744, AS-278"
-EA-LEAVE-SCORED-20261022,2026-11-23,"Scored PASS, dated 22 Oct 2026, entered late on 23 Nov 2026 after a desk read of the SCC 42261 docket, on Barry go t4054s19974 / GO-0748 (23 Nov 2026 07:12 CST, ""Go on both"").",desk-default,,"/workspace/sovereign-realism/sources/ea-leave-20261123/; official docket https://www.scc-csc.ca/cases-dossiers/search-recherche/42261/ read 2026-11-23 07:14 CST; archive opened 2026-11-23 07:15 CST; Barry go t4054s19974, GO-0748, AS-281"
-QC-BILL21-41231-20261127,2026-11-23,"Entered on Barry go t4054s19974 / GO-0748 (23 Nov 2026 07:12 CST, ""Go on both"") using the exact wording in reports/MUSE-READ-2026-11-23.md, adjusted to WATCH. Scoring date 27 Nov 2026. The Gap 31 Dec report-by date is unchanged.",desk-default,,"/workspace/sovereign-realism/sources/qc-bill21-41231-20261123/; official docket https://www.scc-csc.ca/cases-dossiers/search-recherche/41231/ read 2026-11-23 07:14 CST; archive opened 2026-11-23 07:20 CST; Barry go t4054s19974, GO-0748, AS-280"
-GX-PRINT-20261127,2026-11-23,"Entered on Barry go t4060s20024 / GO-0751 (23 Nov 2026 10:44 CST, ""Go on GX-PRINT Option B"") as Option B: whether the five Attorney General factums already filed in SCC 42200 are marked completed or have a printed version filed by the printed due date. Ontario is excluded (GX-ON-FACTUM-20270119).",government,"Scoring date 27 Nov 2026 is the printed due date on the five Attorney General intervener factums (""Printed version due on 2026-11-27"").","_primary/gx-print-scc42200-20261123/; official docket https://www.scc-csc.ca/cases-dossiers/search-recherche/42200/ read 2026-11-23 10:49 CST; Barry go t4060s20024, GO-0751, AS-285"
-QC-OATH-OPEN-20261201,2026-11-24,"Entered on Barry go, card answer 24 Nov 2026 07:09 CST (t4108u / GO-0764 / AS-288), exact text: ""Go: apply fixes 1 to 3, leave 4, enter QC-OATH-OPEN-20261201, publish web only, link the row, bring the X draft"".",government,"Scoring date 1 December 2026 is the session opening date printed on the official National Assembly library guide (""Date d'ouverture de la session 1er décembre 2026"") and cited as décret 1437-2026 in Demers J. footnote 71 of the 23 November 2026 judgment.","/workspace/sovereign-realism/_primary/itchy-20261124-quebec-oath/; official National Assembly library guide https://www.bibliotheque.assnat.qc.ca/guides/fr/elections-au-quebec-depuis-1867/19849-election-generale-de-2026 read 2026-11-24 07:01 CST; archive opened 2026-11-24 07:12 CST; Barry go t4108u, GO-0764, AS-288"
-EU-SANC22-ADOPTED-20261231,2026-11-24,"Entered on Barry go, card t4112s20416, answered 08:08 CST 24 Nov 2026 (GO-0765 / AS-289), exact text: ""Go: score PATHWAYS-DA-20261124 FAILED at 21:05 after a fresh primary re-read, and enter EU-SANC22-ADOPTED with a 31 Dec 2026 backstop"". Distinct from EU-SANC22-20261127, which tests presentation.",desk-default,"Scoring date 31 December 2026 is a desk backstop for Council adoption of the EU's 22nd sanctions package, shown by Official Journal publication; not a Council-printed deadline.","reports/DESK-READ-MUSE-2026-11-24-morning.md; official Commission statement https://cyprus.representation.ec.europa.eu/news/statement-president-von-der-leyen-22nd-package-sanctions-against-russia-2026-11-23_en read 2026-11-24 08:11 CST; ARCHIVE LINK OPENED 2026-11-24 08:14 CST; Barry go t4112s20416, GO-0765, AS-289"
-DND-AERO-SERV-NEXT-DRR,2026-11-24,"Entered on Barry go t4134u (24 Nov 2026 16:18 CST, exact text ""Go rows""), confirming card go t4133s20546 (""Go: enter both rows, row 2 tested on arrival in Canada""), GO-0770 / AS-292, as drafted in itchy/PROPOSED-rows-aircraft-must-fly-2026-11-24.md.",desk-default,"Scoring date 15 Dec 2027 is a desk-set backstop after the usual fall tabling window. The 2025-26 Departmental Results Reports were tabled in the House of Commons on 6 Nov 2026. The long-term target dates in Table 2.2 (March 2032, and Footnote 3's 2036) are not this row's scoring date.","itchy/PROPOSED-rows-aircraft-must-fly-2026-11-24.md; official DRR https://www.canada.ca/en/department-national-defence/corporate/reports-publications/departmental-results-report/drr-2025-26.html read 2026-11-24 16:21 CST; ARCHIVE LINK OPENED 2026-11-24 16:26 CST; Barry go t4134u, t4133s20546, GO-0770, AS-292"
-F35-CANADA-OPS-20281231,2026-11-24,"Entered on Barry go t4134u (24 Nov 2026 16:18 CST, exact text ""Go rows""), confirming card go t4133s20546 (""Go: enter both rows, row 2 tested on arrival in Canada""), GO-0770 / AS-292. Main test is arrival in Canada, not operational service.",government,"Scoring date 2 Jan 2029 is GOVERNMENT PROMISE, desk arithmetic on the year 2028 printed on the Future Fighter Capability Project page as ""the first aircraft will arrive in Canada in 2028."" 2 Jan 2029 is the first day after 31 Dec 2028.","itchy/PROPOSED-rows-aircraft-must-fly-2026-11-24.md; official FFCP page https://www.canada.ca/en/department-national-defence/services/procurement/fighter-jets/future-fighter-capability-project.html read 2026-11-24 16:21 CST; ARCHIVE LINK OPENED 2026-11-24 16:26 CST; Barry go t4134u, t4133s20546, GO-0770, AS-292"
-TEAM-RS-BONUS-PAY-20261207,2026-11-24,"Entered on Barry go t4143u (24 Nov 2026 18:49 CST, exact text ""Go  rows""), answering t4142s20600, GO-0773 / AS-295, as drafted in drafts/PROPOSED-REGISTER-ROWS-redseal-bonus-2026-11-24.md.",government,"The ESDC release prints ""starting the first week of December""; 7 Dec 2026 is the desk reading of the end of that first week (the release prints no day).","drafts/PROPOSED-REGISTER-ROWS-redseal-bonus-2026-11-24.md; official ESDC release https://www.canada.ca/en/employment-social-development/news/2026/11/5000-team-canada-strong-red-seal-completion-bonus-payments-to-start-landing-in-bank-accounts-of-approved-applicants-in-early-december.html read 2026-11-24 18:53 CST; ARCHIVE LINK OPENED 2026-11-24 18:54 CST; Barry go t4143u, t4142s20600, GO-0773, AS-295"
-TEAM-RS-QUALIFIER-20270731,2026-11-24,"Entered on Barry go t4143u (24 Nov 2026 18:49 CST, exact text ""Go  rows""), answering t4142s20600, GO-0773 / AS-295, as drafted in drafts/PROPOSED-REGISTER-ROWS-redseal-bonus-2026-11-24.md.",government,"The ESDC release prints ""beginning in July 2027""; 31 Jul 2027 is the desk reading of the end of July 2027 (the release prints no day).","drafts/PROPOSED-REGISTER-ROWS-redseal-bonus-2026-11-24.md; official ESDC release https://www.canada.ca/en/employment-social-development/news/2026/11/5000-team-canada-strong-red-seal-completion-bonus-payments-to-start-landing-in-bank-accounts-of-approved-applicants-in-early-december.html read 2026-11-24 18:53 CST; ARCHIVE LINK OPENED 2026-11-24 18:54 CST; Barry go t4143u, t4142s20600, GO-0773, AS-295"
-PATHWAYS-DA-20261124-SCORED-20261124,2026-11-25,"score companion of PATHWAYS-DA-20261124 (Barry go t4146u / GO-0775 / AS-297, also t4112s20416 / GO-0765 / AS-290)",desk-default,copied from promise row PATHWAYS-DA-20261124; scoring date 24 Nov 2026 is the desk confirmation date after the official MoU target of 15 Nov 2026,desk append 2026-11-25 after PATHWAYS-DA-20261124 FAILED score; official MPO Pathways Plus page https://www.canada.ca/en/privy-council/major-projects-office/projects/other/referred/pathways-plus.html read 2026-11-25 01:11 CST
-CN-DUALUSE-20270127,2026-11-25,"Entered on Barry go t4160u (25 Nov 2026 07:30 CST, exact text ""Go morning notes""), approving the list in t4159s20680, GO-0779 / AS-305, from the PROPOSED wording in reports/META-CHECK-2026-11-25.md.",government,"Scoring date 27 Jan 2027 is the government's stated end of the 23 Nov 2026 MOFCOM suspension of clause 2 of Announcement 46/2024 (""自2026年11月28日起至2027年1月27日"").","reports/META-CHECK-2026-11-25.md; official MOFCOM decision https://www.mofcom.gov.cn/zcfb/blgg/art/2026/art_c0c0eed8c30c447a8b24337254ca7746.html read 2026-11-25 07:31 CST, sha256 803811e259f938d5ba08a8369cf8effe3d73e1da6afef708e02a69919ab5ca63; archived https://web.archive.org/web/20261125133450/https://www.mofcom.gov.cn/zcfb/blgg/art/2026/art_c0c0eed8c30c447a8b24337254ca7746.html; Barry go t4160u, GO-0779, AS-305"
-KEB-LEAVE-SCORED-20261125,2026-11-25,"Recorded companion of KEB-LEAVE (Barry go t4160u / GO-0779 / AS-305). Recorded as filed, not PASS or FAILED. KEB-LEAVE remains LIVE (fill-once).",statutory,"Copied from promise row KEB-LEAVE (STATUTE: Supreme Court Act s.58, 60 days from 2026 FCA 174, 16 Oct 2026). Recorded 25 Nov 2026 after the SCC 42626 docket showed the leave application completed 13 Nov 2026 and the file opened 18 Nov 2026.","desk append 2026-11-25 after KEB-LEAVE recorded as filed; official SCC 42626 docket https://www.scc-csc.gc.ca/cases-dossiers/search-recherche/42626/ read 2026-11-25 07:31 CST, sha256 c4aad185a0623eb08a6bc5ee7f7aff617fda70a1077c1c6994b1f1a6be07c672; ARCHIVE LINK OPENED 2026-11-25 07:41 CST https://web.archive.org/web/20261125133547/https://www.scc-csc.gc.ca/cases-dossiers/search-recherche/42626/; Barry go t4160u, GO-0779, AS-305"
-BC-TAX-PANEL-180D,2026-11-25,"Entered on Barry go t4161u (25 Nov 2026 07:48 CST, exact text ""Go B.C. rows""), GO-0780 / AS-306, from the 24 Nov 2026 Premier's mandate letter to the Minister of Finance.",government,"The mandate letter prints ""report within the first 180 days""; 23 May 2027 is desk arithmetic of 24 Nov 2026 + 180 days.","official mandate letter https://www2.gov.bc.ca/assets/gov/government/ministries-organizations/premier-cabinet-mlas/minister-letter/mandate_letter_peter_milobar.pdf read 2026-11-25 07:50 CST, sha256 d0ca6736fb034cf627ede6f63e45c9d63c02c52c2ad8d00a0efbae1353df5ff8; archived https://web.archive.org/web/20261125135144/https://www2.gov.bc.ca/assets/gov/government/ministries-organizations/premier-cabinet-mlas/minister-letter/mandate_letter_peter_milobar.pdf; Barry go t4161u, GO-0780, AS-306"
-BC-CAPITAL-PLAN-REVIEW,2026-11-25,"Entered on Barry go t4161u (25 Nov 2026 07:48 CST, exact text ""Go B.C. rows""), GO-0780 / AS-306, from the 24 Nov 2026 Premier's mandate letter to the Minister of Finance.",government,"The mandate letter prints ""report its findings and recommendations within six months""; 24 May 2027 is 24 Nov 2026 + six months.","official mandate letter https://www2.gov.bc.ca/assets/gov/government/ministries-organizations/premier-cabinet-mlas/minister-letter/mandate_letter_peter_milobar.pdf read 2026-11-25 07:50 CST, sha256 d0ca6736fb034cf627ede6f63e45c9d63c02c52c2ad8d00a0efbae1353df5ff8; archived https://web.archive.org/web/20261125135144/https://www2.gov.bc.ca/assets/gov/government/ministries-organizations/premier-cabinet-mlas/minister-letter/mandate_letter_peter_milobar.pdf; Barry go t4161u, GO-0780, AS-306"
-BC-BPA-32000-2027,2026-11-25,"Entered on Barry go t4161u (25 Nov 2026 07:48 CST, exact text ""Go B.C. rows""), GO-0780 / AS-306, from the 24 Nov 2026 Premier's mandate letter to the Minister of Finance.",desk-default,"Scoring date 31 Dec 2027 is desk-set as the last day of the 2027 calendar year. The mandate letter prints ""effective for the 2027 tax year"" and does not print a 31 Dec date.","official mandate letter https://www2.gov.bc.ca/assets/gov/government/ministries-organizations/premier-cabinet-mlas/minister-letter/mandate_letter_peter_milobar.pdf read 2026-11-25 07:50 CST, sha256 d0ca6736fb034cf627ede6f63e45c9d63c02c52c2ad8d00a0efbae1353df5ff8; archived https://web.archive.org/web/20261125135144/https://www2.gov.bc.ca/assets/gov/government/ministries-organizations/premier-cabinet-mlas/minister-letter/mandate_letter_peter_milobar.pdf; Barry go t4161u, GO-0780, AS-306"
-ROSHEL-CLOSE-20261231,2026-11-25,"Entered on Barry go t4164u (25 Nov 2026 08:32 CST, exact text ""Go Roshel row and fix the 30 day line""), GO-0781 / AS-307, from the 9 Nov 2026 Stellantis and Roshel company release.",desk-default,"Scoring date 31 Dec 2026 is the last calendar day of 2026 (desk arithmetic). The 9 Nov 2026 company release prints ""The transaction is expected to close by the end of 2026"" and does not print a 31 Dec date.","official company release https://media.stellantisnorthamerica.com/newsrelease.do?id=28190&mid=1 read 2026-11-25 08:37 CST, HTTP 200, 330612 bytes, sha256 cf7d8f6c732adb79db5178116127a3641d3e18bfe89b294c2515b649439154b8; archived https://web.archive.org/web/20261112172326/https://media.stellantisnorthamerica.com/newsrelease.do?id=28190&mid=1 opened 2026-11-25 08:37 CST, HTTP 200; Barry go t4164u, GO-0781, AS-307"
-ALTO-HSR-POWERS-20270331,2026-11-25,"Entered on Barry go t4175u (25 Nov 2026, exact text ""Go ALTO-HSR-POWERS""), GO-0784 / AS-310, from the 20 Nov 2026 Notice of Ways and Means Motion, Division 44, as drafted in drafts/ROW-ALTO-HSR-2026-11-25.md (recommended row only).",desk-default,"Scoring date 1 Apr 2027 is desk-set. No government primary sets a royal-assent date for the Budget 2026 implementation bill. The 31 Mar 2027 cut-off is about four months after the B26-BIA-1R first-reading line, in line with C-15 (introduced 18 Nov 2025, royal assent 26 Mar 2026).","official Finance Canada Notice of Ways and Means Motion PDF https://www.canada.ca/content/dam/fin/corporate/dr-leg/2026/11-nwmm-amvm-bil.pdf read 2026-11-25 10:39 CST, HTTP 200, 3392312 bytes, sha256 682e760f148fa07ecfd8cff22920e7e75aab68101444395f8bc9263cf4ca9d17; saved /workspace/sovereign-realism/_primary/t4175u/nwmm-2026-11-20.pdf; Wayback https://web.archive.org/web/20261124155130/https://www.canada.ca/content/dam/fin/corporate/dr-leg/2026/11-nwmm-amvm-bil.pdf; Barry go t4175u, GO-0784, AS-310"
-FIN-CANNED-VEG-TRQ-20261201,2026-11-25,"Entered on Barry go t4177u (25 Nov 2026 19:20 CST, exact text ""Go rows""), GO-0785 / AS-311, from the 25 Nov 2026 Finance Canada canned-vegetable safeguard release, as drafted in drafts/PROPOSED-REGISTER-ROWS-canned-vegetables-safeguard-2026-11-25.md.",government,"Scoring date 2 Dec 2026 is the day after the government in-force date printed in the 25 Nov 2026 Finance Canada news release (""enter into force on December 1, 2026"").","official Finance Canada news release https://www.canada.ca/en/department-finance/news/2026/11/canada-moves-forward-with-final-safeguard-measure-on-canned-vegetables-imports-to-protect-canadian-producers.html read 2026-11-25 19:21 CST live by WebFetch; Wayback 20261125215140 HTTP 200, 37948 bytes, sha256 b0c7704cd011467e2f71e5fdfac084942fae45858e825065274138736db93c43; saved /workspace/sovereign-realism/_primary/t4177u/finance-canned-veg-2026-11-25.wayback.html; page text /workspace/sovereign-realism/_primary/t4177u/finance-canned-veg-2026-11-25.txt; Barry go t4177u, GO-0785, AS-311"
-FIN-CANNED-VEG-CITT-20270201,2026-11-25,"Entered on Barry go t4177u (25 Nov 2026 19:20 CST, exact text ""Go rows""), GO-0785 / AS-311, from the 25 Nov 2026 Finance Canada canned-vegetable safeguard release, as drafted in drafts/PROPOSED-REGISTER-ROWS-canned-vegetables-safeguard-2026-11-25.md.",government,"Scoring date 2 Feb 2027 is the day after the government begin-by date printed in the 25 Nov 2026 Finance Canada news release (""with the inquiry to begin by February 1, 2027"").","official Finance Canada news release https://www.canada.ca/en/department-finance/news/2026/11/canada-moves-forward-with-final-safeguard-measure-on-canned-vegetables-imports-to-protect-canadian-producers.html read 2026-11-25 19:21 CST live by WebFetch; Wayback 20261125215140 HTTP 200, 37948 bytes, sha256 b0c7704cd011467e2f71e5fdfac084942fae45858e825065274138736db93c43; saved /workspace/sovereign-realism/_primary/t4177u/finance-canned-veg-2026-11-25.wayback.html; page text /workspace/sovereign-realism/_primary/t4177u/finance-canned-veg-2026-11-25.txt; Barry go t4177u, GO-0785, AS-311"
-C39-D1-SCORED-20261125,2026-11-26,"score companion of C39-D1, FAILED 25 Nov 2026 (Barry go t4183u / GO-0786 / AS-312)",desk-default,"copied from promise row C39-D1; scoring date 31 Dec 2026 is a desk-set date; the score is dated 25 Nov 2026, the day the committee report was presented (Journals No. 172)","CC39 Committee Report No. 1 and House Journals No. 172, read 2026-11-26 11:06 CST"
-HMCS-FRASER-DELIVERY-20340331,2026-11-26,"Entered on Barry go t4184u (26 Nov 2026, exact text ""I want both included""), GO-0787 / AS-312, as the 2034 HMCS Fraser delivery row.",desk-default,"GOVERNMENT PROMISE, desk arithmetic: the National Defence release of 12 Jun 2026 prints ""delivery of the future HMCS Fraser expected in the early 2030s"" (https://www.canada.ca/en/department-national-defence/news/2026/06/canada-celebrates-keel-laying-for-the-first-river-class-destroyer.html, read 2026-11-26 11:12 CST) and the Public Services and Procurement Canada project page prints ""First ship delivery"" as ""Early 2030s"" (https://www.canada.ca/en/public-services-procurement/services/acquisitions/defence-marine/national-shipbuilding-strategy/projects/large-vessels/river-class-destroyer.html, re",National Defence release of 12 Jun 2026 and PSPC River-class destroyer project page (Wayback 20261113045237 and 20261026135615); Barry go t4184u
-CGL-EQ2-SCORED-20261126,2026-11-27,"score companion of CGL-EQ2, PASS 26 Nov 2026 (Barry go t4262u / GO-0806 / AS-316)",company,"copied from promise row CGL-EQ2; scoring date 31 Dec 2026 is the company timetable end of Q4; the score is dated 26 Nov 2026, the date of the TC Energy close announcement","TC Energy close release https://www.tcenergy.com/announcements/2026/2026-11-26-tc-energy-announces-second-indigenous-investment-in-coastal-gaslink/ and Finance Canada supporting release, read 2026-11-27 08:04 CST; archives opened 2026-11-27 08:08 CST"
+GX1b,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+AB1-PL,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FA3b,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+C39-CTTE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TR1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+BC1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BC-PARCELS,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+DGR1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+S2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+S7,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+MTL-CLOSE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+IRV1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+GX2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+C39-366,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+DSL2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FIR1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FIR2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+GX4,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+BEC1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+C2/S3,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+P4,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+MD1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+C4,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+C3/O2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FB9,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FA3,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+C39-D1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+SINGLE-TAB,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+DUALUSE-PAGE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CGL-EQ2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+EA-LEAVE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CAN2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+C1/O1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+S8,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+TAR1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+C5/FA8/TM1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+IND5-CORRIDOR,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+USMCA-JR1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+P2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FIR3,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EIB-S12,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+SINGLE-TAB-FY,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+NUCH-SCC,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+IND2-INCOME,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+FOREST-ACT-COMP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BC-DRIPA-NEXT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+A1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+S4,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+N1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FA5,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FA6,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FA7,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+C39,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+C39-D2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+O3,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+IND1-DEBT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+IND3-TFD,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+IND4-INVEST,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+PL1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+PHARA-TRIAL,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+A2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+N2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TITLE-MAP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BOOMBUST-SUNSET,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BOOMBUST-CORRIDOR,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+HOUSING-STARTS,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+N3,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+A3,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+PS-330,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+DT1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+MEGA-TEST,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+A4,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CPL-FREEZE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+SOTF,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+READING-ANNUAL,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CPL-OWNER,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CPL-CODE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CPL-RESULT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+RWE-READ,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AI1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AI2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+PAUSE-RECIP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AI4,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+DSL1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+SA1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TIGER-DU,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+AI3,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+MAN1-CHK,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BM1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+NS1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TIGER-UKCN,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TIGER-UKMFG,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+SA2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+HR5334,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+AB1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+BoC,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+RU1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+N4,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+LEVELS2729,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+IR1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+HCAP-LVL,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+CN-GRAPH,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+AB-REMAIN-CLOSE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AB-PROCEED-TT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+NOV1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+KEB-LEAVE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+NS1-CHK,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FA1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+SIX-mid,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AB-NINE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+USMCA-AUTO27,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+NPR5,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CPL-RESPONSE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+SIX-final,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+G1/G2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+LIM-ORIGIN,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+LIM-REBUILD,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+ATIP-FIN-377,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+MIL-QUESTURA,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+HCAP-LVL-28,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+XFER-UA-GRAIN,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+PS-330-HOLD,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+SUNSET-BCA-5,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+REVIEW-BCA-24,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+GUAR-DARL-PA,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+CAP-RATIO-27,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CL-BASE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CL-FINAL,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CL-REGISTER,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CL-ICA,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CL-FEESIMPLE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TR-CANDU,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TR-OFFTAKE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+DSRB-CAP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TR-FTA-ROUND,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TR-UA-PAGE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TR-DEF,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+UK-M6-RESP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+AB1-SCORED-20261020,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+UK-M6-RESP-2,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+ATIP-CIRNAC-149,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BUDGET26-TABLE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CDRC-CIF,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+WDG-VET,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+REG-PROV1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+KAMLOOPS-EXCAV,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+QC-SEATMATH,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+GDPPC-POP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+MFG-EMP-CA,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+EU-RETURN,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EU-STOCK,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+QC-STANDARD,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TAX-HC3,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+AID-CLOSE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+UKR-REPAY,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CLIM-13B,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+FA3-MVH-DEC,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+LEVELS-1NOV,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+DNG-CAP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+PR380-2026,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TRARR-2026,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+PR1PCT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+PL-EARLYWORK,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+PL-FID,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+PL-FULLCON,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+PL-INSVC,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+AB-Q-LEG,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AB-Q7-BIND,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AB-Q9-BIND,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CTF-PL-OPEN,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TCT-TRILAT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TCT-GUAR,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EV-GHG-TEXT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TR-ACTION-PLAN,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EA-REFORM,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AB1-PL-SCORED-20261022,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+MIL-QUESTURA-C20261022,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+LIM-ORIGIN-C20261022,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+LIM-REBUILD-C20261022,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+KSM-SSD-DEC,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CPLOAN-SCHED,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CROWN-LOAN-TABLE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CAN-SEED-RATE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+C4-FILL,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+COVID-RESIDUE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+C39-CTTE-SCORED-20261023,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FA3b-SCORED-20261023,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TR-ATA-USE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TR-FTA-R1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+TR-FTA-R1-SCHED,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+COVID-RESIDUE-C20261024,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TRADE-SHARE-SEP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+QC-SEATMATH-L20261024,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+APF-INDEMNITY-FY27,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+LASER-G1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+C39-REPORT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+C39-ASSENT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+C39-DELIVERY,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AB1-OFFICIAL,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+Q10-NEXT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+GRAHAM-RPT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BC-GOV-FORM,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+S338-SCOPE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+HP-PERF,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+ETH-SCREEN-HP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+REG-CITE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+OTMA-S6-STRATH,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+STRATH-TERM,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+NUCH-NOA,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+NUCH-FACTUM,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+GX-AGINT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+KOMOKS-S15,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+PA-NOTE28-27,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+QC-BIO-REG,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+PRIVACY-JOIN,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+STBL-REGISTRY,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+STBL-VOLUME,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TR-CANDU-DEC,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+HEM-VZCU,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+HEM-VZPROD,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+HEM-ZULIA,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+HEM-BEJUCAL,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+HEM-IRAN,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+RWC-SHERRITT-SHIP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+MRNA-ESMO-FULL,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+MRNA-REG-FILE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+MRNA-OS,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+BNT122-DEATHS,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+RWC-SHERRITT-2LIC,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+BC1-SCORED-20261024,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CL-BASE-SCORED-20261024,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CL-REG-NEWGOV,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+BC-TITLE-MAP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+BC-DRIPA-SPRING,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+BC-81-DIRECTIVES,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+C1-C20261025,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TR-FTA-ROUND-SCORED-20261024,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CHARTER-LIMIT-REG,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+GX1b-SCORED-20261025,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TR1-SCORED-20261025,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TR-CANDU-SCORED-20261025,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TR-OFFTAKE-SCORED-20261025,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+DSRB-CAP-SCORED-20261025,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TR-UA-PAGE-SCORED-20261025,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TR-DEF-SCORED-20261025,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+FA3c,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BND-TAR-90,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BND-PRICED,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+RU-LNG-EU-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+US-EUR-POSTURE-2026,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+MADURO-TRIAL-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CRINK-PROD-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+DSRB-CHARTER-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+US-TOMAHAWK-2029,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CAF-STRENGTH-2032,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+DSRB-LEGAL-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BC-PARCELS-SCORED-20261025,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BC-PARCELS-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+UA-CN-ONE-PAGE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BC-DRIPA-PET,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+CGL-P2-CONST,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CEDAR-ISD,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+KOMOKS-FED,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FA6-FID-2026,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+EA-HEARING,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+WATER-ZERO-LTDWA-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+C37-CHAIN-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EM-1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+POL-1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+LANE-1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+DLV-C15,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+DLV-C15-SCORED-20261026,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+DLV-CTR,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+DLV-CTR-SCORED-20261026,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+DLV-DEN,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+DLV-DEN-SCORED-20261026,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+DLV-ONLTC,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+DLV-ONLTC-SCORED-20261026,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+DGR1-SCORED-20261026,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+PL-DEVFUND-B26,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+PL-DEVFUND,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CLFNS-JR,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+DSRB-SIGN-2026,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+OE-Q1561,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+INDACT-PATH,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+ONRES-EMP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+MTL-LABEL,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CFR-GAZ-30OCT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+CEPA-UAE-EIF,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+MPA-3PCT-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+FIR4,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+IRCC-REG-1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+USE-OUTSIDE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+UK-UKR-AD-WINTER,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+UK-DEF3-PATH,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+RBT2-FAA-OCT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+ETH-LIST,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+PBO-DEBT-BASE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+UK-FISCAL-PATH,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+UK-UKR-AUDIT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BoC-SCORED-20261028,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+MRNA-ESMO-FULL-SCORED-20261029,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+MRNA-NEJM-PUB,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+SOV-COMPUTE-1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AB1-OFFICIAL-SCORED-20261029,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CF-GAP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+CN-GRAPH-EXT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+B26-BIA-1R,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BCA-CLOCK,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+NSS-LEGIS-1Y,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+FUEL-EXC-SUNSET,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+TSTS-SUBCOMP-2031,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+RBT2-REGISTRY-30D,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+RBT2-SCHED1-GAZ,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+RBT2-FID-MID27,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+DGR-CLOSE-15JAN,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+COAL-EXPORT-2030,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+COAL-EXPORT-2030-SCORED-20261029,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+COAL-RATIONALE-PUB,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+ECA-DEF,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+CETA-RAT,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EMIS-2030-TRAJ,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CAN-UKL-500,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CORRIDOR-FIN-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EU-ASSOC-DEF,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CA-EU-DTA,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CA-SAFE-AWARD,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+POL-BASE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+MTL-LABEL-SCORED-20261030,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+MTL-CLOSE-SCORED-20261030,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+S2-SCORED-20261030,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+S7-SCORED-20261030,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CFR-GAZ-30OCT-SCORED-20261031,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+PAUSE-RECIP-SCORED-20261031,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+S338-SCOPE-SCORED-20261030,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+AI1-SCORED-20261031,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AI2-SCORED-20261031,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+MIL-QUESTURA-C20261022-SCORED-20261031,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+RU1-SCORED-20261031B,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+EXCL-TABLE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+RBT2-FAA-OCT-SCORED-20261101,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+STBL-CRED-ONBOARD,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+SPT-CLINIC,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+CUMMINGS-TX,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+COW-STAY-DEC,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+EV-W2-DEC15,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+REG-PROV1-SCORED-20261101,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EU-ASSOC-JUNE27,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+EU-COLLEGE-MAR27,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CUMMINGS-TX-SCORED-20261102,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+Q10-NEXT-SCORED-20261102,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+INDACT-BILL,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+MOFCOM-48-FINAL,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+COINS-FINAL,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+ARCTIC-JOINT-1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+COHERE-JOBS-2030,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EUROHPC-CA-TERMS,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+NSS-DEF-5PCT-2035,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+NSS-UPDATE-4Y,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+BNT122-DEATHS-SCORED-20261103,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CN-EXP50-2030,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TRADE-SHARE-SEP-SCORED-20261104,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+FA3c-SCORED-20261104,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+LANE-1-SCORED-20261104,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+N4-SCORED-20261104,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+LEVELS-1NOV-SCORED-20261104,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+MAID-MI-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+CA-CN-REMISSION-2028,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+PH-FTA-1119,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+ASEAN-FTA-1119,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+AB-CI-SPRING2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+FA3-MVH-DEC-SCORED-20261104,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+NONUS-2X-2035,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+IR1-SCORED-20261104,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BUDGET26-TABLE-SCORED-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CROWN-LOAN-TABLE-SCORED-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+PL-DEVFUND-B26-SCORED-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+LEVELS2729-SCORED-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+EM-1-SCORED-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+POL-1-SCORED-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+DNG-CAP-SCORED-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CF-GAP-SCORED-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+SPT-CLINIC-SCORED-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+HCAP-LVL-SCORED-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+PROG-GDP,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+PUB-REGISTER,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+MVH-FULLFUND-B26,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+DEF-4PCT-2030,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+OP-REASSURE-2031,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+FCA-OPS-FALL27,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+OP-BAL-2728,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+MVH-FULLFUND-B26-SCORED-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+MI-MISSING-MIDDLE-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+MPF-2031,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+FRANCO-12PCT-2029,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TR-PR-200K-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+MPF-2031-SCORED-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+RBT2-CONSOL-20NOV,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FA3-MVH-ORDER-DEC,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+SEB-B-TABLE-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+SEB-B-TABLE-20261106-SCORED-20261106,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+SEB-SUPPLY-20261210,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+MTL-DIGID,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+DIGID-FED,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+QC-DIGID,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FOR1,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+RU-SEMA-3824-20261109,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+RCIP-5500-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CSF-NOTES-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AI4-SCORED-20261109,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+IR-SEMA-11-20261110,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CN-EFSD-MOU-20261109,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+US-REMIT-HZ-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+CULTURE-4B-RECON-20270331,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AV-600-FLOW-20270331,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CN-EFSD-MOU-20261109-SCORED-20261111,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+DSL1-SCORED-20261111,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BC-GOV-FORM-SCORED-20261111,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+HK-UFRP-ALL-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+RT-STATUS,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BRAMP-FT-20270630,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CN-XI-TEXT-20261120,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CEPA-INDIA-CONCL-2026,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+STELL-RECOVER-20270630,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+C39-THIRD-20261204,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+SEB-ASSENT-20261211,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+RBT2-SCHED1-GAZ-SCORED-20261113,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+PH-FTA-1119-SCORED-20261114,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+PH-FTA-SIGN-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CN-XI-UA-READOUT-20261120,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+TSAT-GEO-REFI-20261206,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+LIGHTSPEED-PATHFINDER-20270930,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+LIGHTSPEED-HILAT-20280331,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+LIGHTSPEED-GLOBAL-20280630,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+LIGHTSPEED-NONSPX-20281231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+ETH-SCREEN-TSAT-20261231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+AB-OGP-SPRING2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+FBBAN-EXT-20270101,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+CA-CN-AQUATIC-20261231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CN-SEAFOOD-PORK-RELIEF-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+NUCH-NOA-SCORED-20261117,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+AB-BILL40-BOUNDARIES-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+EU-CN-GOODS-2026,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EU-SIMPL-375,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+ISC-PIRUTS-20270401,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+AB-CAREFIRST-20270101,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CPP-BASE-475-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+BIZPAL-PT-FALL2028,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+IRV1-SCORED-20261118,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+EU-ICSU-EUCO-20261127,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EU-ICSU-OJ-20261231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EU-ICSU-MFF-20261231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EU-UA-INTEREST-MFF-20271231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EU-SANC22-20261127,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CN-RU-US-DECL-20261119,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+CN-RU-US-NUCDIAL-20270519,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CN-RU-US-REFINED-20270930,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CN-RU-US-DECL-20261119-SCORED-20261119,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+GEB-TOPUP-JAN2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+AB-RACAS-20270401,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+GC-CDR-10M-2030,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+GX-REPLY-1218,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+EU-WASTE-LIST-1121,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+C10-CMTI-APPT-20270630,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+GX2-SCORED-20261120,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TC-SSM-PORT-35MT-2031,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EU-UK-TUITION-20270520,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+RU-SEMA-3824-20261109-SCORED-20261120,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+IR-SEMA-11-20261110-SCORED-20261120,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+DSRB-TABLED-20261216,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+GX-HEARD-20270120,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+RBT2-CONSOL-20NOV-SCORED-20261120,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+C39-REPORT-SCORED-20261120,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+ASEAN-FTA-1119-SCORED-20261120,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CN-XI-TEXT-20261120-SCORED-20261120,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CN-XI-UA-READOUT-20261120-SCORED-20261120,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CPSP-CONTRACT-20271231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+CPSP-FIRST4-2034,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+UK-EXCL-PAGE-20270520,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+UK-YES-TERMS-20271231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+UK-SPS-EXPORTS-20290331,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+ACAFTA-SIGN-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BC-FIN-REVIEW,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+BDN-FID-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+SNS-SPECTRUM-ORBIT-20281231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+EU-WASTE-LIST-1121-SCORED-20261121,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+HOMELESS-10Y-20361231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+PATHWAYS-DA-20261124,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+GX-ON-FACTUM-20270119,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+GX-AGINT-SCORED-20261120,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TEAM-RS-100K-2031,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+UK-CH-NEARZERO-20271231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+EA-LEAVE-SCORED-20261022,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+QC-BILL21-41231-20261127,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+GX-PRINT-20261127,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+QC-OATH-OPEN-20261201,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+EU-SANC22-ADOPTED-20261231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+DND-AERO-SERV-NEXT-DRR,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+F35-CANADA-OPS-20281231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TEAM-RS-BONUS-PAY-20261207,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+TEAM-RS-QUALIFIER-20270731,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+PATHWAYS-DA-20261124-SCORED-20261124,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CN-DUALUSE-20270127,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+KEB-LEAVE-SCORED-20261125,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+BC-TAX-PANEL-180D,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+BC-CAPITAL-PLAN-REVIEW,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+BC-BPA-32000-2027,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+ROSHEL-CLOSE-20261231,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+ALTO-HSR-POWERS-20270331,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FIN-CANNED-VEG-TRQ-20261201,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+FIN-CANNED-VEG-CITT-20270201,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),not recorded,,scripts/build_row_method.py from data/entries.csv date_source
+HMCS-FRASER-DELIVERY-20340331,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+C39-D1-SCORED-20261125,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+CGL-EQ2-SCORED-20261126,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+C39-366-SCORED-20261127,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+QC-BILL21-41231-20261127-SCORED-20261127,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
