@@ -32,3 +32,7 @@ Reason class (batch 4, 2026-10-27): not found Batch 5b (2026-10-27): partial pri
 
 ## Desk action
 Find and read a primary.
+
+
+## Dated note 27 Nov 2026
+The close was announced on 26 Nov 2026 in the TC Energy release (https://www.tcenergy.com/announcements/2026/2026-11-26-tc-energy-announces-second-indigenous-investment-in-coastal-gaslink/, read 2026-11-27 08:04 CST, HTTP 200, sha256 e8ab0e99094612864a56e2005f0e1eb215e319f2458e8f790e8a2389cca12e0a). Scored as companion CGL-EQ2-SCORED-20261126 (PASS). This record is unchanged (fill-once). See sources/CGL-EQ2-SCORED-20261126.md. Barry go t4262u / GO-0806 / AS-316.
