@@ -517,3 +517,7 @@ C39-366-SCORED-20261127,2026-11-27,not recorded (existing row; method side-file 
 QC-BILL21-41231-20261127-SCORED-20261127,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
 CN-GRAPH-SCORED-20261127,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
 EU-SANC22-20261127-SCORED-20261127,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
+C39-366-STATUTE,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),statutory,,scripts/build_row_method.py from data/entries.csv date_source
+AESC-SHOVEL-2029,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FA3-MVH-ORDER-DEC-SCORED-20261127,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),desk-default,,scripts/build_row_method.py from data/entries.csv date_source
+FA3-MVH-DEC-LATE-20261125,2026-11-27,not recorded (existing row; method side-file bootstrapped mechanically),government,,scripts/build_row_method.py from data/entries.csv date_source
