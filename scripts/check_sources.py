@@ -194,6 +194,18 @@ def main(argv=None):
 
     import datetime
     today = datetime.date.fromisoformat(a.audit_date) if a.audit_date else datetime.date.today()
+    # Barry go t4424u (28 Nov 2026): a row past its scoring date with a current dated HOLD line in
+    # data/scoring-pending.csv (noted on or after the scoring date, recheck_by not yet passed, a reason given; the same
+    # test as scripts/check_overdue.py) is not expired. Nothing else changes.
+    pend = {}
+    pp = os.path.join(a.staging, "data", "scoring-pending.csv")
+    if os.path.exists(pp):
+        with open(pp, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                pend.setdefault((r.get("id") or "").strip(), []).append(r)
+    def held(rid, sd, day):
+        return any((r.get("noted") or "") >= sd.isoformat() and (r.get("recheck_by") or "") >= day.isoformat()
+                   and (r.get("reason") or "").strip() for r in pend.get(rid, []))
     rows, fails, stale = [], [], []
     for rid in ids:
         p = os.path.join(src, rid + ".md")
@@ -226,6 +238,8 @@ def main(argv=None):
                 if scored:
                     derived = PROMISE_SCORED
                 elif sd >= today:  # Barry go t3827s18670: expiry from the day AFTER the scoring date
+                    derived = PROMISE
+                elif held(rid, sd, today):  # Barry go t4424u (28 Nov 2026): a current dated HOLD (C5) keeps the level
                     derived = PROMISE
                 else:
                     reason = (reason + "; " if reason else "") + "SCORING DATE PASSED, NOT SCORED (%s; promise-sourced level expired)" % sd.isoformat()
@@ -482,6 +496,32 @@ def selftest(staging):
             out = io.StringIO()
             with contextlib.redirect_stdout(out):
                 got = main(["--staging", d, "--allowlist", os.path.join(d, "data", "sources-gate-allowlist.csv"), "--audit-date", "2026-11-27"])
+            ok = got == want and needle in out.getvalue()
+            bad += not ok; cases.append(None)
+            print("SELFTEST %s %s: exit %d (want %d)" % ("ok" if ok else "FAIL", cid, got, want))
+            if not ok: print(out.getvalue())
+        finally:
+            shutil.rmtree(d)
+    # 28 Nov 2026 (Barry go t4424u): a dated HOLD in data/scoring-pending.csv keeps an unscored row past its date
+    # from expiring while the HOLD is current; a lapsed, undated or reasonless HOLD does not.
+    for cid, prow, want, needle in (
+            ("FX-HOLD-OK", "FX-HOLD-OK,2026-12-05,docket recheck,2026-12-07", 0, "promise sourced outcome pending 1"),
+            ("FX-HOLD-LAPSED", "FX-HOLD-LAPSED,2026-12-05,docket recheck,2026-12-05", 1, "FORWARD EXPIRED FX-HOLD-LAPSED"),
+            ("FX-HOLD-EARLY", "FX-HOLD-EARLY,2026-12-01,docket recheck,2026-12-09", 1, "FORWARD EXPIRED FX-HOLD-EARLY"),
+            ("FX-HOLD-NOREASON", "FX-HOLD-NOREASON,2026-12-05,,2026-12-09", 1, "FORWARD EXPIRED FX-HOLD-NOREASON")):
+        d = tempfile.mkdtemp(prefix="sources-selftest-")
+        try:
+            os.makedirs(os.path.join(d, "data")); os.makedirs(os.path.join(d, "sources", "failed"))
+            shutil.copy(seed_src, os.path.join(d, "data"))
+            open(os.path.join(d, "data", "sources-gate-allowlist.csv"), "w").write("id,level,reason_class,primary_search_date,expires,renewals,listed\n")
+            open(os.path.join(d, "data", "scoring-pending.csv"), "w").write("id,noted,reason,recheck_by\n" + prow + "\n")
+            with open(os.path.join(d, "data", "entries.csv"), "w", newline="") as ef:
+                w = csv.writer(ef, lineterminator="\n")
+                w.writerow(FIXTURE_HEAD.strip().split(",")); w.writerow(["FIX", "", "4 Dec 2026", cid, "PASS: x. FAILED: y", "o", "s", "LIVE"])
+            open(os.path.join(d, "sources", cid + ".md"), "w").write(FIXTURE_REC.format(id=cid, sup="full", status=PROMISE))
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                got = main(["--staging", d, "--allowlist", os.path.join(d, "data", "sources-gate-allowlist.csv"), "--audit-date", "2026-12-06"])
             ok = got == want and needle in out.getvalue()
             bad += not ok; cases.append(None)
             print("SELFTEST %s %s: exit %d (want %d)" % ("ok" if ok else "FAIL", cid, got, want))
